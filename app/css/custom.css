@@ -2,3 +2,21 @@
  * Version: 2.1
  * File Description: Place here your custom CSS styles
  */
+
+ .paddingNews{
+     padding-left: 60px;
+     padding-right: 60px;
+     padding-top: 100px;
+ }
+
+ .paddingBottom60{
+     padding-bottom: 60px;
+ }
+
+ .marginLeftNews{
+     margin-left: 16.6% !important;
+ }
+
+ .paddingTop0{
+     padding-top: 0px !important;
+ }

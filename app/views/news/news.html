@@ -1,26 +1,108 @@
-<!-- banner start -->
-      <!-- ================ -->
-      <div class="banner dark-translucent-bg" style="background-image:url('images/page-about-banner-1.jpg'); background-position: 50% 27%;">
-        <!-- breadcrumb start -->
-        <!-- ================ -->
-        <div class="breadcrumb-container" style="clearfix transparent-header-on">
-          <div class="container">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><i class="fa fa-home pr-2"></i><a class="link-dark" href="index.html">Home</a></li>
-              <li class="breadcrumb-item active">Page About</li>
-            </ol>
-          </div>
-        </div>
-        <!-- breadcrumb end -->
-        <div class="container">
-          <div class="row justify-content-lg-center">
-            <div class="col-lg-8 text-center pv-20">
-              <h3 class="title logo-font object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">The <span class="text-default">Project</span> Inc.</h3>
-              <div class="separator object-non-visible mt-10" data-animation-effect="fadeIn" data-effect-delay="100"></div>
-              <p class="text-center object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi perferendis magnam ea necessitatibus, officiis voluptas odit! Aperiam omnis, cupiditate laudantium velit nostrum, exercitationem accusamus, possimus soluta illo deserunt tempora qui.</p>
+<div class="paddingNews">
+  <section class="main-container">
+
+    <div class="container">
+      <div class="row">
+        <div class="main col-lg-8 order-lg-2 ml-xl-auto">
+          <!-- page-title start -->
+          <!-- ================ -->
+          <!-- <h1 class="page-title text-center">Our News</h1> -->
+          <!-- page-title end -->
+          <div class="space-top paddingBottom60">
+            <div class="image-box style-4" ng-repeat="f in news">
+              <div class="row grid-space-0">
+                <div class="col-lg-6" ng-class="{'order-lg-2': $index%2 == 1}">
+                  <div class="overlay-container">
+                    <img ng-src="{{f.mainImage}}">
+                    <div class="overlay-to-top">
+                      <p class="small margin-clear">
+                        <em>{{f.title}}
+                          <!-- <br> Lorem ipsum dolor sit -->
+                        </em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6" ng-class="{'order-lg-1': $index%2 == 1}">
+                  <div class="body paddingTop0" ng-class="{'text-right': $index%2 == 1}">
+                    <!-- <div class="pv-30 hidden-lg-down"></div> -->
+                    <h3>{{f.title}}</h3>
+                    <div class="separator-2"></div>
+                    <p class="margin-clear">{{f.content}}</p>
+                    <br>
+                    <a href="" class="btn btn-lg btn-gray-transparent btn-sm btn-animated margin-clear" ng-click="goToProject(f.id)">Read More
+                      <i class="fa fa-arrow-right pl-10"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- pagination start -->
+          <nav aria-label="Page navigation" ng-show="newsPagination != 0">
+            <ul class="pagination justify-content-center">
+              <li class="page-item" ng-hide="page == 1">
+                <a class="page-link" ng-click="previous()" href="" aria-label="Previous">
+                  <i aria-hidden="true" class="fa fa-angle-left"></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li ng-repeat="n in pagNum" class="page-item" ng-class="{'active': page == n}">
+                <a class="page-link" ng-click="goToPage(n)" href="">{{n}}</a>
+              </li>
+              <li class="page-item" ng-hide="page == pagNum[pagNum.length-1]">
+                <a class="page-link" ng-click="next()" href="" aria-label="Next">
+                  <i aria-hidden="true" class="fa fa-angle-right"></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- pagination end -->
         </div>
+        <aside class="col-lg-4 col-xl-3 order-lg-1">
+          <div class="sidebar">
+            <div class="block clearfix">
+              <h3 class="title">News</h3>
+              <div class="separator-2"></div>
+              <nav>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="" ng-click="ChangeNews(1)" ng-class="{'active': activeSideBar == 1}">Media Coverage</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="" ng-click="ChangeNews(2)" ng-class="{'active': activeSideBar == 2}">Latest News</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="" ng-click="ChangeNews(3)" ng-class="{'active': activeSideBar == 3}">Industry News</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="block clearfix">
+              <h3 class="title">Hot News</h3>
+              <div class="separator-2"></div>
+              <div id="carousel-portfolio-sidebar" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li ng-repeat="f in news" data-target="#carousel-portfolio-sidebar" data-slide-to="{{$index}}"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item" ng-class="{'active': $index==0}" ng-repeat="n in news">
+                    <div class="image-box shadow text-center mb-20">
+                      <div class="overlay-container" ng-click="goToProject(n.id)">
+                        <img ng-src="{{n.mainImage}}">
+                        <a class="overlay-link">
+                          <i class="fa fa-link"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
-      
-<!-- banner end -->
+    </div>
+  </section>
+</div>

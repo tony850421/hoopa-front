@@ -6,6 +6,7 @@ angular.module('myApp', [
   'myApp.Main',
   'myApp.Home',
   'myApp.News',
+  'myApp.ViewNews',
   'myApp.ProjectList',
   'myApp.version',
   'myApp.Login',
@@ -13,6 +14,5 @@ angular.module('myApp', [
 
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
-
   $routeProvider.otherwise({redirectTo: '/home'});
 }]);
