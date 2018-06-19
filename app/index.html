@@ -16,10 +16,10 @@
   <link rel="shortcut icon" href="images/favicon.ico">
 
   <!-- Web Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet"> -->
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -114,7 +114,7 @@
                       </div>
                       <!-- header-top-first end -->
                     </div>
-                    <div class="col-9 col-sm-6 col-lg-3">
+                    <div class="col-9 col-sm-6 col-lg-3" ng-controller="LoginCtrl">
       
                       <!-- header-top-second start -->
                       <!-- ================ -->
@@ -141,7 +141,7 @@
                                     <input type="password" class="form-control" placeholder="">
                                     <i class="fa fa-lock form-control-feedback"></i>
                                   </div>
-                                  <button type="submit" class="btn btn-gray btn-sm">Log In</button>
+                                  <button type="submit" class="btn btn-gray btn-sm" ng-click="login()">Log In</button>
                                   <span class="pl-1 pr-1">or</span>
                                   <button type="submit" class="btn btn-default btn-sm">Sing Up</button>
                                   <ul>
@@ -844,7 +844,7 @@
 
       <!-- banner start -->
       <!-- ================ -->
-      <div id="banner" class="banner clearfix">
+      <div id="banner" class="banner clearfix" ng-show="showBanner">
 
         <!-- slideshow start -->
         <!-- ================ -->
@@ -1168,6 +1168,8 @@
   <script src="app.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
+  <script src="mainControllers/login.js"></script>
+
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
