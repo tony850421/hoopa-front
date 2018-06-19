@@ -207,7 +207,10 @@ angular.module('myApp.News', ['ngRoute'])
     };
 
     $scope.goToProject = function (id) {
-      $window.location.href = 'http://localhost/hoopa-front/app/#!/viewNews/' + id;
+      
+      $rootScope.customGoTo('/viewNews/' + id);
+
+      // $window.location.href = 'http://localhost/hoopa-front/app/#!/viewNews/' + id;
     };
 
   }]);
