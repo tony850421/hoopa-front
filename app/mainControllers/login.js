@@ -88,6 +88,7 @@ angular.module('myApp.Login', ['ngRoute'])
 
         }, function (error) {
 
+            console.log(error);
             // switch(error.code){
             //     case 210:
             //         alert = $translate.instant('ALERTLOGIN1');
