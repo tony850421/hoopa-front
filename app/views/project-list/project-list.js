@@ -9,7 +9,7 @@ angular.module('myApp.ProjectList', ['ngRoute'])
   });
 }])
 
-.controller('ProjectListCtrl', ['$rootScope', '$scope', function($rootScope, $scope) {
+.controller('ProjectListCtrl', ['$rootScope', '$scope', '$routeParams', function($rootScope, $scope, $routeParams) {
 
   $rootScope.showBanner = false;
 

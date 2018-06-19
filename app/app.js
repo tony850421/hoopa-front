@@ -5,6 +5,7 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.Main',
   'myApp.Home',
+  'myApp.News',
   'myApp.ProjectList',
   'myApp.version',
   'myApp.Login',
