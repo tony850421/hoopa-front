@@ -20,3 +20,9 @@
  .paddingTop0{
      padding-top: 0px !important;
  }
+
+ .imageProjectRecommended{
+     object-fit: cover;
+     min-width: 260px;
+     max-height: 160px;
+ }
