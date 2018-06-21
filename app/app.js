@@ -8,6 +8,7 @@ angular.module('myApp', [
   'myApp.News',
   'myApp.ViewNews',
   'myApp.ProjectList',
+  'myApp.ProjectDetails',
   'myApp.version',
   'myApp.Login',
 ]).
