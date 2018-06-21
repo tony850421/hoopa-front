@@ -1,86 +1,6 @@
-<!-- banner start -->
-<!-- ================ -->
-<div class="banner dark-translucent-bg padding-bottom-clear" style="background-image:url('images/shop-banner.jpg');background-position: 50% 32%;">
-  <!-- breadcrumb start -->
-  <!-- ================ -->
-  <!-- <div class="breadcrumb-container">
-          <div class="container">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><i class="fa fa-home pr-2"></i><a class="link-dark" href="index.html">Home</a></li>
-              <li class="breadcrumb-item active">Shop 4 Columns</li>
-            </ol>
-          </div>
-        </div> -->
-  <!-- breadcrumb end -->
-  <div class="container">
-    <div class="row justify-content-lg-center">
-      <div class="col-lg-8 text-center pv-20">
-        <h2 class="title object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">Wellcome to
-          <strong>Shop</strong>
-        </h2>
-        <div class="separator object-non-visible mt-10" data-animation-effect="fadeIn" data-effect-delay="100"></div>
-        <p class="text-center object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi perferendis magnam ea necessitatibus, officiis
-          voluptas odit! Aperiam omnis, cupiditate laudantium velit nostrum, exercitationem accusamus, possimus soluta illo
-          deserunt tempora qui.</p>
-      </div>
-    </div>
-  </div>
-  <!-- section start -->
-  <!-- ================ -->
-  <div class="dark-translucent-bg section">
-    <div class="container-fluid">
-      <!-- filters start -->
-      <div class="sorting-filters text-center mb-20 d-flex justify-content-center">
-        <form class="form-inline">
-          <div class="form-group">
-            <label>Sort by</label>
-            <select class="form-control">
-              <option selected="selected">Date</option>
-              <option>Price</option>
-              <option>Model</option>
-            </select>
-          </div>
-          <div class="form-group ml-1">
-            <label>Order</label>
-            <select class="form-control">
-              <option selected="selected">Acs</option>
-              <option>Desc</option>
-            </select>
-          </div>
-          <div class="form-group ml-1">
-            <label>Price $ (min/max)</label>
-            <input type="text" class="form-control">
-          </div>
-          <div class="form-group ml-1">
-            <label class="invisible">Price $ (max)</label>
-            <input type="text" class="form-control">
-          </div>
-          <div class="form-group ml-1">
-            <label>Category</label>
-            <select class="form-control">
-              <option selected="selected">Smartphones</option>
-              <option>Tablets</option>
-              <option>Smart Watches</option>
-              <option>Desktops</option>
-              <option>Software</option>
-              <option>Accessories</option>
-            </select>
-          </div>
-          <div class="form-group ml-1">
-            <a href="#" class="btn btn-default">Submit</a>
-          </div>
-        </form>
-      </div>
-      <!-- filters end -->
-    </div>
-  </div>
-  <!-- section end -->
-</div>
-<!-- banner end -->
-
 <!-- main-container start -->
 <!-- ================ -->
-<section class="main-container">
+<section class="main-container paddingNews">
 
   <div class="container">
     <div class="row">
@@ -88,97 +8,112 @@
       <!-- main start -->
       <!-- ================ -->
       <div class="main col-12">
-        <!-- pills start -->
+
+        <!-- page-title start -->
         <!-- ================ -->
-        <!-- Nav tabs -->
-        <ul class="nav nav-pills" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" href="#pill-1" role="tab" data-toggle="tab" title="Latest Arrivals">
-              <i class="fa fa-star"></i> Latest Arrivals</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#pill-2" role="tab" data-toggle="tab" title="Featured">
-              <i class="fa fa-heart"></i> Featured</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#pill-3" role="tab" data-toggle="tab" title="Top Sellers">
-              <i class=" fa fa-arrow-up"></i> Top Sellers</a>
-          </li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content clear-style">
-          <div class="tab-pane active" id="pill-1">
-            <div class="row grid-space-10">
-              <div class="col-lg-3 col-md-6" ng-repeat="project in products">
-                <div class="listing-item white-bg bordered mb-20">
-                  <div class="overlay-container">
-                    <img ng-src="{{project.imageUrl}}" alt="">
-                    <!-- <a class="overlay-link popup-img-single" href="images/product-1.jpg">
-                      <i class="fa fa-search-plus"></i>
-                    </a> -->
-                    <span class="badge">30% OFF</span>
-                    <div class="overlay-to-top links">
-                      <span class="small">
-                        <a href="#" class="btn-sm-link">
-                          <i class="fa fa-heart-o pr-10"></i>Add to Wishlist</a>
-                        <a href="#" class="btn-sm-link">
-                          <i class="fa fa-link pr-1"></i>View Details</a>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="body">
-                    <h3>
-                      <a >{{project.title}}</a>
-                    </h3>
-                    <p class="small">{{project.description}}</p>
-                    <div class="elements-list clearfix">
-                      <span class="price">
-                        <del>$100.00</del> $70.00</span>
-                      <a href="#" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated">Add To Cart
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
+        <h2 class="page-title">{{project.get('title')}}</h2>
+        <div class="separator-2"></div>
+        <!-- page-title end -->
+
+        <div class="row">
+          <div class="col-lg-4">
+            <!-- pills start -->
+            <!-- ================ -->
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link active" href="#pill-1" data-toggle="tab" title="images">
+                  <i class="fa fa-camera pr-1"></i> Photo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pill-2" data-toggle="tab" title="video">
+                  <i class="fa fa-video-camera pr-1"></i> Video</a>
+              </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content clear-style">
+              <div class="tab-pane active" id="pill-1">
+                <div id="carousel-sidebar" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators top">
+                    <li data-target="#carousel-sidebar" data-slide-to="{{$index}}" ng-repeat="image in imageList"></li>
+                  </ol>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item" ng-class="{'active': $index==0}" ng-repeat="i in imageList">
+                      <div class="listing-item">
+                        <div class="overlay-container">
+                          <img ng-src="{{i.get('url')}}">
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="tab-pane" id="pill-2">
+                <div class="overlay-container">
+                  <img src="images/page-about-2.jpg" alt="">
+                  <a class="overlay-link" href="#">
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h3 class="mt-3">
+              <a href="shop-product.html">Suscipit consequatur velit</a>
+            </h3>
+            <span class="price">
+              <del>$199.00</del> $150.00</span>
+            <h3 class="mt-3">
+              <a href="shop-product.html">Suscipit consequatur velit</a>
+            </h3>
+            <span class="price">
+              <del>$199.00</del> $150.00</span>
+            <!-- pills end -->
+          </div>
+          <div class="col-lg-8 pv-30">
+            <h3 class="mt-4">Description</h3>
+            <p>{{project.get('description')}}</p>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+            <p>{{project.get('creditHighlights')}}</p>
+            <hr class="mb-10">
+            <div class="clearfix mb-20">
+              <span>
+                <i class="fa fa-star text-default"></i>
+                <i class="fa fa-star text-default"></i>
+                <i class="fa fa-star text-default"></i>
+                <i class="fa fa-star text-default"></i>
+                <i class="fa fa-star"></i>
+              </span>
+              <a href="#" class="wishlist">
+                <i class="fa fa-heart-o pl-10 pr-1"></i>Wishlist</a>
+              <ul class="pl-20 pull-right social-links circle small clearfix margin-clear animated-effect-1">
+                <li class="twitter">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="googleplus">
+                  <a href="#">
+                    <i class="fa fa-google-plus"></i>
+                  </a>
+                </li>
+                <li class="facebook">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="light-gray-bg p-20 bordered clearfix">
+              <span class="product price">
+                <i class="fa fa-rmb pr-10"></i>99.00</span>
+              <div class="product elements-list pull-right clearfix">
+                <input type="submit" value="Add to Cart" class="margin-clear btn btn-default">
+              </div>
             </div>
           </div>
         </div>
-        <!-- pills end -->
-
-        <!-- pagination start -->
-        <nav aria-label="Page navigation">
-          <ul class="pagination justify-content-center">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <i aria-hidden="true" class="fa fa-angle-left"></i>
-                <span class="sr-only">Previous</span>
-              </a>
-            </li>
-            <li class="page-item active">
-              <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">4</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">5</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <i aria-hidden="true" class="fa fa-angle-right"></i>
-                <span class="sr-only">Next</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- pagination end -->
       </div>
       <!-- main end -->
 
@@ -186,3 +121,303 @@
   </div>
 </section>
 <!-- main-container end -->
+
+<!-- section start -->
+<!-- ================ -->
+<section class="pv-30 light-gray-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs style-4" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" href="" role="tab" data-toggle="tab" ng-click="tabCommentsVisible = false">
+              <i class="fa fa-files-o pr-1"></i>Specifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabCommentsVisible = true">
+              <i class="fa fa-star pr-1"></i>(3) Reviews</a>
+          </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content padding-top-clear padding-bottom-clear">
+          <div class="tab-pane" id="h2tab2" ng-class="{'active': tabCommentsVisible == false}">
+            <h4 class="space-top">Specifications</h4>
+            <hr>
+            <dl class="row">
+              <dt class="col-sm-3 text-sm-right">Consectetur</dt>
+              <dd class="col-sm-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
+              <dt class="col-sm-3 text-sm-right">Culla</dt>
+              <dd class="col-sm-9">Adipisci autem illo hic itaque nulla velit quod laboriosam ipsum in illum!</dd>
+              <dt class="col-sm-3 text-sm-right">Quas</dt>
+              <dd class="col-sm-9">Velit mollitia vel nemo, repudiandae quas nisi consectetur maiores beatae.</dd>
+              <dt class="col-sm-3 text-sm-right">Sapiente</dt>
+              <dd class="col-sm-9">Dolor, architecto, accusamus. Explicabo, culpa hic sapiente amet libero, recusandae laudantium consequatur
+                velit possimus ratione quo. Ipsum maxime officia quasi quos magni!</dd>
+              <dt class="col-sm-3 text-sm-right">Dignissimos</dt>
+              <dd class="col-sm-9">Odio cum deleniti mollitia, quisquam dignissimos voluptatem, unde rem alias.</dd>
+              <dt class="col-sm-3 text-sm-right">Adipisicing</dt>
+              <dd class="col-sm-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora rerum veritatis nam blanditiis.</dd>
+              <dt class="col-sm-3 text-sm-right">Werspiciatis</dt>
+              <dd class="col-sm-9">Rem nostrum sit magnam debitis quidem perspiciatis fuga fugit.</dd>
+            </dl>
+            <hr>
+          </div>
+          <div class="tab-pane" id="h2tab3" ng-class="{'active': tabCommentsVisible == true}">
+            <!-- comments start -->
+            <div class="comments margin-clear space-top">
+              <!-- comment start -->
+              <div class="comment clearfix">
+                <div class="comment-avatar">
+                  <img class="rounded-circle" src="images/avatar.jpg" alt="avatar">
+                </div>
+                <header>
+                  <h3>Amazing!</h3>
+                  <div class="comment-meta">
+                    <i class="fa fa-star text-default"></i>
+                    <i class="fa fa-star text-default"></i>
+                    <i class="fa fa-star text-default"></i>
+                    <i class="fa fa-star text-default"></i>
+                    <i class="fa fa-star"></i> | Today, 12:31</div>
+                </header>
+                <div class="comment-content">
+                  <div class="comment-body clearfix">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo </p>
+                    <a href="blog-post.html" class="btn-sm-link link-dark pull-right">
+                      <i class="fa fa-reply"></i> Reply</a>
+                  </div>
+                </div>
+              </div>
+              <!-- comment end -->
+
+              <!-- comment start -->
+              <div class="comment clearfix">
+                <div class="comment-avatar">
+                  <img class="rounded-circle" src="images/avatar.jpg" alt="avatar">
+                </div>
+                <header>
+                  <h3>Really Nice!</h3>
+                  <div class="comment-meta">
+                    <i class="fa fa-star text-default"></i>
+                    <i class="fa fa-star text-default"></i>
+                    <i class="fa fa-star text-default"></i>
+                    <i class="fa fa-star text-default"></i>
+                    <i class="fa fa-star"></i> | Today, 10:31</div>
+                </header>
+                <div class="comment-content">
+                  <div class="comment-body clearfix">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo </p>
+                    <a href="blog-post.html" class="btn-sm-link link-dark pull-right">
+                      <i class="fa fa-reply"></i> Reply</a>
+                  </div>
+                </div>
+              </div>
+              <!-- comment end -->
+
+              <!-- comment start -->
+              <div class="comment clearfix">
+                <div class="comment-avatar">
+                  <img class="rounded-circle" src="images/avatar.jpg" alt="avatar">
+                </div>
+                <header>
+                  <h3>Worth to Buy!</h3>
+                  <div class="comment-meta">
+                    <i class="fa fa-star text-default"></i>
+                    <i class="fa fa-star text-default"></i>
+                    <i class="fa fa-star text-default"></i>
+                    <i class="fa fa-star text-default"></i>
+                    <i class="fa fa-star"></i> | Today, 09:31</div>
+                </header>
+                <div class="comment-content">
+                  <div class="comment-body clearfix">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo </p>
+                    <a href="blog-post.html" class="btn-sm-link link-dark pull-right">
+                      <i class="fa fa-reply"></i> Reply</a>
+                  </div>
+                </div>
+              </div>
+              <!-- comment end -->
+            </div>
+            <!-- comments end -->
+
+            <!-- comments form start -->
+            <div class="comments-form">
+              <h2 class="title">Add your Review</h2>
+              <form>
+                <div class="form-group has-feedback">
+                  <label for="name4">Name</label>
+                  <input type="text" class="form-control" id="name4" placeholder="" required>
+                  <i class="fa fa-user form-control-feedback"></i>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="subject4">Subject</label>
+                  <input type="text" class="form-control" id="subject4" placeholder="" required>
+                  <i class="fa fa-pencil form-control-feedback"></i>
+                </div>
+                <div class="form-group">
+                  <label>Rating</label>
+                  <select class="form-control" id="review">
+                    <option value="five">5</option>
+                    <option value="four">4</option>
+                    <option value="three">3</option>
+                    <option value="two">2</option>
+                    <option value="one">1</option>
+                  </select>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="message4">Message</label>
+                  <textarea class="form-control" rows="8" id="message4" placeholder="" required></textarea>
+                  <i class="fa fa-envelope-o form-control-feedback"></i>
+                </div>
+                <input type="submit" value="Submit" class="btn btn-default">
+              </form>
+            </div>
+            <!-- comments form end -->
+          </div>
+        </div>
+      </div>
+
+      <!-- sidebar start -->
+      <!-- ================ -->
+      <aside class="col-lg-4 col-xl-3 ml-xl-auto">
+        <div class="sidebar">
+          <div class="block clearfix">
+            <h3 class="title">Related Products</h3>
+            <div class="separator-2"></div>
+            <div class="media margin-clear">
+              <div class="d-flex pr-2">
+                <div class="overlay-container">
+                  <img class="media-object" src="images/product-5.jpg" alt="blog-thumb">
+                  <a href="shop-product.html" class="overlay-link small">
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="media-body">
+                <h6 class="media-heading">
+                  <a href="shop-product.html">Lorem ipsum dolor sit amet</a>
+                </h6>
+                <p class="margin-clear">
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                </p>
+                <p class="price">$99.00</p>
+              </div>
+            </div>
+            <hr>
+            <div class="media margin-clear">
+              <div class="d-flex pr-2">
+                <div class="overlay-container">
+                  <img class="media-object" src="images/product-6.jpg" alt="blog-thumb">
+                  <a href="shop-product.html" class="overlay-link small">
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="media-body">
+                <h6 class="media-heading">
+                  <a href="shop-product.html">Eum repudiandae ipsam</a>
+                </h6>
+                <p class="margin-clear">
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star"></i>
+                </p>
+                <p class="price">$299.00</p>
+              </div>
+            </div>
+            <hr>
+            <div class="media margin-clear">
+              <div class="d-flex pr-2">
+                <div class="overlay-container">
+                  <img class="media-object" src="images/product-7.jpg" alt="blog-thumb">
+                  <a href="shop-product.html" class="overlay-link small">
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="media-body">
+                <h6 class="media-heading">
+                  <a href="shop-product.html">Quia aperiam velit fuga</a>
+                </h6>
+                <p class="margin-clear">
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star"></i>
+                </p>
+                <p class="price">$9.99</p>
+              </div>
+            </div>
+            <hr>
+            <div class="media margin-clear">
+              <div class="d-flex pr-2">
+                <div class="overlay-container">
+                  <img class="media-object" src="images/product-8.jpg" alt="blog-thumb">
+                  <a href="shop-product.html" class="overlay-link small">
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="media-body">
+                <h6 class="media-heading">
+                  <a href="shop-product.html">Fugit non natus officiis</a>
+                </h6>
+                <p class="margin-clear">
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </p>
+                <p class="price">$399.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- sidebar end -->
+
+    </div>
+  </div>
+</section>
+<!-- section end -->
+
+<!-- footer top start -->
+<!-- ================ -->
+<div class="dark-bg default-hovered footer-top animated-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="call-to-action text-center">
+          <div class="row">
+            <div class="col-md-8">
+              <h2 class="mt-4">Powerful Bootstrap Template</h2>
+              <h2 class="mt-4">Waste no more time</h2>
+            </div>
+            <div class="col-md-4">
+              <p class="mt-3">
+                <a href="#" class="btn btn-animated btn-lg btn-gray-transparent">Purchase
+                  <i class="fa fa-cart-arrow-down pl-20"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- footer top end -->

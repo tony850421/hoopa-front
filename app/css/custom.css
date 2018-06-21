@@ -3,49 +3,49 @@
  * File Description: Place here your custom CSS styles
  */
 
-.paddingNews {
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 100px;
-}
+ .paddingNews{
+     padding-left: 60px;
+     padding-right: 60px;
+     padding-top: 120px;
+ }
 
-.paddingBottom60 {
-    padding-bottom: 60px;
-}
+ .paddingBottom60{
+     padding-bottom: 60px;
+ }
 
-.marginLeftNews {
-    margin-left: 16.6% !important;
-}
+ .marginLeftNews{
+     margin-left: 16.6% !important;
+ }
 
-.paddingTop0 {
-    padding-top: 0px !important;
-}
+ .paddingTop0{
+     padding-top: 0px !important;
+ }
 
-.imageProjectRecommended {
-    object-fit: cover;
-    min-width: 260px;
-    max-height: 160px;
-}
+ .imageProjectRecommended{
+     object-fit: cover;
+     min-width: 260px;
+     max-height: 160px;
+ }
 
-.logo_img {
-    margin-top: -5px !important;
-    width: 120px !important
-}
+ .logo_img{
+     margin-top: -5px !important;
+     width: 120px !important
+ }
 
-.backgroundWhite {
-    background-color: white !important;
-}
+ .backgroundWhite{
+     background-color: white !important;
+ }
 
-.paddingBoxHome {
-    padding: 60px;
-    background-color: #fafafa !important;
-}
+ .paddingBoxHome{
+     padding: 60px;
+     background-color: #fafafa !important;
+ }
 
-.padding0 {
-    padding: 0px !important;
-}
+ .padding0{
+     padding: 0px !important;
+ }
 
-.background-slide-1 {
+ .background-slide-1{
     background-color: #283a52 !important;
 }
 
