@@ -30,6 +30,9 @@
   <!-- Font Awesome CSS -->
   <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
 
+  <!-- FontHoopa CSS -->
+  <link href="fonts/font-hoopa/style.css" rel="stylesheet">
+
   <!-- Plugins -->
   <link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
   <link href="plugins/rs-plugin-5/css/settings.css" rel="stylesheet">
@@ -183,7 +186,9 @@
                   <li class="list-inline-item">
                     <i class="text-default fa fa-map-marker pr-1 pl-2"></i>One Infinity Loop Av, Tk 123456</li>
                   <li class="list-inline-item">
-                    <i class="text-default fa fa-phone pr-1 pl-2"></i>+12 123 123 123</li>
+                    <a href="tel:+12 123 123 123" class="link-dark">
+                      <i class="text-default fa fa-phone pr-1 pl-2"></i>+12 123 123 123</a>
+                  </li>
                   <li class="list-inline-item">
                     <a href="mailto:email@domain.com" class="link-dark">
                       <i class="text-default fa fa-envelope-o pl-10 pr-1"></i>email@domain.com</a>
@@ -201,13 +206,13 @@
                 <!-- ================ -->
                 <div class="header-top-dropdown text-right">
                   <div class="btn-group">
-                    <a href="page-signup.html" class="btn btn-sm">
-                      <i class="fa fa-user-o pr-2"></i> Sign Up</a>
+                    <a href="page-signup.html" class="btn btn-sm paddingLR10">
+                      <span class="icon-user spanSignUp"></span> Sign Up</a>
                   </div>
                   <div class="btn-group">
-                    <a id="header-top-drop-2" type="button" class="btn dropdown-toggle btn-sm dropdown-toggle--no-caret" data-toggle="dropdown"
+                    <a id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-sign-in pr-2"></i> Login</a>
+                      <i class="icon-onlogin spanSignUp"></i> Login</a>
                     <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
                       <li>
                         <form class="login-form margin-clear">
@@ -248,6 +253,22 @@
                             </li>
                           </ul>
                         </form>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <a id="header-top-drop-2" type="button" class="btn dropdown-toggle btn-sm paddingLR10" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      CN</a>
+                    <ul id="language" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
+                      <li href="" class="languageActive">
+                        <a class="colorInherit">Chinese</a>
+                      </li>
+                      <li href="" class="languageActive">
+                        <a class="colorInherit">English</a>
+                      </li>
+                      <li href="" class="languageActive">
+                        <a class="colorInherit">Spanish</a>
                       </li>
                     </ul>
                   </div>
@@ -327,14 +348,14 @@
                       <div class="btn-group">
                         <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true"
                           aria-expanded="false">
-                          <i class="fa fa-search"></i>
+                          <i class="icon-search"></i>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
                           <li>
                             <form role="search" class="search-box margin-clear">
                               <div class="form-group has-feedback">
                                 <input type="text" class="form-control" placeholder="Search">
-                                <i class="fa fa-search form-control-feedback"></i>
+                                <i class="icon-search form-control-feedback"></i>
                               </div>
                             </form>
                           </li>
@@ -343,7 +364,7 @@
                       <div class="btn-group">
                         <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-4" data-toggle="dropdown" aria-haspopup="true"
                           aria-expanded="false">
-                          <i class="fa fa-shopping-cart"></i>
+                          <i class="icon-shopping-cart"></i>
                           <span class="cart-count default-bg">8</span>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-4">
@@ -531,14 +552,14 @@
                 <div class="btn-group">
                   <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
-                    <i class="fa fa-search"></i>
+                    <i class="icon-search"></i>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-1">
                     <li>
                       <form role="search" class="search-box margin-clear">
                         <div class="form-group has-feedback">
                           <input type="text" class="form-control" placeholder="Search">
-                          <i class="fa fa-search form-control-feedback"></i>
+                          <i class="icon-search form-control-feedback"></i>
                         </div>
                       </form>
                     </li>
@@ -547,7 +568,7 @@
                 <div class="btn-group">
                   <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
-                    <i class="fa fa-shopping-cart"></i>
+                    <i class="icon-shopping-cart"></i>
                     <span class="cart-count default-bg">8</span>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-2">
@@ -711,8 +732,7 @@
               <li data-transition="slidehorizontal" data-slotamount="default" data-masterspeed="default" data-title="Team Circle">
 
                 <!-- main image -->
-                <img src="images/home6.jpg" alt="slidebg1" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover"
-                  class="rev-slidebg">
+                <img src="images/home6.jpg" alt="slidebg1" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover" class="rev-slidebg">
 
                 <!-- Transparent Background -->
                 <div class="tp-caption dark-translucent-bg" data-x="center" data-y="center" data-start="0" data-transform_idle="o:1;" data-transform_in="o:0;s:600;e:Power2.easeInOut;"
@@ -778,8 +798,7 @@
               <li data-transition="slidehorizontal" data-slotamount="default" data-masterspeed="default" data-title="Team Work">
 
                 <!-- main image -->
-                <img src="images/home7.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover"
-                  class="rev-slidebg">
+                <img src="images/home7.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover" class="rev-slidebg">
 
                 <!-- Transparent Background -->
                 <div class="tp-caption dark-translucent-bg" data-x="center" data-y="center" data-start="0" data-transform_idle="o:1;" data-transform_in="o:0;s:600;e:Power2.easeInOut;"
@@ -911,7 +930,7 @@
                       <li class="list-inline-item">
                         <i class="text-default fa fa-map-marker pr-1"></i>One infinity loop, 54100</li>
                       <li class="list-inline-item">
-                        <a href="#" class="link-dark">
+                        <a href="tel:+00 1234567890" class="link-dark">
                           <i class="text-default fa fa-phone pl-10 pr-1"></i>+00 1234567890</a>
                       </li>
                       <li class="list-inline-item">
