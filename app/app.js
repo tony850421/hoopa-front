@@ -7,7 +7,7 @@ angular.module('myApp', [
   'myApp.Home',
   'myApp.News',
   'myApp.ViewNews',
-  'myApp.ProjectList',
+  'myApp.Projects',
   'myApp.ProjectDetails',
   'myApp.version',
   'myApp.Login',
