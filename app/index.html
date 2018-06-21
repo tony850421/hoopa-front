@@ -214,7 +214,7 @@
                   <div class="btn-group">
                     <a id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">
-                      <i class="icon-onlogin spanSignUp"></i> Login</a>
+                      <i class="icon-onlogin spanSignUp"></i> {{'LOGIN' | translate}}</a>
                     <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
                       <li>
                         <form class="login-form margin-clear">
@@ -228,7 +228,7 @@
                             <input type="password" class="form-control" placeholder="">
                             <i class="fa fa-lock form-control-feedback"></i>
                           </div>
-                          <a type="submit" class="btn btn-gray btn-sm" ng-click="login()">Log In</button>
+                          <a type="submit" class="btn btn-gray btn-sm" ng-click="login()">{{'LOGIN' | translate}}</button>
                             <span class="pl-1 pr-1">or</span>
                             <button type="submit" class="btn btn-sm">Sing Up</a>
                           <ul>
@@ -264,10 +264,10 @@
                       EN</a>
                     <ul id="language" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
                       <li href="" class="languageActive">
-                        <a class="colorInherit">Chinese</a>
+                        <a ng-click="setLanguage('cn_CN')" class="colorInherit">Chinese</a>
                       </li>
                       <li href="" class="languageActive">
-                        <a class="colorInherit">English</a>
+                        <a ng-click="setLanguage('en_EN')" class="colorInherit">English</a>
                       </li>
                       <li href="" class="languageActive">
                         <a class="colorInherit">Spanish</a>
@@ -989,7 +989,6 @@
     <script src="js/initLeanCloud.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="translate/translate.js"></script>
     <script src="app.js"></script>
     <script src="views/home/home.js"></script>
     <script src="views/news/news.js"></script>
@@ -1028,9 +1027,15 @@
     <!-- Custom Scripts -->
     <script src="js/custom.js"></script>
 
-    <!-- Angular Translate -->
-    <script src="bower_components/angular-translate/angular-translate.min.js"></script>   
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
 
+    <!-- Angular Translate -->
+    <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+    <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
 </body>
 
 </html>
