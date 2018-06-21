@@ -39,9 +39,9 @@ angular.module('myApp.Projects', ['ngRoute'])
           var productTitle = product.get('title');
           var productDescription = product.get('description');
           var productDesc = productDescription;
-          if (productDescription.length > 170) {
+          if (productDescription.length > 50) {
             productDesc = ''
-            for (var i = 0; i < 170; i++) {
+            for (var i = 0; i < 50; i++) {
               productDesc += productDescription[i];
             }
             productDesc += "...";
@@ -55,7 +55,7 @@ angular.module('myApp.Projects', ['ngRoute'])
           var productAddress = product.get('plainAddress');
           var productImageUrl;
           if (productImage) {
-            productImageUrl = productImage.thumbnailURL(500, 750);
+            productImageUrl = productImage.thumbnailURL(320, 200);
           } else {
             productImageUrl = 'img/LogoHoopa.png';
           }
