@@ -3,6 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
+  'pascalprecht.translate',
   'myApp.Main',
   'myApp.Home',
   'myApp.News',
@@ -11,6 +12,7 @@ angular.module('myApp', [
   'myApp.ProjectDetails',
   'myApp.version',
   'myApp.Login',
+  'myApp.Translate'
 ]).
 
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

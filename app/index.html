@@ -206,8 +206,10 @@
                 <!-- ================ -->
                 <div class="header-top-dropdown text-right">
                   <div class="btn-group">
-                    <a href="page-signup.html" class="btn btn-sm paddingLR10">
-                      <span class="icon-user spanSignUp"></span> Sign Up</a>
+                    <a href="" class="btn btn-sm paddingLR10">
+                      <span class="icon-user spanSignUp"></span>
+                      {{'SIGNUP' | translate}}
+                    </a>
                   </div>
                   <div class="btn-group">
                     <a id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret" data-toggle="dropdown"
@@ -259,7 +261,7 @@
                   <div class="btn-group">
                     <a id="header-top-drop-2" type="button" class="btn dropdown-toggle btn-sm paddingLR10" data-toggle="dropdown" aria-haspopup="true"
                       aria-expanded="false">
-                      CN</a>
+                      EN</a>
                     <ul id="language" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
                       <li href="" class="languageActive">
                         <a class="colorInherit">Chinese</a>
@@ -987,6 +989,7 @@
     <script src="js/initLeanCloud.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="translate/translate.js"></script>
     <script src="app.js"></script>
     <script src="views/home/home.js"></script>
     <script src="views/news/news.js"></script>
@@ -1024,6 +1027,10 @@
     <script src="js/template.js"></script>
     <!-- Custom Scripts -->
     <script src="js/custom.js"></script>
+
+    <!-- Angular Translate -->
+    <script src="bower_components/angular-translate/angular-translate.min.js"></script>   
+
 </body>
 
 </html>

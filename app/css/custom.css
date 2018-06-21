@@ -236,11 +236,16 @@ h6 {
     min-width: 160px !important;
 }
 
-.languageActive:hover{
+.languageActive {
+    font-weight: 300;
+    color: #78787a;
+}
+
+.languageActive:hover {
     cursor: pointer;
     color: #ff6700 !important;
 }
 
-.colorInherit{
+.colorInherit {
     color: inherit !important;
 }
