@@ -47,14 +47,14 @@
 
  .background-slide-1{
     background-color: #283a52 !important;
- }
+}
 
- .btn-default{
+.btn-default {
     background-color: #ff6700 !important;
     border-color: #ff6700 !important;
- }
+}
 
- a:hover {
+a:hover {
     color: #ff6700 !important;
 }
 
@@ -62,12 +62,12 @@ a {
     color: #78787a !important;
 }
 
-.header-dropdown-buttons .btn-group > .btn:hover {
+.header-dropdown-buttons .btn-group>.btn:hover {
     background-color: #d8d8d8 !important;
     border-color: #d8d8d8 !important;
 }
 
-.header-dropdown-buttons .btn-group > .btn {
+.header-dropdown-buttons .btn-group>.btn {
     background-color: #f2f2f2 !important;
     border-color: #f2f2f2 !important;
 }
@@ -77,80 +77,175 @@ a {
     color: #ffffff;
 }
 
-header:not(.dark) .mega-menu .menu > li > a:hover i, header:not(.dark) .dropdown-menu > li > a:hover i, header:not(.dark) .mega-menu .menu > li.active > a i, header:not(.dark) .dropdown-menu > li.active > a i {
-	color: #ff6700;
+header:not(.dark) .mega-menu .menu>li>a:hover i,
+header:not(.dark) .dropdown-menu>li>a:hover i,
+header:not(.dark) .mega-menu .menu>li.active>a i,
+header:not(.dark) .dropdown-menu>li.active>a i {
+    color: #ff6700;
 }
 
-.paddingRight0{
+.paddingRight0 {
     padding-right: 0px;
 }
 
-.paddingLeft0{
+.paddingLeft0 {
     padding-left: 0px;
 }
 
-#qr-footer{
+#qr-footer {
     width: 130px !important;
 }
 
-.borderRight{
+.borderRight {
     border-right: 2px solid #f2f2f2;
 }
 
-.borderLeft{
+.borderLeft {
     border-left: 2px solid #f2f2f2;
 }
 
-.paddingBottom20{
+.paddingBottom20 {
     padding-bottom: 20px !important;
 }
 
-.text-default{
+.text-default {
     color: #ff6700 !important;
 }
 
-.icon.default-bg{
+.icon.default-bg {
     background-color: #ff6700 !important;
 }
 
-.imageProjectHome{
+.imageProjectHome {
     width: 285px !important;
     height: 190px !important;
     object-fit: cover !important;
 }
 
-.social-links:not(.animated-effect-1) li.skype a:hover, .colored.social-links li.skype a, .social-links.animated-effect-1 li.skype a::after, .btn.skype {
-	color: #ffffff !important;
+.social-links:not(.animated-effect-1) li.skype a:hover,
+.colored.social-links li.skype a,
+.social-links.animated-effect-1 li.skype a::after,
+.btn.skype {
+    color: #ffffff !important;
 }
 
-.social-links:not(.animated-effect-1) li.linkedin a:hover, .colored.social-links li.linkedin a, .social-links.animated-effect-1 li.linkedin a::after, .btn.linkedin {
-	color: #ffffff !important;
+.social-links:not(.animated-effect-1) li.linkedin a:hover,
+.colored.social-links li.linkedin a,
+.social-links.animated-effect-1 li.linkedin a::after,
+.btn.linkedin {
+    color: #ffffff !important;
 }
 
-.social-links:not(.animated-effect-1) li.googleplus a:hover, .colored.social-links li.googleplus a, .social-links.animated-effect-1 li.googleplus a::after, .btn.googleplus {
-	color: #ffffff !important;
+.social-links:not(.animated-effect-1) li.googleplus a:hover,
+.colored.social-links li.googleplus a,
+.social-links.animated-effect-1 li.googleplus a::after,
+.btn.googleplus {
+    color: #ffffff !important;
 }
 
-.social-links:not(.animated-effect-1) li.youtube a:hover, .colored.social-links li.youtube a, .social-links.animated-effect-1 li.youtube a::after, .btn.youtube {
-	background-color: #b31217 !important;
-	border-color: #b31217 !important;
-	color: #ffffff !important;
+.social-links:not(.animated-effect-1) li.youtube a:hover,
+.colored.social-links li.youtube a,
+.social-links.animated-effect-1 li.youtube a::after,
+.btn.youtube {
+    background-color: #b31217 !important;
+    border-color: #b31217 !important;
+    color: #ffffff !important;
 }
 
-.social-links:not(.animated-effect-1) li.flickr a:hover, .colored.social-links li.flickr a, .social-links.animated-effect-1 li.flickr a::after, .btn.flickr {
-	color: #ffffff !important;
+.social-links:not(.animated-effect-1) li.flickr a:hover,
+.colored.social-links li.flickr a,
+.social-links.animated-effect-1 li.flickr a::after,
+.btn.flickr {
+    color: #ffffff !important;
 }
 
-.social-links:not(.animated-effect-1) li.facebook a:hover, .colored.social-links li.facebook a, .social-links.animated-effect-1 li.facebook a::after, .btn.facebook {
-	color: #ffffff !important;
+.social-links:not(.animated-effect-1) li.facebook a:hover,
+.colored.social-links li.facebook a,
+.social-links.animated-effect-1 li.facebook a::after,
+.btn.facebook {
+    color: #ffffff !important;
 }
 
-.social-links:not(.animated-effect-1) li.pinterest a:hover, .colored.social-links li.pinterest a, .social-links.animated-effect-1 li.pinterest a::after, .btn.pinterest {
-	color: #ffffff !important;
+.social-links:not(.animated-effect-1) li.pinterest a:hover,
+.colored.social-links li.pinterest a,
+.social-links.animated-effect-1 li.pinterest a::after,
+.btn.pinterest {
+    color: #ffffff !important;
 }
 
-.social-links:not(.animated-effect-1) li.twitter a:hover, .colored.social-links li.twitter a, .social-links.animated-effect-1 li.twitter a::after, .btn.twitter {
-	background-color: #55acee !important;
-	border-color: #55acee !important;
-	color: #ffffff !important;
+.social-links:not(.animated-effect-1) li.twitter a:hover,
+.colored.social-links li.twitter a,
+.social-links.animated-effect-1 li.twitter a::after,
+.btn.twitter {
+    background-color: #55acee !important;
+    border-color: #55acee !important;
+    color: #ffffff !important;
+}
+
+.hoverButtonProject:hover {
+    border: 1px solid #d8d8d8 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #3c3c3c !important;
+}
+
+.activeProjectFilter {
+    border: 1px solid #d8d8d8 !important;
+    color: #ff6700 !important;
+}
+
+.fontWeight400 {
+    font-weight: 300 !important;
+}
+
+.spanSignUp {
+    font-size: 18px;
+    vertical-align: middle !important;
+}
+
+.iconSpanHome {
+    font-size: 34px;
+    vertical-align: middle;
+}
+
+.verticalAlignMiddel {
+    vertical-align: middle !important;
+}
+
+.textWhite {
+    color: white !important;
+}
+
+.paddingLR10 {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+#language {
+    position: absolute;
+    transform: translate3d(-100px, 29px, 0px) !important;
+    top: 0px;
+    left: 0px;
+    will-change: transform;
+    min-width: 160px !important;
+}
+
+.languageActive {
+    font-weight: 300;
+    color: #78787a;
+}
+
+.languageActive:hover {
+    cursor: pointer;
+    color: #ff6700 !important;
+}
+
+.colorInherit {
+    color: inherit !important;
 }
