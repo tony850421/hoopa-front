@@ -38,6 +38,7 @@
 
  .paddingBoxHome{
      padding: 60px;
+     background-color: #fafafa !important;
  }
 
  .padding0{
@@ -45,20 +46,20 @@
  }
 
  .background-slide-1{
-    background: url("../images/homeBlue.png") 50% 0px no-repeat;
+    background-color: #283a52 !important;
  }
 
  .btn-default{
-    background-color: #ff6801 !important;
-    border-color: #ff6801 !important;
+    background-color: #ff6700 !important;
+    border-color: #ff6700 !important;
  }
 
  a:hover {
-    color: #ff6801 !important;
+    color: #ff6700 !important;
 }
 
 a {
-    color: #9B9DA1 !important;
+    color: #78787a !important;
 }
 
 .header-dropdown-buttons .btn-group > .btn:hover {
@@ -72,12 +73,12 @@ a {
 }
 
 .default-bg {
-    background-color: #ff6801;
+    background-color: #ff6700;
     color: #ffffff;
 }
 
 header:not(.dark) .mega-menu .menu > li > a:hover i, header:not(.dark) .dropdown-menu > li > a:hover i, header:not(.dark) .mega-menu .menu > li.active > a i, header:not(.dark) .dropdown-menu > li.active > a i {
-	color: #ff6801;
+	color: #ff6700;
 }
 
 .paddingRight0{
@@ -105,11 +106,11 @@ header:not(.dark) .mega-menu .menu > li > a:hover i, header:not(.dark) .dropdown
 }
 
 .text-default{
-    color: #ff6801 !important;
+    color: #ff6700 !important;
 }
 
 .icon.default-bg{
-    background-color: #ff6801 !important;
+    background-color: #ff6700 !important;
 }
 
 .imageProjectHome{
