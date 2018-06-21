@@ -249,3 +249,7 @@ h6 {
 .colorInherit {
     color: inherit !important;
 }
+
+.fixed.header .main-navigation.animated .navbar-nav > li > a {
+	font-size: 14px !important;
+}

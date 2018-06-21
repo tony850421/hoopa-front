@@ -261,16 +261,16 @@
                   <div class="btn-group">
                     <a id="header-top-drop-2" type="button" class="btn dropdown-toggle btn-sm paddingLR10" data-toggle="dropdown" aria-haspopup="true"
                       aria-expanded="false">
-                      EN</a>
+                      {{languageShort}}</a>
                     <ul id="language" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
-                      <li href="" class="languageActive">
-                        <a ng-click="setLanguage('cn_CN')" class="colorInherit">Chinese</a>
+                      <li href="" class="languageActive" ng-click="setLanguage('cn_CN')">
+                        <a class="colorInherit">{{'CHINESE' | translate}}</a>
                       </li>
-                      <li href="" class="languageActive">
-                        <a ng-click="setLanguage('en_EN')" class="colorInherit">English</a>
+                      <li href="" class="languageActive" ng-click="setLanguage('en_EN')">
+                        <a class="colorInherit">{{'ENGLISH' | translate}}</a>
                       </li>
-                      <li href="" class="languageActive">
-                        <a class="colorInherit">Spanish</a>
+                      <li href="" class="languageActive" ng-click="setLanguage('es_ES')">
+                        <a class="colorInherit">{{'SPANISH' | translate}}</a>
                       </li>
                     </ul>
                   </div>
@@ -430,111 +430,111 @@
                       <ul class="navbar-nav ml-xl-auto">
 
                         <li class="nav-item dropdown ">
-                          <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                          <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'HOME' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Group Overview</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'GROUPOVERVIEW' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Group Introduction</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'GROUPINTRODUCTION' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Org. structure</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'STRUCTURE' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Core Team</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'CORETEAM' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Development history</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'DEVHISTORY' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Group honors</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'GROUPHONORS' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Chairman's Message</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'CHAIRMAN' | translate }}</a>
                             </li>
                           </ul>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                          <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'SERVICES' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Business System</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'BSYSTEM' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Service process</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'SPROCESS' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Service Advantages</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'SADVANTAGES' | translate }}</a>
                             </li>
                           </ul>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
+                          <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'NEWS' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="" ng-click="customGoTo('news/1')">
-                                <i class="fa fa-suitcase pr-2"></i>Media coverage</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'MCOVERAGE' | translate }}</a>
                             </li>
                             <li>
                               <a href="" ng-click="customGoTo('news/2')">
-                                <i class="fa fa-suitcase pr-2"></i>Latest News</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'LNEWS' | translate }}</a>
                             </li>
                             <li>
                               <a href="" ng-click="customGoTo('news/3')">
-                                <i class="fa fa-suitcase pr-2"></i>Industry News</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'INEWS' | translate }}</a>
                             </li>
                           </ul>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Assets</a>
+                          <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'ASSETS' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Investment promotion</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'IPROMOTION' | translate }}</a>
                             </li>
                             <li>
                               <a ng-click="customGoTo('projects')">
-                                <i class="fa fa-suitcase pr-2"></i>Project list</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'PLIST' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Featured Cases</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'FCASES' | translate }}</a>
                             </li>
                           </ul>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research</a>
+                          <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'RESEARCH' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Research Report</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'RREPORT' | translate }}</a>
                             </li>
                           </ul>
                         </li>
                         <li class="nav-item ">
-                          <a href="#" class="nav-link" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MBA</a>
+                          <a href="#" class="nav-link" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'MBA' | translate }}</a>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Us</a>
+                          <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'CONTACTUS' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Branch offices</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'BOFFICES' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>Talent Recruitment</a>
+                                <i class="fa fa-suitcase pr-2"></i>{{'TRECRUIMENT' | translate }}</a>
                             </li>
                           </ul>
                         </li>
