@@ -39,5 +39,10 @@
     "OURF": "我们",
     "WEBP": "网络平台",
     "PROJECTS": "项目",
-    "PARTNERS": "合作 伙伴"
+    "PARTNERS": "合作 伙伴",
+    "USERNAME": "用户",
+    "PASSWORD": "密码",
+    "FORGOTPASS": "忘记密码了？",
+    "LOGINWITH": "登录",
+    "OR": "或"
 }

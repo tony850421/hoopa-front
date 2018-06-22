@@ -1,42 +1,64 @@
 <div class="paddingNews">
-  <section class="main-container">
+  <section class="main-container paddingBottom0">
 
     <div class="container">
       <div class="row">
-        <div class="main col-lg-8 order-lg-2 ml-xl-auto">
-          <!-- page-title start -->
-          <!-- ================ -->
-          <!-- <h1 class="page-title text-center">Our News</h1> -->
-          <!-- page-title end -->
+        <div class="main col-lg-8 ml-xl-auto">
           <div class="space-top paddingBottom60">
-            <div class="image-box style-4" ng-repeat="f in news">
-              <div class="row grid-space-0">
-                <div class="col-lg-6" ng-class="{'order-lg-2': $index%2 == 1}">
-                  <div class="overlay-container">
-                    <img ng-src="{{f.mainImage}}">
-                    <div class="overlay-to-top">
-                      <p class="small margin-clear">
-                        <em>{{f.title}}
-                          <!-- <br> Lorem ipsum dolor sit -->
-                        </em>
-                      </p>
+            <article class="blogpost" ng-repeat="f in news">
+              <div class="row grid-space-10">
+                <div class="col-lg-6">
+                  <div id="{{f.id}}" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators bottom margin-clear">
+                      <li data-target="#{{f.id}}" data-slide-to="{{$index}}" ng-class="{'active': $index == 0}" ng-repeat="n in f.newsMedia"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="carousel-item" ng-class="{'active': $index==0}" ng-repeat="n in f.newsMedia">
+                        <div class="overlay-container">
+                          <img class="imageNewsSlide" ng-src="{{n.image}}">
+                          <a class="overlay-link" href="" ng-click="goToProject(f.id)">
+                            <i class="fa fa-link"></i>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6" ng-class="{'order-lg-1': $index%2 == 1}">
-                  <div class="body paddingTop0" ng-class="{'text-right': $index%2 == 1}">
-                    <!-- <div class="pv-30 hidden-lg-down"></div> -->
-                    <h3>{{f.title}}</h3>
-                    <div class="separator-2"></div>
-                    <p class="margin-clear">{{f.content}}</p>
-                    <br>
-                    <a href="" class="btn btn-lg btn-gray-transparent btn-sm btn-animated margin-clear" ng-click="goToProject(f.id)">Read More
-                      <i class="fa fa-arrow-right pl-10"></i>
-                    </a>
+                <div class="col-lg-6">
+                  <header>
+                    <h3>
+                      <a href="">{{f.title}}</a>
+                    </h3>
+                    <div class="post-info">
+                      <span class="post-date">
+                        <i class="fa fa-calendar-o pr-1"></i>
+                        <span class="day">{{f.date.getDate()}}</span>
+                        <span class="month">{{month[f.date.getMonth()]}} {{f.date.getFullYear()}}</span>
+                      </span>
+                      <!-- <span class="submitted">
+                        <i class="fa fa-user pr-1 pl-1"></i> by
+                        <a href="#">John Doe</a>
+                      </span> -->
+                      <!-- <span class="comments">
+                        <i class="fa fa-comments-o pl-1 pr-1"></i>
+                        <a href="#">22 comments</a>
+                      </span> -->
+                    </div>
+                  </header>
+                  <div class="blogpost-content">
+                    <p>{{f.content}}</p>
+                    <div class="link pull-right marginRight13">
+                      <i class="fa fa-link pr-1 fontSize12"></i>
+                      <a class="fontSize12" ng-click="goToProject(f.id)" href="">{{'READMORE' | translate}}</a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+              <footer class="clearfix"></footer>
+            </article>
           </div>
           <!-- pagination start -->
           <nav aria-label="Page navigation" ng-show="newsPagination != 0">
@@ -60,7 +82,7 @@
           </nav>
           <!-- pagination end -->
         </div>
-        <aside class="col-lg-4 col-xl-3 order-lg-1">
+        <aside class="col-lg-4 col-xl-3 ml-xl-auto">
           <div class="sidebar">
             <div class="block clearfix">
               <h3 class="title">News</h3>
@@ -79,7 +101,7 @@
                 </ul>
               </nav>
             </div>
-            <div class="block clearfix">
+            <!-- <div class="block clearfix">
               <h3 class="title">Hot News</h3>
               <div class="separator-2"></div>
               <div id="carousel-portfolio-sidebar" class="carousel slide" data-ride="carousel">
@@ -99,6 +121,29 @@
                   </div>
                 </div>
               </div>
+            </div> -->
+
+            <div class="block clearfix">
+              <h3 class="title">Latest News</h3>
+              <div class="separator-2"></div>
+              <div class="media margin-clear marginBottom5" ng-repeat="n in news">
+                <div class="d-flex pr-2">
+                  <div class="overlay-container">
+                    <img class="media-object" ng-src="{{n.mainImage}}">
+                    <a ng-click="goToProject(n.id)" href="" class="overlay-link small">
+                      <i class="fa fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="media-body">
+                  <h6 class="media-heading">
+                    <a ng-click="goToProject(n.id)" href="">{{n.title}}</a>
+                  </h6>
+                  <p class="small margin-clear">
+                    <i class="fa fa-calendar pr-10"></i>{{month[n.date.getMonth()]}} {{n.date.getDate()}}, {{n.date.getFullYear()}} </p>
+                </div>
+              </div>
+              <hr>
             </div>
           </div>
         </aside>
@@ -106,3 +151,29 @@
     </div>
   </section>
 </div>
+
+<section class="section background-slide-1 dark-translucent-bg" style="background-position: 50% 42%;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="call-to-action text-center">
+          <div class="row">
+            <div class="col-lg-8">
+              <h1 class="title textWhite">Don't Miss Out Our Offers</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quasi explicabo consequatur consectetur, a atque
+                voluptate officiis eligendi nostrum.</p>
+            </div>
+            <div class="col-lg-4">
+              <br>
+              <p>
+                <a href="" class="btn btn-lg btn-outline-light btn-animated backgroundWhite">Learn More
+                  <i class="fa fa-arrow-right pl-20"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
