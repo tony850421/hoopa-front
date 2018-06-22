@@ -1,83 +1,53 @@
-<div>
-<!-- banner start -->
-<!-- ================ -->
-<div class="banner dark-translucent-bg padding-bottom-clear" style="background-image:url('images/shop-banner.jpg');background-position: 50% 32%;">
-  <!-- breadcrumb start -->
-  <!-- ================ -->
-  <!-- <div class="breadcrumb-container">
-          <div class="container">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><i class="fa fa-home pr-2"></i><a class="link-dark" href="index.html">Home</a></li>
-              <li class="breadcrumb-item active">Shop 4 Columns</li>
-            </ol>
-          </div>
-        </div> -->
-  <!-- breadcrumb end -->
-  <div class="container">
-    <div class="row justify-content-lg-center">
-      <div class="col-lg-8 text-center pv-20">
-        <h2 class="title object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">Wellcome to
-          <strong>Shop</strong>
-        </h2>
-        <div class="separator object-non-visible mt-10" data-animation-effect="fadeIn" data-effect-delay="100"></div>
-        <p class="text-center object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi perferendis magnam ea necessitatibus, officiis
-          voluptas odit! Aperiam omnis, cupiditate laudantium velit nostrum, exercitationem accusamus, possimus soluta illo
-          deserunt tempora qui.</p>
-      </div>
-    </div>
-  </div>
+<section class="paddingNews">
   <!-- section start -->
   <!-- ================ -->
-  <div class="dark-translucent-bg section">
-    <div class="container-fluid">
+  <div class="container">
+    <div class="row">
+
+      <!-- page-title start -->
+      <!-- ================ -->
+      <h2 class="page-title">Explore packages</h2>
+      <!-- page-title end -->
+    </div>
+
+    <div class="row">
       <!-- filters start -->
-      <div class="sorting-filters text-center mb-20 d-flex justify-content-center">
+      <div class="sorting-filters text-center mb-20 d-flex justify-content-center pull-right">
+
         <form class="form-inline">
-          <div class="form-group">
-            <label>Sort by</label>
-            <select class="form-control">
-              <option selected="selected">Date</option>
-              <option>Price</option>
-              <option>Model</option>
+          <div class="form-group ml-1">
+            <a href="" class="btn btn-default" ng-click="resetFilters()">Reset filters</a>
+          </div>
+          <div class="form-group ml-1">
+            <label>Text</label>
+            <input type="text" class="form-control" ng-model="filters.text">
+          </div>
+          <div class="form-group ml-1">
+            <label>Type</label>
+            <select id="type" class="form-control backgroundGray" ng-model="filters.type" ng-options="x for x in typeArrivalArray">
             </select>
           </div>
           <div class="form-group ml-1">
-            <label>Order</label>
-            <select class="form-control">
-              <option selected="selected">Acs</option>
-              <option>Desc</option>
+            <label>Province</label>
+            <select id="province" class="form-control backgroundGray" ng-model="filters.province" ng-options="x for x in provinces">
             </select>
           </div>
           <div class="form-group ml-1">
-            <label>Price $ (min/max)</label>
-            <input type="text" class="form-control">
-          </div>
-          <div class="form-group ml-1">
-            <label class="invisible">Price $ (max)</label>
-            <input type="text" class="form-control">
-          </div>
-          <div class="form-group ml-1">
-            <label>Category</label>
-            <select class="form-control">
-              <option selected="selected">Smartphones</option>
-              <option>Tablets</option>
-              <option>Smart Watches</option>
-              <option>Desktops</option>
-              <option>Software</option>
-              <option>Accessories</option>
+            <label>Amount</label>
+            <select id="amount" class="form-control backgroundGray" ng-model="filters.amount" ng-options="x for x in amountArray">
             </select>
           </div>
           <div class="form-group ml-1">
-            <a href="" class="btn btn-default">Submit</a>
+            <a href="" class="btn btn-default" ng-click="applyFiltersClick()">Apply filters</a>
           </div>
         </form>
       </div>
       <!-- filters end -->
     </div>
   </div>
-  <!-- section end -->
-</div>
-<!-- banner end -->
+</section>
+
+<!-- section end -->
 
 <!-- main-container start -->
 <!-- ================ -->
@@ -92,7 +62,7 @@
         <!-- pills start -->
         <!-- ================ -->
         <!-- Nav tabs -->
-        <ul class="nav nav-pills" role="tablist">
+        <!-- <ul class="nav nav-pills" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" href="#pill-1" role="tab" data-toggle="tab" title="Latest Arrivals">
               <i class="fa fa-star"></i> Latest Arrivals</a>
@@ -105,7 +75,7 @@
             <a class="nav-link" href="#pill-3" role="tab" data-toggle="tab" title="Top Sellers">
               <i class=" fa fa-arrow-up"></i> Top Sellers</a>
           </li>
-        </ul>
+        </ul> -->
         <!-- Tab panes -->
         <div class="tab-content clear-style">
           <div class="tab-pane active" id="pill-1">
@@ -114,9 +84,6 @@
                 <div class="listing-item white-bg bordered mb-20">
                   <div class="overlay-container">
                     <img class="imageProjectHome" ng-src="{{project.imageUrl}}">
-                    <!-- <a class="overlay-link popup-img-single" href="images/product-1.jpg">
-                      <i class="fa fa-search-plus"></i>
-                    </a> -->
                     <span class="badge">30% OFF</span>
                     <div class="overlay-to-top links">
                       <span class="small">
@@ -129,14 +96,14 @@
                   </div>
                   <div class="body">
                     <h3>
-                      <a >{{project.title}}</a>
+                      <a>{{project.title}}</a>
                     </h3>
                     <p class="small">{{project.description}}</p>
                     <div class="elements-list clearfix">
                       <span class="price">
-                        <del>$100.00</del> $70.00</span>
-                      <a href="#" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated">Add To Cart
-                        <i class="fa fa-shopping-cart"></i>
+                          <i class="fa fa-rmb"></i>{{project.debitAmount}}万</span>
+                      <a href="" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated">View more
+                        <i class="fa fa-arrow-right"></i>
                       </a>
                     </div>
                   </div>
@@ -151,30 +118,26 @@
         <nav aria-label="Page navigation">
           <ul class="pagination justify-content-center">
             <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
+              <a class="page-link" href="" aria-label="Previous" ng-click="begin()">
+                <i aria-hidden="true" class="fa fa-angle-double-left"></i>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="" aria-label="Previous" ng-click="previousPage()">
                 <i aria-hidden="true" class="fa fa-angle-left"></i>
-                <span class="sr-only">Previous</span>
               </a>
             </li>
             <li class="page-item active">
-              <a class="page-link" href="#">1</a>
+              <a class="page-link" href="">{{currentPage}}</a>
             </li>
             <li class="page-item">
-              <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">4</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">5</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
+              <a class="page-link" href="" aria-label="Next" ng-click="nextPage()">
                 <i aria-hidden="true" class="fa fa-angle-right"></i>
-                <span class="sr-only">Next</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="" aria-label="Next" ng-click="end()">
+                <i aria-hidden="true" class="fa fa-angle-double-right"></i>
               </a>
             </li>
           </ul>
@@ -187,76 +150,3 @@
 </section>
 <!-- main-container end -->
 </div>
-
-      <!-- main-container start -->
-      <!-- ================ -->
-      <div class="main-container dark-translucent-bg" style="background-image:url('images/background-img-6.jpg');">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-auto">
-              <!-- main start -->
-              <!-- ================ -->
-              <div class="main" data-animation-effect="fadeInUpSmall" data-effect-delay="100">
-                <div class="form-block p-30 light-gray-bg border-clear">
-                  <h2 class="title">Sign Up</h2>
-                  <form class="form-horizontal">
-                    <div class="form-group has-feedback row">
-                      <label for="inputName" class="col-md-3 control-label text-md-right col-form-label">First Name <span class="text-danger small">*</span></label>
-                      <div class="col-md-8">
-                        <input type="text" class="form-control" id="inputName" placeholder="Fisrt Name" required>
-                        <i class="fa fa-pencil form-control-feedback pr-4"></i>
-                      </div>
-                    </div>
-                    <div class="form-group has-feedback row">
-                      <label for="inputLastName" class="col-md-3 control-label text-md-right col-form-label">Last Name <span class="text-danger small">*</span></label>
-                      <div class="col-md-8">
-                        <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" required>
-                        <i class="fa fa-pencil form-control-feedback pr-4"></i>
-                      </div>
-                    </div>
-                    <div class="form-group has-feedback row">
-                      <label for="inputUserName" class="col-md-3 control-label text-md-right col-form-label">User Name <span class="text-danger small">*</span></label>
-                      <div class="col-md-8">
-                        <input type="text" class="form-control" id="inputUserName" placeholder="User Name" required>
-                        <i class="fa fa-user form-control-feedback pr-4"></i>
-                      </div>
-                    </div>
-                    <div class="form-group has-feedback row">
-                      <label for="inputEmail" class="col-md-3 control-label text-md-right col-form-label">Email <span class="text-danger small">*</span></label>
-                      <div class="col-md-8">
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
-                        <i class="fa fa-envelope form-control-feedback pr-4"></i>
-                      </div>
-                    </div>
-                    <div class="form-group has-feedback row">
-                      <label for="inputPassword" class="col-md-3 control-label text-md-right col-form-label">Password <span class="text-danger small">*</span></label>
-                      <div class="col-md-8">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
-                        <i class="fa fa-lock form-control-feedback pr-4"></i>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="ml-md-auto col-md-9">
-                        <div class="checkbox form-check">
-                          <input class="form-check-input" type="checkbox" required>
-                          <label class="form-check-label">
-                             Lorem ipsum <a href="#">dolor sit</a> and <a href="#">ametetot unamliage</a>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="ml-md-auto col-md-9">
-                        <button type="submit" class="btn btn-group btn-default btn-animated">Sign Up <i class="fa fa-check"></i></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <!-- main end -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- main-container end -->
-
