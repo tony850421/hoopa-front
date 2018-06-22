@@ -39,5 +39,10 @@
     "OURF": "Nuestra",
     "WEBP": "Plataforma web",
     "PROJECTS": "Projectos",
-    "PARTNERS": "Socios"
+    "PARTNERS": "Socios",
+    "USERNAME": "Usuario",
+    "PASSWORD": "Contraseña",
+    "FORGOTPASS": "¿Olvidó su contraseña?",
+    "LOGINWITH": "Iniciar sesión con",
+    "OR": "o"
 }
