@@ -40,7 +40,8 @@
   <link href="plugins/rs-plugin-5/css/navigation.css" rel="stylesheet">
   <link href="css/animations.css" rel="stylesheet">
   <link href="plugins/slick/slick.css" rel="stylesheet">
-
+  
+  <link href="bower_components/angular-carousel/dist/angular-carousel.css" rel="stylesheet">
   <!-- The Project's core CSS file -->
   <!-- Use css/rtl_style.css for RTL version -->
   <link href="css/style.css" rel="stylesheet">
@@ -882,29 +883,31 @@
 
     <!-- footer top start -->
     <!-- ================ -->
-    <!-- <div class="default-translucent-bg border-clear footer-top animated-text default-hovered" style="background-color:rgba(0,0,0,0.6);">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="call-to-action text-center">
-              <div class="row">
-                <div class="col-md-8">
-                  <h2 class="mt-4">Powerful Bootstrap Template</h2>
-                  <h2 class="mt-4">Waste no more time</h2>
-                </div>
-                <div class="col-md-4">
-                  <p class="mt-3">
-                    <a href="#" class="btn btn-animated btn-lg btn-gray-transparent radius-50">Purchase
-                      <i class="fa fa-cart-arrow-down pl-20"></i>
-                    </a>
-                  </p>
+    <section class="section background-slide-1 dark-translucent-bg" style="background-position: 50% 42%;">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="call-to-action text-center">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <h1 class="title textWhite">Don't Miss Out Our Offers</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quasi explicabo consequatur consectetur, a atque
+                      voluptate officiis eligendi nostrum.</p>
+                  </div>
+                  <div class="col-lg-4">
+                    <br>
+                    <p>
+                      <a href="" class="btn btn-lg btn-outline-light btn-animated backgroundWhite">Learn More
+                        <i class="fa fa-arrow-right pl-20"></i>
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div> -->
+      </section>
     <!-- footer top end -->
     </section>
     <!-- section end -->
@@ -991,6 +994,25 @@
   -->
     <script src="js/av-live-query.js"></script>
     <script src="js/initLeanCloud.js"></script>
+
+    <!-- Jquery and Bootstap core js files -->
+    <!-- <script src="plugins/jquery.min.js"></script> -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery Revolution Slider  -->
+    <script src="plugins/rs-plugin-5/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/rs-plugin-5/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Isotope javascript -->
+    <script src="plugins/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="plugins/isotope/isotope.pkgd.min.js"></script>
+    <!-- Magnific Popup javascript -->
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Appear javascript -->
+    <script src="plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script src="plugins/waypoints/sticky.min.js"></script>
+    <!-- Count To javascript -->
+    <script src="plugins/countTo/jquery.countTo.js"></script>
+
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="app.js"></script>
@@ -1006,26 +1028,14 @@
     <script src="components/version/version-directive.js"></script>
     <script src="components/version/interpolate-filter.js"></script>
 
-    <!-- Jquery and Bootstap core js files -->
-    <script src="plugins/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- jQuery Revolution Slider  -->
-    <script src="plugins/rs-plugin-5/js/jquery.themepunch.tools.min.js"></script>
-    <script src="plugins/rs-plugin-5/js/jquery.themepunch.revolution.min.js"></script>
-    <!-- Isotope javascript -->
-    <script src="plugins/isotope/imagesloaded.pkgd.min.js"></script>
-    <script src="plugins/isotope/isotope.pkgd.min.js"></script>
-    <!-- Magnific Popup javascript -->
-    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <!-- Appear javascript -->
-    <script src="plugins/waypoints/jquery.waypoints.min.js"></script>
-    <script src="plugins/waypoints/sticky.min.js"></script>
-    <!-- Count To javascript -->
-    <script src="plugins/countTo/jquery.countTo.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-carousel/dist/angular-carousel.js"></script>
+    
     <!-- Google Maps javascript -->
     <!-- <script src="js/google.map.config.js"></script> -->
     <!-- Slick carousel javascript -->
     <script src="plugins/slick/slick.min.js"></script>
+
     <!-- Initialization of Plugins -->
     <script src="js/template.js"></script>
     <!-- Custom Scripts -->

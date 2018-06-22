@@ -295,3 +295,20 @@ h6 {
 .paddingBottom0{
     padding-bottom: 0 !important;
 }
+
+ul[rn-carousel] {
+    width:400px;
+    height:200px;
+    margin: 0 auto;
+}
+
+.rn-carousel-controls {
+    margin-top: 100px;
+}
+
+
+ul[rn-carousel] li{
+    width:33%;
+    height:auto;
+    padding-left: 20px;
+}

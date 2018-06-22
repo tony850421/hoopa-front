@@ -13,7 +13,8 @@ angular.module('myApp', [
   'myApp.Projects',
   'myApp.ProjectDetails',
   'myApp.version',
-  'myApp.Login'
+  'myApp.Login',
+  'angular-carousel'
 ])
 
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
