@@ -324,11 +324,9 @@ angular.module('myApp.Projects', ['ngRoute'])
     };
 
     $scope.loginWithSmsCode = function () {
-
       console.log('loginWithSmsCode:' + ' ' + $scope.phoneNumber + ' ' + $scope.smsCode);
 
       AV.User.signUpOrlogInWithMobilePhone($scope.phoneNumber, $scope.smsCode).then(res => {
-
         console.log(res);
 
       }).catch(function (error) {
@@ -337,16 +335,13 @@ angular.module('myApp.Projects', ['ngRoute'])
     };
 
     $scope.requestSmsCode = function () {
-
       console.log('requestSmsCode ' + $scope.phoneNumber);
 
       AV.Cloud.requestSmsCode($scope.phoneNumber).then(res => {
-
         console.log(res);
         $rootScope.displayAlert('success', 'SMS Message sended OK');
 
       }).catch(function (error) {
-
         console.log(error);
         $rootScope.displayAlert('danger', error);
       });

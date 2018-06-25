@@ -197,7 +197,7 @@
               </div>
               <!-- header-top-first end -->
             </div>
-            <div class="col-9 col-sm-6 col-lg-3" ng-controller="LoginCtrl">
+            <div class="col-9 col-sm-6 col-lg-3">
 
               <!-- header-top-second start -->
               <!-- ================ -->
@@ -213,12 +213,11 @@
                     </a>
                   </div> -->
                   <div class="btn-group">
-                    <a id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret" data-toggle="dropdown"
+                    <a  ng-click="customGoTo('login')" id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">
                       <i class="icon-onlogin spanSignUp"></i> {{'LOGIN' | translate}}</a>
-                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
+                    <!-- <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
                       <li>
-                        <!-- <form class="login-form margin-clear"> -->
                           <div class="form-group has-feedback">
                             <label class="control-label"> {{'PHONENUMBER' | translate}}
                               <span class="text-danger small">*</span>
@@ -228,7 +227,7 @@
                                 <input type="text" class="form-control paddingRight12" placeholder="{{'PHONENUMBER' | translate}}">
                               </div>
                               <div class="col-md-6">
-                                <a class="btn btn-gray btn-sm buttonSenCodeLogin" ng-click="requestSmsCode()">{{'SENDCODE' | translate}}
+                                <a class="btn btn-gray btn-sm buttonSenCodeLogin" >{{'SENDCODE' | translate}}
                                   <i class="fa fa-check"></i>
                                 </a>
                               </div>
@@ -266,9 +265,8 @@
                               </ul>
                             </div>
                           </div>
-                        <!-- </form> -->
                       </li>
-                    </ul>
+                    </ul> -->
                   </div>
                   <div class="btn-group">
                     <a id="header-top-drop-1" type="button" class="btn dropdown-toggle btn-sm paddingLR10" data-toggle="dropdown" aria-haspopup="true"
@@ -1029,7 +1027,7 @@
     <script src="views/projects/projects.js"></script>
     <script src="views/project-details/project-details.js"></script>
     <script src="views/wishlist/wishlist.js"></script>
-    <script src="mainControllers/login.js"></script>
+    <script src="views/login/login.js"></script>
     <script src="mainControllers/main.js"></script>
 
     <script src="components/version/version.js"></script>
