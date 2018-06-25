@@ -7,7 +7,7 @@
 
       <!-- main start -->
       <!-- ================ -->
-      <div class="main col-12">
+      <div class="main">
 
         <!-- page-title start -->
         <!-- ================ -->
@@ -22,12 +22,12 @@
             <!-- Nav tabs -->
             <ul class="nav nav-pills">
               <li class="nav-item">
-                <a class="nav-link active" href="#pill-1" data-toggle="tab" title="images">
-                  <i class="fa fa-camera pr-1"></i> Photo</a>
+                <a class="nav-link active" href="" data-toggle="tab" title="images">
+                  <i class="fa fa-camera pr-1"></i>{{'PHOTO' | translate}}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill-2" data-toggle="tab" title="video">
-                  <i class="fa fa-video-camera pr-1"></i> Video</a>
+                <a class="nav-link" href="" data-toggle="tab" title="video">
+                  <i class="fa fa-video-camera pr-1"></i>{{'VIDEO' | translate}}</a>
               </li>
             </ul>
             <!-- Tab panes -->
@@ -49,48 +49,16 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="tab-pane" id="pill-2">
-                <div class="overlay-container">
-                  <img src="images/page-about-2.jpg" alt="">
-                  <a class="overlay-link" href="#">
-                    <i class="fa fa-link"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
+              </div>              
+            </div>            
             <!-- <span class="price">
-              <del>$199.00</del> $150.00</span> -->
-            <div class="mt-3">
-              <ul class="list margin-clear">
-                <li>
-                  <strong>Company: </strong>
-                  <span class="text-right">{{project.get('companyName')}}</span>
-                </li>
-                <li>
-                  <strong>Province: </strong>
-                  <span class="text-right">{{project.get('province')}}</span>
-                </li>
-                <li>
-                  <strong>Come from: </strong>
-                  <span class="text-right">{{project.get('comefrom')}}</span>
-                </li>
-                <li>
-                  <strong>Address: </strong>
-                  <span class="text-right">{{project.get('plainAddress')}}</span>
-                </li>
-                <li>
-                    <strong>Principal and interest of the debt: </strong>
-                    <span class="text-right colorPrimary"><i class="fa fa-rmb"></i>{{project.get('debitPricipalInterest')}}万</span>
-                  </li>
-              </ul>
-            </div>
+              <del>$199.00</del> $150.00</span> -->            
             <!-- pills end -->
-          </div>
+          </div>          
           <div class="col-lg-8 pv-30">
-            <h3 class="mt-4">Description</h3>
+            <h3 class="mt-4">{{'PDESC' | translate}}</h3>
             <p>{{project.get('description')}}</p>
-            <h4>Credit Highlights</h4>
+            <h4>{{'CHIGHL' | translate}}</h4>
             <p>{{project.get('creditHighlights')}}</p>
             <hr class="mb-10">
             <div class="clearfix mb-20">
@@ -101,38 +69,61 @@
                 <i class="fa fa-star text-default"></i>
                 <i class="fa fa-star"></i>
               </span>
-              <a href="#" class="wishlist">
-                <i class="fa fa-heart-o pl-10 pr-1"></i>Wishlist</a>
-              <ul class="pl-20 pull-right social-links circle small clearfix margin-clear animated-effect-1">
+              <a href="" class="wishlist">
+                <i class="fa fa-heart-o pl-10 pr-1"></i>{{'WISHLIST' | translate}}</a>
+              <!-- <ul class="pl-20 pull-right social-links circle small clearfix margin-clear animated-effect-1">
                 <li class="twitter">
-                  <a href="#">
+                  <a href="">
                     <i class="fa fa-twitter"></i>
                   </a>
                 </li>
                 <li class="googleplus">
-                  <a href="#">
+                  <a href="">
                     <i class="fa fa-google-plus"></i>
                   </a>
                 </li>
                 <li class="facebook">
-                  <a href="#">
+                  <a href="">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
-              </ul>
-            </div>
-            <div class="light-gray-bg p-20 bordered clearfix">
-              <span class="product price colorPrimary">
-                <i class="fa fa-rmb"></i>{{project.get('debitAmount')}}万</span>
-              <div class="product elements-list pull-right clearfix">
-                <input type="submit" value="Add to Cart" class="margin-clear btn btn-default backgroundColorBlue">
-              </div>
+              </ul> -->
             </div>
           </div>
         </div>
       </div>
       <!-- main end -->
-
+      <div class="col-md-12 light-gray-bg p-20 bordered clearfix">
+        <span class="product price colorPrimary">
+          <i class="fa fa-rmb"></i>{{project.get('debitAmount')}}万</span>
+        <div class="product elements-list pull-right clearfix">
+          <input type="submit" value="{{'MAKEANOFFER' | translate}}" class="margin-clear btn btn-default backgroundColorBlue">
+        </div>
+      </div>
+      <div class="mt-3">
+        <ul class="list margin-clear">
+          <li>
+            <strong>{{'PUCOMPANY' | translate}}</strong>
+            <span class="text-right">{{project.get('companyName')}}</span>
+          </li>
+          <li>
+            <strong>{{'PUPROVINCE' | translate}}</strong>
+            <span class="text-right">{{project.get('province')}}</span>
+          </li>
+          <li>
+            <strong>{{'CUFROM' | translate}}</strong>
+            <span class="text-right">{{project.get('comefrom')}}</span>
+          </li>
+          <li>
+            <strong>{{'PUADDRESS' | translate}} </strong>
+            <span class="text-right">{{project.get('plainAddress')}}</span>
+          </li>
+          <li>
+              <strong>{{'DUPRINCIPALI' | translate}}</strong>
+              <span class="text-right colorPrimary"><i class="fa fa-rmb"></i>{{project.get('debitPricipalInterest')}}万</span>
+            </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -148,19 +139,19 @@
         <ul class="nav nav-tabs style-4" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = true; tabCommentsVisible = false; tabBorrowersVisible = false; tabSponsorsVisible = false">
-              <i class="fa fa-files-o pr-1"></i>({{assetsList.length}}) Assets</a>
+              <i class="fa fa-files-o pr-1"></i>({{assetsList.length}}) {{'ASSETS' | translate}}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = false; tabBorrowersVisible = true; tabSponsorsVisible = false">
-              <i class="fa fa-files-o pr-1"></i>({{borrowerList.length}}) Borrowers</a>
+              <i class="fa fa-files-o pr-1"></i>({{borrowerList.length}}) {{'BORROWERS' | translate}}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = false; tabBorrowersVisible = false; tabSponsorsVisible = true">
-              <i class="fa fa-files-o pr-1"></i>({{sponsorsList.length}}) Sponsors</a>
+              <i class="fa fa-files-o pr-1"></i>({{sponsorsList.length}}) {{'SPONSORS' | translate}}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = true; tabBorrowersVisible = false; tabSponsorsVisible = false">
-              <i class="fa fa-star pr-1"></i>(3) Reviews</a>
+              <i class="fa fa-star pr-1"></i>(3) {{'REVIEWS' | translate}}</a>
           </li>
         </ul>
         <!-- Tab panes -->
@@ -170,17 +161,17 @@
               <h4 class="space-top">{{asset.get('title')}}</h4>
               <hr>
               <dl class="row">
-                <dt class="col-sm-3 text-sm-right">TARRIVAL</dt>
+                <dt class="col-sm-3 text-sm-right">{{'TARRIVAL' | translate}}</dt>
                 <dd class="col-sm-9">{{asset.get('typeArrival')}}</dd>
-                <dt class="col-sm-3 text-sm-right">CAREA</dt>
+                <dt class="col-sm-3 text-sm-right">{{'CAREA' | translate}}</dt>
                 <dd class="col-sm-9">{{asset.get('constructionArea')}}</dd>
-                <dt class="col-sm-3 text-sm-right">LAREA</dt>
+                <dt class="col-sm-3 text-sm-right">{{'LAREA' | translate}}</dt>
                 <dd class="col-sm-9">{{asset.get('landArea')}}</dd>
-                <dt class="col-sm-3 text-sm-right">ADDRESS</dt>
+                <dt class="col-sm-3 text-sm-right">{{'ADDRESS' | translate}}</dt>
                 <dd class="col-sm-9">{{asset.get('plainAddress')}}</dd>
-                <dt class="col-sm-3 text-sm-right">PROVINCE</dt>
+                <dt class="col-sm-3 text-sm-right">{{'PROVINCE' | translate}}</dt>
                 <dd class="col-sm-9">{{asset.get('province')}}</dd>
-                <dt class="col-sm-3 text-sm-right">LONGLATASSETS</dt>
+                <dt class="col-sm-3 text-sm-right">{{'LONGLATASSETS' | translate}}</dt>
                 <dd class="col-sm-9">({{asset.get('location').longitude+","+asset.get('location').latitude}})</dd>
               </dl>
               <hr>
@@ -191,9 +182,9 @@
               <h4 class="space-top">{{borrower.get('name')}}</h4>
               <hr>
               <dl class="row">
-                <dt class="col-sm-3 text-sm-right">BORROPDEB</dt>
+                <dt class="col-sm-3 text-sm-right">{{'BORROPDEB' | translate}}</dt>
                 <dd class="col-sm-9">{{borrower.get('principalDebit')}}</dd>
-                <dt class="col-sm-3 text-sm-right">BORROINTER</dt>
+                <dt class="col-sm-3 text-sm-right">{{'BORROINTER' | translate}}</dt>
                 <dd class="col-sm-9">{{borrower.get('interestCreditor')}}</dd>
               </dl>
               <hr>
@@ -204,9 +195,9 @@
               <h4 class="space-top">{{sponsor.get('name')}}</h4>
               <hr>
               <dl class="row">
-                <dt class="col-sm-3 text-sm-right">AMOUNT</dt>
+                <dt class="col-sm-3 text-sm-right">{{'AMOUNT' | translate}}</dt>
                 <dd class="col-sm-9">{{sponsor.get('amount')}}</dd>
-                <dt class="col-sm-3 text-sm-right">STYPE</dt>
+                <dt class="col-sm-3 text-sm-right">{{'TYPE' | translate}}</dt>
                 <dd class="col-sm-9">{{sponsor.get('type')}}</dd>
               </dl>
               <hr>
@@ -297,20 +288,20 @@
 
             <!-- comments form start -->
             <div class="comments-form">
-              <h2 class="title">Add your Review</h2>
+              <h2 class="title">{{'ADDREVIEW' | translate}}</h2>
               <form>
                 <div class="form-group has-feedback">
-                  <label for="name4">Name</label>
+                  <label for="name4">{{'NAME' | translate}}</label>
                   <input type="text" class="form-control" id="name4" placeholder="" required>
                   <i class="fa fa-user form-control-feedback"></i>
                 </div>
                 <div class="form-group has-feedback">
-                  <label for="subject4">Subject</label>
+                  <label for="subject4"></label>
                   <input type="text" class="form-control" id="subject4" placeholder="" required>
                   <i class="fa fa-pencil form-control-feedback"></i>
                 </div>
                 <div class="form-group">
-                  <label>Rating</label>
+                  <label>{{'RATING' | translate}}</label>
                   <select class="form-control" id="review">
                     <option value="five">5</option>
                     <option value="four">4</option>
@@ -320,11 +311,11 @@
                   </select>
                 </div>
                 <div class="form-group has-feedback">
-                  <label for="message4">Message</label>
+                  <label for="message4">{{'MESSAGE' | translate}}</label>
                   <textarea class="form-control" rows="8" id="message4" placeholder="" required></textarea>
                   <i class="fa fa-envelope-o form-control-feedback"></i>
                 </div>
-                <input type="submit" value="Submit" class="btn btn-default">
+                <input type="submit" value="{{'PPUBLISH' | translate}}" class="btn btn-default backgroundColorBlue">
               </form>
             </div>
             <!-- comments form end -->
