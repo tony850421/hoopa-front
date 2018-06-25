@@ -298,7 +298,7 @@
                 <div class="form-group has-feedback">
                   <label for="subject4"></label>
                   <input type="text" class="form-control" id="subject4" placeholder="" required>
-                  <i class="fa fa-pencil form-control-feedback"></i>
+                  <i class="fa fa-pencil form-control-feedback top22"></i>
                 </div>
                 <div class="form-group">
                   <label>{{'RATING' | translate}}</label>
@@ -328,20 +328,20 @@
       <aside class="col-lg-4 col-xl-3 ml-xl-auto">
         <div class="sidebar">
           <div class="block clearfix">
-            <h3 class="title">Related Products</h3>
+            <h3 class="title">{{"RECOMMENDEDPROJECT" | translate}}</h3>
             <div class="separator-2"></div>
-            <div class="media margin-clear">
+            <div class="media margin-clear" ng-repeat="p in projects" ng-hide="p.id == project.id">
               <div class="d-flex pr-2">
                 <div class="overlay-container">
-                  <img class="media-object" src="images/product-5.jpg" alt="blog-thumb">
-                  <a href="shop-product.html" class="overlay-link small">
+                  <img class="media-object recommendedProjectClass" ng-src="{{p.mainImage}}" alt="blog-thumb">
+                  <a href="" ng-click="goToProject(p.id)" class="overlay-link small">
                     <i class="fa fa-link"></i>
                   </a>
                 </div>
               </div>
               <div class="media-body">
                 <h6 class="media-heading">
-                  <a href="shop-product.html">Lorem ipsum dolor sit amet</a>
+                  <a href="" ng-click="goToProject(p.id)">{{p.title}}</a>
                 </h6>
                 <p class="margin-clear">
                   <i class="fa fa-star text-default"></i>
@@ -350,81 +350,10 @@
                   <i class="fa fa-star text-default"></i>
                   <i class="fa fa-star text-default"></i>
                 </p>
-                <p class="price">$99.00</p>
+                <p class="price colorPrimary">¥{{p.amount}}万</p>
               </div>
             </div>
-            <hr>
-            <div class="media margin-clear">
-              <div class="d-flex pr-2">
-                <div class="overlay-container">
-                  <img class="media-object" src="images/product-6.jpg" alt="blog-thumb">
-                  <a href="shop-product.html" class="overlay-link small">
-                    <i class="fa fa-link"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="media-body">
-                <h6 class="media-heading">
-                  <a href="shop-product.html">Eum repudiandae ipsam</a>
-                </h6>
-                <p class="margin-clear">
-                  <i class="fa fa-star text-default"></i>
-                  <i class="fa fa-star text-default"></i>
-                  <i class="fa fa-star text-default"></i>
-                  <i class="fa fa-star text-default"></i>
-                  <i class="fa fa-star"></i>
-                </p>
-                <p class="price">$299.00</p>
-              </div>
-            </div>
-            <hr>
-            <div class="media margin-clear">
-              <div class="d-flex pr-2">
-                <div class="overlay-container">
-                  <img class="media-object" src="images/product-7.jpg" alt="blog-thumb">
-                  <a href="shop-product.html" class="overlay-link small">
-                    <i class="fa fa-link"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="media-body">
-                <h6 class="media-heading">
-                  <a href="shop-product.html">Quia aperiam velit fuga</a>
-                </h6>
-                <p class="margin-clear">
-                  <i class="fa fa-star text-default"></i>
-                  <i class="fa fa-star text-default"></i>
-                  <i class="fa fa-star text-default"></i>
-                  <i class="fa fa-star text-default"></i>
-                  <i class="fa fa-star"></i>
-                </p>
-                <p class="price">$9.99</p>
-              </div>
-            </div>
-            <hr>
-            <div class="media margin-clear">
-              <div class="d-flex pr-2">
-                <div class="overlay-container">
-                  <img class="media-object" src="images/product-8.jpg" alt="blog-thumb">
-                  <a href="shop-product.html" class="overlay-link small">
-                    <i class="fa fa-link"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="media-body">
-                <h6 class="media-heading">
-                  <a href="shop-product.html">Fugit non natus officiis</a>
-                </h6>
-                <p class="margin-clear">
-                  <i class="fa fa-star text-default"></i>
-                  <i class="fa fa-star text-default"></i>
-                  <i class="fa fa-star text-default"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </p>
-                <p class="price">$399.00</p>
-              </div>
-            </div>
+            <hr>            
           </div>
         </div>
       </aside>

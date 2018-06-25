@@ -81,5 +81,6 @@
     "NAME": "Name",
     "SUBJECT": "Subject",
     "RATING": "Rating",
-    "MESSAGE": "Message"
+    "MESSAGE": "Message",
+    "RECOMMENDEDPROJECT": "Recommended assets"
 }
