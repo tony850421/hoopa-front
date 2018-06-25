@@ -133,11 +133,11 @@
   /*color: #78787a;*/
 }
 .icon-next:before {
-  content: "\e91b";
+  content: "\e91b" !important;
   /*color: #78787a;*/
 }
 .icon-previous:before {
-  content: "\e91c";
+  content: "\e91c" !important;
   /*color: #78787a;*/
 }
 .icon-30:before {

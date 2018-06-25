@@ -262,4 +262,9 @@ angular.module('myApp.Home', ['ngRoute'])
       console.log(id);
     };
 
+    $(window).load('/app/views/home/home.js', function () {
+      $("span.rn-carousel-control-next").addClass("icon-next");
+      $("span.rn-carousel-control-prev").addClass("icon-previous");
+    });
+
   }]);

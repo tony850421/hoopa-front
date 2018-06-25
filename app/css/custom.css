@@ -39,10 +39,6 @@
      width: 120px !important
  }
 
- .backgroundWhite{
-     background-color: white !important;
- }
-
  .paddingBoxHome{
      padding: 60px;
      background-color: #fafafa !important;
@@ -309,6 +305,38 @@ ul[rn-carousel] {
 
 ul[rn-carousel] li{
     width:33%;
-    height:auto;
+    height: 160px !important;
     padding-left: 20px;
+}
+
+.rn-carousel-control-next{
+    margin-top: 55px;
+    margin-right: -40px;
+    color: #ff6700 !important;
+}
+
+.rn-carousel-control-prev{
+    margin-top: 55px;
+    margin-left: -40px;
+    color: #ff6700 !important;
+}
+
+.backgroundWhite{
+    background-color: white !important;
+}
+
+#sectionPartners.dark-translucent-bg{
+    position: initial !important;
+}
+
+#sectionPartners.dark-translucent-bg, #sectionPartners.dark-translucent-bg h1, #sectionPartners.dark-translucent-bg h3, #sectionPartners.dark-translucent-bg h4, #sectionPartners.dark-translucent-bg h5, #sectionPartners.dark-translucent-bg h6{
+    color: #777777 !important;
+}
+
+#sectionPartners.dark-translucent-bg h2{
+    color: #777777 !important;
+}
+
+.paddingTop60{
+    padding-top: 60px !important;
 }
