@@ -81,5 +81,9 @@
     "NAME": "Nombre",
     "SUBJECT": "Asunto",
     "RATING": "Valoración",
-    "MESSAGE": "Mensaje"
+    "MESSAGE": "Mensaje",
+    "RECOMMENDEDPROJECT": "Activos recomendados",
+    "PHONENUMBER": "Número de teléfono",
+    "SENDCODE": "Enviar código",
+    "SMSCODE": "Código SMS"
 }

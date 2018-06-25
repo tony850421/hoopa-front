@@ -40,7 +40,7 @@
   <link href="plugins/rs-plugin-5/css/navigation.css" rel="stylesheet">
   <link href="css/animations.css" rel="stylesheet">
   <link href="plugins/slick/slick.css" rel="stylesheet">
-  
+
   <link href="bower_components/angular-carousel/dist/angular-carousel.css" rel="stylesheet">
   <!-- The Project's core CSS file -->
   <!-- Use css/rtl_style.css for RTL version -->
@@ -206,12 +206,12 @@
                 <!-- header top dropdowns start -->
                 <!-- ================ -->
                 <div class="header-top-dropdown text-right">
-                  <div class="btn-group">
+                  <!-- <div class="btn-group">
                     <a href="" class="btn btn-sm paddingLR10">
                       <span class="icon-user spanSignUp"></span>
                       {{'SIGNUP' | translate}}
                     </a>
-                  </div>
+                  </div> -->
                   <div class="btn-group">
                     <a id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">
@@ -220,45 +220,64 @@
                       <li>
                         <form class="login-form margin-clear">
                           <div class="form-group has-feedback">
-                            <label class="control-label"> {{'USERNAME' | translate}}</label>
-                            <input type="text" class="form-control" placeholder="">
-                            <i class="fa fa-user form-control-feedback"></i>
+                            <label class="control-label"> {{'PHONENUMBER' | translate}}
+                              <span class="text-danger small">*</span>
+                            </label>
+                            <div class="row">
+                              <div class="col-md-6 paddingRight0">
+                                <input type="text" class="form-control paddingRight12" placeholder="{{'PHONENUMBER' | translate}}">
+                                <!-- <i class="fa fa-phone form-control-feedback"></i> -->
+                              </div>
+                              <div class="col-md-6">
+                                <a class="btn btn-gray btn-sm buttonSenCodeLogin" ng-click="requestSmsCode()">{{'SENDCODE' | translate}}
+                                  <i class="fa fa-check"></i>
+                                </a>
+                              </div>
+                            </div>
                           </div>
                           <div class="form-group has-feedback">
-                            <label class="control-label"> {{'PASSWORD' | translate}}</label>
-                            <input type="password" class="form-control" placeholder="">
-                            <i class="fa fa-lock form-control-feedback"></i>
+                            <!-- <label class="control-label"> {{'SMSCODE' | translate}}
+                              <span class="text-danger small">*</span>
+                            </label> -->
+                            <input type="password" class="form-control paddingRight12" placeholder="{{'SMSCODE' | translate}}">
+                            <!-- <i class="fa fa-pencil form-control-feedback"></i> -->
                           </div>
                           <div class="row">
                             <div class="col-md-12">
-                              <a type="submit" class="btn btn-gray btn-sm pull-right" ng-click="login()">{{'LOGIN' | translate}}</a>
+                              <a type="submit" class="btn btn-gray btn-sm pull-right buttonSenCodeLogin col-md-5" ng-click="login()">{{'LOGIN' | translate}}
+                                  <i class="fa fa-user-o"></i>
+                              </a>
                             </div>
                           </div>
                           <!-- <span class="pl-1 pr-1 orClass"> {{'OR' | translate}}</span>
                             <a type="submit" class="btn btn-sm"> {{'SIGNUP' | translate}}</a> -->
-                          <ul class="listStyleNone">
+                          <!-- <ul class="listStyleNone">
                             <li>
                               <a href="" class="fontSize12"> {{'FORGOTPASS' | translate}}</a>
                             </li>
-                          </ul>
-                          <span class="text-center fontSize12 colorTextCustom"> {{'LOGINWITH' | translate}}</span>
-                          <ul class="social-links circle small colored clearfix">
-                            <li class="facebook">
-                              <a href="">
-                                <i class="fa fa-facebook"></i>
-                              </a>
-                            </li>
-                            <li class="twitter">
-                              <a href="">
-                                <i class="fa fa-twitter"></i>
-                              </a>
-                            </li>
-                            <li class="googleplus">
-                              <a href="">
-                                <i class="fa fa-google-plus"></i>
-                              </a>
-                            </li>
-                          </ul>
+                          </ul> -->
+                          <div class="row">
+                            <div class="col-md-12 marginTop10">
+                              <span class="text-center fontSize12 colorTextCustom"> {{'LOGINWITH' | translate}}</span>
+                              <ul class="social-links circle small colored clearfix">
+                                <li class="facebook">
+                                  <a href="">
+                                    <i class="fa fa-facebook"></i>
+                                  </a>
+                                </li>
+                                <li class="twitter">
+                                  <a href="">
+                                    <i class="fa fa-twitter"></i>
+                                  </a>
+                                </li>
+                                <li class="googleplus">
+                                  <a href="">
+                                    <i class="fa fa-google-plus"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
                         </form>
                       </li>
                     </ul>
@@ -884,30 +903,30 @@
     <!-- footer top start -->
     <!-- ================ -->
     <section class="section background-slide-1 dark-translucent-bg" style="background-position: 50% 42%;">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="call-to-action text-center">
-                <div class="row">
-                  <div class="col-lg-8">
-                    <h1 class="title textWhite">Don't Miss Out Our Offers</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quasi explicabo consequatur consectetur, a atque
-                      voluptate officiis eligendi nostrum.</p>
-                  </div>
-                  <div class="col-lg-4">
-                    <br>
-                    <p>
-                      <a href="" class="btn btn-lg btn-outline-light btn-animated backgroundWhite">Learn More
-                        <i class="fa fa-arrow-right pl-20"></i>
-                      </a>
-                    </p>
-                  </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="call-to-action text-center">
+              <div class="row">
+                <div class="col-lg-8">
+                  <h1 class="title textWhite">Don't Miss Out Our Offers</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quasi explicabo consequatur consectetur,
+                    a atque voluptate officiis eligendi nostrum.</p>
+                </div>
+                <div class="col-lg-4">
+                  <br>
+                  <p>
+                    <a href="" class="btn btn-lg btn-outline-light btn-animated backgroundWhite">Learn More
+                      <i class="fa fa-arrow-right pl-20"></i>
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
     <!-- footer top end -->
     </section>
     <!-- section end -->
@@ -1031,7 +1050,7 @@
 
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-carousel/dist/angular-carousel.js"></script>
-    
+
     <!-- Google Maps javascript -->
     <!-- <script src="js/google.map.config.js"></script> -->
     <!-- Slick carousel javascript -->

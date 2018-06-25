@@ -81,5 +81,9 @@
     "NAME": "名字",
     "SUBJECT": "主题",
     "RATING": "评级",
-    "MESSAGE": "消息"
+    "MESSAGE": "消息",
+    "RECOMMENDEDPROJECT": "推荐资产",
+    "PHONENUMBER": "电话号码",
+    "SENDCODE": "发送代码",
+    "SMSCODE": "SMS 代码"
 }

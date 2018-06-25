@@ -88,11 +88,15 @@ header:not(.dark) .dropdown-menu>li.active>a i {
 }
 
 .paddingRight0 {
-    padding-right: 0px;
+    padding-right: 0px !important;
+}
+
+.paddingRight12 {
+    padding-right: 12px !important;
 }
 
 .paddingLeft0 {
-    padding-left: 0px;
+    padding-left: 0px !important;
 }
 
 #qr-footer {
@@ -280,12 +284,20 @@ h6 {
     margin-top: 0 !important;
 }
 
+.marginTop10 {
+    margin-top: 10px !important;
+}
+
 .marginRight13 {
     margin-right: 13px;
 }
 
 .marginBottom5 {
     margin-bottom: 5px !important;
+}
+
+.marginBottom0 {
+    margin-bottom: 0px !important;
 }
 
 .paddingBottom0 {
@@ -428,6 +440,24 @@ ul.pagination .page-item.active .page-link,
     height: 60px;
 }
 
-.top22{
+.top22 {
     top: 22px !important;
+}
+
+.buttonSenCodeLogin {
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.minHeight410{
+    min-height: 410px !important;
+}
+
+.marginTop5P{
+    margin-top: 5% !important;
+}
+
+.backgroundGray{
+    background-color: #f2f2f2;
 }

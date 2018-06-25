@@ -82,5 +82,8 @@
     "SUBJECT": "Subject",
     "RATING": "Rating",
     "MESSAGE": "Message",
-    "RECOMMENDEDPROJECT": "Recommended assets"
+    "RECOMMENDEDPROJECT": "Recommended assets",
+    "PHONENUMBER": "Phone number",
+    "SENDCODE": "Send code",
+    "SMSCODE": "SMS Code"
 }
