@@ -44,5 +44,15 @@
     "PASSWORD": "Password",
     "FORGOTPASS": "Forgot your password?",
     "LOGINWITH": "Login with",
-    "OR": "or"
+    "OR": "or",
+    "EXPASSETS": "Explore assets",
+    "RESETFILTERS": "Reset filters",
+    "TEXT": "Text",
+    "TYPE": "Type",
+    "PROVINCE": "Province",
+    "AMOUNT": "Amount",
+    "APPLYFILTERS": "Apply filters",
+    "ADDWISHLIST": "Add to Wishlist",
+    "VIEWDETAILS": "View Details",
+    "VIEWMORE": "View more"
 }

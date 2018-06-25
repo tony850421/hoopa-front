@@ -7,7 +7,7 @@
 
       <!-- page-title start -->
       <!-- ================ -->
-      <h2 class="page-title">Explore packages</h2>
+      <h2 class="page-title">{{'EXPASSETS' | translate}}</h2>
       <!-- page-title end -->
     </div>
 
@@ -15,31 +15,31 @@
       <!-- filters start -->
       <div class="sorting-filters text-center mb-20 d-flex justify-content-center pull-right">
 
-        <form class="form-inline">
+        <form class="form-inline col-md-12">
           <div class="form-group ml-1">
-            <a href="" class="btn btn-default" ng-click="resetFilters()">Reset filters</a>
+            <a href="" class="btn btn-default backgroundColorBlue" ng-click="resetFilters()">{{'RESETFILTERS' | translate}}</a>
           </div>
           <div class="form-group ml-1">
-            <label>Text</label>
+            <label>{{'TEXT' | translate}}</label>
             <input type="text" class="form-control" ng-model="filters.text">
           </div>
           <div class="form-group ml-1">
-            <label>Type</label>
-            <select id="type" class="form-control backgroundGray" ng-model="filters.type" ng-options="x for x in typeArrivalArray">
+            <label>{{'TYPE' | translate}}</label>
+            <select id="type" class="form-control" ng-model="filters.type" ng-options="x for x in typeArrivalArray">
             </select>
           </div>
           <div class="form-group ml-1">
-            <label>Province</label>
-            <select id="province" class="form-control backgroundGray" ng-model="filters.province" ng-options="x for x in provinces">
+            <label>{{'PROVINCE' | translate}}</label>
+            <select id="province" class="form-control" ng-model="filters.province" ng-options="x for x in provinces">
             </select>
           </div>
           <div class="form-group ml-1">
-            <label>Amount</label>
-            <select id="amount" class="form-control backgroundGray" ng-model="filters.amount" ng-options="x for x in amountArray">
+            <label>{{'AMOUNT' | translate}}</label>
+            <select id="amount" class="form-control" ng-model="filters.amount" ng-options="x for x in amountArray">
             </select>
           </div>
           <div class="form-group ml-1">
-            <a href="" class="btn btn-default" ng-click="applyFiltersClick()">Apply filters</a>
+            <a href="" class="btn btn-default backgroundColorBlue" ng-click="applyFiltersClick()">{{'APPLYFILTERS' | translate}}</a>
           </div>
         </form>
       </div>
@@ -88,22 +88,22 @@
                     <span class="badge">30% OFF</span>
                     <div class="overlay-to-top links">
                       <span class="small">
-                        <a href="" class="btn-sm-link" ng-click="addToWhishList(project.id)">
+                        <a href="" class="btn-sm-link textWhite" ng-click="addToWhishList(project.id)">
                           <i class="fa fa-heart-o pr-10"></i>Add to Wishlist</a>
-                        <a href="" class="btn-sm-link" ng-click="goToProject(project.id)">
+                        <a href="" class="btn-sm-link textWhite" ng-click="goToProject(project.id)">
                           <i class="fa fa-link pr-1"></i>View Details</a>
                       </span>
                     </div>
                   </div>
                   <div class="body">
                     <h3>
-                      <a>{{project.title}}</a>
+                      <a ng-click="goToProject(project.id)" href="">{{project.title}}</a>
                     </h3>
                     <p class="small">{{project.description}}</p>
                     <div class="elements-list clearfix">
-                      <span class="price">
-                          <i class="fa fa-rmb"></i>{{project.debitAmount}}万</span>
-                      <a href="" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated" ng-click="goToProject(project.id)">View more
+                      <span class="price colorPrimary">
+                          <i class="fa fa-rmb colorPrimary"></i>{{project.debitAmount}}万</span>
+                      <a href="" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated backgroundColorBlue" ng-click="goToProject(project.id)">View more
                         <i class="fa fa-arrow-right"></i>
                       </a>
                     </div>

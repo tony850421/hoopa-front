@@ -44,5 +44,15 @@
     "PASSWORD": "Contraseña",
     "FORGOTPASS": "¿Olvidó su contraseña?",
     "LOGINWITH": "Iniciar sesión con",
-    "OR": "o"
+    "OR": "o",
+    "EXPASSETS": "Explorar activos",
+    "RESETFILTERS": "Restablecer filtros",
+    "TEXT": "Texto",
+    "TYPE": "Tipo",
+    "PROVINCE": "Provincia",
+    "AMOUNT": "Monto",
+    "APPLYFILTERS": "Aplicar Filtros",
+    "ADDWISHLIST": "Añadir a la lista de deseos",
+    "VIEWDETAILS": "Ver detalles",
+    "VIEWMORE": "Ver más"
 }

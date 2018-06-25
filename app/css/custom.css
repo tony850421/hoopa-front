@@ -340,3 +340,51 @@ ul[rn-carousel] li{
 .paddingTop60{
     padding-top: 60px !important;
 }
+
+.backgroundColorBlue{
+    background-color: #22447a !important;
+    border-color: #22447a !important;
+    color: white !important;
+}
+
+.backgroundColorBlue:hover{
+    background-color: #283a52 !important;
+    border-color: #283a52 !important;
+    color: white !important;
+}
+
+.colorPrimary {
+    color: #ff6700 !important;
+}
+
+ul.pagination .page-item .page-link, .pagination .page-item:first-child .page-link, .pagination .page-item:last-child .page-link, ul.pager .page-item .page-link {
+	text-align: center;
+	padding: 0;
+	height: 40px;
+	width: 40px;
+	border: 1px solid #283a52;
+	line-height: 39px;
+	background-color: #283a52;
+	color: #ffffff;
+	display: inline-block;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+}
+
+ul.pagination .page-item .page-link:hover, ul.pagination .page-item .page-link {
+	background-color: #283a52;
+    border-color: #283a52;
+    color: white !important;
+}
+
+ul.pagination .page-item .page-link:hover, ul.pagination .page-item .page-link:focus {
+	background-color: #22447a;
+    border-color: #22447a;
+    color: white !important;
+}
+
+ul.pagination .page-item.active .page-link, .page-item.active .page-link:hover, .page-item.active .page-link:focus {
+	background-color: #22447a;
+	border-color: #22447a;
+}
