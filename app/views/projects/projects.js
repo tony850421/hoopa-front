@@ -20,6 +20,9 @@ angular.module('myApp.Projects', ['ngRoute'])
     $scope.pageSize = 8;
     $scope.productsCount = 0;
 
+    $scope.phoneNumber = '';
+    $scope.smsCode = '';
+
     $scope.provinces = ['区域无限制', '安徽省', '北京市', '重庆市', '福建省', '广东省', '甘肃省', '广西壮族自治区', '贵州省', '河南省', '湖北省', '河北省',
       '海南省', '香港特别行政区', '黑龙江省', '湖南省', '吉林省', '江苏省', '江西省', '辽宁省', '澳门特别行政区', '內蒙古自治区',
       '宁夏回族自治区', '青海省', '四川省', '山东省', '上海市', '陕西省', '山西省', '天津市', '台湾省', '新疆维吾尔自治区',
@@ -41,7 +44,7 @@ angular.module('myApp.Projects', ['ngRoute'])
       text: ''
     };
 
-    $scope.resetFilters = function() {
+    $scope.resetFilters = function () {
       $scope.filters = {
         province: '区域无限制',
         type: '抵押物类型',
@@ -243,51 +246,51 @@ angular.module('myApp.Projects', ['ngRoute'])
       });
     };
 
-    $scope.applyFiltersClick = function() {
+    $scope.applyFiltersClick = function () {
       $scope.currentPage = 1;
       $scope.applyFilters();
     };
 
     $scope.applyFilters();
 
-    $scope.begin = function() {
+    $scope.begin = function () {
       $scope.currentPage = 1;
       $scope.applyFilters();
       $('html,body').scrollTop(0);
     };
 
-    $scope.end = function() {
+    $scope.end = function () {
       console.log($scope.productsCount);
-        var quotient = Math.floor($scope.productsCount/$scope.pageSize);
-        var remainder = $scope.productsCount % $scope.pageSize;
-        
-        $scope.currentPage = quotient;
-        if(remainder > 0) {
+      var quotient = Math.floor($scope.productsCount / $scope.pageSize);
+      var remainder = $scope.productsCount % $scope.pageSize;
+
+      $scope.currentPage = quotient;
+      if (remainder > 0) {
+        $scope.currentPage = quotient + 1;
+      }
+      $scope.applyFilters();
+      $('html,body').scrollTop(0);
+    };
+
+    $scope.nextPage = function () {
+      var quotient = Math.floor($scope.productsCount / $scope.pageSize);
+      var remainder = $scope.productsCount % $scope.pageSize;
+
+      if ($scope.currentPage == quotient) {
+        if (remainder > 0) {
           $scope.currentPage = quotient + 1;
         }
-        $scope.applyFilters();
-        $('html,body').scrollTop(0);
+      }
+
+      if ($scope.currentPage < quotient) {
+        $scope.currentPage = $scope.currentPage + 1;
+      }
+      $scope.applyFilters();
+      $('html,body').scrollTop(0);
     };
 
-    $scope.nextPage = function() {
-        var quotient = Math.floor($scope.productsCount/$scope.pageSize);
-        var remainder = $scope.productsCount % $scope.pageSize;
-        
-        if($scope.currentPage == quotient) {
-            if(remainder > 0) {
-              $scope.currentPage = quotient + 1;
-            }
-        }
-
-        if($scope.currentPage < quotient) {
-          $scope.currentPage = $scope.currentPage + 1;
-        }
-        $scope.applyFilters();
-        $('html,body').scrollTop(0);
-    };
-
-    $scope.previousPage = function() {
-      if($scope.currentPage > 1) {
+    $scope.previousPage = function () {
+      if ($scope.currentPage > 1) {
         $scope.currentPage = $scope.currentPage - 1;
         $scope.applyFilters();
       }
@@ -298,26 +301,56 @@ angular.module('myApp.Projects', ['ngRoute'])
       $rootScope.customGoTo('project-details/' + id);
     };
 
-    $scope.addToWhishList = function(id) {
+    $scope.addToWhishList = function (id) {
+
+      console.log('addToWhishList ' + id)
 
       var currentUser = AV.User.current();
-      if(currentUser) {
+      if (currentUser) {
         console.log(currentUser);
+      //   var project = AV.Object.createWithoutData('Project', id);
+
+      //   var shop = new AV.Object('ShopCar');
+      //   shop.set('user', currentUser);
+      //   shop.set('checked', false);
+      //   shop.set('project', project);
+      //   shop.save().then( res => {
+      //     $rootScope.displayAlert('success', 'Project added to your wishlist');
+      //   });
+
       } else {
         $scope.showLogin = true;
       }
     };
 
-    $scope.loginWithSmsCode = function() {
+    $scope.loginWithSmsCode = function () {
 
-      AV.Cloud.requestSmsCode('13817991464').then( res => {
+      console.log('loginWithSmsCode:' + ' ' + $scope.phoneNumber + ' ' + $scope.smsCode);
+
+      AV.User.signUpOrlogInWithMobilePhone($scope.phoneNumber, $scope.smsCode).then(res => {
 
         console.log(res);
 
       }).catch(function (error) {
-        // alert(JSON.stringify(error));
         console.log(error);
       });
+    };
+
+    $scope.requestSmsCode = function () {
+
+      console.log('requestSmsCode ' + $scope.phoneNumber);
+
+      AV.Cloud.requestSmsCode($scope.phoneNumber).then(res => {
+
+        console.log(res);
+        $rootScope.displayAlert('success', 'SMS Message sended OK');
+
+      }).catch(function (error) {
+
+        console.log(error);
+        $rootScope.displayAlert('danger', error);
+      });
+
     };
 
   }]);
