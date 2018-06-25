@@ -3,52 +3,52 @@
  * File Description: Place here your custom CSS styles
  */
 
- .paddingNews{
-     padding-left: 60px;
-     padding-right: 60px;
-     padding-top: 120px;
- }
+.paddingNews {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 120px;
+}
 
- .paddingBottom60{
-     padding-bottom: 60px;
- }
+.paddingBottom60 {
+    padding-bottom: 60px;
+}
 
- .marginLeftNews{
-     margin-left: 16.6% !important;
- }
+.marginLeftNews {
+    margin-left: 16.6% !important;
+}
 
- .paddingTop0{
-     padding-top: 0px !important;
- }
+.paddingTop0 {
+    padding-top: 0px !important;
+}
 
- .imageProjectRecommended{
-     object-fit: cover;
-     min-width: 260px;
-     max-height: 160px;
- }
+.imageProjectRecommended {
+    object-fit: cover;
+    min-width: 260px;
+    max-height: 160px;
+}
 
- .imageNewsSlide{
+.imageNewsSlide {
     object-fit: cover;
     min-width: 360px !important;
     min-height: 240px !important;
     max-height: 240px !important;
- }
+}
 
- .logo_img{
-     margin-top: -5px !important;
-     width: 120px !important
- }
+.logo_img {
+    margin-top: -5px !important;
+    width: 120px !important
+}
 
- .paddingBoxHome{
-     padding: 60px;
-     background-color: #fafafa !important;
- }
+.paddingBoxHome {
+    padding: 60px;
+    background-color: #fafafa !important;
+}
 
- .padding0{
-     padding: 0px !important;
- }
+.padding0 {
+    padding: 0px !important;
+}
 
- .background-slide-1{
+.background-slide-1 {
     background-color: #283a52 !important;
 }
 
@@ -253,48 +253,48 @@ h6 {
     color: inherit !important;
 }
 
-.fixed.header .main-navigation.animated .navbar-nav > li > a {
-	font-size: 14px !important;
+.fixed.header .main-navigation.animated .navbar-nav>li>a {
+    font-size: 14px !important;
 }
 
-.orClass{
+.orClass {
     font-size: 12px;
     line-height: 1.4666666667;
     border-radius: 3px;
     color: #78787a;
 }
 
-.listStyleNone{
+.listStyleNone {
     list-style: none;
 }
 
-.fontSize12{
+.fontSize12 {
     font-size: 12px;
 }
 
-.colorTextCustom{
+.colorTextCustom {
     color: #78787a;
 }
 
-.marginTop0{
+.marginTop0 {
     margin-top: 0 !important;
 }
 
-.marginRight13{
+.marginRight13 {
     margin-right: 13px;
 }
 
-.marginBottom5{
+.marginBottom5 {
     margin-bottom: 5px !important;
 }
 
-.paddingBottom0{
+.paddingBottom0 {
     padding-bottom: 0 !important;
 }
 
 ul[rn-carousel] {
-    width:400px;
-    height:200px;
+    width: 400px;
+    height: 200px;
     margin: 0 auto;
 }
 
@@ -302,52 +302,56 @@ ul[rn-carousel] {
     margin-top: 100px;
 }
 
-
-ul[rn-carousel] li{
-    width:33%;
+ul[rn-carousel] li {
+    width: 33%;
     height: 160px !important;
     padding-left: 20px;
 }
 
-.rn-carousel-control-next{
+.rn-carousel-control-next {
     margin-top: 55px;
     margin-right: -40px;
     color: #ff6700 !important;
 }
 
-.rn-carousel-control-prev{
+.rn-carousel-control-prev {
     margin-top: 55px;
     margin-left: -40px;
     color: #ff6700 !important;
 }
 
-.backgroundWhite{
+.backgroundWhite {
     background-color: white !important;
 }
 
-#sectionPartners.dark-translucent-bg{
+#sectionPartners.dark-translucent-bg {
     position: initial !important;
 }
 
-#sectionPartners.dark-translucent-bg, #sectionPartners.dark-translucent-bg h1, #sectionPartners.dark-translucent-bg h3, #sectionPartners.dark-translucent-bg h4, #sectionPartners.dark-translucent-bg h5, #sectionPartners.dark-translucent-bg h6{
+#sectionPartners.dark-translucent-bg,
+#sectionPartners.dark-translucent-bg h1,
+#sectionPartners.dark-translucent-bg h3,
+#sectionPartners.dark-translucent-bg h4,
+#sectionPartners.dark-translucent-bg h5,
+#sectionPartners.dark-translucent-bg h6 {
     color: #777777 !important;
 }
 
-#sectionPartners.dark-translucent-bg h2{
+#sectionPartners.dark-translucent-bg h2 {
     color: #777777 !important;
 }
 
-.paddingTop60{
+.paddingTop60 {
     padding-top: 60px !important;
 }
 
-.backgroundColorBlue{
+.backgroundColorBlue {
     background-color: #22447a !important;
     border-color: #22447a !important;
     color: white !important;
 }
 
-.backgroundColorBlue:hover{
+.backgroundColorBlue:hover {
     background-color: #283a52 !important;
     border-color: #283a52 !important;
     color: white !important;
@@ -357,34 +361,73 @@ ul[rn-carousel] li{
     color: #ff6700 !important;
 }
 
-ul.pagination .page-item .page-link, .pagination .page-item:first-child .page-link, .pagination .page-item:last-child .page-link, ul.pager .page-item .page-link {
-	text-align: center;
-	padding: 0;
-	height: 40px;
-	width: 40px;
-	border: 1px solid #283a52;
-	line-height: 39px;
-	background-color: #283a52;
-	color: #ffffff;
-	display: inline-block;
-	-webkit-border-radius: 100%;
-	-moz-border-radius: 100%;
-	border-radius: 100%;
+ul.pagination .page-item .page-link,
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link,
+ul.pager .page-item .page-link {
+    text-align: center;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #283a52;
+    line-height: 39px;
+    background-color: #283a52;
+    color: #ffffff;
+    display: inline-block;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
 }
 
-ul.pagination .page-item .page-link:hover, ul.pagination .page-item .page-link {
-	background-color: #283a52;
+ul.pagination .page-item .page-link:hover,
+ul.pagination .page-item .page-link {
+    background-color: #283a52;
     border-color: #283a52;
     color: white !important;
 }
 
-ul.pagination .page-item .page-link:hover, ul.pagination .page-item .page-link:focus {
-	background-color: #22447a;
+ul.pagination .page-item .page-link:hover,
+ul.pagination .page-item .page-link:focus {
+    background-color: #22447a;
     border-color: #22447a;
     color: white !important;
 }
 
-ul.pagination .page-item.active .page-link, .page-item.active .page-link:hover, .page-item.active .page-link:focus {
-	background-color: #22447a;
-	border-color: #22447a;
+ul.pagination .page-item.active .page-link,
+.page-item.active .page-link:hover,
+.page-item.active .page-link:focus {
+    background-color: #22447a;
+    border-color: #22447a;
+}
+
+.padding--15 {
+    padding-left: -15px !important;
+    padding-right: -15px !important;
+}
+
+.nav-tabs.style-4>li>a.active,
+.nav-tabs.style-4>li>a.active:hover,
+.nav-tabs.style-4>li>a.active:focus {
+    color: #ffffff !important;
+    cursor: default;
+    background-color: #283a52 !important;
+    border-color: #283a52 !important;
+    border-bottom-color: transparent;
+}
+
+.nav-tabs.style-4>li>a:hover {
+    color: #ffffff !important;
+    background-color: #22447a !important;
+    border-color: #22447a !important;
+    border-bottom-color: #22447a !important;
+}
+
+.recommendedProjectClass {
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+}
+
+.top22{
+    top: 22px !important;
 }
