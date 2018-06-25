@@ -12,6 +12,7 @@ angular.module('myApp.Projects', ['ngRoute'])
   .controller('ProjectsCtrl', ['$rootScope', '$scope', '$routeParams', '$window', function ($rootScope, $scope, $routeParams, $window) {
 
     $rootScope.showBanner = false;
+    $scope.showLogin = false;
 
     $scope.products = [];
 
@@ -294,8 +295,29 @@ angular.module('myApp.Projects', ['ngRoute'])
     };
 
     $scope.goToProject = function (id) {
-      console.log('goToProject: ' + 'project-details/' + id);
       $rootScope.customGoTo('project-details/' + id);
+    };
+
+    $scope.addToWhishList = function(id) {
+
+      var currentUser = AV.User.current();
+      if(currentUser) {
+        console.log(currentUser);
+      } else {
+        $scope.showLogin = true;
+      }
+    };
+
+    $scope.loginWithSmsCode = function() {
+
+      AV.Cloud.requestSmsCode('13817991464').then( res => {
+
+        console.log(res);
+
+      }).catch(function (error) {
+        // alert(JSON.stringify(error));
+        console.log(error);
+      });
     };
 
   }]);
