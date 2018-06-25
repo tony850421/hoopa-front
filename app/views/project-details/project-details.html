@@ -80,9 +80,10 @@
                   <span class="text-right">{{project.get('plainAddress')}}</span>
                 </li>
                 <li>
-                    <strong>Principal and interest of the debt: </strong>
-                    <span class="text-right"><i class="fa fa-rmb"></i>{{project.get('debitPricipalInterest')}}万</span>
-                  </li>
+                  <strong>Principal and interest of the debt: </strong>
+                  <span class="text-right">
+                    <i class="fa fa-rmb"></i>{{project.get('debitPricipalInterest')}}万</span>
+                </li>
               </ul>
             </div>
             <!-- pills end -->
@@ -148,15 +149,15 @@
         <ul class="nav nav-tabs style-4" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = true; tabCommentsVisible = false; tabBorrowersVisible = false; tabSponsorsVisible = false">
-              <i class="fa fa-files-o pr-1"></i>Assets</a>
+              <i class="fa fa-files-o pr-1"></i>({{assetsList.length}}) Assets</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = false; tabBorrowersVisible = true; tabSponsorsVisible = false">
-              <i class="fa fa-files-o pr-1"></i>Borrowers</a>
+              <i class="fa fa-files-o pr-1"></i>({{borrowerList.length}}) Borrowers</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = false; tabBorrowersVisible = false; tabSponsorsVisible = true">
-              <i class="fa fa-files-o pr-1"></i>Sponsors</a>
+              <i class="fa fa-files-o pr-1"></i>({{sponsorsList.length}}) Sponsors</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = true; tabBorrowersVisible = false; tabSponsorsVisible = false">
@@ -166,42 +167,51 @@
         <!-- Tab panes -->
         <div class="tab-content padding-top-clear padding-bottom-clear">
           <div class="tab-pane" id="h2tab2" ng-class="{'active': tabAssetsVisible == true}">
-            <h4 class="space-top">Specifications</h4>
-            <hr>
-            <dl class="row">
-              <dt class="col-sm-3 text-sm-right">Consectetur</dt>
-              <dd class="col-sm-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
-              <dt class="col-sm-3 text-sm-right">Culla</dt>
-              <dd class="col-sm-9">Adipisci autem illo hic itaque nulla velit quod laboriosam ipsum in illum!</dd>
-              <dt class="col-sm-3 text-sm-right">Quas</dt>
-              <dd class="col-sm-9">Velit mollitia vel nemo, repudiandae quas nisi consectetur maiores beatae.</dd>
-              <dt class="col-sm-3 text-sm-right">Sapiente</dt>
-              <dd class="col-sm-9">Dolor, architecto, accusamus. Explicabo, culpa hic sapiente amet libero, recusandae laudantium consequatur
-                velit possimus ratione quo. Ipsum maxime officia quasi quos magni!</dd>
-              <dt class="col-sm-3 text-sm-right">Dignissimos</dt>
-              <dd class="col-sm-9">Odio cum deleniti mollitia, quisquam dignissimos voluptatem, unde rem alias.</dd>
-              <dt class="col-sm-3 text-sm-right">Adipisicing</dt>
-              <dd class="col-sm-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora rerum veritatis nam blanditiis.</dd>
-              <dt class="col-sm-3 text-sm-right">Werspiciatis</dt>
-              <dd class="col-sm-9">Rem nostrum sit magnam debitis quidem perspiciatis fuga fugit.</dd>
-            </dl>
-            <hr>
+            <div ng-repeat="asset in assetsList">
+              <h4 class="space-top">{{asset.get('title')}}</h4>
+              <hr>
+              <dl class="row">
+                <dt class="col-sm-3 text-sm-right">TARRIVAL</dt>
+                <dd class="col-sm-9">{{asset.get('typeArrival')}}</dd>
+                <dt class="col-sm-3 text-sm-right">CAREA</dt>
+                <dd class="col-sm-9">{{asset.get('constructionArea')}}</dd>
+                <dt class="col-sm-3 text-sm-right">LAREA</dt>
+                <dd class="col-sm-9">{{asset.get('landArea')}}</dd>
+                <dt class="col-sm-3 text-sm-right">ADDRESS</dt>
+                <dd class="col-sm-9">{{asset.get('plainAddress')}}</dd>
+                <dt class="col-sm-3 text-sm-right">PROVINCE</dt>
+                <dd class="col-sm-9">{{asset.get('province')}}</dd>
+                <dt class="col-sm-3 text-sm-right">LONGLATASSETS</dt>
+                <dd class="col-sm-9">({{asset.get('location').longitude+","+asset.get('location').latitude}})</dd>
+              </dl>
+              <hr>
+            </div>
           </div>
           <div class="tab-pane" id="h2tab2" ng-class="{'active': tabBorrowersVisible == true}">
-            <h4 class="space-top">Borrowers</h4>
-            <hr>
-            <dl class="row">
-              <dt class="col-sm-3 text-sm-right">Consectetur</dt>
-            </dl>
-            <hr>
+            <div ng-repeat="borrower in borrowerList">
+              <h4 class="space-top">{{borrower.get('name')}}</h4>
+              <hr>
+              <dl class="row">
+                <dt class="col-sm-3 text-sm-right">BORROPDEB</dt>
+                <dd class="col-sm-9">{{borrower.get('principalDebit')}}</dd>
+                <dt class="col-sm-3 text-sm-right">BORROINTER</dt>
+                <dd class="col-sm-9">{{borrower.get('interestCreditor')}}</dd>
+              </dl>
+              <hr>
+            </div>
           </div>
           <div class="tab-pane" id="h2tab2" ng-class="{'active': tabSponsorsVisible == true}">
-            <h4 class="space-top">Sponsors</h4>
-            <hr>
-            <dl class="row">
-              <dt class="col-sm-3 text-sm-right">Consectetur</dt>
-            </dl>
-            <hr>
+            <div ng-repeat="sponsor in sponsorsList">
+              <h4 class="space-top">{{sponsor.get('name')}}</h4>
+              <hr>
+              <dl class="row">
+                <dt class="col-sm-3 text-sm-right">AMOUNT</dt>
+                <dd class="col-sm-9">{{sponsor.get('amount')}}</dd>
+                <dt class="col-sm-3 text-sm-right">STYPE</dt>
+                <dd class="col-sm-9">{{sponsor.get('type')}}</dd>
+              </dl>
+              <hr>
+            </div>
           </div>
           <div class="tab-pane" id="h2tab3" ng-class="{'active': tabCommentsVisible == true}">
             <!-- comments start -->
