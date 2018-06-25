@@ -59,22 +59,38 @@
                 </div>
               </div>
             </div>
-            <h3 class="mt-3">
-              <a href="shop-product.html">Suscipit consequatur velit</a>
-            </h3>
-            <span class="price">
-              <del>$199.00</del> $150.00</span>
-            <h3 class="mt-3">
-              <a href="shop-product.html">Suscipit consequatur velit</a>
-            </h3>
-            <span class="price">
-              <del>$199.00</del> $150.00</span>
+            <!-- <span class="price">
+              <del>$199.00</del> $150.00</span> -->
+            <div class="mt-3">
+              <ul class="list margin-clear">
+                <li>
+                  <strong>Company: </strong>
+                  <span class="text-right">{{project.get('companyName')}}</span>
+                </li>
+                <li>
+                  <strong>Province: </strong>
+                  <span class="text-right">{{project.get('province')}}</span>
+                </li>
+                <li>
+                  <strong>Come from: </strong>
+                  <span class="text-right">{{project.get('comefrom')}}</span>
+                </li>
+                <li>
+                  <strong>Address: </strong>
+                  <span class="text-right">{{project.get('plainAddress')}}</span>
+                </li>
+                <li>
+                    <strong>Principal and interest of the debt: </strong>
+                    <span class="text-right"><i class="fa fa-rmb"></i>{{project.get('debitPricipalInterest')}}万</span>
+                  </li>
+              </ul>
+            </div>
             <!-- pills end -->
           </div>
           <div class="col-lg-8 pv-30">
             <h3 class="mt-4">Description</h3>
             <p>{{project.get('description')}}</p>
-            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+            <h4>Credit Highlights</h4>
             <p>{{project.get('creditHighlights')}}</p>
             <hr class="mb-10">
             <div class="clearfix mb-20">
@@ -107,7 +123,7 @@
             </div>
             <div class="light-gray-bg p-20 bordered clearfix">
               <span class="product price">
-                <i class="fa fa-rmb pr-10"></i>99.00</span>
+                <i class="fa fa-rmb"></i>{{project.get('debitAmount')}}万</span>
               <div class="product elements-list pull-right clearfix">
                 <input type="submit" value="Add to Cart" class="margin-clear btn btn-default">
               </div>
@@ -131,17 +147,25 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs style-4" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" href="" role="tab" data-toggle="tab" ng-click="tabCommentsVisible = false">
-              <i class="fa fa-files-o pr-1"></i>Specifications</a>
+            <a class="nav-link active" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = true; tabCommentsVisible = false; tabBorrowersVisible = false; tabSponsorsVisible = false">
+              <i class="fa fa-files-o pr-1"></i>Assets</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabCommentsVisible = true">
+            <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = false; tabBorrowersVisible = true; tabSponsorsVisible = false">
+              <i class="fa fa-files-o pr-1"></i>Borrowers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = false; tabBorrowersVisible = false; tabSponsorsVisible = true">
+              <i class="fa fa-files-o pr-1"></i>Sponsors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = true; tabBorrowersVisible = false; tabSponsorsVisible = false">
               <i class="fa fa-star pr-1"></i>(3) Reviews</a>
           </li>
         </ul>
         <!-- Tab panes -->
         <div class="tab-content padding-top-clear padding-bottom-clear">
-          <div class="tab-pane" id="h2tab2" ng-class="{'active': tabCommentsVisible == false}">
+          <div class="tab-pane" id="h2tab2" ng-class="{'active': tabAssetsVisible == true}">
             <h4 class="space-top">Specifications</h4>
             <hr>
             <dl class="row">
@@ -160,6 +184,22 @@
               <dd class="col-sm-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora rerum veritatis nam blanditiis.</dd>
               <dt class="col-sm-3 text-sm-right">Werspiciatis</dt>
               <dd class="col-sm-9">Rem nostrum sit magnam debitis quidem perspiciatis fuga fugit.</dd>
+            </dl>
+            <hr>
+          </div>
+          <div class="tab-pane" id="h2tab2" ng-class="{'active': tabBorrowersVisible == true}">
+            <h4 class="space-top">Borrowers</h4>
+            <hr>
+            <dl class="row">
+              <dt class="col-sm-3 text-sm-right">Consectetur</dt>
+            </dl>
+            <hr>
+          </div>
+          <div class="tab-pane" id="h2tab2" ng-class="{'active': tabSponsorsVisible == true}">
+            <h4 class="space-top">Sponsors</h4>
+            <hr>
+            <dl class="row">
+              <dt class="col-sm-3 text-sm-right">Consectetur</dt>
             </dl>
             <hr>
           </div>

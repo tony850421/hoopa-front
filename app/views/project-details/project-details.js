@@ -13,7 +13,12 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
 
     $rootScope.showBanner = false;
 
+    $scope.tabAssetsVisible = true;
+    $scope.tabBorrowersVisible = false;
+    $scope.tabSponsorsVisible = false;
     $scope.tabCommentsVisible = false;
+
+
     $scope.projectId = $routeParams.id;
 
     $scope.project = {};
