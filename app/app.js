@@ -14,7 +14,8 @@ angular.module('myApp', [
   'myApp.ProjectDetails',
   'myApp.version',
   'myApp.Login',
-  'angular-carousel'
+  'angular-carousel',
+  'myApp.Wishlist',
 ])
 
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

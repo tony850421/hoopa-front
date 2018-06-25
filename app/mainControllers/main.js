@@ -45,6 +45,6 @@ angular.module('myApp.Main', ['ngRoute'])
             $translate.use(lan);
         };
 
-        $scope.setLanguage('en_EN');
+        // $scope.setLanguage('en_EN');
 
     }]);
