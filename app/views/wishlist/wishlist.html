@@ -22,23 +22,23 @@
           <table class="table cart table-hover table-colored">
             <thead>
               <tr>
-                <th>{{'PACKAGE' | translate}}</th>
-                <th class="textcenter">{{'DAMOUNT' | translate}}</th>
-                <th>{{'PROVINCE' | translate}}</th>
-                <th>{{'WMAKEANOFFER' | translate}}</th>
-                <th class="textcenter">{{'REMOVE' | translate}}</th>
+                <th class="cursorDefault">{{'PACKAGE' | translate}}</th>
+                <th class="textcenter cursorDefault">{{'DAMOUNT' | translate}}</th>
+                <th class="cursorDefault">{{'PROVINCE' | translate}}</th>
+                <th class="cursorDefault">{{'WMAKEANOFFER' | translate}}</th>
+                <th class="textcenter cursorDefault">{{'REMOVE' | translate}}</th>
               </tr>
             </thead>
             <tbody>
               <tr class="remove-data" ng-repeat="cartObject in shopCartArray">
                 <td class="product">
                   <a id="textShopCart" href="">{{cartObject.get('project').get('title')}}</a>
-                  <p class="fontSize12">{{cartObject.get('project').get('description')}}</p>
+                  <p class="fontSize12 cursorDefault">{{cartObject.get('project').get('description')}}</p>
                 </td>
-                <td class="price colorPrimary textcenter">
+                <td class="price colorPrimary cursorDefault textcenter">
                   <i class="fa fa-rmb colorPrimary"></i>{{cartObject.get('project').get('debitAmount')}}万</td>
                 <td class="price">
-                  <small>{{cartObject.get('project').get('province')}}</small>
+                  <small class="cursorDefault">{{cartObject.get('project').get('province')}}</small>
                 </td>
                 <td class="remove">
                   <a href="" class="btn btn-remove icon-offers backgroundColorBlue marginLeft20P"> {{'OFFER' | translate}}</a>
