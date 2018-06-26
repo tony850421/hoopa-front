@@ -89,7 +89,7 @@
                       <div class="overlay-to-top links">
                         <span class="small">
                           <a href="" class="btn-sm-link textWhite" ng-click="addToWhishList(project.id)">
-                            <i class="fa fa-heart-o pr-10"></i>Add to Wishlist</a>
+                            <i ng-class="{'fa-heart': project.get('wished') == true, 'fa-heart-o': project.get('wished') == false}" class="fa pr-10"></i>Add to Wishlist</a>
                           <a href="" class="btn-sm-link textWhite" ng-click="goToProject(project.id)">
                             <i class="fa fa-link pr-1"></i>View Details</a>
                         </span>

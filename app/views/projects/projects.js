@@ -57,6 +57,7 @@ angular.module('myApp.Projects', ['ngRoute'])
       console.log($scope.filters);
 
       $scope.products = [];
+      var currentUser = AV.User.current();
 
       var queryType = new AV.Query('Project')
       if ($scope.filters.type != '抵押物类型') {
@@ -183,7 +184,11 @@ angular.module('myApp.Projects', ['ngRoute'])
       queryAndSearchBar.descending('createdAt')
       queryAndSearchBar.find().then(function (products) {
 
-        products.forEach(function (product) {
+        products.forEach(function (product, index) {
+
+          if (currentUser) {
+            $scope.setWish(products, index, product, currentUser);
+          }
 
           var productId = product.id;
           var productTitle = product.get('title');
@@ -251,6 +256,19 @@ angular.module('myApp.Projects', ['ngRoute'])
       $scope.applyFilters();
     };
 
+    $scope.setWish = function (array, index, project, user) {
+      var query = new AV.Query("ShopCar")
+      query.equalTo('project', project);
+      query.equalTo('user', user);
+      query.count().then(res => {
+        if (res > 0) {
+          array[index].set('wished', true);
+          console.log(array);
+        }
+        $scope.$apply();
+      });
+    };
+
     $scope.applyFilters();
 
     $scope.begin = function () {
@@ -302,21 +320,30 @@ angular.module('myApp.Projects', ['ngRoute'])
     };
 
     $scope.addToWhishList = function (id) {
-
       console.log('addToWhishList ' + id)
 
       var currentUser = AV.User.current();
-      if (currentUser) {
-        console.log(currentUser);
-      //   var project = AV.Object.createWithoutData('Project', id);
 
-      //   var shop = new AV.Object('ShopCar');
-      //   shop.set('user', currentUser);
-      //   shop.set('checked', false);
-      //   shop.set('project', project);
-      //   shop.save().then( res => {
-      //     $rootScope.displayAlert('success', 'Project added to your wishlist');
-      //   });
+      if (currentUser) {
+        var project = AV.Object.createWithoutData('Project', id);
+
+        var query = new AV.Query("ShopCar")
+        query.equalTo('project', project);
+        query.equalTo('user', currentUser);
+        query.count().then(res => {
+          if (res > 0) {
+            $rootScope.displayAlert('warning', 'This project is already in your wishlist');
+          } else {
+            var shop = new AV.Object('ShopCar');
+            shop.set('user', currentUser);
+            shop.set('checked', false);
+            shop.set('project', project);
+            shop.save().then(res => {
+              $rootScope.displayAlert('success', 'Project added to your wishlist');
+            });
+          }
+          $scope.$apply();
+        });
 
       } else {
         $scope.showLogin = true;
@@ -345,7 +372,6 @@ angular.module('myApp.Projects', ['ngRoute'])
         console.log(error);
         $rootScope.displayAlert('danger', error);
       });
-
     };
 
   }]);
