@@ -290,19 +290,19 @@
             <div class="comments-form">
               <h2 class="title">{{'ADDREVIEW' | translate}}</h2>
               <form>
-                <div class="form-group has-feedback">
+                <!-- <div class="form-group has-feedback">
                   <label for="name4">{{'NAME' | translate}}</label>
                   <input type="text" class="form-control" id="name4" placeholder="" required>
                   <i class="fa fa-user form-control-feedback"></i>
-                </div>
+                </div> -->
                 <div class="form-group has-feedback">
                   <label for="subject4"></label>
-                  <input type="text" class="form-control" id="subject4" placeholder="" required>
+                  <input ng-model="titleReview" type="text" class="form-control" id="subject4" placeholder="" required>
                   <i class="fa fa-pencil form-control-feedback top22"></i>
                 </div>
                 <div class="form-group">
                   <label>{{'RATING' | translate}}</label>
-                  <select class="form-control" id="review">
+                  <select ng-model="ratingReview" class="form-control" id="review">
                     <option value="five">5</option>
                     <option value="four">4</option>
                     <option value="three">3</option>
@@ -312,10 +312,10 @@
                 </div>
                 <div class="form-group has-feedback">
                   <label for="message4">{{'MESSAGE' | translate}}</label>
-                  <textarea class="form-control" rows="8" id="message4" placeholder="" required></textarea>
+                  <textarea ng-model="contentReview" class="form-control" rows="8" id="message4" placeholder="" required></textarea>
                   <i class="fa fa-envelope-o form-control-feedback"></i>
                 </div>
-                <input type="submit" value="{{'PPUBLISH' | translate}}" class="btn btn-default backgroundColorBlue">
+                <a ng-click="publishReview()" class="btn btn-default backgroundColorBlue">{{'PPUBLISH' | translate}}</a>
               </form>
             </div>
             <!-- comments form end -->
