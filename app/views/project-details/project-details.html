@@ -49,12 +49,12 @@
                     </div>
                   </div>
                 </div>
-              </div>              
-            </div>            
+              </div>
+            </div>
             <!-- <span class="price">
-              <del>$199.00</del> $150.00</span> -->            
+              <del>$199.00</del> $150.00</span> -->
             <!-- pills end -->
-          </div>          
+          </div>
           <div class="col-lg-8 pv-30">
             <h3 class="mt-4">{{'PDESC' | translate}}</h3>
             <p>{{project.get('description')}}</p>
@@ -119,9 +119,10 @@
             <span class="text-right">{{project.get('plainAddress')}}</span>
           </li>
           <li>
-              <strong>{{'DUPRINCIPALI' | translate}}</strong>
-              <span class="text-right colorPrimary"><i class="fa fa-rmb"></i>{{project.get('debitPricipalInterest')}}万</span>
-            </li>
+            <strong>{{'DUPRINCIPALI' | translate}}</strong>
+            <span class="text-right colorPrimary">
+              <i class="fa fa-rmb"></i>{{project.get('debitPricipalInterest')}}万</span>
+          </li>
         </ul>
       </div>
     </div>
@@ -206,7 +207,7 @@
           <div class="tab-pane" id="h2tab3" ng-show="loginUser" ng-class="{'active': tabCommentsVisible == true}">
             <!-- comments start -->
             <div class="comments margin-clear space-top">
-              <!-- comment start -->              
+              <!-- comment start -->
               <div class="comment clearfix" ng-repeat="c in reviews">
                 <div class="comment-avatar">
                   <img class="rounded-circle" ng-src="{{c.get('avatarUrl')}}" alt="avatar">
@@ -225,41 +226,42 @@
                 </div>
               </div>
               <!-- comment end -->
-            <!-- comments end -->
+              <!-- comments end -->
 
-            <!-- comments form start -->
-            <div class="comments-form">
-              <h2 class="title">{{'ADDREVIEW' | translate}}</h2>
-              <form>
-                <!-- <div class="form-group has-feedback">
+              <!-- comments form start -->
+              <div class="comments-form">
+                <h2 class="title">{{'ADDREVIEW' | translate}}</h2>
+                <form>
+                  <!-- <div class="form-group has-feedback">
                   <label for="name4">{{'NAME' | translate}}</label>
                   <input type="text" class="form-control" id="name4" placeholder="" required>
                   <i class="fa fa-user form-control-feedback"></i>
                 </div> -->
-                <!-- <div class="form-group has-feedback">
+                  <!-- <div class="form-group has-feedback">
                   <label for="subject4"></label>
                   <input ng-model="titleReview" type="text" class="form-control" id="subject4" placeholder="" required>
                   <i class="fa fa-pencil form-control-feedback top22"></i>
                 </div> -->
-                <div class="form-group">
-                  <label>{{'RATING' | translate}}</label>
-                  <select ng-model="ratingReview" class="form-control" id="review">
-                    <option value="5">5</option>
-                    <option value="4">4</option>
-                    <option value="3">3</option>
-                    <option value="2">2</option>
-                    <option value="1">1</option>
-                  </select>
-                </div>
-                <div class="form-group has-feedback">
-                  <label for="message4">{{'MESSAGE' | translate}}</label>
-                  <textarea ng-model="contentReview" class="form-control" rows="8" id="message4" placeholder="" required></textarea>
-                  <i class="fa fa-envelope-o form-control-feedback"></i>
-                </div>
-                <a ng-click="publishReview()" class="btn btn-default backgroundColorBlue">{{'PPUBLISH' | translate}}</a>
-              </form>
+                  <div class="form-group">
+                    <label>{{'RATING' | translate}}</label>
+                    <select ng-model="ratingReview" class="form-control" id="review">
+                      <option value="5">5</option>
+                      <option value="4">4</option>
+                      <option value="3">3</option>
+                      <option value="2">2</option>
+                      <option value="1">1</option>
+                    </select>
+                  </div>
+                  <div class="form-group has-feedback">
+                    <label for="message4">{{'MESSAGE' | translate}}</label>
+                    <textarea ng-model="contentReview" class="form-control" rows="8" id="message4" placeholder="" required></textarea>
+                    <i class="fa fa-envelope-o form-control-feedback"></i>
+                  </div>
+                  <a ng-click="publishReview()" class="btn btn-default backgroundColorBlue">{{'PPUBLISH' | translate}}</a>
+                </form>
+              </div>
+              <!-- comments form end -->
             </div>
-            <!-- comments form end -->
           </div>
         </div>
       </div>
@@ -294,13 +296,11 @@
                 <p class="price colorPrimary">¥{{p.amount}}万</p>
               </div>
             </div>
-            <hr>            
+            <hr>
           </div>
         </div>
       </aside>
       <!-- sidebar end -->
-
     </div>
-  </div>
 </section>
 <!-- section end -->
