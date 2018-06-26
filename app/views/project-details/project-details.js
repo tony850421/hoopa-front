@@ -180,4 +180,12 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
             $rootScope.customGoTo('project-details/' + id);
         };
 
+        $scope.titleReview = '';
+        $scope.ratingReview = '';
+        $scope.contentReview = '';
+
+        $scope.publishReview = function(){
+            
+        };
+
     }]);
