@@ -143,6 +143,16 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                     $scope.$apply();
                 })
 
+                var query8 = new AV.Query("ShopCar")
+                query8.equalTo('project', p);
+                query8.equalTo('user', AV.User.current());
+                query8.count().then(res => {
+                  if (res > 0) {
+                    p.set('wished', true);
+                  }
+                  $scope.$apply();
+                });
+                
                 $scope.$apply();
             })
 
