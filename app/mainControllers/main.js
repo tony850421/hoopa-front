@@ -62,8 +62,6 @@ angular.module('myApp.Main', ['ngRoute'])
                 query.limit(4);
                 query.descending('createdAt');
                 query.find().then(res => {
-                    console.log(res);
-
                     $scope.shopCartArray = res;
                     $scope.$apply();
                 })

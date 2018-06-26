@@ -95,5 +95,12 @@
     "REMOVE": "Eliminar",
     "CLEARALL": "Limpiar todo",
     "OFFER": "Ofertar",
-    "WMAKEANOFFER": "Oferta"
+    "WMAKEANOFFER": "Oferta",
+    "NEXT": "Siguiente",
+    "PREVIOUS": "Anterior",
+    "LASTEStNEWS": "Últimas noticias",
+    "ALREADYINWISHLIST": "Este proyecto ya existe en tu lista de deseos",
+    "ADDEDWISHLIST": "Proyecto añadido a tu lista de deseos correctamente",
+    "REMOVEDWISHLIST": "Proyecto eliminado de tu lista de deseos correctamente",
+    "SMSSENDED": "Mensaje SMS enviado correctamente"
 }

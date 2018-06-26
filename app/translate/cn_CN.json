@@ -95,5 +95,12 @@
     "REMOVE": "删除",
     "CLEARALL": "全部清除",
     "OFFER": "提供",
-    "WMAKEANOFFER": "提出建议"
+    "WMAKEANOFFER": "提出建议",
+    "NEXT": "下",
+    "PREVIOUS": "以前",
+    "LASTEStNEWS": "最新动态",
+    "ALREADYINWISHLIST": "此项目已在您的愿望列表中",
+    "ADDEDWISHLIST": "添加到希望列表中的项目",
+    "REMOVEDWISHLIST": "从您的愿望列表中删除项目",
+    "SMSSENDED": "SMS 消息送"
 }

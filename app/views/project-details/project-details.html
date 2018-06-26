@@ -151,7 +151,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = true; tabBorrowersVisible = false; tabSponsorsVisible = false">
-              <i class="fa fa-star pr-1"></i>(3) {{'REVIEWS' | translate}}</a>
+              <i class="fa fa-star pr-1"></i>({{reviews.length}}) {{'REVIEWS' | translate}}</a>
           </li>
         </ul>
         <!-- Tab panes -->
@@ -203,87 +203,28 @@
               <hr>
             </div>
           </div>
-          <div class="tab-pane" id="h2tab3" ng-class="{'active': tabCommentsVisible == true}">
+          <div class="tab-pane" id="h2tab3" ng-show="loginUser" ng-class="{'active': tabCommentsVisible == true}">
             <!-- comments start -->
             <div class="comments margin-clear space-top">
-              <!-- comment start -->
-              <div class="comment clearfix">
+              <!-- comment start -->              
+              <div class="comment clearfix" ng-repeat="c in reviews">
                 <div class="comment-avatar">
-                  <img class="rounded-circle" src="images/avatar.jpg" alt="avatar">
+                  <img class="rounded-circle" ng-src="{{c.get('avatarUrl')}}" alt="avatar">
                 </div>
                 <header>
                   <h3>Amazing!</h3>
                   <div class="comment-meta">
-                    <i class="fa fa-star text-default"></i>
-                    <i class="fa fa-star text-default"></i>
-                    <i class="fa fa-star text-default"></i>
-                    <i class="fa fa-star text-default"></i>
-                    <i class="fa fa-star"></i> | Today, 12:31</div>
+                    <i class="fa fa-star {{s.class}}" ng-repeat="s in c.rating"></i> | {{c.createdAt}}</div>
                 </header>
                 <div class="comment-content">
                   <div class="comment-body clearfix">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                      aliquip ex ea commodo </p>
-                    <a href="blog-post.html" class="btn-sm-link link-dark pull-right">
-                      <i class="fa fa-reply"></i> Reply</a>
+                    <p>{{c.get('content')}}</p>
+                    <!-- <a href="blog-post.html" class="btn-sm-link link-dark pull-right">
+                      <i class="fa fa-reply"></i> Reply</a> -->
                   </div>
                 </div>
               </div>
               <!-- comment end -->
-
-              <!-- comment start -->
-              <div class="comment clearfix">
-                <div class="comment-avatar">
-                  <img class="rounded-circle" src="images/avatar.jpg" alt="avatar">
-                </div>
-                <header>
-                  <h3>Really Nice!</h3>
-                  <div class="comment-meta">
-                    <i class="fa fa-star text-default"></i>
-                    <i class="fa fa-star text-default"></i>
-                    <i class="fa fa-star text-default"></i>
-                    <i class="fa fa-star text-default"></i>
-                    <i class="fa fa-star"></i> | Today, 10:31</div>
-                </header>
-                <div class="comment-content">
-                  <div class="comment-body clearfix">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                      aliquip ex ea commodo </p>
-                    <a href="blog-post.html" class="btn-sm-link link-dark pull-right">
-                      <i class="fa fa-reply"></i> Reply</a>
-                  </div>
-                </div>
-              </div>
-              <!-- comment end -->
-
-              <!-- comment start -->
-              <div class="comment clearfix">
-                <div class="comment-avatar">
-                  <img class="rounded-circle" src="images/avatar.jpg" alt="avatar">
-                </div>
-                <header>
-                  <h3>Worth to Buy!</h3>
-                  <div class="comment-meta">
-                    <i class="fa fa-star text-default"></i>
-                    <i class="fa fa-star text-default"></i>
-                    <i class="fa fa-star text-default"></i>
-                    <i class="fa fa-star text-default"></i>
-                    <i class="fa fa-star"></i> | Today, 09:31</div>
-                </header>
-                <div class="comment-content">
-                  <div class="comment-body clearfix">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                      aliquip ex ea commodo </p>
-                    <a href="blog-post.html" class="btn-sm-link link-dark pull-right">
-                      <i class="fa fa-reply"></i> Reply</a>
-                  </div>
-                </div>
-              </div>
-              <!-- comment end -->
-            </div>
             <!-- comments end -->
 
             <!-- comments form start -->
@@ -295,19 +236,19 @@
                   <input type="text" class="form-control" id="name4" placeholder="" required>
                   <i class="fa fa-user form-control-feedback"></i>
                 </div> -->
-                <div class="form-group has-feedback">
+                <!-- <div class="form-group has-feedback">
                   <label for="subject4"></label>
                   <input ng-model="titleReview" type="text" class="form-control" id="subject4" placeholder="" required>
                   <i class="fa fa-pencil form-control-feedback top22"></i>
-                </div>
+                </div> -->
                 <div class="form-group">
                   <label>{{'RATING' | translate}}</label>
                   <select ng-model="ratingReview" class="form-control" id="review">
-                    <option value="five">5</option>
-                    <option value="four">4</option>
-                    <option value="three">3</option>
-                    <option value="two">2</option>
-                    <option value="one">1</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                   </select>
                 </div>
                 <div class="form-group has-feedback">

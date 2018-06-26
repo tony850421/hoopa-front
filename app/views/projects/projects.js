@@ -9,7 +9,7 @@ angular.module('myApp.Projects', ['ngRoute'])
     });
   }])
 
-  .controller('ProjectsCtrl', ['$rootScope', '$scope', '$routeParams', '$window', function ($rootScope, $scope, $routeParams, $window) {
+  .controller('ProjectsCtrl', ['$rootScope', '$scope', '$routeParams', '$window', '$translate', function ($rootScope, $scope, $routeParams, $window, $translate) {
 
     $rootScope.showBanner = false;
     $scope.showLogin = false;
@@ -23,19 +23,11 @@ angular.module('myApp.Projects', ['ngRoute'])
     $scope.phoneNumber = '';
     $scope.smsCode = '';
 
-    $scope.provinces = ['区域无限制', '安徽省', '北京市', '重庆市', '福建省', '广东省', '甘肃省', '广西壮族自治区', '贵州省', '河南省', '湖北省', '河北省',
-      '海南省', '香港特别行政区', '黑龙江省', '湖南省', '吉林省', '江苏省', '江西省', '辽宁省', '澳门特别行政区', '內蒙古自治区',
-      '宁夏回族自治区', '青海省', '四川省', '山东省', '上海市', '陕西省', '山西省', '天津市', '台湾省', '新疆维吾尔自治区',
-      '西藏自治区', '云南省', '浙江省'
-    ];
+    $scope.provinces = ['区域无限制', '安徽省', '北京市', '重庆市', '福建省', '广东省', '甘肃省', '广西壮族自治区', '贵州省', '河南省', '湖北省', '河北省','海南省', '香港特别行政区', '黑龙江省', '湖南省', '吉林省', '江苏省', '江西省', '辽宁省', '澳门特别行政区', '內蒙古自治区','宁夏回族自治区', '青海省', '四川省', '山东省', '上海市', '陕西省', '山西省', '天津市', '台湾省', '新疆维吾尔自治区','西藏自治区', '云南省', '浙江省'];
 
-    $scope.typeArrivalArray = ['抵押物类型', '住宅', '商铺', '写字楼', '厂房', '在建工程', '机械设备，存货，原材料', '土地（无厂房',
-      '林权', '海城使用权', '商住', '无抵押', '其他'
-    ];
+    $scope.typeArrivalArray = ['抵押物类型', '住宅', '商铺', '写字楼', '厂房', '在建工程', '机械设备，存货，原材料', '土地（无厂房',      '林权', '海城使用权', '商住', '无抵押', '其他'];
 
-    $scope.amountArray = ['本金无限制', '500万', '500-1000万', '1000-1500万', '1500-2000万', '2000-2500万', '2500-3000万', '3000-3500万',
-      '3500-4000万', '4000-4500万', '4500-5000万', '5000-5500万', '5500-6000万', '6000万'
-    ];
+    $scope.amountArray = ['本金无限制', '500万', '500-1000万', '1000-1500万', '1500-2000万', '2000-2500万', '2500-3000万', '3000-3500万','3500-4000万', '4000-4500万', '4500-5000万', '5000-5500万', '5500-6000万', '6000万'];
 
     $scope.filters = {
       province: '区域无限制',
@@ -328,14 +320,16 @@ angular.module('myApp.Projects', ['ngRoute'])
         query.equalTo('user', currentUser);
         query.count().then(res => {
           if (res > 0) {
-            $rootScope.displayAlert('warning', 'This project is already in your wish list');
+            var alreadyInWishList = $translate.instant('ALREADYINWISHLIST');
+            $rootScope.displayAlert('warning', alreadyInWishList);
           } else {
             var shop = new AV.Object('ShopCar');
             shop.set('user', currentUser);
             shop.set('checked', false);
             shop.set('project', project);
             shop.save().then(res => {
-              $rootScope.displayAlert('success', 'Project added to your wish list');
+              var addedWishList= $translate.instant('ADDEDWISHLIST');
+              $rootScope.displayAlert('success', addedWishList);
               $scope.applyFilters();
             });
           }
@@ -358,7 +352,8 @@ angular.module('myApp.Projects', ['ngRoute'])
         query.find().then( res => {
           res.forEach(function(element){
             element.destroy();
-            $rootScope.displayAlert('success', 'Project remove from your wish list');
+            var removeWishList= $translate.instant('REMOVEDWISHLIST');
+            $rootScope.displayAlert('success', removeWishList);
           });
 
           $scope.applyFilters();
@@ -382,7 +377,8 @@ angular.module('myApp.Projects', ['ngRoute'])
 
       AV.Cloud.requestSmsCode($scope.phoneNumber).then(res => {
         console.log(res);
-        $rootScope.displayAlert('success', 'SMS Message sended OK');
+        var smsSended= $translate.instant('SMSSENDED');
+        $rootScope.displayAlert('success', smsSended);
 
       }).catch(function (error) {
         console.log(error);

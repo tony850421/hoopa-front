@@ -20,6 +20,10 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
         $scope.tabSponsorsVisible = false;
         $scope.tabCommentsVisible = false;
 
+        $scope.titleReview = '';
+        $scope.ratingReview = '';
+        $scope.contentReview = '';
+        $scope.reviews = [];
 
         $scope.projectId = $routeParams.id;
 
@@ -63,6 +67,8 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
             query.get(id).then(function (p) {
 
                 $scope.project = p;
+
+                $scope.fectComments();
 
                 $scope.projectTitle = p.get('title');
                 $scope.projectCompany = p.get('companyName');
@@ -147,12 +153,12 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                 query8.equalTo('project', p);
                 query8.equalTo('user', AV.User.current());
                 query8.count().then(res => {
-                  if (res > 0) {
-                    p.set('wished', true);
-                  }
-                  $scope.$apply();
+                    if (res > 0) {
+                        p.set('wished', true);
+                    }
+                    $scope.$apply();
                 });
-                
+
                 $scope.$apply();
             })
 
@@ -190,12 +196,82 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
             $rootScope.customGoTo('project-details/' + id);
         };
 
-        $scope.titleReview = '';
-        $scope.ratingReview = '';
-        $scope.contentReview = '';
+        $scope.publishReview = function () {
+            var user = AV.User.current();
+            if (user && $scope.ratingReview != '' && $scope.contentReview != '') {
+                var query = new AV.Object('ForumComment');
+                query.set('content', $scope.contentReview);
+                query.set('user', user);
+                query.set('rating', $scope.ratingReview);
+                query.set('avatarUrl', user.get('avatarUrl'));
+                var project = AV.Object.createWithoutData('Project', $scope.project.id);
+                query.set('project', project);
 
-        $scope.publishReview = function(){
-            
+                var acl = new AV.ACL();
+                acl.setPublicReadAccess(true);
+                acl.setPublicWriteAccess(true);
+                query.setACL(acl);
+
+                query.save().then(function (comment) {
+                    comment.createdAt = comment.createdAt.toLocaleDateString('zh-CN') + " " + comment.createdAt.toLocaleTimeString('zh-CN');
+
+                    var rating = parseInt(comment.get('rating'));
+                    comment.rating = [5];
+                    for (var t = 0; t < rating; t++) {
+                        comment.rating[t] = {
+                            id: t,
+                            class: 'text-default'
+                        };
+                    }
+                    for (var x = rating; x < 5; x++) {
+                        comment.rating[x] = {
+                            id: t,
+                            class: ''
+                        };
+                    }
+
+                    $scope.reviews.push(comment);
+
+                    $scope.ratingReview = '';
+                    $scope.contentReview = '';
+
+                    $scope.$apply();
+                }).catch(function (error) {
+                    console.log(error);
+                });
+            }
+        };
+
+        $scope.fectComments = function () {
+            var user = AV.User.current();
+            if (user) {
+                var query1 = new AV.Query('ForumComment');
+                query1.equalTo('project', $scope.project)
+                query1.find().then(function (comments) {
+                    $scope.reviews = [];
+
+                    for (var i = 0; i < comments.length; i++) {
+                        comments[i].createdAt = comments[i].createdAt.toLocaleDateString('zh-CN') + " " + comments[i].createdAt.toLocaleTimeString('zh-CN');
+                        var rating = parseInt(comments[i].get('rating'));
+                        comments[i].rating = [5];
+                        for (var t = 0; t < rating; t++) {
+                            comments[i].rating[t] = {
+                                id: t,
+                                class: 'text-default'
+                            };
+                        }
+                        for (var x = rating; x < 5; x++) {
+                            comments[i].rating[x] = {
+                                id: t,
+                                class: ''
+                            };
+                        }
+                    }
+
+                    console.log(comments);
+                    $scope.reviews = comments;
+                })
+            }
         };
 
     }]);
