@@ -12,7 +12,6 @@ angular.module('myApp.Projects', ['ngRoute'])
   .controller('ProjectsCtrl', ['$rootScope', '$scope', '$routeParams', '$window', '$translate', function ($rootScope, $scope, $routeParams, $window, $translate) {
 
     $rootScope.showBanner = false;
-    $scope.showLogin = false;
 
     $scope.products = [];
 
@@ -336,7 +335,7 @@ angular.module('myApp.Projects', ['ngRoute'])
         });
 
       } else {
-        $scope.showLogin = true;
+        $rootScope.customGoTo('login/projects');
       }
     };
 
@@ -360,30 +359,4 @@ angular.module('myApp.Projects', ['ngRoute'])
         })
       }
     };
-
-    $scope.loginWithSmsCode = function () {
-      console.log('loginWithSmsCode:' + ' ' + $scope.phoneNumber + ' ' + $scope.smsCode);
-
-      AV.User.signUpOrlogInWithMobilePhone($scope.phoneNumber, $scope.smsCode).then(res => {
-        console.log(res);
-
-      }).catch(function (error) {
-        console.log(error);
-      });
-    };
-
-    $scope.requestSmsCode = function () {
-      console.log('requestSmsCode ' + $scope.phoneNumber);
-
-      AV.Cloud.requestSmsCode($scope.phoneNumber).then(res => {
-        console.log(res);
-        var smsSended= $translate.instant('SMSSENDED');
-        $rootScope.displayAlert('success', smsSended);
-
-      }).catch(function (error) {
-        console.log(error);
-        $rootScope.displayAlert('danger', error);
-      });
-    };
-
   }]);

@@ -5,8 +5,8 @@ angular.module('myApp.Main', ['ngRoute'])
     .controller('MainCtrl', ['$rootScope', '$scope', '$window', '$translate', function ($rootScope, $scope, $window, $translate) {
 
         // $scope.baseUrl = 'https://hoopa.org/front-end/#!/';
-        // $scope.baseUrl = 'http://127.0.0.1:8000/#!/';
-        $scope.baseUrl = 'http://localhost/hoopa-front/app/#!/';
+        $scope.baseUrl = 'http://127.0.0.1:8000/#!/';
+        // $scope.baseUrl = 'http://localhost/hoopa-front/app/#!/';
 
         $scope.languageShort = "English";
 
@@ -47,43 +47,49 @@ angular.module('myApp.Main', ['ngRoute'])
 
         // $scope.setLanguage('en_EN');
 
-        $scope.shopCartArray = [];
+        $rootScope.shopCartArray = [];
+        $rootScope.shopCartCount = 0;
 
-        $scope.initWishList = function () {
+        $rootScope.initWishList = function () {
             console.log('initWishList');
             // var id = $scope.projectId;
             var currentUser = AV.User.current();
 
             if(currentUser) {
+                $rootScope.loginUser = true;
+
                 var query = new AV.Query('ShopCar');
                 query.equalTo('user', currentUser);
                 query.include('image');
                 query.include('project');
+
+                query.count().then( count => {
+                    $rootScope.shopCartCount = count;
+                })
+
                 query.limit(4);
                 query.descending('createdAt');
                 query.find().then(res => {
                     $scope.shopCartArray = res;
                     $scope.$apply();
                 })
-            } else {
-                $rootScope.customGoTo('login');
             }
         };
 
-        $scope.loginUser = false;
+        $rootScope.loginUser = false;
 
-        $scope.getUser = function () {
+        $rootScope.getUser = function () {
             var currentUser = AV.User.current();
             if (currentUser) {
-                $scope.loginUser = true;
+                $rootScope.loginUser = true;
             } else {
-                $scope.loginUser = false;
+                $rootScope.loginUser = false;
             }
         };
 
-        $scope.getUser();
+        $rootScope.getUser();
 
-        $scope.initWishList();
+        $rootScope.initWishList();
 
         $scope.goToWishList = function(){
             $rootScope.customGoTo('wishlist');
