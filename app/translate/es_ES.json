@@ -51,8 +51,9 @@
     "TYPE": "Tipo",
     "PROVINCE": "Provincia",
     "AMOUNT": "Monto",
-    "APPLYFILTERS": "Aplicar Filtros",
+    "APPLYFILTERS": "Aplicar filtros",
     "ADDWISHLIST": "Añadir a la lista de deseos",
+    "REMOVEWISHLIST": "Eliminar de la lista de deseos",
     "VIEWDETAILS": "Ver detalles",
     "VIEWMORE": "Ver más",
     "TARRIVAL": "Tipo de llegada",
@@ -94,5 +95,5 @@
     "REMOVE": "Eliminar",
     "CLEARALL": "Limpiar todo",
     "OFFER": "Ofertar",
-    "WMAKEANOFFER": "Hacer una oferta"
+    "WMAKEANOFFER": "Oferta"
 }

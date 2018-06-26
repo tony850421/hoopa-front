@@ -186,10 +186,6 @@ angular.module('myApp.Projects', ['ngRoute'])
 
         products.forEach(function (product, index) {
 
-          if (currentUser) {
-            $scope.setWish(products, index, product, currentUser);
-          }
-
           var productId = product.id;
           var productTitle = product.get('title');
           var productT = productTitle;
@@ -234,8 +230,14 @@ angular.module('myApp.Projects', ['ngRoute'])
             plainAddress: productAddress,
             ownerUsername: ownerUsername,
             releaseTime: releaseTime,
+            wished: false
             // imCreator: (ownerUsername == currentUser.get('username')),
           })
+
+          if (currentUser) {
+            $scope.setWish($scope.products, index, product, currentUser);
+          }
+
           $scope.$apply();
         });
 
@@ -262,7 +264,7 @@ angular.module('myApp.Projects', ['ngRoute'])
       query.equalTo('user', user);
       query.count().then(res => {
         if (res > 0) {
-          array[index].set('wished', true);
+          array[index].wished = true;
           console.log(array);
         }
         $scope.$apply();
