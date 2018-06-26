@@ -47,4 +47,29 @@ angular.module('myApp.Main', ['ngRoute'])
 
         // $scope.setLanguage('en_EN');
 
+        $scope.shopCartArray = [];
+
+        $scope.initWishList = function () {
+            console.log('initWishList');
+            // var id = $scope.projectId;
+            var currentUser = AV.User.current();
+
+            if(currentUser) {
+                var query = new AV.Query('ShopCar');
+                query.equalTo('user', currentUser);
+                query.include('image');
+                query.include('project');
+                query.limit(4);
+                query.descending('createdAt');
+                query.find().then(res => {
+                    console.log(res);
+
+                    $scope.shopCartArray = res;
+                    $scope.$apply();
+                })
+            } else {
+                $rootScope.customGoTo('login');
+            }
+        };
+
     }]);
