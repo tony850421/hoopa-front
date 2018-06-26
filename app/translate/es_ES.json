@@ -85,5 +85,14 @@
     "RECOMMENDEDPROJECT": "Activos recomendados",
     "PHONENUMBER": "Número de teléfono",
     "SENDCODE": "Enviar código",
-    "SMSCODE": "Código SMS"
+    "SMSCODE": "Código SMS",
+    "PACKAGE": "Paquete",
+    "DAMOUNT": "Cantidad de la deuda",
+    "VWISHLIST": "Lista de deseos",
+    "TOTAL": "Total",
+    "ITEMS": "de artículos",
+    "REMOVE": "Eliminar",
+    "CLEARALL": "Limpiar todo",
+    "OFFER": "Ofertar",
+    "WMAKEANOFFER": "Hacer una oferta"
 }

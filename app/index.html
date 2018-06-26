@@ -213,8 +213,8 @@
                     </a>
                   </div> -->
                   <div class="btn-group">
-                    <a  ng-click="customGoTo('login')" id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false">
+                    <a ng-click="customGoTo('login')" id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="icon-onlogin spanSignUp"></i> {{'LOGIN' | translate}}</a>
                     <!-- <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
                       <li>
@@ -373,56 +373,42 @@
                           </li>
                         </ul>
                       </div>
-                      <div class="btn-group">
+                      <div class="btn-group" ng-hide="!loginUser">
                         <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-4" data-toggle="dropdown" aria-haspopup="true"
                           aria-expanded="false" ng-click="initWishList()">
-                          <i class="icon-shopping-cart"></i>
-                          <span class="cart-count default-bg">8</span>
+                          <i class="fa fa-heart-o marginLeft5"></i>
+                          <span class="cart-count default-bg" ng-show="shopCartArray.length > 0">{{shopCartArray.length}}</span>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-4">
                           <li>
                             <table class="table table-hover">
                               <thead>
                                 <tr>
-                                  <th class="quantity">QTY</th>
-                                  <th class="product">Product</th>
-                                  <th class="amount">Subtotal</th>
+                                  <!-- <th class="quantity">Province</th> -->
+                                  <th class="product">{{'PACKAGES' | translate}}</th>
+                                  <th class="amount">{{'DAMOUNT' | translate}}</th>
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr>
-                                  <td class="quantity">2 x</td>
+                                <tr ng-repeat="product in shopCartArray">
+                                  <!-- <td class="quantity">{{product.get('project').get('province')}}</td> -->
                                   <td class="product">
-                                    <a href="shop-product.html">Android 4.4 Smartphone</a>
-                                    <span class="small">4.7" Dual Core 1GB</span>
+                                    <a href="">
+                                      <span class="small">{{product.get('project').get('title')}}</span>
+                                    </a>
+                                    <!-- <span class="small">{{product.get('project').get('plainAddress')}}</span> -->
                                   </td>
-                                  <td class="amount">$199.00</td>
+                                  <td class="amount colorPrimary">
+                                    <i class="fa fa-rmb colorPrimary"></i>{{product.get('project').get('debitAmount')}}万</td>
                                 </tr>
                                 <tr>
-                                  <td class="quantity">3 x</td>
-                                  <td class="product">
-                                    <a href="shop-product.html">Android 4.2 Tablet</a>
-                                    <span class="small">7.3" Quad Core 2GB</span>
-                                  </td>
-                                  <td class="amount">$299.00</td>
-                                </tr>
-                                <tr>
-                                  <td class="quantity">3 x</td>
-                                  <td class="product">
-                                    <a href="shop-product.html">Desktop PC</a>
-                                    <span class="small">Quad Core 3.2MHz, 8GB RAM, 1TB Hard Disk</span>
-                                  </td>
-                                  <td class="amount">$1499.00</td>
-                                </tr>
-                                <tr>
-                                  <td class="total-quantity" colspan="2">Total 8 Items</td>
-                                  <td class="total-amount">$1997.00</td>
+                                  <td class="total-quantity" colspan="2">{{shopCartArray.length}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
+                                  <!-- <td class="total-amount">$1997.00</td> -->
                                 </tr>
                               </tbody>
                             </table>
                             <div class="panel-body text-right">
-                              <a href="shop-cart.html" class="btn btn-group btn-gray btn-sm">View Cart</a>
-                              <a href="shop-checkout.html" class="btn btn-group btn-gray btn-sm">Checkout</a>
+                              <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm"> {{'VWISHLIST' | translate}}</a>
                             </div>
                           </li>
                         </ul>
@@ -577,11 +563,11 @@
                     </li>
                   </ul>
                 </div>
-                <div class="btn-group">
+                <div class="btn-group" ng-hide="!loginUser">
                   <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false" ng-click="initWishList()">
-                    <i class="icon-shopping-cart"></i>
-                    <span class="cart-count default-bg">8</span>
+                    <i class="fa fa-heart-o marginLeft5"></i>
+                    <span class="cart-count default-bg" ng-show="shopCartArray.length > 0">{{shopCartArray.length}}</span>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-2">
                     <li>
@@ -589,27 +575,30 @@
                         <thead>
                           <tr>
                             <!-- <th class="quantity">Province</th> -->
-                            <th class="product">Package</th>
-                            <th class="amount">Debt amount</th>
+                            <th class="product">{{'PACKAGES' | translate}}</th>
+                            <th class="amount">{{'DAMOUNT' | translate}}</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr ng-repeat="product in shopCartArray">
                             <!-- <td class="quantity">{{product.get('project').get('province')}}</td> -->
                             <td class="product">
-                              <a href=""><span class="small">{{product.get('project').get('title')}}</span></a>
+                              <a href="">
+                                <span class="small">{{product.get('project').get('title')}}</span>
+                              </a>
                               <!-- <span class="small">{{product.get('project').get('plainAddress')}}</span> -->
                             </td>
-                            <td class="amount"><i class="fa fa-rmb"></i>{{product.get('project').get('debitAmount')}}万</td>
+                            <td class="amount colorPrimary">
+                              <i class="fa fa-rmb colorPrimary"></i>{{product.get('project').get('debitAmount')}}万</td>
                           </tr>
                           <tr>
-                            <td class="total-quantity" colspan="2">Total {{shopCartArray.length}} Items</td>
+                            <td class="total-quantity" colspan="2">{{shopCartArray.length}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
                             <!-- <td class="total-amount">$1997.00</td> -->
                           </tr>
                         </tbody>
                       </table>
                       <div class="panel-body text-right">
-                        <a href="" class="btn btn-group btn-gray btn-sm">View wishlist</a>
+                        <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm"> {{'VWISHLIST' | translate}}</a>
                       </div>
                     </li>
                   </ul>

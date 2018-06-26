@@ -85,5 +85,14 @@
     "RECOMMENDEDPROJECT": "推荐资产",
     "PHONENUMBER": "电话号码",
     "SENDCODE": "发送代码",
-    "SMSCODE": "SMS 代码"
+    "SMSCODE": "SMS 代码",
+    "PACKAGES": "包",
+    "DAMOUNT": "债务金额",
+    "VWISHLIST": "查看收藏",
+    "TOTAL": "总",
+    "ITEMS": "项目",
+    "REMOVE": "删除",
+    "CLEARALL": "全部清除",
+    "OFFER": "提供",
+    "WMAKEANOFFER": "提出建议"
 }

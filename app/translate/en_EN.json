@@ -85,5 +85,14 @@
     "RECOMMENDEDPROJECT": "Recommended assets",
     "PHONENUMBER": "Phone number",
     "SENDCODE": "Send code",
-    "SMSCODE": "SMS Code"
+    "SMSCODE": "SMS Code",
+    "PACKAGE": "Package",
+    "DAMOUNT": "Debt amount",
+    "VWISHLIST": "View wishlist",
+    "TOTAL": "Total",
+    "ITEMS": "Items",
+    "REMOVE": "Remove",
+    "CLEARALL": "Clear all",
+    "OFFER": "Offer",
+    "WMAKEANOFFER": "Make an offer"
 }

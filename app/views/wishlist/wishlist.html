@@ -2,59 +2,66 @@
 <!-- ================ -->
 <section class="main-container">
 
-      <!-- main-container start -->
-      <!-- ================ -->
-      <section class="main-container">
+  <!-- main-container start -->
+  <!-- ================ -->
+  <section class="main-container">
 
-          <div class="container">
-            <div class="row">
-  
-              <!-- main start -->
-              <!-- ================ -->
-              <div class="main col-12">
-  
-                <!-- page-title start -->
-                <!-- ================ -->
-                <h1 class="page-title">Shopping Cart</h1>
-                <div class="separator-2"></div>
-                <!-- page-title end -->
-  
-                <table class="table cart table-hover table-colored">
-                  <thead>
-                    <tr>
-                      <th>Package </th>
-                      <th>Debt Amount </th>
-                      <th>Province</th>
-                      <th>Make an offer</th>
-                      <th>Remove </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="remove-data" ng-repeat="cartObject in shopCartArray">
-                      <td class="product"><a href="">{{cartObject.get('project').get('title')}}</a></td>
-                      <td class="price"><i class="fa fa-rmb"></i>{{cartObject.get('project').get('debitAmount')}}万</td>
-                      <td class="price"><small>{{cartObject.get('project').get('province')}}</small></td>
-                      <td class="remove"><a href="" class="btn btn-remove btn-sm btn-default">Offer</a></td>
-                      <td class="remove"><a href="" class="btn btn-remove btn-sm btn-default">Remove</a></td>
-                    </tr>
-                    <tr>
-                      <td class="total-quantity" colspan="4">Total {{shopCartArray.length}} Items</td>
-                      <!-- <td class="total-amount">$1997.00</td> -->
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="text-right">
-                  <a href="" class="btn btn-group btn-default">Clear all</a>
-                </div>
-  
-              </div>
-              <!-- main end -->
-  
-            </div>
+    <div class="container">
+      <div class="row">
+
+        <!-- main start -->
+        <!-- ================ -->
+        <div class="main col-12">
+
+          <!-- page-title start -->
+          <!-- ================ -->
+          <h1 class="page-title">{{'WISHLIST' | translate}}</h1>
+          <div class="separator-2"></div>
+          <!-- page-title end -->
+
+          <table class="table cart table-hover table-colored">
+            <thead>
+              <tr>
+                <th>{{'PACKAGE' | translate}}</th>
+                <th class="textcenter">{{'DAMOUNT' | translate}}</th>
+                <th>{{'PROVINCE' | translate}}</th>
+                <th>{{'WMAKEANOFFER' | translate}}</th>
+                <th class="textcenter">{{'REMOVE' | translate}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="remove-data" ng-repeat="cartObject in shopCartArray">
+                <td class="product">
+                  <a id="textShopCart" href="">{{cartObject.get('project').get('title')}}</a>
+                  <p class="fontSize12">{{cartObject.get('project').get('description')}}</p>
+                </td>
+                <td class="price colorPrimary textcenter">
+                  <i class="fa fa-rmb colorPrimary"></i>{{cartObject.get('project').get('debitAmount')}}万</td>
+                <td class="price">
+                  <small>{{cartObject.get('project').get('province')}}</small>
+                </td>
+                <td class="remove">
+                  <a href="" class="btn btn-remove icon-offers backgroundColorBlue marginLeft20P"> {{'OFFER' | translate}}</a>
+                </td>
+                <td class="remove">
+                  <a href="" class="btn btn-remove fa fa-remove btn-default backgroundColorBlue marginLeft20P"> {{'REMOVE' | translate}}</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="total-quantity" colspan="6">{{shopCartArray.length}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
+                <!-- <td class="total-amount">$1997.00</td> -->
+              </tr>
+            </tbody>
+          </table>
+          <div class="text-right">
+            <a href="" class="btn btn-group fa fa-trash-o btn-default backgroundColorBlue"> {{'CLEARALL' | translate}}</a>
           </div>
-        </section>
-        <!-- main-container end -->
-  
 
+        </div>
+        <!-- main end -->
+      </div>
+    </div>
+  </section>
+  <!-- main-container end -->
 </section>
 <!-- section end -->

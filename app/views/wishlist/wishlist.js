@@ -30,7 +30,20 @@ angular.module('myApp.Wishlist', ['ngRoute'])
                 query.include('project');
                 query.descending('createdAt');
                 query.find().then(res => {
-                    console.log(res);
+                    
+                    
+
+                    for (var i=0; i<res.length; i++){
+                        var aux = res[i].get('project').get('description');
+                        if (res[i].get('project').get('description').length > 30){
+                            aux = '';
+                            for (var t=0; t<30; t++){
+                                aux += res[i].get('project').get('description')[t];
+                            }
+                            aux += "...";
+                        }
+                        res[i].get('project').set('description', aux);
+                    }
 
                     $scope.shopCartArray = res;
                     $scope.$apply();

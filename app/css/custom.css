@@ -17,6 +17,14 @@
     margin-left: 16.6% !important;
 }
 
+.marginLeft20P {
+    margin-left: 20% !important;
+}
+
+.marginLeft5 {
+    margin-left: 5px !important;
+}
+
 .paddingTop0 {
     padding-top: 0px !important;
 }
@@ -117,6 +125,10 @@ header:not(.dark) .dropdown-menu>li.active>a i {
 
 .text-default {
     color: #ff6700 !important;
+}
+
+.textcenter {
+    text-align: center !important;
 }
 
 .icon.default-bg {
@@ -460,4 +472,23 @@ ul.pagination .page-item.active .page-link,
 
 .backgroundGray{
     background-color: #f2f2f2;
+}
+
+.cart .product .small:hover {
+	display: block;
+	color: #ff6700 !important;
+}
+
+#textShopCart{
+    color: #22447a !important;
+}
+
+.table-colored > thead > tr > th {
+	border-color: #22447a;
+	background-color: #22447a;
+	color: #ffffff;
+}
+
+.table.table-colored {
+	border-bottom-color: #22447a;
 }
