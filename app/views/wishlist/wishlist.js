@@ -15,11 +15,27 @@ angular.module('myApp.Wishlist', ['ngRoute'])
 
         $rootScope.showBanner = false;
 
-        $scope.projectId = $routeParams.id;
+        $scope.shopCartArray = [];
+
+        // $scope.projectId = $routeParams.id;
 
         $scope.init = function () {
-            var id = $scope.projectId;
+            // var id = $scope.projectId;
+            var currentUser = AV.User.current();
 
+            if(currentUser) {
+                var query = new AV.Query('ShopCar');
+                query.equalTo('user', currentUser);
+                query.include('image');
+                query.include('project');
+                query.descending('createdAt');
+                query.find().then(res => {
+                    console.log(res);
+
+                    $scope.shopCartArray = res;
+                    $scope.$apply();
+                })
+            }
         };
 
         $scope.init();
