@@ -91,7 +91,7 @@
                           <a ng-hide="project.wished" href="" class="btn-sm-link textWhite" ng-click="addToWhishList(project.id)">
                             <i  class="fa fa-heart-o pr-10"></i>{{'ADDWISHLIST' | translate}}
                           </a>
-                          <a ng-hide="!project.wished" href="" class="btn-sm-link textWhite" ng-click="addToWhishList(project.id)">
+                          <a ng-hide="!project.wished" href="" class="btn-sm-link textWhite" ng-click="removeToWhishList(project.id)">
                             <i class="fa fa-heart pr-10"></i>{{'REMOVEWISHLIST' | translate}}
                           </a>
                           <a href="" class="btn-sm-link textWhite" ng-click="goToProject(project.id)">

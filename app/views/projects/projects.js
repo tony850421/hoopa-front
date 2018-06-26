@@ -54,8 +54,6 @@ angular.module('myApp.Projects', ['ngRoute'])
     };
 
     $scope.applyFilters = function () {
-      console.log($scope.filters);
-
       $scope.products = [];
       var currentUser = AV.User.current();
 
@@ -265,7 +263,6 @@ angular.module('myApp.Projects', ['ngRoute'])
       query.count().then(res => {
         if (res > 0) {
           array[index].wished = true;
-          console.log(array);
         }
         $scope.$apply();
       });
@@ -280,7 +277,6 @@ angular.module('myApp.Projects', ['ngRoute'])
     };
 
     $scope.end = function () {
-      console.log($scope.productsCount);
       var quotient = Math.floor($scope.productsCount / $scope.pageSize);
       var remainder = $scope.productsCount % $scope.pageSize;
 
@@ -322,8 +318,6 @@ angular.module('myApp.Projects', ['ngRoute'])
     };
 
     $scope.addToWhishList = function (id) {
-      console.log('addToWhishList ' + id)
-
       var currentUser = AV.User.current();
 
       if (currentUser) {
@@ -334,21 +328,41 @@ angular.module('myApp.Projects', ['ngRoute'])
         query.equalTo('user', currentUser);
         query.count().then(res => {
           if (res > 0) {
-            $rootScope.displayAlert('warning', 'This project is already in your wishlist');
+            $rootScope.displayAlert('warning', 'This project is already in your wish list');
           } else {
             var shop = new AV.Object('ShopCar');
             shop.set('user', currentUser);
             shop.set('checked', false);
             shop.set('project', project);
             shop.save().then(res => {
-              $rootScope.displayAlert('success', 'Project added to your wishlist');
+              $rootScope.displayAlert('success', 'Project added to your wish list');
+              $scope.applyFilters();
             });
           }
-          $scope.$apply();
         });
 
       } else {
         $scope.showLogin = true;
+      }
+    };
+
+    $scope.removeToWhishList = function(id){
+      var currentUser = AV.User.current();
+
+      if (currentUser) {
+        var project = AV.Object.createWithoutData('Project', id);
+
+        var query = new AV.Query("ShopCar")
+        query.equalTo('project', project);
+        query.equalTo('user', currentUser);
+        query.find().then( res => {
+          res.forEach(function(element){
+            element.destroy();
+            $rootScope.displayAlert('success', 'Project remove from your wish list');
+          });
+
+          $scope.applyFilters();
+        })
       }
     };
 
