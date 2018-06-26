@@ -47,45 +47,51 @@ angular.module('myApp.Main', ['ngRoute'])
 
         // $scope.setLanguage('en_EN');
 
-        $scope.shopCartArray = [];
+        $rootScope.shopCartArray = [];
+        $rootScope.shopCartCount = 0;
 
-        $scope.initWishList = function () {
+        $rootScope.initWishList = function () {
             console.log('initWishList');
             // var id = $scope.projectId;
             var currentUser = AV.User.current();
 
             if(currentUser) {
+                $rootScope.loginUser = true;
+
                 var query = new AV.Query('ShopCar');
                 query.equalTo('user', currentUser);
                 query.include('image');
                 query.include('project');
+
+                query.count().then( count => {
+                    $rootScope.shopCartCount = count;
+                })
+
                 query.limit(4);
                 query.descending('createdAt');
                 query.find().then(res => {
                     console.log(res);
 
-                    $scope.shopCartArray = res;
+                    $rootScope.shopCartArray = res;
                     $scope.$apply();
                 })
-            } else {
-                $rootScope.customGoTo('login');
             }
         };
 
-        $scope.loginUser = false;
+        $rootScope.loginUser = false;
 
-        $scope.getUser = function () {
+        $rootScope.getUser = function () {
             var currentUser = AV.User.current();
             if (currentUser) {
-                $scope.loginUser = true;
+                $rootScope.loginUser = true;
             } else {
-                $scope.loginUser = false;
+                $rootScope.loginUser = false;
             }
         };
 
-        $scope.getUser();
+        $rootScope.getUser();
 
-        $scope.initWishList();
+        $rootScope.initWishList();
 
         $scope.goToWishList = function(){
             $rootScope.customGoTo('wishlist');

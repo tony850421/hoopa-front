@@ -3,7 +3,7 @@
 angular.module('myApp.Login', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/login', {
+        $routeProvider.when('/login/:uriOption', {
             templateUrl: 'views/login/login.html',
             controller: 'LoginCtrl'
         });
@@ -18,13 +18,7 @@ angular.module('myApp.Login', ['ngRoute'])
         $scope.phoneNumber = '';
         $scope.smsCode = '';
 
-        // $scope.projectId = $routeParams.id;
-
-        $scope.init = function () {
-            // var id = $scope.projectId;
-        };
-
-        $scope.init();
+        $scope.option = $routeParams.uriOption;
 
         $scope.goToProject = function (id) {
             $rootScope.customGoTo('project-details/' + id);
@@ -35,7 +29,9 @@ angular.module('myApp.Login', ['ngRoute'])
 
             AV.User.signUpOrlogInWithMobilePhone($scope.phoneNumber, $scope.smsCode).then(res => {
                 console.log(res);
-
+                console.log($scope.option);
+                $rootScope.initWishList();
+                $rootScope.customGoTo($scope.option);
             }).catch(function (error) {
                 console.log(error);
             });
@@ -52,7 +48,6 @@ angular.module('myApp.Login', ['ngRoute'])
                 console.log(error);
                 $rootScope.displayAlert('danger', error);
             });
-
         };
 
     }]);

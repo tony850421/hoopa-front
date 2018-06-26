@@ -1,69 +1,68 @@
-<div ng-show="!showLogin">
-  <section class="paddingNews">
-    <!-- section start -->
-    <!-- ================ -->
-    <div class="container">
-      <div class="row">
-
-        <!-- page-title start -->
-        <!-- ================ -->
-        <h2 class="page-title">{{'EXPASSETS' | translate}}</h2>
-        <!-- page-title end -->
-      </div>
-
-      <div class="row">
-        <!-- filters start -->
-        <div class="sorting-filters text-center mb-20 d-flex justify-content-center pull-right">
-
-          <form class="form-inline col-md-12">
-            <div class="form-group ml-1">
-              <a href="" class="btn btn-default backgroundColorBlue" ng-click="resetFilters()">{{'RESETFILTERS' | translate}}</a>
-            </div>
-            <div class="form-group ml-1">
-              <label>{{'TEXT' | translate}}</label>
-              <input type="text" class="form-control" ng-model="filters.text">
-            </div>
-            <div class="form-group ml-1">
-              <label>{{'TYPE' | translate}}</label>
-              <select id="type" class="form-control" ng-model="filters.type" ng-options="x for x in typeArrivalArray">
-              </select>
-            </div>
-            <div class="form-group ml-1">
-              <label>{{'PROVINCE' | translate}}</label>
-              <select id="province" class="form-control" ng-model="filters.province" ng-options="x for x in provinces">
-              </select>
-            </div>
-            <div class="form-group ml-1">
-              <label>{{'AMOUNT' | translate}}</label>
-              <select id="amount" class="form-control" ng-model="filters.amount" ng-options="x for x in amountArray">
-              </select>
-            </div>
-            <div class="form-group ml-1">
-              <a href="" class="btn btn-default backgroundColorBlue" ng-click="applyFiltersClick()">{{'APPLYFILTERS' | translate}}</a>
-            </div>
-          </form>
-        </div>
-        <!-- filters end -->
-      </div>
-    </div>
-  </section>
-
-  <!-- section end -->
-
-  <!-- main-container start -->
+<section class="paddingNews">
+  <!-- section start -->
   <!-- ================ -->
-  <section class="main-container">
+  <div class="container">
+    <div class="row">
 
-    <div class="container">
-      <div class="row">
+      <!-- page-title start -->
+      <!-- ================ -->
+      <h2 class="page-title">{{'EXPASSETS' | translate}}</h2>
+      <!-- page-title end -->
+    </div>
 
-        <!-- main start -->
+    <div class="row">
+      <!-- filters start -->
+      <div class="sorting-filters text-center mb-20 d-flex justify-content-center pull-right">
+
+        <form class="form-inline col-md-12">
+          <div class="form-group ml-1">
+            <a href="" class="btn btn-default backgroundColorBlue" ng-click="resetFilters()">{{'RESETFILTERS' | translate}}</a>
+          </div>
+          <div class="form-group ml-1">
+            <label>{{'TEXT' | translate}}</label>
+            <input type="text" class="form-control" ng-model="filters.text">
+          </div>
+          <div class="form-group ml-1">
+            <label>{{'TYPE' | translate}}</label>
+            <select id="type" class="form-control" ng-model="filters.type" ng-options="x for x in typeArrivalArray">
+            </select>
+          </div>
+          <div class="form-group ml-1">
+            <label>{{'PROVINCE' | translate}}</label>
+            <select id="province" class="form-control" ng-model="filters.province" ng-options="x for x in provinces">
+            </select>
+          </div>
+          <div class="form-group ml-1">
+            <label>{{'AMOUNT' | translate}}</label>
+            <select id="amount" class="form-control" ng-model="filters.amount" ng-options="x for x in amountArray">
+            </select>
+          </div>
+          <div class="form-group ml-1">
+            <a href="" class="btn btn-default backgroundColorBlue" ng-click="applyFiltersClick()">{{'APPLYFILTERS' | translate}}</a>
+          </div>
+        </form>
+      </div>
+      <!-- filters end -->
+    </div>
+  </div>
+</section>
+
+<!-- section end -->
+
+<!-- main-container start -->
+<!-- ================ -->
+<section class="main-container">
+
+  <div class="container">
+    <div class="row">
+
+      <!-- main start -->
+      <!-- ================ -->
+      <div class="main col-12">
+        <!-- pills start -->
         <!-- ================ -->
-        <div class="main col-12">
-          <!-- pills start -->
-          <!-- ================ -->
-          <!-- Nav tabs -->
-          <!-- <ul class="nav nav-pills" role="tablist">
+        <!-- Nav tabs -->
+        <!-- <ul class="nav nav-pills" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" href="#pill-1" role="tab" data-toggle="tab" title="Latest Arrivals">
               <i class="fa fa-star"></i> Latest Arrivals</a>
@@ -77,189 +76,80 @@
               <i class=" fa fa-arrow-up"></i> Top Sellers</a>
           </li>
         </ul> -->
-          <!-- Tab panes -->
-          <div class="tab-content clear-style">
-            <div class="tab-pane active" id="pill-1">
-              <div class="row grid-space-10">
-                <div class="col-lg-3 col-md-6" ng-repeat="project in products">
-                  <div class="listing-item white-bg bordered mb-20">
-                    <div class="overlay-container">
-                      <img class="imageProjectHome" ng-src="{{project.imageUrl}}">
-                      <span class="badge">30% OFF</span>
-                      <div class="overlay-to-top links">
-                        <span class="small">                            
-                          <a ng-hide="project.wished" href="" class="btn-sm-link textWhite" ng-click="addToWhishList(project.id)">
-                            <i  class="fa fa-heart-o pr-10"></i>{{'ADDWISHLIST' | translate}}
-                          </a>
-                          <a ng-hide="!project.wished" href="" class="btn-sm-link textWhite" ng-click="removeToWhishList(project.id)">
-                            <i class="fa fa-heart pr-10"></i>{{'REMOVEWISHLIST' | translate}}
-                          </a>
-                          <a href="" class="btn-sm-link textWhite" ng-click="goToProject(project.id)">
-                            <i class="fa fa-link pr-1"></i>{{'VIEWDETAILS' | translate}}</a>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="body">
-                      <h3>
-                        <a ng-click="goToProject(project.id)" href="">{{project.title}}</a>
-                      </h3>
-                      <p class="small">{{project.description}}</p>
-                      <div class="elements-list clearfix">
-                        <span class="price colorPrimary">
-                          <i class="fa fa-rmb colorPrimary"></i>{{project.debitAmount}}万</span>
-                        <a href="" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated backgroundColorBlue" ng-click="goToProject(project.id)">{{'VIEWMORE' | translate}}
-                          <i class="fa fa-arrow-right"></i>
+        <!-- Tab panes -->
+        <div class="tab-content clear-style">
+          <div class="tab-pane active" id="pill-1">
+            <div class="row grid-space-10">
+              <div class="col-lg-3 col-md-6" ng-repeat="project in products">
+                <div class="listing-item white-bg bordered mb-20">
+                  <div class="overlay-container">
+                    <img class="imageProjectHome" ng-src="{{project.imageUrl}}">
+                    <span class="badge">30% OFF</span>
+                    <div class="overlay-to-top links">
+                      <span class="small">
+                        <a ng-hide="project.wished" href="" class="btn-sm-link textWhite" ng-click="addToWhishList(project.id)">
+                          <i class="fa fa-heart-o pr-10"></i>{{'ADDWISHLIST' | translate}}
                         </a>
-                      </div>
+                        <a ng-hide="!project.wished" href="" class="btn-sm-link textWhite" ng-click="removeToWhishList(project.id)">
+                          <i class="fa fa-heart pr-10"></i>{{'REMOVEWISHLIST' | translate}}
+                        </a>
+                        <a href="" class="btn-sm-link textWhite" ng-click="goToProject(project.id)">
+                          <i class="fa fa-link pr-1"></i>{{'VIEWDETAILS' | translate}}</a>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="body">
+                    <h3>
+                      <a ng-click="goToProject(project.id)" href="">{{project.title}}</a>
+                    </h3>
+                    <p class="small">{{project.description}}</p>
+                    <div class="elements-list clearfix">
+                      <span class="price colorPrimary">
+                        <i class="fa fa-rmb colorPrimary"></i>{{project.debitAmount}}万</span>
+                      <a href="" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated backgroundColorBlue" ng-click="goToProject(project.id)">{{'VIEWMORE' | translate}}
+                        <i class="fa fa-arrow-right"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- pills end -->
-
-          <!-- pagination start -->
-          <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-              <li class="page-item">
-                <a class="page-link" href="" aria-label="Previous" ng-click="begin()">
-                  <i aria-hidden="true" class="fa fa-angle-double-left"></i>
-                </a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="" aria-label="Previous" ng-click="previousPage()">
-                  <i aria-hidden="true" class="fa fa-angle-left"></i>
-                </a>
-              </li>
-              <li class="page-item active">
-                <a class="page-link" href="">{{currentPage}}</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="" aria-label="Next" ng-click="nextPage()">
-                  <i aria-hidden="true" class="fa fa-angle-right"></i>
-                </a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="" aria-label="Next" ng-click="end()">
-                  <i aria-hidden="true" class="fa fa-angle-double-right"></i>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <!-- pagination end -->
         </div>
-        <!-- main end -->
-      </div>
-    </div>
-  </section>
-  <!-- main-container end -->
-</div>
+        <!-- pills end -->
 
-
-<div ng-show="showLogin" class="main-container backgroundGray paddingNews">
-  <div class="container">
-    <div class="row justify-content-center minHeight410">
-      <div class="col-auto marginTop5P">
-        <!-- main start -->
-        <!-- ================ -->
-        <div class="main" data-animation-effect="fadeInUpSmall" data-effect-delay="100">
-          <div class="form-block p-30 light-gray-bg border-clear">
-            <h2 class="title">{{'LOGIN' | translate}}</h2>
-            <form class="form-horizontal">
-              <!-- <div class="form-group has-feedback row">
-                <label for="inputName" class="col-md-3 control-label text-md-right col-form-label">First Name
-                  <span class="text-danger small">*</span>
-                </label>
-                <div class="col-md-8">
-                  <input type="text" class="form-control" id="inputName" placeholder="Fisrt Name" required>
-                  <i class="fa fa-pencil form-control-feedback pr-4"></i>
-                </div>
-              </div> -->
-              <div class="form-group has-feedback row">
-                <label for="phoneNumber" class="col-md-3 control-label text-md-right col-form-label">{{'PHONENUMBER' | translate}}
-                  <span class="text-danger small">*</span>
-                </label>
-                <div class="col-md-5">
-                  <input type="text" class="form-control" id="phoneNumber" placeholder="{{'PHONENUMBER' | translate}}" ng-model="phoneNumber"
-                    required>
-                  <i class="fa fa-pencil form-control-feedback pr-4"></i>
-                </div>
-                <div class="col-md-3 paddingLeft0">
-                  <button class="btn btn-group btn-default btn-animated marginTop0 marginBottom0 backgroundColorBlue" ng-click="requestSmsCode()">{{'SENDCODE' | translate}}
-                    <i class="fa fa-check"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="form-group has-feedback row">
-                <label for="smsCode" class="col-md-3 control-label text-md-right col-form-label">{{'SMSCODE' | translate}}
-                  <span class="text-danger small">*</span>
-                </label>
-                <div class="col-md-8">
-                  <input type="text" class="form-control" id="smsCode" placeholder="{{'SMSCODE' | translate}}" ng-model="smsCode" required>
-                  <i class="fa fa-pencil form-control-feedback pr-4"></i>
-                </div>
-              </div>
-              <!-- <div class="form-group has-feedback row">
-                <label for="inputLastName" class="col-md-3 control-label text-md-right col-form-label">Last Name
-                  <span class="text-danger small">*</span>
-                </label>
-                <div class="col-md-8">
-                  <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" required>
-                  <i class="fa fa-pencil form-control-feedback pr-4"></i>
-                </div>
-              </div>
-              <div class="form-group has-feedback row">
-                <label for="inputUserName" class="col-md-3 control-label text-md-right col-form-label">User Name
-                  <span class="text-danger small">*</span>
-                </label>
-                <div class="col-md-8">
-                  <input type="text" class="form-control" id="inputUserName" placeholder="User Name" required>
-                  <i class="fa fa-user form-control-feedback pr-4"></i>
-                </div>
-              </div>
-              <div class="form-group has-feedback row">
-                <label for="inputEmail" class="col-md-3 control-label text-md-right col-form-label">Email
-                  <span class="text-danger small">*</span>
-                </label>
-                <div class="col-md-8">
-                  <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
-                  <i class="fa fa-envelope form-control-feedback pr-4"></i>
-                </div>
-              </div>
-              <div class="form-group has-feedback row">
-                <label for="inputPassword" class="col-md-3 control-label text-md-right col-form-label">Password
-                  <span class="text-danger small">*</span>
-                </label>
-                <div class="col-md-8">
-                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
-                  <i class="fa fa-lock form-control-feedback pr-4"></i>
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="ml-md-auto col-md-9">
-                  <div class="checkbox form-check">
-                    <input class="form-check-input" type="checkbox" required>
-                    <label class="form-check-label">
-                      Lorem ipsum
-                      <a href="#">dolor sit</a> and
-                      <a href="#">ametetot unamliage</a>
-                    </label>
-                  </div>
-                </div>
-              </div> -->
-              <div class="form-group row">
-                <div class="ml-md-auto col-md-9">
-                  <button type="submit" class="btn btn-group btn-default btn-animated backgroundColorBlue" ng-click="loginWithSmsCode()">{{'LOGIN' | translate}}
-                    <i class="fa fa-check"></i>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <!-- main end -->
+        <!-- pagination start -->
+        <nav aria-label="Page navigation">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="" aria-label="Previous" ng-click="begin()">
+                <i aria-hidden="true" class="fa fa-angle-double-left"></i>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="" aria-label="Previous" ng-click="previousPage()">
+                <i aria-hidden="true" class="fa fa-angle-left"></i>
+              </a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="">{{currentPage}}</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="" aria-label="Next" ng-click="nextPage()">
+                <i aria-hidden="true" class="fa fa-angle-right"></i>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="" aria-label="Next" ng-click="end()">
+                <i aria-hidden="true" class="fa fa-angle-double-right"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- pagination end -->
       </div>
+      <!-- main end -->
     </div>
   </div>
-</div>
+</section>
+<!-- main-container end -->
