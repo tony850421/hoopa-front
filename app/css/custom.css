@@ -496,3 +496,8 @@ ul.pagination .page-item.active .page-link,
 .table.table-colored {
 	border-bottom-color: #22447a;
 }
+
+.iconMenuClass{
+    font-size: 16px !important;
+    vertical-align: middle !important;
+}
