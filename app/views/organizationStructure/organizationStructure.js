@@ -10,6 +10,9 @@ angular.module('myApp.OrganizationStructure', ['ngRoute'])
   }])
 
   .controller('OrganizationStructureCtrl', ['$rootScope', '$scope', '$routeParams', function ($rootScope, $scope, $routeParams) {
+
+    $rootScope.showBanner = false;
+    
     $scope.projects = [];
 
     $scope.init = function () {
