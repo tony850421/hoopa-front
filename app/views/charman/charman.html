@@ -1,0 +1,38 @@
+<!-- main-container start -->
+<!-- ================ -->
+<section class="main-container paddingStructure">
+    <div class="container">
+        <div class="row">
+            <div class="main col-lg-8">
+                <h1 class="page-title">{{'CHAIRMAN' | translate }}</h1>
+                <div class="separator-2"></div>
+                <p>胡巴资产是不良资产投资管理服务提供商，一直秉承着“让社会闲置资源合理利用，创造社会价值”的理念，为众多投资机构及民营资本创造了丰厚收益，我们诚邀社会各界人士精诚合作，创造我们共同追求的财富价值，分享成功合作的喜悦与成果。</p>
+            </div>
+            <aside class="col-lg-4 col-xl-3 ml-xl-auto">
+                <div class="sidebar">
+                    <div class="block clearfix">
+                        <h4 class="title">{{"RECOMMENDEDPROJECT" | translate}}</h4>
+                        <div class="separator-2"></div>
+                        <div class="media margin-clear" ng-repeat="p in projects" ng-hide="p.id == project.id" style="margin-bottom: 10px !important">
+                            <div class="d-flex pr-2">
+                                <div class="overlay-container">
+                                    <img class="media-object recommendedProjectClass" ng-src="{{p.mainImage}}" alt="blog-thumb">
+                                    <a href="" ng-click="goToProject(p.id)" class="overlay-link small">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading">
+                                    <a href="" ng-click="goToProject(p.id)">{{p.title}}</a>
+                                </h6>
+                                <p class="price colorPrimary marginBottom0">¥{{p.amount}}万</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
