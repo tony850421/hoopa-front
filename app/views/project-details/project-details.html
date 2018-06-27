@@ -69,8 +69,10 @@
                 <i class="fa fa-star text-default"></i>
                 <i class="fa fa-star"></i>
               </span>
-              <a href="" class="wishlist">
-                <i class="fa fa-heart-o pl-10 pr-1"></i>{{'WISHLIST' | translate}}</a>
+              <a href="" ng-hide="project.wished" class="wishlist" ng-click="addToWhishList()">
+                <i class="fa fa-heart-o pl-10 pr-1"></i>{{'ADDWISHLIST' | translate}}</a>
+                <a href="" ng-hide="!project.wished" class="wishlist" ng-click="removeToWhishList()">
+                    <i class="fa fa-heart pl-10 pr-1"></i>{{'REMOVEWISHLIST' | translate}}</a>
               <!-- <ul class="pl-20 pull-right social-links circle small clearfix margin-clear animated-effect-1">
                 <li class="twitter">
                   <a href="">
