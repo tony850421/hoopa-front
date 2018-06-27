@@ -5,14 +5,16 @@ angular.module('myApp.Main', ['ngRoute'])
     .controller('MainCtrl', ['$rootScope', '$scope', '$window', '$translate', function ($rootScope, $scope, $window, $translate) {
 
         // $scope.baseUrl = 'https://hoopa.org/front-end/#!/';
-        // $scope.baseUrl = 'http://127.0.0.1:8000/#!/';
-        $scope.baseUrl = 'http://localhost/hoopa-front/app/#!/';
+        $scope.baseUrl = 'http://127.0.0.1:8000/#!/';
+        // $scope.baseUrl = 'http://localhost/hoopa-front/app/#!/';
 
         $scope.languageShort = "English";
 
         $rootScope.customGoTo = function (route) {
             $window.location.href = $scope.baseUrl + route;
         };
+
+        $rootScope.searchFilterText = '';
 
         $rootScope.displayAlert = function (type, message) {
             //type => 'success', 'info', 'warning', 'danger'
@@ -95,4 +97,9 @@ angular.module('myApp.Main', ['ngRoute'])
             $rootScope.customGoTo('wishlist');
         };
 
+        $scope.search = function (searchFilterText) {
+            $rootScope.searchFilterText = searchFilterText;
+            $rootScope.customGoTo('projects');
+            $rootScope.$broadcast('searchTextUpdated');
+        }
     }]);

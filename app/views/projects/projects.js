@@ -36,15 +36,23 @@ angular.module('myApp.Projects', ['ngRoute'])
     };
 
     $scope.resetFilters = function () {
+      $rootScope.searchFilterText = '';
+
       $scope.filters = {
         province: '区域无限制',
         type: '抵押物类型',
         amount: '本金无限制',
-        text: ''
+        text: '',
       };
     };
 
+    $scope.$on("searchTextUpdated", function(evt, data) { 
+      $scope.filters.text = $rootScope.searchFilterText;
+      $scope.applyFilters();
+    });
+
     $scope.applyFilters = function () {
+      
       $scope.products = [];
       var currentUser = AV.User.current();
 
