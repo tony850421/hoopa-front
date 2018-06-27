@@ -304,6 +304,14 @@ h6 {
     margin-top: 10px !important;
 }
 
+.marginTop15 {
+    margin-top: 15px !important;
+}
+
+.marginTop20 {
+    margin-top: 20px !important;
+}
+
 .marginRight13 {
     margin-right: 13px;
 }
@@ -519,4 +527,12 @@ ul.pagination .page-item.active .page-link,
 
 .structureImage{
     object-fit: cover !important;
+}
+
+.fontWeightBold{
+    font-weight: bold !important;
+}
+
+.paddingTop25{
+    padding-top: 25px !important;
 }

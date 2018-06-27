@@ -18,7 +18,13 @@ angular.module('myApp', [
   'myApp.Wishlist',
   'myApp.GroupIntroduction',
   'myApp.OrganizationStructure',
-  'myApp.CoreTeam'
+  'myApp.CoreTeam',
+  'myApp.DevHistory',
+  'myApp.GroupHonors',
+  'myApp.Charman',
+  'myApp.BussinesSystem',
+  'myApp.BussinesProcess',
+  'myApp.FeaturedCases'
 ])
 
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

@@ -33,6 +33,7 @@
   <!-- Font and Icon Hoopa CSS -->
   <link href="fonts/font-hoopa/style.css" rel="stylesheet">
   <link href="fonts/icon-hoopa/style.css" rel="stylesheet">
+  <link href="fonts/icon-hoopa2/style.css" rel="stylesheet">
 
 
   <!-- Plugins -->
@@ -426,8 +427,8 @@
                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
                       <!-- main-menu -->
                       <ul class="navbar-nav ml-xl-auto">
-                        <li class="nav-item" ng-click="customGoTo('home')">
-                            <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'HOME' | translate }}</a>
+                        <li class="nav-item" >
+                            <a href="index.html" class="nav-link">{{'HOME' | translate }}</a>
                         </li>
                         <li class="nav-item dropdown">
                           <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'GROUPOVERVIEW' | translate }}</a>
@@ -445,15 +446,16 @@
                                 <i class="icon--Core-Team iconMenuClass pr-2"></i>{{'CORETEAM' | translate }}</a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="" ng-click="customGoTo('devhistory')">
                                 <i class="icon--Development-history iconMenuClass pr-2"></i>{{'DEVHISTORY' | translate }}</a>
                             </li>
                             <li>
+                              <!-- <a href="" ng-click="customGoTo('grouphonors')"> -->
                               <a href="">
                                 <i class="icon--Group-honors iconMenuClass pr-2"></i>{{'GROUPHONORS' | translate }}</a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="" ng-click="customGoTo('charman')">
                                 <i class="icon--Chairmans-Message iconMenuClass pr-2"></i>{{'CHAIRMAN' | translate }}</a>
                             </li>
                           </ul>
@@ -462,11 +464,11 @@
                           <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'SERVICES' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
-                              <a href="">
+                              <a href="" ng-click="customGoTo('bussinessystem')">
                                 <i class="icon--Business-System iconMenuClass pr-2"></i>{{'BSYSTEM' | translate }}</a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="" ng-click="customGoTo('bussinesprocess')">
                                 <i class="icon--Service-process iconMenuClass pr-2"></i>{{'SPROCESS' | translate }}</a>
                             </li>
                             <li>
@@ -496,15 +498,15 @@
                           <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'ASSETS' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown" style="width: 250px !important">
                             <li>
-                              <a href=""  ng-click="customGoTo('projects')">
-                                <i class="fa fa-suitcase iconMenuClass pr-2"></i>{{'IPROMOTION' | translate }}</a>
+                              <a href="" ng-click="customGoTo('projects')">
+                                <i class="icon-Investment-Promotion iconMenuClass pr-2"></i>{{'IPROMOTION' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
                                 <i class="icon--Project-list iconMenuClass pr-2"></i>{{'PLIST' | translate }}</a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="" ng-click="customGoTo('featured-cases')">
                                 <i class="icon--Featured-Cases iconMenuClass pr-2"></i>{{'FCASES' | translate }}</a>
                             </li>
                           </ul>
@@ -514,7 +516,7 @@
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase iconMenuClass pr-2"></i>{{'RREPORT' | translate }}</a>
+                                <i class="icon-Research-Report iconMenuClass pr-2"></i>{{'RREPORT' | translate }}</a>
                             </li>
                           </ul>
                         </li>
@@ -901,12 +903,15 @@
                   <div class="logo-footer">
                     <div class="col-md-12 paddingBottom20">
                       <div class="row">
-                        <div class="col-md-6">
-                          <img id="logo-footer borderRight" class="mx-auto" src="images/LogoHoopa.png" alt="">
+                        <div class="col-md-4">
+                          <img id="logo-footer" class="mx-auto paddingTop25" src="images/LogoHoopa.png" alt="">
                         </div>
-                        <div class="col-md-6 borderLeft">
+                        <div class="col-md-4 borderLeft">
                           <img id="qr-footer" class="mx-auto" src="images/qrcode.jpg" alt="">
                         </div>
+                        <div class="col-md-4 borderLeft">
+                            <img id="qr-footer" class="mx-auto" src="images/qrmini.jpg" alt="">
+                          </div>
                       </div>
                     </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus illo vel dolorum soluta consectetur
@@ -1003,6 +1008,13 @@
     <script src="views/groupIntroduction/groupIntroduction.js"></script>
     <script src="views/organizationStructure/organizationStructure.js"></script>
     <script src="views/coreTeam/coreTeam.js"></script>
+    <script src="views/devHistory/devHistory.js"></script>
+    <script src="views/groupHonors/groupHonors.js"></script>
+    <script src="views/charman/charman.js"></script>
+    <script src="views/bussinesSystem/bussinesSystem.js"></script>
+    <script src="views/bussinesProcess/bussinesProcess.js"></script>
+    <script src="views/featured-cases/featured-cases.js"></script>
+
     <script src="mainControllers/main.js"></script>
 
     <script src="components/version/version.js"></script>
