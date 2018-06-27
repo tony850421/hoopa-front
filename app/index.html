@@ -496,11 +496,11 @@
                           <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'ASSETS' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown" style="width: 250px !important">
                             <li>
-                              <a href="">
+                              <a href=""  ng-click="customGoTo('projects')">
                                 <i class="fa fa-suitcase iconMenuClass pr-2"></i>{{'IPROMOTION' | translate }}</a>
                             </li>
                             <li>
-                              <a href="" ng-click="customGoTo('projects')">
+                              <a href="">
                                 <i class="icon--Project-list iconMenuClass pr-2"></i>{{'PLIST' | translate }}</a>
                             </li>
                             <li>
@@ -548,7 +548,7 @@
               <!-- header dropdown buttons -->
               <div class="header-dropdown-buttons">
                 <div class="btn-group">
-                  <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true"
+                  <button ng-click="customGoTo('projects')" type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
                     <i class="icon-search"></i>
                   </button>
@@ -556,8 +556,8 @@
                     <li>
                       <form role="search" class="search-box margin-clear">
                         <div class="form-group has-feedback">
-                          <input type="text" class="form-control" placeholder="Search">
-                          <i class="icon-search form-control-feedback"></i>
+                          <input type="text" class="form-control" placeholder="Search" ng-model="searchFilterText">
+                          <i ng-click="search(searchFilterText)" class="icon-search form-control-feedback"></i>
                         </div>
                       </form>
                     </li>

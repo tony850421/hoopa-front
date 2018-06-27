@@ -14,6 +14,8 @@ angular.module('myApp.Main', ['ngRoute'])
             $window.location.href = $scope.baseUrl + route;
         };
 
+        $rootScope.searchFilterText = '';
+
         $rootScope.displayAlert = function (type, message) {
             //type => 'success', 'info', 'warning', 'danger'
             $.notify({
@@ -95,4 +97,9 @@ angular.module('myApp.Main', ['ngRoute'])
             $rootScope.customGoTo('wishlist');
         };
 
+        $scope.search = function (searchFilterText) {
+            $rootScope.searchFilterText = searchFilterText;
+            $rootScope.customGoTo('projects');
+            $rootScope.$broadcast('searchTextUpdated');
+        }
     }]);
