@@ -30,8 +30,10 @@
   <!-- Font Awesome CSS -->
   <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-  <!-- FontHoopa CSS -->
+  <!-- Font and Icon Hoopa CSS -->
   <link href="fonts/font-hoopa/style.css" rel="stylesheet">
+  <link href="fonts/icon-hoopa/style.css" rel="stylesheet">
+
 
   <!-- Plugins -->
   <link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -326,7 +328,7 @@
               <!-- header-first end -->
 
             </div>
-            <div class="col-lg-8 ml-auto">
+            <div class="col-lg-9 ml-auto">
 
               <!-- header-second start -->
               <!-- ================ -->
@@ -424,37 +426,35 @@
                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
                       <!-- main-menu -->
                       <ul class="navbar-nav ml-xl-auto">
-
-                        <li class="nav-item dropdown ">
-                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'HOME' | translate }}</a>
-                          <ul class="dropdown-menu" aria-labelledby="third-dropdown">
+                        <li class="nav-item" ng-click="customGoTo('home')">
+                            <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'HOME' | translate }}</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'GROUPOVERVIEW' | translate }}</a>
+                          <ul class="dropdown-menu" aria-labelledby="third-dropdown" style="width: 250px !important">
                             <li>
-                              <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'GROUPOVERVIEW' | translate }}</a>
+                              <a href="" ng-click="customGoTo('groupIntroduction')">
+                                <i class="icon--Group-Introduction iconMenuClass pr-2"></i>{{'GROUPINTRODUCTION' | translate }}</a>
+                            </li>
+                            <li>
+                              <a href="" ng-click="customGoTo('organizationStructure')">
+                                <i class="icon--Organization-structure iconMenuClass pr-2"></i>{{'STRUCTURE' | translate }}</a>
+                            </li>
+                            <li>
+                              <a href="" ng-click="customGoTo('coreteam')">
+                                <i class="icon--Core-Team iconMenuClass pr-2"></i>{{'CORETEAM' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'GROUPINTRODUCTION' | translate }}</a>
+                                <i class="icon--Development-history iconMenuClass pr-2"></i>{{'DEVHISTORY' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'STRUCTURE' | translate }}</a>
+                                <i class="icon--Group-honors iconMenuClass pr-2"></i>{{'GROUPHONORS' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'CORETEAM' | translate }}</a>
-                            </li>
-                            <li>
-                              <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'DEVHISTORY' | translate }}</a>
-                            </li>
-                            <li>
-                              <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'GROUPHONORS' | translate }}</a>
-                            </li>
-                            <li>
-                              <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'CHAIRMAN' | translate }}</a>
+                                <i class="icon--Chairmans-Message iconMenuClass pr-2"></i>{{'CHAIRMAN' | translate }}</a>
                             </li>
                           </ul>
                         </li>
@@ -463,15 +463,15 @@
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'BSYSTEM' | translate }}</a>
+                                <i class="icon--Business-System iconMenuClass pr-2"></i>{{'BSYSTEM' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'SPROCESS' | translate }}</a>
+                                <i class="icon--Service-process iconMenuClass pr-2"></i>{{'SPROCESS' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'SADVANTAGES' | translate }}</a>
+                                <i class="icon--Service-Advantages iconMenuClass pr-2"></i>{{'SADVANTAGES' | translate }}</a>
                             </li>
                           </ul>
                         </li>
@@ -480,32 +480,32 @@
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="" ng-click="customGoTo('news/1')">
-                                <i class="fa fa-suitcase pr-2"></i>{{'MCOVERAGE' | translate }}</a>
+                                <i class="icon--Media-coverage iconMenuClass pr-2"></i>{{'MCOVERAGE' | translate }}</a>
                             </li>
                             <li>
                               <a href="" ng-click="customGoTo('news/2')">
-                                <i class="fa fa-suitcase pr-2"></i>{{'LNEWS' | translate }}</a>
+                                <i class="icon--Latest-News iconMenuClass pr-2"></i>{{'LNEWS' | translate }}</a>
                             </li>
                             <li>
                               <a href="" ng-click="customGoTo('news/3')">
-                                <i class="fa fa-suitcase pr-2"></i>{{'INEWS' | translate }}</a>
+                                <i class="icon--Industry-News iconMenuClass pr-2"></i>{{'INEWS' | translate }}</a>
                             </li>
                           </ul>
                         </li>
                         <li class="nav-item dropdown ">
                           <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'ASSETS' | translate }}</a>
-                          <ul class="dropdown-menu" aria-labelledby="third-dropdown">
+                          <ul class="dropdown-menu" aria-labelledby="third-dropdown" style="width: 250px !important">
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'IPROMOTION' | translate }}</a>
+                                <i class="fa fa-suitcase iconMenuClass pr-2"></i>{{'IPROMOTION' | translate }}</a>
                             </li>
                             <li>
                               <a href="" ng-click="customGoTo('projects')">
-                                <i class="fa fa-suitcase pr-2"></i>{{'PLIST' | translate }}</a>
+                                <i class="icon--Project-list iconMenuClass pr-2"></i>{{'PLIST' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'FCASES' | translate }}</a>
+                                <i class="icon--Featured-Cases iconMenuClass pr-2"></i>{{'FCASES' | translate }}</a>
                             </li>
                           </ul>
                         </li>
@@ -514,7 +514,7 @@
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'RREPORT' | translate }}</a>
+                                <i class="fa fa-suitcase iconMenuClass pr-2"></i>{{'RREPORT' | translate }}</a>
                             </li>
                           </ul>
                         </li>
@@ -526,11 +526,11 @@
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'BOFFICES' | translate }}</a>
+                                <i class="icon--Branch-offices iconMenuClass pr-2"></i>{{'BOFFICES' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="fa fa-suitcase pr-2"></i>{{'TRECRUIMENT' | translate }}</a>
+                                <i class="icon--Talent-Recruitment iconMenuClass pr-2"></i>{{'TRECRUIMENT' | translate }}</a>
                             </li>
                           </ul>
                         </li>
@@ -713,10 +713,10 @@
             <ul class="slides">
               <!-- slide 1 start -->
               <!-- ================ -->
-              <li data-transition="slidehorizontal" data-slotamount="default" data-masterspeed="default" data-title="Team Circle">
+              <li data-transition="slidehorizontal" data-slotamount="default" data-masterspeed="default" data-title="">
 
                 <!-- main image -->
-                <img src="images/home6.jpg" alt="slidebg1" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover" class="rev-slidebg">
+                <img src="images/home6.jpg" alt="slidebg1" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover" style="object-fit: cover !important" class="rev-slidebg">
 
                 <!-- Transparent Background -->
                 <div class="tp-caption dark-translucent-bg" data-x="center" data-y="center" data-start="0" data-transform_idle="o:1;" data-transform_in="o:0;s:600;e:Power2.easeInOut;"
@@ -724,62 +724,62 @@
                 </div>
 
                 <!-- LAYER NR. 1 -->
-                <div class="tp-caption large_white" data-x="left" data-y="150" data-start="1000" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;"
+                <!-- <div class="tp-caption large_white" data-x="left" data-y="150" data-start="1000" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;"
                   data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
                   data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">Next Generation Template
-                </div>
+                </div> -->
 
                 <!-- LAYER NR. 2 -->
-                <div class="tp-caption medium_white" data-x="left" data-y="230" data-speed="500" data-start="1200" data-transform_idle="o:1;"
+                <!-- <div class="tp-caption medium_white" data-x="left" data-y="230" data-speed="500" data-start="1200" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-laptop"></i>
                   </span> 100% Responsive
-                </div>
+                </div> -->
 
                 <!-- LAYER NR. 3 -->
-                <div class="tp-caption medium_white" data-x="left" data-y="290" data-speed="500" data-start="1400" data-transform_idle="o:1;"
+                <!-- <div class="tp-caption medium_white" data-x="left" data-y="290" data-speed="500" data-start="1400" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-check"></i>
                   </span> Bootstrap Based
-                </div>
+                </div> -->
 
                 <!-- LAYER NR. 4 -->
-                <div class="tp-caption medium_white" data-x="left" data-y="350" data-speed="500" data-start="1600" data-transform_idle="o:1;"
+                <!-- <div class="tp-caption medium_white" data-x="left" data-y="350" data-speed="500" data-start="1600" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-gift"></i>
                   </span> Packed Full of Features
-                </div>
+                </div> -->
 
                 <!-- LAYER NR. 5 -->
-                <div class="tp-caption medium_white" data-x="left" data-y="410" data-speed="500" data-start="1800" data-transform_idle="o:1;"
+                <!-- <div class="tp-caption medium_white" data-x="left" data-y="410" data-speed="500" data-start="1800" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-hourglass-half"></i>
                   </span> Very Elegant Design
-                </div>
+                </div> -->
 
                 <!-- LAYER NR. 6 -->
-                <div class="tp-caption small_white" data-x="left" data-y="480" data-speed="500" data-start="2000" data-transform_idle="o:1;"
+                <!-- <div class="tp-caption small_white" data-x="left" data-y="480" data-speed="500" data-start="2000" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <a href="" class="btn btn-default btn-lg btn-animated">Purchase
                     <i class="fa fa-cart-arrow-down"></i>
                   </a>
-                </div>
+                </div> -->
 
               </li>
               <!-- slide 1 end -->
 
               <!-- slide 2 start -->
               <!-- ================ -->
-              <li data-transition="slidehorizontal" data-slotamount="default" data-masterspeed="default" data-title="Team Work">
+              <li data-transition="slidehorizontal" data-slotamount="default" data-masterspeed="default" data-title="">
 
                 <!-- main image -->
                 <img src="images/home7.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover" class="rev-slidebg">
@@ -790,55 +790,55 @@
                 </div>
 
                 <!-- LAYER NR. 1 -->
-                <div class="tp-caption large_white" data-x="left" data-y="150" data-start="1000" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;"
+                <!-- <div class="tp-caption large_white" data-x="left" data-y="150" data-start="1000" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;"
                   data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
                   data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">Premium HTML5 Bootstrap Theme
-                </div>
+                </div> -->
 
                 <!-- LAYER NR. 2 -->
-                <div class="tp-caption medium_white" data-x="left" data-y="230" data-speed="500" data-start="1200" data-transform_idle="o:1;"
+                <!-- <div class="tp-caption medium_white" data-x="left" data-y="230" data-speed="500" data-start="1200" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-laptop"></i>
                   </span> W3C Validated
-                </div>
+                </div> -->
 
                 <!-- LAYER NR. 3 -->
-                <div class="tp-caption medium_white" data-x="left" data-y="290" data-speed="500" data-start="1400" data-transform_idle="o:1;"
+                <!-- <div class="tp-caption medium_white" data-x="left" data-y="290" data-speed="500" data-start="1400" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-check"></i>
                   </span> Unt loremcu dolor
-                </div>
+                </div> -->
 
                 <!-- LAYER NR. 4 -->
-                <div class="tp-caption medium_white" data-x="left" data-y="350" data-speed="500" data-start="1600" data-transform_idle="o:1;"
+                <!-- <div class="tp-caption medium_white" data-x="left" data-y="350" data-speed="500" data-start="1600" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-gift"></i>
                   </span> Crossbrowser Compatible
-                </div>
+                </div> -->
 
                 <!-- LAYER NR. 5 -->
-                <div class="tp-caption medium_white" data-x="left" data-y="410" data-speed="500" data-start="1800" data-transform_idle="o:1;"
+                <!-- <div class="tp-caption medium_white" data-x="left" data-y="410" data-speed="500" data-start="1800" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-hourglass-half"></i>
                   </span> Very Elegant Design
-                </div>
+                </div> -->
 
                 <!-- LAYER NR. 6 -->
-                <div class="tp-caption small_white" data-x="left" data-y="480" data-speed="500" data-start="2000" data-transform_idle="o:1;"
+                <!-- <div class="tp-caption small_white" data-x="left" data-y="480" data-speed="500" data-start="2000" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <a href="" class="btn btn-default-transparent btn-lg btn-animated">Purchase
                     <i class="fa fa-cart-arrow-down"></i>
                   </a>
-                </div>
+                </div> -->
 
               </li>
               <!-- slide 2 end -->
@@ -1000,6 +1000,9 @@
     <script src="views/project-details/project-details.js"></script>
     <script src="views/wishlist/wishlist.js"></script>
     <script src="views/login/login.js"></script>
+    <script src="views/groupIntroduction/groupIntroduction.js"></script>
+    <script src="views/organizationStructure/organizationStructure.js"></script>
+    <script src="views/coreTeam/coreTeam.js"></script>
     <script src="mainControllers/main.js"></script>
 
     <script src="components/version/version.js"></script>

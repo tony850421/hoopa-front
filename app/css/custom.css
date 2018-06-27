@@ -265,7 +265,7 @@ h6 {
     color: #ff6700 !important;
 }
 
-.cursorDefault{
+.cursorDefault {
     cursor: default !important;
 }
 
@@ -466,33 +466,57 @@ ul.pagination .page-item.active .page-link,
     text-align: center;
 }
 
-.minHeight410{
+.minHeight410 {
     min-height: 410px !important;
 }
 
-.marginTop5P{
+.marginTop5P {
     margin-top: 5% !important;
 }
 
-.backgroundGray{
+.backgroundGray {
     background-color: #f2f2f2;
 }
 
 .cart .product .small:hover {
-	display: block;
-	color: #ff6700 !important;
+    display: block;
+    color: #ff6700 !important;
 }
 
-#textShopCart{
+#textShopCart {
     color: #22447a !important;
 }
 
-.table-colored > thead > tr > th {
-	border-color: #22447a;
-	background-color: #22447a;
-	color: #ffffff;
+.table-colored>thead>tr>th {
+    border-color: #22447a;
+    background-color: #22447a;
+    color: #ffffff;
 }
 
 .table.table-colored {
-	border-bottom-color: #22447a;
+    border-bottom-color: #22447a;
+}
+
+.iconMenuClass {
+    font-size: 16px !important;
+    vertical-align: middle !important;
+}
+
+.paddingGroupIntroduction {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    height: 655px !important;
+}
+
+.paddingStructure {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.structureImage{
+    object-fit: cover !important;
 }
