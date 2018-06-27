@@ -24,7 +24,8 @@ angular.module('myApp', [
   'myApp.Charman',
   'myApp.BussinesSystem',
   'myApp.BussinesProcess',
-  'myApp.FeaturedCases'
+  'myApp.FeaturedCases',
+  'myApp.BranchesOffices'
 ])
 
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

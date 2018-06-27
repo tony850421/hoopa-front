@@ -536,3 +536,7 @@ ul.pagination .page-item.active .page-link,
 .paddingTop25{
     padding-top: 25px !important;
 }
+
+.img-rounded{
+    border-radius: 50% !important;
+}
