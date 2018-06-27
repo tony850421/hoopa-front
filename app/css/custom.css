@@ -532,3 +532,7 @@ ul.pagination .page-item.active .page-link,
 .fontWeightBold{
     font-weight: bold !important;
 }
+
+.paddingTop25{
+    padding-top: 25px !important;
+}
