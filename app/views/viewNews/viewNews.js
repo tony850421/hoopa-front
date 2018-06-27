@@ -10,6 +10,9 @@ angular.module('myApp.ViewNews', ['ngRoute'])
     }])
 
     .controller('ViewNewsCtrl', ['$rootScope', '$scope', '$routeParams', function ($rootScope, $scope, $routeParams) {
+
+        $rootScope.showBanner = false;
+        
         $scope.new = {};
         $scope.news = [];
         $scope.projects = [];

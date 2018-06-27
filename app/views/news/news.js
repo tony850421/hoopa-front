@@ -12,6 +12,7 @@ angular.module('myApp.News', ['ngRoute'])
   .controller('NewsCtrl', ['$rootScope', '$scope', '$routeParams', '$window', function ($rootScope, $scope, $routeParams, $window) {
 
     $rootScope.showBanner = false;
+    
     $scope.activeSideBar = $routeParams.param1;
 
     $scope.news = [];
