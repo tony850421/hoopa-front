@@ -328,7 +328,7 @@
               <!-- header-first end -->
 
             </div>
-            <div class="col-lg-8 ml-auto">
+            <div class="col-lg-9 ml-auto">
 
               <!-- header-second start -->
               <!-- ================ -->
@@ -426,10 +426,10 @@
                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
                       <!-- main-menu -->
                       <ul class="navbar-nav ml-xl-auto">
-                        <!-- <li class="nav-item dropdown ">
+                        <li class="nav-item" ng-click="customGoTo('home')">
                             <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'HOME' | translate }}</a>
-                        </li> -->
-                        <li class="nav-item dropdown ">
+                        </li>
+                        <li class="nav-item dropdown">
                           <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'GROUPOVERVIEW' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown" style="width: 250px !important">
                             <li>
@@ -437,11 +437,11 @@
                                 <i class="icon--Group-Introduction iconMenuClass pr-2"></i>{{'GROUPINTRODUCTION' | translate }}</a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="" ng-click="customGoTo('organizationStructure')">
                                 <i class="icon--Organization-structure iconMenuClass pr-2"></i>{{'STRUCTURE' | translate }}</a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="" ng-click="customGoTo('coreteam')">
                                 <i class="icon--Core-Team iconMenuClass pr-2"></i>{{'CORETEAM' | translate }}</a>
                             </li>
                             <li>
@@ -1001,6 +1001,8 @@
     <script src="views/wishlist/wishlist.js"></script>
     <script src="views/login/login.js"></script>
     <script src="views/groupIntroduction/groupIntroduction.js"></script>
+    <script src="views/organizationStructure/organizationStructure.js"></script>
+    <script src="views/coreTeam/coreTeam.js"></script>
     <script src="mainControllers/main.js"></script>
 
     <script src="components/version/version.js"></script>

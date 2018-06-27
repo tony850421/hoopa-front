@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.OrganizationStructure', ['ngRoute'])
+angular.module('myApp.CoreTeam', ['ngRoute'])
 
   .config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/organizationStructure', {
-      templateUrl: 'views/organizationStructure/organizationStructure.html',
-      controller: 'OrganizationStructureCtrl'
+    $routeProvider.when('/coreteam', {
+      templateUrl: 'views/coreTeam/coreTeam.html',
+      controller: 'CoreTeamCtrl'
     });
   }])
 
-  .controller('OrganizationStructureCtrl', ['$rootScope', '$scope', '$routeParams', function ($rootScope, $scope, $routeParams) {
+  .controller('CoreTeamCtrl', ['$rootScope', '$scope', '$routeParams', function ($rootScope, $scope, $routeParams) {
     $scope.projects = [];
 
     $scope.init = function () {
