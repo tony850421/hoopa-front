@@ -21,13 +21,13 @@ angular.module('myApp.Main', ['ngRoute'])
             $.notify({
                 message: message
             }, {
-                    type: type,
-                    delay: 4000,
-                    offset: {
-                        y: 100,
-                        x: 20
-                    }
-                });
+                type: type,
+                delay: 4000,
+                offset: {
+                    y: 100,
+                    x: 20
+                }
+            });
         }
 
         $scope.setLanguage = function (lan) {
@@ -57,7 +57,7 @@ angular.module('myApp.Main', ['ngRoute'])
             // var id = $scope.projectId;
             var currentUser = AV.User.current();
 
-            if(currentUser) {
+            if (currentUser) {
                 $rootScope.loginUser = true;
 
                 var query = new AV.Query('ShopCar');
@@ -65,13 +65,14 @@ angular.module('myApp.Main', ['ngRoute'])
                 query.include('image');
                 query.include('project');
 
-                query.count().then( count => {
+                query.count().then(count => {
                     $rootScope.shopCartCount = count;
                 })
 
                 query.limit(4);
                 query.descending('createdAt');
                 query.find().then(res => {
+                    console.log(res);
                     $scope.shopCartArray = res;
                     $scope.$apply();
                 })
@@ -93,7 +94,7 @@ angular.module('myApp.Main', ['ngRoute'])
 
         $rootScope.initWishList();
 
-        $scope.goToWishList = function(){
+        $scope.goToWishList = function () {
             $rootScope.customGoTo('wishlist');
         };
 
@@ -101,5 +102,10 @@ angular.module('myApp.Main', ['ngRoute'])
             $rootScope.searchFilterText = searchFilterText;
             $rootScope.customGoTo('projects');
             $rootScope.$broadcast('searchTextUpdated');
-        }
+        };   
+        
+        $scope.goToProject = function (id) {
+            console.log(id);
+            $rootScope.customGoTo('project-details/' + id);
+        };
     }]);

@@ -540,3 +540,7 @@ ul.pagination .page-item.active .page-link,
 .img-rounded{
     border-radius: 50% !important;
 }
+
+.cursorPointer {
+    cursor: pointer !important;
+}

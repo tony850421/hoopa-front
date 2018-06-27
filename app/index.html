@@ -387,10 +387,10 @@
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr ng-repeat="product in shopCartArray">
+                                <tr class="cursorPointer" ng-repeat="product in shopCartArray" ng-click="goToProject(product.get('project').id)">
                                   <!-- <td class="quantity">{{product.get('project').get('province')}}</td> -->
                                   <td class="product">
-                                    <a href="">
+                                    <a href="" ng-click="goToProject(product.get('project').id)">
                                       <span class="small">{{product.get('project').get('title')}}</span>
                                     </a>
                                     <!-- <span class="small">{{product.get('project').get('plainAddress')}}</span> -->
@@ -576,10 +576,10 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr ng-repeat="product in shopCartArray">
+                          <tr ng-repeat="product in shopCartArray" ng-click="goToProject(product.get('project').id)">
                             <!-- <td class="quantity">{{product.get('project').get('province')}}</td> -->
                             <td class="product">
-                              <a href="">
+                              <a href="" ng-click="goToProject(product.get('project').id)">
                                 <span class="small">{{product.get('project').get('title')}}</span>
                               </a>
                               <!-- <span class="small">{{product.get('project').get('plainAddress')}}</span> -->
