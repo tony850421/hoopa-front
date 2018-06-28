@@ -76,7 +76,8 @@
     "PDESC": "Description",
     "PHOTO": "Photos",
     "VIDEO": "Video",
-    "MAKEANOFFER": "MAKE AN OFFER",
+    "MAKEANOFFER": "Make a bid",
+    "MAKEABID": "Bid",
     "PPUBLISH": "Publish",
     "ADDREVIEW": "Add your Review",
     "NAME": "Name",
@@ -95,12 +96,14 @@
     "REMOVE": "Remove",
     "CLEARALL": "Clear all",
     "OFFER": "Offer",
-    "WMAKEANOFFER": "Make an offer",
     "NEXT": "Next",
     "PREVIOUS": "Previous",
     "LASTEStNEWS": "Latest News",
     "ALREADYINWISHLIST": "This project is already in your wish list",
     "ADDEDWISHLIST": "Project added to your wish list",
     "REMOVEDWISHLIST": "Project remove from your wish list",
-    "SMSSENDED": "SMS Message sended"
+    "SMSSENDED": "SMS Message sended",
+    "COPYRIGHT": "Copyright © 2018 Hoopa. All Rights Reserved",
+    "COMPANYADDRESS": "Room 2701, 3 Building, Qianjiang International Times Square, No. 111th, Jianggan District City, Hangzhou, China",
+    "MUSTBELOGGED": "You must be logged in to make a comment"
 }

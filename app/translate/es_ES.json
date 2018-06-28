@@ -76,7 +76,8 @@
     "PDESC": "Descripción",
     "PHOTO": "Fotos",
     "VIDEO": "Video",
-    "MAKEANOFFER": "HACER UNA OFERTA",
+    "MAKEANOFFER": "Hacer una oferta",
+    "MAKEABID": "Ofertar",
     "PPUBLISH": "Publicar",
     "ADDREVIEW": "Añada su opinión",
     "NAME": "Nombre",
@@ -95,12 +96,14 @@
     "REMOVE": "Eliminar",
     "CLEARALL": "Limpiar todo",
     "OFFER": "Ofertar",
-    "WMAKEANOFFER": "Oferta",
     "NEXT": "Siguiente",
     "PREVIOUS": "Anterior",
     "LASTEStNEWS": "Últimas noticias",
     "ALREADYINWISHLIST": "Este proyecto ya existe en tu lista de deseos",
     "ADDEDWISHLIST": "Proyecto añadido a tu lista de deseos correctamente",
     "REMOVEDWISHLIST": "Proyecto eliminado de tu lista de deseos correctamente",
-    "SMSSENDED": "Mensaje SMS enviado correctamente"
+    "SMSSENDED": "Mensaje SMS enviado correctamente",
+    "COPYRIGHT": "Copyright © 2018 Hoopa. Todos los derechos reservados",
+    "COMPANYADDRESS": "Sala 2701, Edificio 3, Plaza de los tiempos de Qianjiang International, No. 111, Ciudad del distrito de Jianggan, Hangzhou, China",
+    "MUSTBELOGGED": "Debe estar logueado para hacer un comentario"
 }

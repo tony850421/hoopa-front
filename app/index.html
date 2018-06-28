@@ -32,8 +32,6 @@
 
   <!-- Font and Icon Hoopa CSS -->
   <link href="fonts/font-hoopa/style.css" rel="stylesheet">
-  <link href="fonts/icon-hoopa/style.css" rel="stylesheet">
-  <link href="fonts/icon-hoopa2/style.css" rel="stylesheet">
 
 
   <!-- Plugins -->
@@ -94,8 +92,8 @@
               <!-- header-top-first start -->
               <!-- ================ -->
               <div class="header-top-first clearfix">
-                <ul class="social-links circle small clearfix hidden-sm-down">
-                  <li class="twitter">
+                <!-- <ul class="social-links circle small clearfix hidden-sm-down"> -->
+                <!-- <li class="twitter">
                     <a href="">
                       <i class="fa fa-twitter"></i>
                     </a>
@@ -109,8 +107,8 @@
                     <a href="">
                       <i class="fa fa-linkedin"></i>
                     </a>
-                  </li>
-                  <!-- <li class="googleplus">
+                  </li> -->
+                <!-- <li class="googleplus">
                     <a href="">
                       <i class="fa fa-google-plus"></i>
                     </a>
@@ -120,7 +118,7 @@
                       <i class="fa fa-youtube-play"></i>
                     </a>
                   </li> -->
-                  <li class="flickr">
+                <!-- <li class="flickr">
                     <a href="">
                       <i class="fa fa-flickr"></i>
                     </a>
@@ -135,7 +133,7 @@
                       <i class="fa fa-pinterest"></i>
                     </a>
                   </li>
-                </ul>
+                </ul> -->
                 <div class="social-links hidden-md-up circle small">
                   <div class="btn-group dropdown">
                     <button id="header-top-drop-1" type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" data-toggle="dropdown"
@@ -143,7 +141,7 @@
                       <i class="fa fa-share-alt"></i>
                     </button>
                     <ul class="dropdown-menu dropdown-animation" aria-labelledby="header-top-drop-1">
-                      <li class="twitter">
+                      <!-- <li class="twitter">
                         <a href="">
                           <i class="fa fa-twitter"></i>
                         </a>
@@ -182,20 +180,21 @@
                         <a href="">
                           <i class="fa fa-pinterest"></i>
                         </a>
-                      </li>
+                      </li> -->
                     </ul>
                   </div>
                 </div>
                 <ul class="list-inline hidden-md-down">
                   <li class="list-inline-item">
-                    <i class="text-default fa fa-map-marker pr-1 pl-2"></i>杭州市江干区城星路111号钱江国际时代广场3幢2701室</li>
+                    <i class="text-default fa fa-map-marker pr-1 pl-2"></i>{{'COMPANYADDRESS' | translate}}</li>
                   <li class="list-inline-item">
                     <a href="tel:+86 0571 85267521" class="link-dark">
                       <i class="text-default fa fa-phone pr-1 pl-2"></i>+86 0571 85267521</a>
                   </li>
-                  <li class="list-inline-item">
+                  <!-- <li class="list-inline-item">
                     <a href="mailto:email@domain.com" class="link-dark">
                       <i class="text-default fa fa-envelope-o pl-10 pr-1"></i>email@domain.com</a>
+                  </li> -->
                 </ul>
               </div>
               <!-- header-top-first end -->
@@ -218,7 +217,7 @@
                   <div class="btn-group">
                     <a ng-click="customGoTo('login/home')" id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret"
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="icon-onlogin spanSignUp"></i> {{'LOGIN' | translate}}</a>
+                      <i class="icon-Login spanSignUp"></i> {{'LOGIN' | translate}}</a>
                     <!-- <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
                       <li>
                           <div class="form-group has-feedback">
@@ -421,36 +420,36 @@
                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
                       <!-- main-menu -->
                       <ul class="navbar-nav ml-xl-auto">
-                        <li class="nav-item" >
-                            <a href="index.html" class="nav-link">{{'HOME' | translate }}</a>
+                        <li class="nav-item">
+                          <a href="index.html" class="nav-link">{{'HOME' | translate }}</a>
                         </li>
                         <li class="nav-item dropdown">
                           <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'GROUPOVERVIEW' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown" style="width: 250px !important">
                             <li>
                               <a href="" ng-click="customGoTo('groupIntroduction')">
-                                <i class="icon--Group-Introduction iconMenuClass pr-2"></i>{{'GROUPINTRODUCTION' | translate }}</a>
+                                <i class="icon-Group-Introduction iconMenuClass pr-2"></i>{{'GROUPINTRODUCTION' | translate }}</a>
                             </li>
                             <li>
                               <a href="" ng-click="customGoTo('organizationStructure')">
-                                <i class="icon--Organization-structure iconMenuClass pr-2"></i>{{'STRUCTURE' | translate }}</a>
+                                <i class="icon-Organization-structure iconMenuClass pr-2"></i>{{'STRUCTURE' | translate }}</a>
                             </li>
                             <li>
                               <a href="" ng-click="customGoTo('coreteam')">
-                                <i class="icon--Core-Team iconMenuClass pr-2"></i>{{'CORETEAM' | translate }}</a>
+                                <i class="icon-Core-Team iconMenuClass pr-2"></i>{{'CORETEAM' | translate }}</a>
                             </li>
                             <li>
                               <a href="" ng-click="customGoTo('devhistory')">
-                                <i class="icon--Development-history iconMenuClass pr-2"></i>{{'DEVHISTORY' | translate }}</a>
+                                <i class="icon-Development-history iconMenuClass pr-2"></i>{{'DEVHISTORY' | translate }}</a>
                             </li>
                             <li>
                               <!-- <a href="" ng-click="customGoTo('grouphonors')"> -->
                               <a href="">
-                                <i class="icon--Group-honors iconMenuClass pr-2"></i>{{'GROUPHONORS' | translate }}</a>
+                                <i class="icon-Group-honors iconMenuClass pr-2"></i>{{'GROUPHONORS' | translate }}</a>
                             </li>
                             <li>
                               <a href="" ng-click="customGoTo('charman')">
-                                <i class="icon--Chairmans-Message iconMenuClass pr-2"></i>{{'CHAIRMAN' | translate }}</a>
+                                <i class="icon-Chairmans-Message iconMenuClass pr-2"></i>{{'CHAIRMAN' | translate }}</a>
                             </li>
                           </ul>
                         </li>
@@ -459,15 +458,15 @@
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="" ng-click="customGoTo('bussinessystem')">
-                                <i class="icon--Business-System iconMenuClass pr-2"></i>{{'BSYSTEM' | translate }}</a>
+                                <i class="icon-Business-System iconMenuClass pr-2"></i>{{'BSYSTEM' | translate }}</a>
                             </li>
                             <li>
                               <a href="" ng-click="customGoTo('bussinesprocess')">
-                                <i class="icon--Service-process iconMenuClass pr-2"></i>{{'SPROCESS' | translate }}</a>
+                                <i class="icon-Service-process iconMenuClass pr-2"></i>{{'SPROCESS' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="icon--Service-Advantages iconMenuClass pr-2"></i>{{'SADVANTAGES' | translate }}</a>
+                                <i class="icon-Service-Advantages iconMenuClass pr-2"></i>{{'SADVANTAGES' | translate }}</a>
                             </li>
                           </ul>
                         </li>
@@ -476,15 +475,15 @@
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="" ng-click="customGoTo('news/1')">
-                                <i class="icon--Media-coverage iconMenuClass pr-2"></i>{{'MCOVERAGE' | translate }}</a>
+                                <i class="icon-Media-coverage iconMenuClass pr-2"></i>{{'MCOVERAGE' | translate }}</a>
                             </li>
                             <li>
                               <a href="" ng-click="customGoTo('news/2')">
-                                <i class="icon--Latest-News iconMenuClass pr-2"></i>{{'LNEWS' | translate }}</a>
+                                <i class="icon-Latest-News iconMenuClass pr-2"></i>{{'LNEWS' | translate }}</a>
                             </li>
                             <li>
                               <a href="" ng-click="customGoTo('news/3')">
-                                <i class="icon--Industry-News iconMenuClass pr-2"></i>{{'INEWS' | translate }}</a>
+                                <i class="icon-Industry-News iconMenuClass pr-2"></i>{{'INEWS' | translate }}</a>
                             </li>
                           </ul>
                         </li>
@@ -497,11 +496,11 @@
                             </li>
                             <li>
                               <a href="">
-                                <i class="icon--Project-list iconMenuClass pr-2"></i>{{'PLIST' | translate }}</a>
+                                <i class="icon-Project-list iconMenuClass pr-2"></i>{{'PLIST' | translate }}</a>
                             </li>
                             <li>
                               <a href="" ng-click="customGoTo('featured-cases')">
-                                <i class="icon--Featured-Cases iconMenuClass pr-2"></i>{{'FCASES' | translate }}</a>
+                                <i class="icon-Featured-Cases iconMenuClass pr-2"></i>{{'FCASES' | translate }}</a>
                             </li>
                           </ul>
                         </li>
@@ -522,11 +521,11 @@
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="" ng-click="customGoTo('branches-offices')">
-                                <i class="icon--Branch-offices iconMenuClass pr-2"></i>{{'BOFFICES' | translate }}</a>
+                                <i class="icon-Branch-offices iconMenuClass pr-2"></i>{{'BOFFICES' | translate }}</a>
                             </li>
                             <li>
                               <a href="">
-                                <i class="icon--Talent-Recruitment iconMenuClass pr-2"></i>{{'TRECRUIMENT' | translate }}</a>
+                                <i class="icon-Talent-Recruitment iconMenuClass pr-2"></i>{{'TRECRUIMENT' | translate }}</a>
                             </li>
                           </ul>
                         </li>
@@ -544,16 +543,16 @@
               <!-- header dropdown buttons -->
               <div class="header-dropdown-buttons">
                 <div class="btn-group">
-                  <button ng-click="customGoTo('projects')" type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    <i class="icon-search"></i>
+                  <button ng-click="customGoTo('projects')" type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="icon-Search"></i>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-1">
                     <li>
                       <form role="search" class="search-box margin-clear">
                         <div class="form-group has-feedback">
                           <input type="text" class="form-control" placeholder="Search" ng-model="searchFilterText">
-                          <i ng-click="search(searchFilterText)" class="icon-search form-control-feedback"></i>
+                          <i ng-click="search(searchFilterText)" class="icon-Search form-control-feedback"></i>
                         </div>
                       </form>
                     </li>
@@ -712,7 +711,8 @@
               <li data-transition="slidehorizontal" data-slotamount="default" data-masterspeed="default" data-title="">
 
                 <!-- main image -->
-                <img src="images/home6.jpg" alt="slidebg1" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover" style="object-fit: cover !important" class="rev-slidebg">
+                <img src="images/home6.jpg" alt="slidebg1" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover" style="object-fit: cover !important"
+                  class="rev-slidebg">
 
                 <!-- Transparent Background -->
                 <!-- <div class="tp-caption dark-translucent-bg" data-x="center" data-y="center" data-start="0" data-transform_idle="o:1;" data-transform_in="o:0;s:600;e:Power2.easeInOut;"
@@ -904,16 +904,16 @@
                           <img id="qr-footer" class="mx-auto" src="images/qrcode.jpg" alt="">
                         </div>
                         <div class="col-md-4 borderLeft">
-                            <img id="qr-footer" class="mx-auto" src="images/qrmini.jpg" alt="">
-                          </div>
+                          <img id="qr-footer" class="mx-auto" src="images/qrmini.jpg" alt="">
+                        </div>
                       </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus illo vel dolorum soluta consectetur
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus illo vel dolorum soluta consectetur
                       doloribus sit. Delectus non tenetur odit dicta vitae debitis suscipit doloribus. Lorem ipsum dolor
-                      sit amet, illo vel dolorum soluta consectetur.</p>
+                      sit amet, illo vel dolorum soluta consectetur.</p> -->
                     <ul class="list-inline mb-20">
                       <li class="list-inline-item">
-                        <i class="text-default fa fa-map-marker pr-1"></i>杭州市江干区城星路111号钱江国际时代广场3幢2701室</li>
+                        <i class="text-default fa fa-map-marker pr-1"></i>{{'COMPANYADDRESS' | translate}}</li>
                       <li class="list-inline-item">
                         <a href="tel:+86 0571 85267521" class="link-dark">
                           <i class="text-default fa fa-phone pl-10 pr-1"></i>+86 0571 85267521</a>
@@ -924,7 +924,7 @@
                       </li>
                     </ul>
                     <ul class="social-links circle animated-effect-1 margin-clear">
-                      <li class="facebook">
+                      <!-- <li class="facebook">
                         <a href="">
                           <i class="fa fa-facebook"></i>
                         </a>
@@ -933,13 +933,13 @@
                         <a href="">
                           <i class="fa fa-twitter"></i>
                         </a>
-                      </li>
+                      </li> -->
                       <!-- <li class="googleplus">
                         <a href="">
                           <i class="fa fa-google-plus"></i>
                         </a>
                       </li> -->
-                      <li class="linkedin">
+                      <!-- <li class="linkedin">
                         <a href="">
                           <i class="fa fa-linkedin"></i>
                         </a>
@@ -948,10 +948,10 @@
                         <a href="">
                           <i class="fa fa-xing"></i>
                         </a>
-                      </li>
+                      </li> -->
                     </ul>
                     <div class="separator"></div>
-                    <p class="text-center margin-clear">Copyright © 2018 Hoopa. All Rights Reserved</p>
+                    <p class="text-center margin-clear">{{'COPYRIGHT' | translate}}</p>
                   </div>
                 </div>
               </div>
