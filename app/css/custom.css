@@ -544,3 +544,12 @@ ul.pagination .page-item.active .page-link,
 .cursorPointer {
     cursor: pointer !important;
 }
+
+.marginRight10{
+    margin-right: 10px !important;
+}
+
+.fontSize18{
+    font-size: 18px !important;
+    vertical-align: middle !important;
+}

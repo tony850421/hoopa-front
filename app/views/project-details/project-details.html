@@ -71,8 +71,8 @@
               </span>
               <a href="" ng-hide="project.wished" class="wishlist" ng-click="addToWhishList()">
                 <i class="fa fa-heart-o pl-10 pr-1"></i>{{'ADDWISHLIST' | translate}}</a>
-                <a href="" ng-hide="!project.wished" class="wishlist" ng-click="removeToWhishList()">
-                    <i class="fa fa-heart pl-10 pr-1"></i>{{'REMOVEWISHLIST' | translate}}</a>
+              <a href="" ng-hide="!project.wished" class="wishlist" ng-click="removeToWhishList()">
+                <i class="fa fa-heart pl-10 pr-1"></i>{{'REMOVEWISHLIST' | translate}}</a>
               <!-- <ul class="pl-20 pull-right social-links circle small clearfix margin-clear animated-effect-1">
                 <li class="twitter">
                   <a href="">
@@ -99,10 +99,51 @@
         <span class="product price colorPrimary">
           <i class="fa fa-rmb"></i>{{project.get('debitAmount')}}万</span>
         <div class="product elements-list pull-right clearfix">
-          <input type="submit" value="{{'MAKEANOFFER' | translate}}" class="margin-clear btn btn-default backgroundColorBlue">
+          <a ng-hide="flagBid" ng-click="makeAnOffer()" class="margin-clear btn btn-default backgroundColorBlue">
+            <i class="icon-Total-offers spanSignUp"></i> {{'MAKEANOFFER' | translate}}</a>
+          <a ng-show="flagBid" ng-click="makeABid()" class="margin-clear btn btn-default backgroundColorBlue">
+            <i class="icon-Offertas spanSignUp"></i> {{'MAKEABID' | translate}}</a>
+        </div>
+        <div class="product elements-list pull-right clearfix marginRight10" ng-show="flagBid">
+          <input type="text" ng-model="bid" class="form-control">
         </div>
       </div>
-      <div class="mt-3">
+      <div class="row col-md-12 marginTop20">
+        <div class="col-md-4">
+          <ul class="list margin-clear">
+            <li>
+              <strong>{{'PUCOMPANY' | translate}}</strong>
+              <span class="text-right">{{project.get('companyName')}}</span>
+            </li>
+            <li>
+              <strong>{{'PUPROVINCE' | translate}}</strong>
+              <span class="text-right">{{project.get('province')}}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list margin-clear">
+            <li>
+              <strong>{{'CUFROM' | translate}}</strong>
+              <span class="text-right">{{project.get('comefrom')}}</span>
+            </li>
+            <li>
+              <strong>{{'DUPRINCIPALI' | translate}}</strong>
+              <span class="text-right colorPrimary">
+                <i class="fa fa-rmb"></i>{{project.get('debitPricipalInterest')}}万</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list margin-clear">
+            <li>
+              <strong>{{'PUADDRESS' | translate}} </strong>
+              <span class="text-right">{{project.get('plainAddress')}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="mt-3">
         <ul class="list margin-clear">
           <li>
             <strong>{{'PUCOMPANY' | translate}}</strong>
@@ -126,7 +167,7 @@
               <i class="fa fa-rmb"></i>{{project.get('debitPricipalInterest')}}万</span>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
@@ -159,7 +200,7 @@
         </ul>
         <!-- Tab panes -->
         <div class="tab-content padding-top-clear padding-bottom-clear">
-          <div class="tab-pane" id="h2tab2" ng-class="{'active': tabAssetsVisible == true}">
+          <div class="tab-pane" ng-class="{'active': tabAssetsVisible == true}">
             <div ng-repeat="asset in assetsList">
               <h4 class="space-top">{{asset.get('title')}}</h4>
               <hr>
@@ -180,7 +221,7 @@
               <hr>
             </div>
           </div>
-          <div class="tab-pane" id="h2tab2" ng-class="{'active': tabBorrowersVisible == true}">
+          <div class="tab-pane" ng-class="{'active': tabBorrowersVisible == true}">
             <div ng-repeat="borrower in borrowerList">
               <h4 class="space-top">{{borrower.get('name')}}</h4>
               <hr>
@@ -193,7 +234,7 @@
               <hr>
             </div>
           </div>
-          <div class="tab-pane" id="h2tab2" ng-class="{'active': tabSponsorsVisible == true}">
+          <div class="tab-pane" ng-class="{'active': tabSponsorsVisible == true}">
             <div ng-repeat="sponsor in sponsorsList">
               <h4 class="space-top">{{sponsor.get('name')}}</h4>
               <hr>
@@ -206,7 +247,7 @@
               <hr>
             </div>
           </div>
-          <div class="tab-pane" id="h2tab3" ng-show="loginUser" ng-class="{'active': tabCommentsVisible == true}">
+          <div class="tab-pane" ng-class="{'active': tabCommentsVisible == true}">
             <!-- comments start -->
             <div class="comments margin-clear space-top">
               <!-- comment start -->
@@ -230,9 +271,11 @@
               <!-- comment end -->
               <!-- comments end -->
 
+              <p ng-show="!loginUser">{{'MUSTBELOGGED' | translate}}</p>
+
               <!-- comments form start -->
-              <div class="comments-form">
-                <h2 class="title">{{'ADDREVIEW' | translate}}</h2>
+              <div class="comments-form" ng-show="loginUser">
+                <h3 class="title">{{'ADDREVIEW' | translate}}</h3>
                 <form>
                   <!-- <div class="form-group has-feedback">
                   <label for="name4">{{'NAME' | translate}}</label>

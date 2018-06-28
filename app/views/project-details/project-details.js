@@ -328,4 +328,15 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
             }
           };
 
+          $scope.flagBid = false;
+          $scope.bid = '';
+
+          $scope.makeAnOffer = function(){
+            $scope.flagBid = !$scope.flagBid;
+          };
+
+          $scope.makeABid = function(){
+            $scope.flagBid = !$scope.flagBid;
+          };
+
     }]);
