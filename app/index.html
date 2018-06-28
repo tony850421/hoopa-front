@@ -216,7 +216,7 @@
                   </div> -->
                   <div class="btn-group">
                     <a ng-click="customGoTo('login/home')" id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
                       <i class="icon-Login spanSignUp"></i> {{'LOGIN' | translate}}</a>
                     <!-- <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
                       <li>
@@ -272,7 +272,7 @@
                   </div>
                   <div class="btn-group">
                     <a id="header-top-drop-1" type="button" class="btn dropdown-toggle btn-sm paddingLR10" data-toggle="dropdown" aria-haspopup="true"
-                      aria-expanded="false">
+                      aria-expanded="false" ng-cloak>
                       {{languageShort}}</a>
                     <ul id="language" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-1">
                       <li href="" class="languageActive" ng-click="setLanguage('cn_CN')">
@@ -357,37 +357,37 @@
                         </ul>
                       </div>
                       <div class="btn-group" ng-hide="!loginUser">
-                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-4" data-toggle="dropdown" aria-haspopup="true"
-                          aria-expanded="false" ng-click="initWishList()">
+                        <a type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-4" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false" ng-click="initWishList()" ng-cloak>
                           <i class="fa fa-heart-o marginLeft5"></i>
                           <span class="cart-count default-bg" ng-show="shopCartArray.length > 0">{{shopCartCount}}</span>
-                        </button>
+                        </a>
                         <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-4">
                           <li>
                             <table class="table table-hover">
                               <thead>
                                 <tr>
-                                  <th class="product">{{'PACKAGE' | translate}}</th>
-                                  <th class="amount">{{'DAMOUNT' | translate}}</th>
+                                  <th class="product" ng-cloak>{{'PACKAGE' | translate}}</th>
+                                  <th class="amount" ng-cloak>{{'DAMOUNT' | translate}}</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr class="cursorPointer" ng-repeat="product in shopCartArray" ng-click="goToProject(product.get('project').id)">
                                   <td class="product">
                                     <a href="" ng-click="goToProject(product.get('project').id)">
-                                      <span class="small">{{product.get('project').get('title')}}</span>
+                                      <span class="small" ng-cloak>{{product.get('project').get('title')}}</span>
                                     </a>
                                   </td>
-                                  <td class="amount colorPrimary">
+                                  <td class="amount colorPrimary" ng-cloak>
                                     <i class="fa fa-rmb colorPrimary"></i>{{product.get('project').get('debitAmount')}}万</td>
                                 </tr>
                                 <tr>
-                                  <td class="total-quantity" colspan="2">{{shopCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
+                                  <td class="total-quantity" colspan="2" ng-cloak>{{shopCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
                                 </tr>
                               </tbody>
                             </table>
                             <div class="panel-body text-right">
-                              <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm"> {{'VWISHLIST' | translate}}</a>
+                              <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm" ng-cloak> {{'VWISHLIST' | translate}}</a>
                             </div>
                           </li>
                         </ul>
@@ -396,29 +396,29 @@
                         <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
                           aria-expanded="false" ng-click="initOffersList()">
                           <i class="icon-Total-offers marginLeft5"></i>
-                          <span class="cart-count default-bg" ng-show="offersCartCount > 0">{{offersCartCount}}</span>
+                          <span class="cart-count default-bg" ng-show="offersCartCount > 0" ng-cloak>{{offersCartCount}}</span>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-2">
                           <li>
                             <table class="table table-hover">
                               <thead>
                                 <tr>
-                                  <th class="product">{{'PACKAGE' | translate}}</th>
-                                  <th class="amount">{{'AMOUNT' | translate}}</th>
+                                  <th class="product" ng-cloak>{{'PACKAGE' | translate}}</th>
+                                  <th class="amount" ng-cloak>{{'AMOUNT' | translate}}</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr ng-repeat="offer in offersArray " ng-click="goToProject(offer.get('project').id)">
                                   <td class="product">
                                     <a href="" ng-click="goToProject(offer.get('project').id)">
-                                      <span class="small">{{offer.get('project').get('title')}}</span>
+                                      <span class="small" ng-cloak>{{offer.get('project').get('title')}}</span>
                                     </a>
                                   </td>
                                   <td class="amount colorPrimary">
-                                    <i class="fa fa-rmb colorPrimary"></i>{{offer.get('amount')}}万</td>
+                                    <i class="fa fa-rmb colorPrimary" ng-cloak></i>{{offer.get('amount')}}万</td>
                                 </tr>
                                 <tr>
-                                  <td class="total-quantity" colspan="2">{{offersCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
+                                  <td class="total-quantity" colspan="2" ng-cloak>{{offersCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -437,109 +437,109 @@
                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
                       <ul class="navbar-nav ml-xl-auto">
                         <li class="nav-item">
-                          <a href="index.html" class="nav-link">{{'HOME' | translate }}</a>
+                          <a href="index.html" class="nav-link" ng-cloak>{{'HOME' | translate }}</a>
                         </li>
                         <li class="nav-item dropdown">
-                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'GROUPOVERVIEW' | translate }}</a>
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'GROUPOVERVIEW' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown" style="width: 250px !important">
                             <li>
-                              <a href="" ng-click="customGoTo('groupIntroduction')">
+                              <a href="" ng-click="customGoTo('groupIntroduction')" ng-cloak>
                                 <i class="icon-Group-Introduction iconMenuClass pr-2"></i>{{'GROUPINTRODUCTION' | translate }}</a>
                             </li>
                             <li>
-                              <a href="" ng-click="customGoTo('organizationStructure')">
+                              <a href="" ng-click="customGoTo('organizationStructure')" ng-cloak>
                                 <i class="icon-Organization-structure iconMenuClass pr-2"></i>{{'STRUCTURE' | translate }}</a>
                             </li>
                             <li>
-                              <a href="" ng-click="customGoTo('coreteam')">
+                              <a href="" ng-click="customGoTo('coreteam')" ng-cloak>
                                 <i class="icon-Core-Team iconMenuClass pr-2"></i>{{'CORETEAM' | translate }}</a>
                             </li>
                             <li>
-                              <a href="" ng-click="customGoTo('devhistory')">
+                              <a href="" ng-click="customGoTo('devhistory')" ng-cloak>
                                 <i class="icon-Development-history iconMenuClass pr-2"></i>{{'DEVHISTORY' | translate }}</a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="" ng-cloak>
                                 <i class="icon-Group-honors iconMenuClass pr-2"></i>{{'GROUPHONORS' | translate }}</a>
                             </li>
                             <li>
-                              <a href="" ng-click="customGoTo('charman')">
+                              <a href="" ng-click="customGoTo('charman')" ng-cloak>
                                 <i class="icon-Chairmans-Message iconMenuClass pr-2"></i>{{'CHAIRMAN' | translate }}</a>
                             </li>
                           </ul>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'SERVICES' | translate }}</a>
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'SERVICES' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
-                              <a href="" ng-click="customGoTo('bussinessystem')">
+                              <a href="" ng-click="customGoTo('bussinessystem')" ng-cloak>
                                 <i class="icon-Business-System iconMenuClass pr-2"></i>{{'BSYSTEM' | translate }}</a>
                             </li>
                             <li>
-                              <a href="" ng-click="customGoTo('bussinesprocess')">
+                              <a href="" ng-click="customGoTo('bussinesprocess')" ng-cloak>
                                 <i class="icon-Service-process iconMenuClass pr-2"></i>{{'SPROCESS' | translate }}</a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="" ng-cloak>
                                 <i class="icon-Service-Advantages iconMenuClass pr-2"></i>{{'SADVANTAGES' | translate }}</a>
                             </li>
                           </ul>
                         </li>
-                        <li class="nav-item dropdown ">
-                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'NEWS' | translate }}</a>
+                        <li class="nav-item dropdown">
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'NEWS' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
-                              <a href="" ng-click="customGoTo('news/1')">
+                              <a href="" ng-click="customGoTo('news/1')" ng-cloak>
                                 <i class="icon-Media-coverage iconMenuClass pr-2"></i>{{'MCOVERAGE' | translate }}</a>
                             </li>
                             <li>
-                              <a href="" ng-click="customGoTo('news/2')">
+                              <a href="" ng-click="customGoTo('news/2')" ng-cloak>
                                 <i class="icon-Latest-News iconMenuClass pr-2"></i>{{'LNEWS' | translate }}</a>
                             </li>
                             <li>
-                              <a href="" ng-click="customGoTo('news/3')">
+                              <a href="" ng-click="customGoTo('news/3')" ng-cloak>
                                 <i class="icon-Industry-News iconMenuClass pr-2"></i>{{'INEWS' | translate }}</a>
                             </li>
                           </ul>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'ASSETS' | translate }}</a>
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'ASSETS' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown" style="width: 250px !important">
                             <li>
-                              <a href="" ng-click="customGoTo('projects')">
+                              <a href="" ng-click="customGoTo('projects')" ng-cloak>
                                 <i class="icon-Investment-Promotion iconMenuClass pr-2"></i>{{'IPROMOTION' | translate }}</a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="" ng-cloak>
                                 <i class="icon-Project-list iconMenuClass pr-2"></i>{{'PLIST' | translate }}</a>
                             </li>
                             <li>
-                              <a href="" ng-click="customGoTo('featured-cases')">
+                              <a href="" ng-click="customGoTo('featured-cases')" ng-cloak>
                                 <i class="icon-Featured-Cases iconMenuClass pr-2"></i>{{'FCASES' | translate }}</a>
                             </li>
                           </ul>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'RESEARCH' | translate }}</a>
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'RESEARCH' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
-                              <a href="">
+                              <a href="" ng-cloak>
                                 <i class="icon-Research-Report iconMenuClass pr-2"></i>{{'RREPORT' | translate }}</a>
                             </li>
                           </ul>
                         </li>
                         <li class="nav-item ">
-                          <a href="" class="nav-link" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'MBA' | translate }}</a>
+                          <a href="" class="nav-link" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'MBA' | translate }}</a>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'CONTACTUS' | translate }}</a>
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'CONTACTUS' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
-                              <a href="" ng-click="customGoTo('branches-offices')">
+                              <a href="" ng-click="customGoTo('branches-offices')" ng-cloak>
                                 <i class="icon-Branch-offices iconMenuClass pr-2"></i>{{'BOFFICES' | translate }}</a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="" ng-cloak>
                                 <i class="icon-Talent-Recruitment iconMenuClass pr-2"></i>{{'TRECRUIMENT' | translate }}</a>
                             </li>
                           </ul>
@@ -572,65 +572,65 @@
                   <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false" ng-click="initWishList()">
                     <i class="fa fa-heart-o marginLeft5"></i>
-                    <span class="cart-count default-bg" ng-show="shopCartArray.length > 0">{{shopCartCount}}</span>
+                    <span class="cart-count default-bg" ng-show="shopCartArray.length > 0" ng-cloak>{{shopCartCount}}</span>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-2">
                     <li>
                       <table class="table table-hover">
                         <thead>
                           <tr>
-                            <th class="product">{{'PACKAGE' | translate}}</th>
-                            <th class="amount">{{'DAMOUNT' | translate}}</th>
+                            <th class="product" ng-cloak>{{'PACKAGE' | translate}}</th>
+                            <th class="amount" ng-cloak>{{'DAMOUNT' | translate}}</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr ng-repeat="product in shopCartArray" ng-click="goToProject(product.get('project').id)">
                             <td class="product">
-                              <a href="" ng-click="goToProject(product.get('project').id)">
+                              <a href="" ng-click="goToProject(product.get('project').id)" ng-cloak>
                                 <span class="small">{{product.get('project').get('title')}}</span>
                               </a>
                             </td>
-                            <td class="amount colorPrimary">
+                            <td class="amount colorPrimary" ng-cloak>
                               <i class="fa fa-rmb colorPrimary"></i>{{product.get('project').get('debitAmount')}}万</td>
                           </tr>
                           <tr>
-                            <td class="total-quantity" colspan="2">{{shopCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
+                            <td class="total-quantity" colspan="2" ng-cloak>{{shopCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
                           </tr>
                         </tbody>
                       </table>
                       <div class="panel-body text-right">
-                        <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm"> {{'VWISHLIST' | translate}}</a>
+                        <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm" ng-cloak> {{'VWISHLIST' | translate}}</a>
                       </div>
                     </li>
                   </ul>
                 </div>
                 <div class="btn-group" ng-hide="!loginUser">
-                  <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false" ng-click="initOffersList()">
+                  <a type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false" ng-click="initOffersList()" ng-cloak>
                     <i class="icon-Total-offers marginLeft5"></i>
                     <span class="cart-count default-bg" ng-show="offersCartCount > 0">{{offersCartCount}}</span>
-                  </button>
+                  </a>
                   <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-2">
                     <li>
                       <table class="table table-hover">
                         <thead>
                           <tr>
-                            <th class="product">{{'PACKAGE' | translate}}</th>
-                            <th class="amount">{{'AMOUNT' | translate}}</th>
+                            <th class="product" ng-cloak>{{'PACKAGE' | translate}}</th>
+                            <th class="amount" ng-cloak>{{'AMOUNT' | translate}}</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr ng-repeat="offer in offersArray " ng-click="goToProject(offer.get('project').id)">
                             <td class="product">
-                              <a href="" ng-click="goToProject(offer.get('project').id)">
+                              <a href="" ng-click="goToProject(offer.get('project').id)" ng-cloak>
                                 <span class="small">{{offer.get('project').get('title')}}</span>
                               </a>
                             </td>
-                            <td class="amount colorPrimary">
+                            <td class="amount colorPrimary" ng-cloak>
                               <i class="fa fa-rmb colorPrimary"></i>{{offer.get('amount')}}万</td>
                           </tr>
                           <tr>
-                            <td class="total-quantity" colspan="2">{{offersCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
+                            <td class="total-quantity" colspan="2" ng-cloak>{{offersCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
                           </tr>
                         </tbody>
                       </table>
@@ -949,13 +949,13 @@
                       doloribus sit. Delectus non tenetur odit dicta vitae debitis suscipit doloribus. Lorem ipsum dolor
                       sit amet, illo vel dolorum soluta consectetur.</p> -->
                     <ul class="list-inline mb-20">
-                      <li class="list-inline-item">
+                      <li class="list-inline-item" ng-cloak>
                         <i class="text-default fa fa-map-marker pr-1"></i>{{'COMPANYADDRESS' | translate}}</li>
-                      <li class="list-inline-item">
+                      <li class="list-inline-item" ng-cloak>
                         <a href="tel:+86 0571 85267521" class="link-dark">
                           <i class="text-default fa fa-phone pl-10 pr-1"></i>+86 0571 85267521</a>
                       </li>
-                      <li class="list-inline-item">
+                      <li class="list-inline-item" ng-cloak>
                         <a href="mailto:email@domain.com" class="link-dark">
                           <i class="text-default fa fa-envelope-o pl-10 pr-1"></i>email@domain.com</a>
                       </li>
@@ -988,7 +988,7 @@
                       </li> -->
                     </ul>
                     <div class="separator"></div>
-                    <p class="text-center margin-clear">{{'COPYRIGHT' | translate}}</p>
+                    <p class="text-center margin-clear" ng-cloak>{{'COPYRIGHT' | translate}}</p>
                   </div>
                 </div>
               </div>
