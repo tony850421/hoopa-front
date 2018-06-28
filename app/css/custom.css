@@ -529,19 +529,19 @@ ul.pagination .page-item.active .page-link,
     padding-bottom: 60px;
 }
 
-.structureImage{
+.structureImage {
     object-fit: cover !important;
 }
 
-.fontWeightBold{
+.fontWeightBold {
     font-weight: bold !important;
 }
 
-.paddingTop25{
+.paddingTop25 {
     padding-top: 25px !important;
 }
 
-.img-rounded{
+.img-rounded {
     border-radius: 50% !important;
 }
 
@@ -549,23 +549,30 @@ ul.pagination .page-item.active .page-link,
     cursor: pointer !important;
 }
 
-.marginRight10{
+.marginRight10 {
     margin-right: 10px !important;
 }
 
-.fontSize18{
+.fontSize18 {
     font-size: 18px !important;
     vertical-align: middle !important;
 }
 
-.factProject{
+.factProject {
     font-size: 18px !important;
 }
 
-.styleFactBox{
+.styleFactBox {
     min-height: 80px !important;
 }
 
-.height40{
+.height40 {
     height: 40px !important;
+}
+
+.widthDropdown {
+    max-width: 72% !important;
+    flex: 0 0 72%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
