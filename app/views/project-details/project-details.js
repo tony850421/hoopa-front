@@ -25,6 +25,10 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
         $scope.contentReview = '';
         $scope.reviews = [];
 
+        $scope.totalOffers = 0;
+        $scope.promOffers = 0;
+        $scope.offerValue = 0;
+
         $scope.projectId = $routeParams.id;
 
         $scope.project = {};
@@ -160,6 +164,19 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                     $scope.$apply();
                 });
 
+                var query9 = new AV.Query('Offert');
+                query9.equalTo('project', p);
+                query9.find().then(function (offers) {
+                    $scope.totalOffers = offers.length;
+                    var sum = 0;
+                    for (var i = 0; i < $scope.totalOffers; i++) {
+                        sum += parseFloat(offers[i].get('amount'));
+                    }
+                    $scope.promOffers = parseFloat(sum / $scope.totalOffers);
+                    $scope.promOffers = Math.round($scope.promOffers*Math.pow(10,2))/Math.pow(10,2);
+                    $scope.$apply();
+                })
+
                 $scope.$apply();
             })
 
@@ -168,6 +185,7 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
             queryProjects.equalTo('isRecommended', true);
             queryProjects.find().then(function (res) {
                 $scope.projects = [];
+
                 res.forEach(function (element) {
                     var mainImage = element.get('image').thumbnailURL(260, 160);
                     var title = element.get('title');
@@ -189,6 +207,8 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
             }).catch(function (error) {
                 alert(JSON.stringify(error));
             });
+
+
         };
 
         $scope.init();
@@ -277,66 +297,105 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
 
         $scope.addToWhishList = function () {
             var currentUser = AV.User.current();
-      
+
             if (currentUser) {
-              var project = AV.Object.createWithoutData('Project', $scope.project.id);
-      
-              var query = new AV.Query("ShopCar")
-              query.equalTo('project', project);
-              query.equalTo('user', currentUser);
-              query.count().then(res => {
-                if (res > 0) {
-                  var alreadyInWishList = $translate.instant('ALREADYINWISHLIST');
-                  $rootScope.displayAlert('warning', alreadyInWishList);
-                } else {
-                  var shop = new AV.Object('ShopCar');
-                  shop.set('user', currentUser);
-                  shop.set('checked', false);
-                  shop.set('project', project);
-                  shop.save().then(res => {
-                    var addedWishList= $translate.instant('ADDEDWISHLIST');
-                    $rootScope.displayAlert('success', addedWishList);
-                    $scope.project.wished = true;
-                    $scope.$apply();
-                  });
-                }
-              });
-      
-            } else {
-              $rootScope.customGoTo('login/projects');
-            }
-          };
-      
-          $scope.removeToWhishList = function(){
-            var currentUser = AV.User.current();
-      
-            if (currentUser) {
-              var project = AV.Object.createWithoutData('Project', $scope.project.id);
-      
-              var query = new AV.Query("ShopCar")
-              query.equalTo('project', project);
-              query.equalTo('user', currentUser);
-              query.find().then( res => {
-                res.forEach(function(element){
-                  element.destroy();
-                  var removeWishList= $translate.instant('REMOVEDWISHLIST');
-                  $rootScope.displayAlert('success', removeWishList);
-                  $scope.project.wished = false;
-                  $scope.$apply();
+                var project = AV.Object.createWithoutData('Project', $scope.project.id);
+
+                var query = new AV.Query("ShopCar")
+                query.equalTo('project', project);
+                query.equalTo('user', currentUser);
+                query.count().then(res => {
+                    if (res > 0) {
+                        var alreadyInWishList = $translate.instant('ALREADYINWISHLIST');
+                        $rootScope.displayAlert('warning', alreadyInWishList);
+                    } else {
+                        var shop = new AV.Object('ShopCar');
+                        shop.set('user', currentUser);
+                        shop.set('checked', false);
+                        shop.set('project', project);
+                        shop.save().then(res => {
+                            var addedWishList = $translate.instant('ADDEDWISHLIST');
+                            $rootScope.displayAlert('success', addedWishList);
+                            $scope.project.wished = true;
+                            $scope.$apply();
+                        });
+                    }
                 });
-              })
+
+            } else {
+                $rootScope.customGoTo('login/projects');
             }
-          };
+        };
 
-          $scope.flagBid = false;
-          $scope.bid = '';
+        $scope.removeToWhishList = function () {
+            var currentUser = AV.User.current();
 
-          $scope.makeAnOffer = function(){
-            $scope.flagBid = !$scope.flagBid;
-          };
+            if (currentUser) {
+                var project = AV.Object.createWithoutData('Project', $scope.project.id);
 
-          $scope.makeABid = function(){
-            $scope.flagBid = !$scope.flagBid;
-          };
+                var query = new AV.Query("ShopCar")
+                query.equalTo('project', project);
+                query.equalTo('user', currentUser);
+                query.find().then(res => {
+                    res.forEach(function (element) {
+                        element.destroy();
+                        var removeWishList = $translate.instant('REMOVEDWISHLIST');
+                        $rootScope.displayAlert('success', removeWishList);
+                        $scope.project.wished = false;
+                        $scope.$apply();
+                    });
+                })
+            }
+        };
+
+        $scope.flagBid = false;
+        $scope.bid = '';
+
+        $scope.makeAnOffer = function () {
+            var user = AV.User.current();
+            if (user) {
+                $scope.flagBid = !$scope.flagBid;
+            } else {
+                $rootScope.customGoTo('login/project-details/' + $scope.project.id);
+            }
+        };
+
+        $scope.makeABid = function () {
+            var user = AV.User.current();
+            if (user) {
+                var project = AV.Object.createWithoutData('Project', $scope.project.id);
+                var offer = new AV.Object('Offert');
+                offer.set('user', user);
+                offer.set('project', project);
+                offer.set('amount', $scope.offerValue);
+                offer.set('pending', true);
+
+                var acl = new AV.ACL();
+                acl.setPublicReadAccess(true);
+                acl.setPublicWriteAccess(true);
+                offer.setACL(acl);
+                offer.save();
+
+                $scope.offerValue = 0;
+                $scope.flagBid = !$scope.flagBid;
+                var offerMade = $translate.instant('OFFERMADE');
+                $rootScope.displayAlert('success', offerMade);
+
+                var query9 = new AV.Query('Offert');
+                query9.equalTo('project', project);
+                query9.find().then(function (offers) {
+                    $scope.totalOffers = offers.length;
+                    var sum = 0;
+                    for (var i = 0; i < $scope.totalOffers; i++) {
+                        sum += parseFloat(offers[i].get('amount'));
+                    }
+                    $scope.promOffers = parseFloat(sum / $scope.totalOffers);
+                    $scope.promOffers = Math.round($scope.promOffers*Math.pow(10,2))/Math.pow(10,2);
+                    $scope.$apply();
+                })
+            } else {
+                $rootScope.customGoTo('login/project-details/' + $scope.project.id);
+            }
+        };
 
     }]);

@@ -300,6 +300,10 @@ h6 {
     margin-top: 0 !important;
 }
 
+.marginTop5 {
+    margin-top: 5px !important;
+}
+
 .marginTop10 {
     margin-top: 10px !important;
 }
@@ -552,4 +556,16 @@ ul.pagination .page-item.active .page-link,
 .fontSize18{
     font-size: 18px !important;
     vertical-align: middle !important;
+}
+
+.factProject{
+    font-size: 18px !important;
+}
+
+.styleFactBox{
+    min-height: 80px !important;
+}
+
+.height40{
+    height: 40px !important;
 }

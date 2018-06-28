@@ -53,7 +53,6 @@ angular.module('myApp.Main', ['ngRoute'])
         $rootScope.shopCartCount = 0;
 
         $rootScope.initWishList = function () {
-            console.log('initWishList');
             // var id = $scope.projectId;
             var currentUser = AV.User.current();
 
@@ -72,7 +71,6 @@ angular.module('myApp.Main', ['ngRoute'])
                 query.limit(4);
                 query.descending('createdAt');
                 query.find().then(res => {
-                    console.log(res);
                     $scope.shopCartArray = res;
                     $scope.$apply();
                 })

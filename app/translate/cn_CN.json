@@ -96,6 +96,8 @@
     "REMOVE": "删除",
     "CLEARALL": "全部清除",
     "OFFER": "提供",
+    "TOFFER": "优惠总数",
+    "POFFER": "平均报价",
     "NEXT": "下",
     "PREVIOUS": "以前",
     "LASTEStNEWS": "最新动态",
@@ -105,5 +107,6 @@
     "SMSSENDED": "SMS 消息送",
     "COPYRIGHT": "版权所有© 2018 Hoopa。保留所有权利",
     "COMPANYADDRESS": "杭州市江干区城星路111号钱江国际时代广场3幢2701室",
-    "MUSTBELOGGED": "您必须登录才能发表评论"
+    "MUSTBELOGGED": "您必须登录才能发表评论",
+    "OFFERMADE": "提供正确"
 }
