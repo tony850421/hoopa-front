@@ -576,3 +576,7 @@ ul.pagination .page-item.active .page-link,
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+
+.marginTop30{
+    margin-top: 30px !important;
+}
