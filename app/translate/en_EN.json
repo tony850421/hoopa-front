@@ -96,6 +96,8 @@
     "REMOVE": "Remove",
     "CLEARALL": "Clear all",
     "OFFER": "Offer",
+    "TOFFER": "Total of offers",
+    "POFFER": "Average offers",
     "NEXT": "Next",
     "PREVIOUS": "Previous",
     "LASTEStNEWS": "Latest News",
@@ -105,5 +107,6 @@
     "SMSSENDED": "SMS Message sended",
     "COPYRIGHT": "Copyright © 2018 Hoopa. All Rights Reserved",
     "COMPANYADDRESS": "Room 2701, 3 Building, Qianjiang International Times Square, No. 111th, Jianggan District City, Hangzhou, China",
-    "MUSTBELOGGED": "You must be logged in to make a comment"
+    "MUSTBELOGGED": "You must be logged in to make a comment",
+    "OFFERMADE": "Offer made correctly"
 }

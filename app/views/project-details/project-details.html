@@ -95,17 +95,37 @@
         </div>
       </div>
       <!-- main end -->
-      <div class="col-md-12 light-gray-bg p-20 bordered clearfix">
-        <span class="product price colorPrimary">
-          <i class="fa fa-rmb"></i>{{project.get('debitAmount')}}万</span>
-        <div class="product elements-list pull-right clearfix">
-          <a ng-hide="flagBid" ng-click="makeAnOffer()" class="margin-clear btn btn-default backgroundColorBlue">
-            <i class="icon-Total-offers spanSignUp"></i> {{'MAKEANOFFER' | translate}}</a>
-          <a ng-show="flagBid" ng-click="makeABid()" class="margin-clear btn btn-default backgroundColorBlue">
-            <i class="icon-Offertas spanSignUp"></i> {{'MAKEABID' | translate}}</a>
+      <div class="col-md-12 light-gray-bg p-20 bordered row styleFactBox">
+        <div class="col-md-3 marginTop5">
+          <span class="factProject">
+            <i class="icon-Value-projects"></i>{{'DAMOUNT' | translate}}:</span>
+          <span class="factProject colorPrimary">
+            ¥{{project.get('debitAmount')}}万</span>
         </div>
-        <div class="product elements-list pull-right clearfix marginRight10" ng-show="flagBid">
-          <input type="text" ng-model="bid" class="form-control">
+        <div class="col-md-2 marginTop5">
+          <span class="factProject">
+            <i class="icon-Total-offers"></i>{{'TOFFER' | translate}}:</span>
+          <span class="factProject colorPrimary">
+            {{totalOffers}}
+          </span>
+        </div>
+        <div class="col-md-3 marginTop5">
+          <span class="factProject">
+            <i class="icon-Offertas"></i>{{'POFFER' | translate}}:</span>
+          <span class="factProject colorPrimary">
+              ¥{{promOffers}}万
+          </span>
+        </div>
+        <div class="col-md-4">
+          <a ng-hide="flagBid" ng-click="makeAnOffer()" class="margin-clear btn btn-default backgroundColorBlue pull-right height40">
+            <i class="icon-Total-offers spanSignUp"></i> {{'MAKEANOFFER' | translate}}</a>
+          <div ng-show="flagBid" class="input-group">
+            <input type="text" ng-model="offerValue" class="form-control">
+            <div class="input-group-append">
+              <a ng-click="makeABid()" class="input-group-text backgroundColorBlue cursorPointer">
+                <i class="icon-Offertas spanSignUp"></i> {{'MAKEABID' | translate}}</a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row col-md-12 marginTop20">
@@ -130,7 +150,7 @@
             <li>
               <strong>{{'DUPRINCIPALI' | translate}}</strong>
               <span class="text-right colorPrimary">
-                <i class="fa fa-rmb"></i>{{project.get('debitPricipalInterest')}}万</span>
+                ¥{{project.get('debitPricipalInterest')}}万</span>
             </li>
           </ul>
         </div>
@@ -164,7 +184,7 @@
           <li>
             <strong>{{'DUPRINCIPALI' | translate}}</strong>
             <span class="text-right colorPrimary">
-              <i class="fa fa-rmb"></i>{{project.get('debitPricipalInterest')}}万</span>
+              ¥{{project.get('debitPricipalInterest')}}万</span>
           </li>
         </ul>
       </div> -->
