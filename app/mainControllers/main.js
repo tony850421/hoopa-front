@@ -115,12 +115,11 @@ angular.module('myApp.Main', ['ngRoute'])
             query9.include('project');
 
             query9.count().then(count => {
-                $scope.offersCartCount = count;
+                rootScope.offersCartCount = count;
             })
 
             query9.limit(4);
-            query9.find().then(function (offers) {
-                console.log(offers);                
+            query9.find().then(function (offers) {           
                 $scope.offersArray = offers;
                 $scope.$apply();
             })
