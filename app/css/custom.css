@@ -577,6 +577,32 @@ ul.pagination .page-item.active .page-link,
     padding-right: 0 !important;
 }
 
-.marginTop30{
+.marginTop30 {
     margin-top: 30px !important;
+}
+
+[ng\:cloak],
+[ng-cloak],
+.ng-cloak {
+    display: none !important;
+}
+
+.timeline-date-label{
+    margin-bottom: 30px !important;
+}
+
+.timeline .timeline-item{
+    margin-bottom: 30px !important;
+}
+
+.timeline .timeline-item.pull-right + .timeline-date-label{
+    padding-top: 30px !important;
+}
+
+.backgroundColorPrimary{
+    background-color: #ff6700 !important;
+}
+
+.lineHeightCustom{
+    line-height: 1.5 !important;
 }
