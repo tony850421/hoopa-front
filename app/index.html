@@ -215,9 +215,9 @@
                     </a>
                   </div> -->
                   <div class="btn-group">
-                    <a ng-click="customGoTo('login/home')" id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret"
+                    <button ng-click="customGoTo('login/home')" id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret backgroundGray colorTextGray"
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
-                      <i class="icon-Login spanSignUp"></i> {{'LOGIN' | translate}}</a>
+                      <i class="icon-Login spanSignUp"></i> {{'LOGIN' | translate}}</button>
                     <!-- <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
                       <li>
                           <div class="form-group has-feedback">
@@ -271,9 +271,9 @@
                     </ul> -->
                   </div>
                   <div class="btn-group">
-                    <a id="header-top-drop-1" type="button" class="btn dropdown-toggle btn-sm paddingLR10" data-toggle="dropdown" aria-haspopup="true"
+                    <button id="header-top-drop-1" type="button" class="btn dropdown-toggle btn-sm paddingLR10 backgroundGray colorTextGray" data-toggle="dropdown" aria-haspopup="true"
                       aria-expanded="false" ng-cloak>
-                      {{languageShort}}</a>
+                      {{languageShort}}</button>
                     <ul id="language" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-1">
                       <li href="" class="languageActive" ng-click="setLanguage('cn_CN')">
                         <a class="colorInherit">{{'CHINESE' | translate}}</a>
@@ -393,7 +393,7 @@
                         </ul>
                       </div>
                       <div class="btn-group" ng-hide="!loginUser">
-                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret backgroundGray" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
                           aria-expanded="false" ng-click="initOffersList()">
                           <i class="icon-Total-offers marginLeft5"></i>
                           <span class="cart-count default-bg" ng-show="offersCartCount > 0" ng-cloak>{{offersCartCount}}</span>
@@ -569,7 +569,7 @@
                   </ul>
                 </div>
                 <div class="btn-group" ng-hide="!loginUser">
-                  <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
+                  <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret backgroundGray" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false" ng-click="initWishList()">
                     <i class="fa fa-heart-o marginLeft5"></i>
                     <span class="cart-count default-bg" ng-show="shopCartArray.length > 0" ng-cloak>{{shopCartCount}}</span>
