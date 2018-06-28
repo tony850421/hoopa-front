@@ -328,30 +328,17 @@
               <!-- header-first end -->
 
             </div>
-            <div class="col-lg-9 ml-auto">
-
-              <!-- header-second start -->
-              <!-- ================ -->
+            <div class="col-lg-8 ml-auto widthDropdown">
               <div class="header-second clearfix">
-
-                <!-- main-navigation start -->
-                <!-- classes: -->
-                <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
-                <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
-                <!-- ================ -->
                 <div class="main-navigation main-navigation--mega-menu main-navigation--style-2  animated">
                   <nav class="navbar navbar-expand-lg navbar-light p-0">
                     <div class="navbar-brand clearfix hidden-lg-up">
-
-                      <!-- logo -->
                       <div id="logo-mobile" class="logo">
                         <a href="index.html">
                           <img class="logo_img" id="logo-img-mobile" src="images/LogoHoopa.png" alt="Hoopa">
                         </a>
                       </div>
                     </div>
-
-                    <!-- header dropdown buttons -->
                     <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
                       <div class="btn-group">
                         <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true"
@@ -380,26 +367,22 @@
                             <table class="table table-hover">
                               <thead>
                                 <tr>
-                                  <!-- <th class="quantity">Province</th> -->
-                                  <th class="product">{{'PACKAGES' | translate}}</th>
+                                  <th class="product">{{'PACKAGE' | translate}}</th>
                                   <th class="amount">{{'DAMOUNT' | translate}}</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr class="cursorPointer" ng-repeat="product in shopCartArray" ng-click="goToProject(product.get('project').id)">
-                                  <!-- <td class="quantity">{{product.get('project').get('province')}}</td> -->
                                   <td class="product">
                                     <a href="" ng-click="goToProject(product.get('project').id)">
                                       <span class="small">{{product.get('project').get('title')}}</span>
                                     </a>
-                                    <!-- <span class="small">{{product.get('project').get('plainAddress')}}</span> -->
                                   </td>
                                   <td class="amount colorPrimary">
                                     <i class="fa fa-rmb colorPrimary"></i>{{product.get('project').get('debitAmount')}}万</td>
                                 </tr>
                                 <tr>
                                   <td class="total-quantity" colspan="2">{{shopCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
-                                  <!-- <td class="total-amount">$1997.00</td> -->
                                 </tr>
                               </tbody>
                             </table>
@@ -409,16 +392,49 @@
                           </li>
                         </ul>
                       </div>
+                      <div class="btn-group" ng-hide="!loginUser">
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false" ng-click="initOffersList()">
+                          <i class="icon-Total-offers marginLeft5"></i>
+                          <span class="cart-count default-bg" ng-show="offersCartCount > 0">{{offersCartCount}}</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-2">
+                          <li>
+                            <table class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th class="product">{{'PACKAGE' | translate}}</th>
+                                  <th class="amount">{{'AMOUNT' | translate}}</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr ng-repeat="offer in offersArray " ng-click="goToProject(offer.get('project').id)">
+                                  <td class="product">
+                                    <a href="" ng-click="goToProject(offer.get('project').id)">
+                                      <span class="small">{{offer.get('project').get('title')}}</span>
+                                    </a>
+                                  </td>
+                                  <td class="amount colorPrimary">
+                                    <i class="fa fa-rmb colorPrimary"></i>{{offer.get('amount')}}万</td>
+                                </tr>
+                                <tr>
+                                  <td class="total-quantity" colspan="2">{{offersCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <!-- <div class="panel-body text-right">
+                                <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm"> {{'VWISHLIST' | translate}}</a>
+                              </div> -->
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                    <!-- header dropdown buttons end -->
-
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1"
                       aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                      <!-- main-menu -->
                       <ul class="navbar-nav ml-xl-auto">
                         <li class="nav-item">
                           <a href="index.html" class="nav-link">{{'HOME' | translate }}</a>
@@ -443,7 +459,6 @@
                                 <i class="icon-Development-history iconMenuClass pr-2"></i>{{'DEVHISTORY' | translate }}</a>
                             </li>
                             <li>
-                              <!-- <a href="" ng-click="customGoTo('grouphonors')"> -->
                               <a href="">
                                 <i class="icon-Group-honors iconMenuClass pr-2"></i>{{'GROUPHONORS' | translate }}</a>
                             </li>
@@ -530,17 +545,12 @@
                           </ul>
                         </li>
                       </ul>
-                      <!-- main-menu end -->
                     </div>
                   </nav>
                 </div>
-                <!-- main-navigation end -->
               </div>
-              <!-- header-second end -->
-
             </div>
             <div class="col-auto hidden-md-down">
-              <!-- header dropdown buttons -->
               <div class="header-dropdown-buttons">
                 <div class="btn-group">
                   <button ng-click="customGoTo('projects')" type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1"
@@ -569,32 +579,64 @@
                       <table class="table table-hover">
                         <thead>
                           <tr>
-                            <!-- <th class="quantity">Province</th> -->
-                            <th class="product">{{'PACKAGES' | translate}}</th>
+                            <th class="product">{{'PACKAGE' | translate}}</th>
                             <th class="amount">{{'DAMOUNT' | translate}}</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr ng-repeat="product in shopCartArray" ng-click="goToProject(product.get('project').id)">
-                            <!-- <td class="quantity">{{product.get('project').get('province')}}</td> -->
                             <td class="product">
                               <a href="" ng-click="goToProject(product.get('project').id)">
                                 <span class="small">{{product.get('project').get('title')}}</span>
                               </a>
-                              <!-- <span class="small">{{product.get('project').get('plainAddress')}}</span> -->
                             </td>
                             <td class="amount colorPrimary">
                               <i class="fa fa-rmb colorPrimary"></i>{{product.get('project').get('debitAmount')}}万</td>
                           </tr>
                           <tr>
                             <td class="total-quantity" colspan="2">{{shopCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
-                            <!-- <td class="total-amount">$1997.00</td> -->
                           </tr>
                         </tbody>
                       </table>
                       <div class="panel-body text-right">
                         <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm"> {{'VWISHLIST' | translate}}</a>
                       </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="btn-group" ng-hide="!loginUser">
+                  <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false" ng-click="initOffersList()">
+                    <i class="icon-Total-offers marginLeft5"></i>
+                    <span class="cart-count default-bg" ng-show="offersCartCount > 0">{{offersCartCount}}</span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-2">
+                    <li>
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th class="product">{{'PACKAGE' | translate}}</th>
+                            <th class="amount">{{'AMOUNT' | translate}}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="offer in offersArray " ng-click="goToProject(offer.get('project').id)">
+                            <td class="product">
+                              <a href="" ng-click="goToProject(offer.get('project').id)">
+                                <span class="small">{{offer.get('project').get('title')}}</span>
+                              </a>
+                            </td>
+                            <td class="amount colorPrimary">
+                              <i class="fa fa-rmb colorPrimary"></i>{{offer.get('amount')}}万</td>
+                          </tr>
+                          <tr>
+                            <td class="total-quantity" colspan="2">{{offersCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!-- <div class="panel-body text-right">
+                        <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm"> {{'VWISHLIST' | translate}}</a>
+                      </div> -->
                     </li>
                   </ul>
                 </div>

@@ -50,7 +50,9 @@ angular.module('myApp.Main', ['ngRoute'])
         // $scope.setLanguage('en_EN');
 
         $rootScope.shopCartArray = [];
+        $scope.offersArray = [];
         $rootScope.shopCartCount = 0;
+        $rootScope.offersCartCount = 0;
 
         $rootScope.initWishList = function () {
             // var id = $scope.projectId;
@@ -103,7 +105,26 @@ angular.module('myApp.Main', ['ngRoute'])
         };   
         
         $scope.goToProject = function (id) {
-            console.log(id);
             $rootScope.customGoTo('project-details/' + id);
         };
+
+        $rootScope.initOffersList = function(){
+            var user = AV.User.current();
+            var query9 = new AV.Query('Offert');            
+            query9.equalTo('user', user);
+            query9.include('project');
+
+            query9.count().then(count => {
+                $scope.offersCartCount = count;
+            })
+
+            query9.limit(4);
+            query9.find().then(function (offers) {
+                console.log(offers);                
+                $scope.offersArray = offers;
+                $scope.$apply();
+            })
+        };
+
+        $rootScope.initOffersList();
     }]);
