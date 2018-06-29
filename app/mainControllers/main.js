@@ -10,6 +10,8 @@ angular.module('myApp.Main', ['ngRoute'])
 
         $scope.languageShort = "English";
 
+        $rootScope.avatar = '';
+
         $rootScope.customGoTo = function (route) {
             $window.location.href = $scope.baseUrl + route;
         };
@@ -79,11 +81,20 @@ angular.module('myApp.Main', ['ngRoute'])
             }
         };
 
+        $scope.logout = function(){
+            AV.User.logOut();
+            $rootScope.getUser();
+        };
+
         $rootScope.loginUser = false;
 
         $rootScope.getUser = function () {
             var currentUser = AV.User.current();
+            
             if (currentUser) {
+                if (currentUser.get('avatarUrl') != ''){
+                    $rootScope.avatar = currentUser.get('avatarUrl');
+                }
                 $rootScope.loginUser = true;
             } else {
                 $rootScope.loginUser = false;

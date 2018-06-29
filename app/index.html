@@ -215,64 +215,25 @@
                     </a>
                   </div> -->
                   <div class="btn-group">
-                    <button ng-click="customGoTo('login/home')" id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret backgroundGray colorTextGray"
+                    <button ng-hide="loginUser" ng-click="customGoTo('login/home')" type="button" class="btn paddingLR10 btn-sm backgroundGray colorTextGray hoverPrimary" ng-cloak>
+                      <i class="icon-Login spanSignUp"></i>
+                      {{'LOGIN' | translate}}
+                    </button>
+                    <button ng-show="loginUser" id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret backgroundGray colorTextGray" style="height:30px !important;"
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
-                      <i class="icon-Login spanSignUp"></i> {{'LOGIN' | translate}}</button>
-                    <!-- <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
-                      <li>
-                          <div class="form-group has-feedback">
-                            <label class="control-label"> {{'PHONENUMBER' | translate}}
-                              <span class="text-danger small">*</span>
-                            </label>
-                            <div class="row">
-                              <div class="col-md-6 paddingRight0">
-                                <input type="text" class="form-control paddingRight12" placeholder="{{'PHONENUMBER' | translate}}">
-                              </div>
-                              <div class="col-md-6">
-                                <a class="btn btn-gray btn-sm buttonSenCodeLogin" >{{'SENDCODE' | translate}}
-                                  <i class="fa fa-check"></i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="form-group has-feedback">
-                            <input type="password" class="form-control paddingRight12" placeholder="{{'SMSCODE' | translate}}">
-                          </div>
-                          <div class="row">
-                            <div class="col-md-12">
-                              <a type="submit" class="btn btn-gray btn-sm pull-right buttonSenCodeLogin col-md-5" ng-click="login()">{{'LOGIN' | translate}}
-                                <i class="fa fa-user-o"></i>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-md-12 marginTop10">
-                              <span class="text-center fontSize12 colorTextCustom"> {{'LOGINWITH' | translate}}</span>
-                              <ul class="social-links circle small colored clearfix">
-                                <li class="facebook">
-                                  <a href="">
-                                    <i class="fa fa-facebook"></i>
-                                  </a>
-                                </li>
-                                <li class="twitter">
-                                  <a href="">
-                                    <i class="fa fa-twitter"></i>
-                                  </a>
-                                </li>
-                                <li class="googleplus">
-                                  <a href="">
-                                    <i class="fa fa-google-plus"></i>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
+                        <img ng-hide="avatar !=''" class="avatarImageBanner" src="images/avatar.jpg">
+                        <img ng-show="avatar !=''" class="avatarImageBanner" ng-src="{{avatar}}">
+                    </button>
+                    <ul id="userDropdown" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
+                      <li class="cursorPointer languageActive" ng-cloak>
+                        <a class="fontSize14" ng-click="logout()">
+                          <i class="icon-Unlogin iconUnloginClass pr-2"></i>
+                          {{'LOGOUT' | translate}}</a>
                       </li>
-                    </ul> -->
+                    </ul>
                   </div>
                   <div class="btn-group">
-                    <button id="header-top-drop-1" type="button" class="btn dropdown-toggle btn-sm paddingLR10 backgroundGray colorTextGray" data-toggle="dropdown" aria-haspopup="true"
-                      aria-expanded="false" ng-cloak>
+                    <button id="header-top-drop-1" type="button" class="btn dropdown-toggle btn-sm paddingLR10 backgroundGray colorTextGray hoverPrimary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
                       {{languageShort}}</button>
                     <ul id="language" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-1">
                       <li href="" class="languageActive" ng-click="setLanguage('cn_CN')">
@@ -393,8 +354,8 @@
                         </ul>
                       </div>
                       <div class="btn-group" ng-hide="!loginUser">
-                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret backgroundGray" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
-                          aria-expanded="false" ng-click="initOffersList()">
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret backgroundGray" id="header-drop-2" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false" ng-click="initOffersList()">
                           <i class="icon-Total-offers marginLeft5"></i>
                           <span class="cart-count default-bg" ng-show="offersCartCount > 0" ng-cloak>{{offersCartCount}}</span>
                         </button>
@@ -429,8 +390,7 @@
                         </ul>
                       </div>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1"
-                      aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -440,7 +400,8 @@
                           <a href="index.html" class="nav-link" ng-cloak>{{'HOME' | translate }}</a>
                         </li>
                         <li class="nav-item dropdown">
-                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'GROUPOVERVIEW' | translate }}</a>
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            ng-cloak>{{'GROUPOVERVIEW' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown" style="width: 250px !important">
                             <li>
                               <a href="" ng-click="customGoTo('groupIntroduction')" ng-cloak>
@@ -469,7 +430,8 @@
                           </ul>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'SERVICES' | translate }}</a>
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            ng-cloak>{{'SERVICES' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="" ng-click="customGoTo('bussinessystem')" ng-cloak>
@@ -486,7 +448,8 @@
                           </ul>
                         </li>
                         <li class="nav-item dropdown">
-                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'NEWS' | translate }}</a>
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            ng-cloak>{{'NEWS' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="" ng-click="customGoTo('news/1')" ng-cloak>
@@ -503,7 +466,8 @@
                           </ul>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'ASSETS' | translate }}</a>
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            ng-cloak>{{'ASSETS' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown" style="width: 250px !important">
                             <li>
                               <a href="" ng-click="customGoTo('projects')" ng-cloak>
@@ -520,7 +484,8 @@
                           </ul>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'RESEARCH' | translate }}</a>
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            ng-cloak>{{'RESEARCH' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="" ng-cloak>
@@ -532,7 +497,8 @@
                           <a href="" class="nav-link" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'MBA' | translate }}</a>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'CONTACTUS' | translate }}</a>
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            ng-cloak>{{'CONTACTUS' | translate }}</a>
                           <ul class="dropdown-menu" aria-labelledby="third-dropdown">
                             <li>
                               <a href="" ng-click="customGoTo('branches-offices')" ng-cloak>
@@ -569,8 +535,8 @@
                   </ul>
                 </div>
                 <div class="btn-group" ng-hide="!loginUser">
-                  <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret backgroundGray" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false" ng-click="initWishList()">
+                  <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret backgroundGray" id="header-drop-2" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" ng-click="initWishList()">
                     <i class="fa fa-heart-o marginLeft5"></i>
                     <span class="cart-count default-bg" ng-show="shopCartArray.length > 0" ng-cloak>{{shopCartCount}}</span>
                   </button>

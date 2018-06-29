@@ -292,6 +292,10 @@ h6 {
     font-size: 12px;
 }
 
+.fontSize14 {
+    font-size: 14px;
+}
+
 .colorTextCustom {
     color: #78787a;
 }
@@ -609,4 +613,26 @@ ul.pagination .page-item.active .page-link,
 
 .colorTextGray{
     color: #777777 !important;
+}
+
+.avatarImageBanner{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: -5px;
+}
+
+#userDropdown{
+    min-width: 150px !important;
+    transform: translate3d(0px, 32px, 0px) !important;
+}
+
+.iconUnloginClass{
+    color: inherit !important;
+    font-size: 16px !important;
+    vertical-align: middle !important;
+}
+
+.hoverPrimary:hover{
+    color: #ff6700 !important;
 }
