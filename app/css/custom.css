@@ -680,6 +680,10 @@ ul.pagination .page-item.active .page-link,
         padding-top: 10px !important;
         padding-bottom: 10px !important;
     }
+    
+    .padding0XS{
+        padding: 0 !important;
+    }
 }
 
 @media(min-width: 360px){
@@ -923,6 +927,10 @@ ul.pagination .page-item.active .page-link,
         padding-left: 0px !important;
         margin-top: 0 !important;
         height: 40px !important;
+    }
+
+    .padding0XS{
+        padding: 15px !important;
     }
 }
 
