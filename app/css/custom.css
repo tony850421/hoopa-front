@@ -659,6 +659,23 @@ ul.pagination .page-item.active .page-link,
         padding: 30px;
         background-color: #fafafa !important;
     }
+
+    .paddingLeftButtonSendCode{
+        margin-top: 10px !important;
+        height: 40px !important;
+    }
+
+    .width100Login{
+        width: 100% !important;
+    }
+
+    .width100SendCode{
+        width: 100% !important;
+    }
+
+    .menuBarPage{
+        width: 290px !important;
+    }
 }
 
 @media(min-width: 360px){
@@ -691,6 +708,10 @@ ul.pagination .page-item.active .page-link,
         padding: 30px;
         background-color: #fafafa !important;
     }
+
+    .menuBarPage{
+        width: 330px !important;
+    }
 }
 
 @media(min-width: 375px){
@@ -714,6 +735,10 @@ ul.pagination .page-item.active .page-link,
     .paddingBoxHome {
         padding: 40px;
         background-color: #fafafa !important;
+    }
+
+    .menuBarPage{
+        width: 345px !important;
     }
 }
 
@@ -739,6 +764,20 @@ ul.pagination .page-item.active .page-link,
         padding: 60px;
         background-color: #fafafa !important;
     }
+
+    .width100Login{
+        width: auto !important;
+        float: right !important;
+    }
+
+    .width100SendCode{
+        width: auto !important;
+        float: right !important;
+    }
+
+    .menuBarPage{
+        width: 390px !important;
+    }
 }
 
 @media(min-width: 480px){
@@ -762,6 +801,10 @@ ul.pagination .page-item.active .page-link,
     .paddingBoxHome {
         padding: 60px;
         background-color: #fafafa !important;
+    }
+
+    .menuBarPage{
+        width: 450px !important;
     }
 }
 
@@ -791,6 +834,28 @@ ul.pagination .page-item.active .page-link,
         padding: 60px;
         background-color: #fafafa !important;
     }
+
+    .paddingLeftButtonSendCode{
+        padding-left: 0px !important;
+        margin-top: 0 !important;
+        height: 40px !important;
+    }
+
+    .width100Login{
+        width: auto !important;
+        float: right !important;
+        margin-right: 12% !important;
+        width: 130px !important;
+    }
+
+    .width100SendCode{
+        width: auto !important;
+        float: right !important;
+    }
+
+    .menuBarPage{
+        width: 689px !important;
+    }
 }
 
 @media(min-width: 992px){
@@ -817,6 +882,12 @@ ul.pagination .page-item.active .page-link,
     .paddingBoxHome {
         padding: 60px;
         background-color: #fafafa !important;
+    }
+
+    .paddingLeftButtonSendCode{
+        padding-left: 0px !important;
+        margin-top: 0 !important;
+        height: 40px !important;
     }
 }
 

@@ -259,7 +259,7 @@ angular.module('myApp.Home', ['ngRoute'])
     $scope.changeActive(1);
 
     $scope.goToProject = function (id) {
-      console.log(id);
+      $rootScope.customGoTo('project-details/' + id);
     };
 
     $(window).load('/app/views/home/home.js', function () {
