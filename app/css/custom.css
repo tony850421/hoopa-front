@@ -606,3 +606,7 @@ ul.pagination .page-item.active .page-link,
 .lineHeightCustom{
     line-height: 1.5 !important;
 }
+
+.colorTextGray{
+    color: #777777 !important;
+}
