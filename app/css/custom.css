@@ -35,13 +35,6 @@
     max-height: 160px;
 }
 
-.imageNewsSlide {
-    object-fit: cover;
-    min-width: 360px !important;
-    min-height: 240px !important;
-    max-height: 240px !important;
-}
-
 .logo_img {
     margin-top: -5px !important;
     width: 120px !important
@@ -676,6 +669,17 @@ ul.pagination .page-item.active .page-link,
     .menuBarPage{
         width: 290px !important;
     }
+
+    .imageNewsSlide {
+        object-fit: cover;
+    }
+
+    .paddingXSFact{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
 }
 
 @media(min-width: 360px){
@@ -712,6 +716,10 @@ ul.pagination .page-item.active .page-link,
     .menuBarPage{
         width: 330px !important;
     }
+
+    .imageNewsSlide {
+        object-fit: cover;
+    }
 }
 
 @media(min-width: 375px){
@@ -739,6 +747,10 @@ ul.pagination .page-item.active .page-link,
 
     .menuBarPage{
         width: 345px !important;
+    }
+
+    .imageNewsSlide {
+        object-fit: cover;
     }
 }
 
@@ -778,6 +790,17 @@ ul.pagination .page-item.active .page-link,
     .menuBarPage{
         width: 390px !important;
     }
+
+    .imageNewsSlide {
+        object-fit: cover;
+    }
+
+    .paddingXSFact{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
 }
 
 @media(min-width: 480px){
@@ -805,6 +828,10 @@ ul.pagination .page-item.active .page-link,
 
     .menuBarPage{
         width: 450px !important;
+    }
+
+    .imageNewsSlide {
+        object-fit: cover;
     }
 }
 
@@ -856,6 +883,11 @@ ul.pagination .page-item.active .page-link,
     .menuBarPage{
         width: 689px !important;
     }
+
+    .imageNewsSlide {
+        object-fit: cover;
+        width: 100% !important;
+    }
 }
 
 @media(min-width: 992px){
@@ -880,7 +912,10 @@ ul.pagination .page-item.active .page-link,
     }
 
     .paddingBoxHome {
-        padding: 60px;
+        padding-top: 120px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 60px;
         background-color: #fafafa !important;
     }
 

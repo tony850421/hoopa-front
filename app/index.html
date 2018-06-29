@@ -133,7 +133,7 @@
                       <i class="fa fa-pinterest"></i>
                     </a>
                   </li>
-                </ul> -->                
+                </ul> -->
                 <ul class="list-inline hidden-md-down">
                   <li class="list-inline-item" ng-cloak>
                     <i class="text-default fa fa-map-marker pr-1 pl-2"></i>{{'COMPANYADDRESS' | translate}}</li>
@@ -165,14 +165,15 @@
                     </a>
                   </div> -->
                   <div class="btn-group">
-                    <button ng-hide="loginUser" ng-click="customGoTo('login/home')" type="button" class="btn paddingLR10 btn-sm backgroundGray colorTextGray hoverPrimary" ng-cloak>
+                    <button ng-hide="loginUser" ng-click="customGoTo('login/home')" type="button" class="btn paddingLR10 btn-sm backgroundGray colorTextGray hoverPrimary"
+                      ng-cloak>
                       <i class="icon-Login spanSignUp"></i>
                       {{'LOGIN' | translate}}
                     </button>
-                    <button ng-show="loginUser" id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret backgroundGray colorTextGray" style="height:30px !important;"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
-                        <img ng-hide="avatar !=''" class="avatarImageBanner" src="images/avatar.jpg">
-                        <img ng-show="avatar !=''" class="avatarImageBanner" ng-src="{{avatar}}">
+                    <button ng-show="loginUser" id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret backgroundGray colorTextGray"
+                      style="height:30px !important;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
+                      <img ng-hide="avatar !=''" class="avatarImageBanner" src="images/avatar.jpg">
+                      <img ng-show="avatar !=''" class="avatarImageBanner" ng-src="{{avatar}}">
                     </button>
                     <ul id="userDropdown" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
                       <li class="cursorPointer languageActive" ng-cloak>
@@ -183,7 +184,8 @@
                     </ul>
                   </div>
                   <div class="btn-group">
-                    <button id="header-top-drop-1" type="button" class="btn dropdown-toggle btn-sm paddingLR10 backgroundGray colorTextGray hoverPrimary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
+                    <button id="header-top-drop-1" type="button" class="btn dropdown-toggle btn-sm paddingLR10 backgroundGray colorTextGray hoverPrimary"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
                       {{languageShort}}</button>
                     <ul id="language" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-1">
                       <li href="" class="languageActive" ng-click="setLanguage('cn_CN')">
@@ -252,8 +254,8 @@
                     </div>
                     <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
                       <div class="btn-group">
-                        <button type="button" ng-click="customGoTo('projects')" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true"
-                          aria-expanded="false">
+                        <button type="button" ng-click="customGoTo('projects')" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i class="icon-Search marginLeft5"></i>
                         </button>
                         <ul id="searchPage" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
@@ -290,7 +292,7 @@
                                     </a>
                                   </td>
                                   <td class="amount colorPrimary" ng-cloak>
-                                    <i class="fa fa-rmb colorPrimary"></i>{{product.get('project').get('debitAmount')}}万</td>
+                                    ¥{{product.get('project').get('debitAmount')}}万</td>
                                 </tr>
                                 <tr>
                                   <td class="total-quantity" colspan="2" ng-cloak>{{shopCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
@@ -325,8 +327,8 @@
                                       <span class="small" ng-cloak>{{offer.get('project').get('title')}}</span>
                                     </a>
                                   </td>
-                                  <td class="amount colorPrimary">
-                                    <i class="fa fa-rmb colorPrimary" ng-cloak></i>{{offer.get('amount')}}万</td>
+                                  <td class="amount colorPrimary" ng-cloak>
+                                    <¥{{offer.get( 'amount')}}万</td>
                                 </tr>
                                 <tr>
                                   <td class="total-quantity" colspan="2" ng-cloak>{{offersCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
@@ -340,7 +342,8 @@
                         </ul>
                       </div>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1"
+                      aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -507,7 +510,7 @@
                               </a>
                             </td>
                             <td class="amount colorPrimary" ng-cloak>
-                              <i class="fa fa-rmb colorPrimary"></i>{{product.get('project').get('debitAmount')}}万</td>
+                              ¥{{product.get('project').get('debitAmount')}}万</td>
                           </tr>
                           <tr>
                             <td class="total-quantity" colspan="2" ng-cloak>{{shopCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
@@ -543,7 +546,7 @@
                               </a>
                             </td>
                             <td class="amount colorPrimary" ng-cloak>
-                              <i class="fa fa-rmb colorPrimary"></i>{{offer.get('amount')}}万</td>
+                              ¥{{offer.get('amount')}}万</td>
                           </tr>
                           <tr>
                             <td class="total-quantity" colspan="2" ng-cloak>{{offersCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
@@ -687,7 +690,7 @@
           </div>
         </div>
       </div>
-    </div> 
+    </div>
 
 
     <div ng-view></div>
@@ -734,17 +737,17 @@
                 <div class="footer-content text-center padding-ver-clear">
                   <div class="logo-footer">
                     <div>
-                        <ul class="listStyleNone paddingLeft0">
-                          <li class="liFooter">
-                              <img id="logo-footer" class="imageFooter mx-auto" src="images/LogoHoopa.png" alt="">
-                          </li>
-                          <li class="liFooter">
-                              <img id="qr-footer" class="imageFooter mx-auto" src="images/qrcode.jpg" alt="">
-                          </li>
-                          <li class="liFooter">
-                              <img id="qr-mini" class="imageFooter mx-auto" src="images/qrmini.jpg" alt="">
-                          </li>
-                        </ul>
+                      <ul class="listStyleNone paddingLeft0">
+                        <li class="liFooter">
+                          <img id="logo-footer" class="imageFooter mx-auto" src="images/LogoHoopa.png" alt="">
+                        </li>
+                        <li class="liFooter">
+                          <img id="qr-footer" class="imageFooter mx-auto" src="images/qrcode.jpg" alt="">
+                        </li>
+                        <li class="liFooter">
+                          <img id="qr-mini" class="imageFooter mx-auto" src="images/qrmini.jpg" alt="">
+                        </li>
+                      </ul>
                     </div>
                     <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus illo vel dolorum soluta consectetur
                       doloribus sit. Delectus non tenetur odit dicta vitae debitis suscipit doloribus. Lorem ipsum dolor
