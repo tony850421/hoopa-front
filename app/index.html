@@ -133,57 +133,7 @@
                       <i class="fa fa-pinterest"></i>
                     </a>
                   </li>
-                </ul> -->
-                <div class="social-links hidden-md-up circle small">
-                  <div class="btn-group dropdown">
-                    <button id="header-top-drop-1" type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-share-alt"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-animation" aria-labelledby="header-top-drop-1">
-                      <!-- <li class="twitter">
-                        <a href="">
-                          <i class="fa fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li class="skype">
-                        <a href="">
-                          <i class="fa fa-skype"></i>
-                        </a>
-                      </li>
-                      <li class="linkedin">
-                        <a href="">
-                          <i class="fa fa-linkedin"></i>
-                        </a>
-                      </li>
-                      <li class="googleplus">
-                        <a href="">
-                          <i class="fa fa-google-plus"></i>
-                        </a>
-                      </li>
-                      <li class="youtube">
-                        <a href="">
-                          <i class="fa fa-youtube-play"></i>
-                        </a>
-                      </li>
-                      <li class="flickr">
-                        <a href="">
-                          <i class="fa fa-flickr"></i>
-                        </a>
-                      </li>
-                      <li class="facebook">
-                        <a href="">
-                          <i class="fa fa-facebook"></i>
-                        </a>
-                      </li>
-                      <li class="pinterest">
-                        <a href="">
-                          <i class="fa fa-pinterest"></i>
-                        </a>
-                      </li> -->
-                    </ul>
-                  </div>
-                </div>
+                </ul> -->                
                 <ul class="list-inline hidden-md-down">
                   <li class="list-inline-item" ng-cloak>
                     <i class="text-default fa fa-map-marker pr-1 pl-2"></i>{{'COMPANYADDRESS' | translate}}</li>
@@ -289,7 +239,7 @@
               <!-- header-first end -->
 
             </div>
-            <div class="col-lg-8 ml-auto widthDropdown">
+            <div class="col-lg-12 ml-auto widthDropdown">
               <div class="header-second clearfix">
                 <div class="main-navigation main-navigation--mega-menu main-navigation--style-2  animated">
                   <nav class="navbar navbar-expand-lg navbar-light p-0">
@@ -302,16 +252,16 @@
                     </div>
                     <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
                       <div class="btn-group">
-                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true"
+                        <button type="button" ng-click="customGoTo('projects')" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true"
                           aria-expanded="false">
-                          <i class="icon-search"></i>
+                          <i class="icon-Search marginLeft5"></i>
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                        <ul id="searchPage" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
                           <li>
                             <form role="search" class="search-box margin-clear">
                               <div class="form-group has-feedback">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <i class="icon-search form-control-feedback"></i>
+                                <input type="text" class="form-control" placeholder="Search" ng-model="searchFilterText">
+                                <i ng-click="search(searchFilterText)" class="icon-Search form-control-feedback cursorPointer"></i>
                               </div>
                             </form>
                           </li>
@@ -528,7 +478,7 @@
                       <form role="search" class="search-box margin-clear">
                         <div class="form-group has-feedback">
                           <input type="text" class="form-control" placeholder="Search" ng-model="searchFilterText">
-                          <i ng-click="search(searchFilterText)" class="icon-Search form-control-feedback"></i>
+                          <i ng-click="search(searchFilterText)" class="icon-Search form-control-feedback cursorPointer"></i>
                         </div>
                       </form>
                     </li>
@@ -618,159 +568,59 @@
 
     <!-- banner start -->
     <!-- ================ -->
-    <div id="banner" class="banner clearfix paddingTop60" ng-show="showBanner">
-
-      <!-- slideshow start -->
-      <!-- ================ -->
+    <!-- <div id="banner" class="banner clearfix paddingTop60" ng-show="showBanner"> -->
+    <div id="banner" class="banner clearfix paddingTopSlider">
       <div class="slideshow">
-
-        <!-- <div class="slider-revolution-5-container">
-          <div id="slider-banner-fullscreen" class="slider-banner-fullscreen rev_slider" data-version="5.0">
-            <ul class="slides">
-              <li data-transition="random" data-slotamount="default" data-masterspeed="default" data-title="Slide Title">
-                <img src="images/home6.jpg" alt="slidebg1" data-bgposition="center center" data-bgrepeat="no-repeat" data-bgfit="cover" class="rev-slidebg">
-                <div class="tp-caption dark-translucent-bg" data-x="center" data-y="center" data-start="0" data-transform_idle="o:1;" data-transform_in="o:0;s:600;e:Power2.easeInOut;"
-                  data-transform_out="o:0;s:600;" data-width="5000" data-height="5000">
-                </div>
-                <div class="tp-caption large_white" data-x="left" data-y="200" data-start="500" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;o:0;s:1000;e:Power4.easeInOut;"
-                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
-                  <span class="logo-font">The Project</span> - Clean Bootstrap Template
-                </div>
-                <div class="tp-caption large_white tp-resizeme" data-x="left" data-y="270" data-start="750" data-transform_idle="o:1;" data-transform_in="o:0;s:2000;e:Power4.easeInOut;">
-                  <div class="separator-2 light"></div>
-                </div>
-                <div class="tp-caption medium_white" data-x="left" data-y="290" data-start="750" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;s:750;e:Power4.easeInOut;"
-                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  <br> Nesciunt, maiores, aliquid. Repellat eum numquam aliquid culpa offici,
-                  <br> tenetur fugiat dolorum sapiente eligendi...
-                </div>
-                <div class="tp-caption small_white" data-x="left" data-y="410" data-start="1000" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;o:0;s:500;e:Power4.easeInOut;"
-                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
-                  <a href="" class="btn btn-gray radius-50 btn-lg btn-animated margin-clear">Learn More
-                    <i class="fa fa-info-circle"></i>
-                  </a>
-                  <span class="pl-1 pr-1">or</span>
-                  <a href="" class="btn radius-50 btn-lg btn-animated margin-clear">Contact Us
-                    <i class="fa fa-envelope"></i>
-                  </a>
-                </div>
-                <div class="tp-caption" data-x="center" data-y="bottom" data-voffset="100" data-start="1250" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;o:0;s:2000;e:Power4.easeInOut;"
-                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
-                  <a href="#page-start" class="btn btn-lg moving smooth-scroll">
-                    <i class="fa fa-angle-down"></i>
-                    <i class="fa fa-angle-down"></i>
-                    <i class="fa fa-angle-down"></i>
-                  </a>
-                </div>
-              </li>
-              <li class="text-right" data-transition="random" data-slotamount="7" data-masterspeed="default" data-title="Simple and Smart Bootstrap Template">
-                <img src="images/home7.jpg" alt="slidebg2" data-bgposition="center center" data-bgrepeat="no-repeat" data-bgfit="cover" class="rev-slidebg">
-                <div class="tp-caption dark-translucent-bg" data-x="center" data-y="center" data-start="0" data-transform_idle="o:1;" data-transform_in="o:0;s:600;e:Power2.easeInOut;"
-                  data-transform_out="o:0;s:600;" data-width="5000" data-height="5000">
-                </div>
-                <div class="tp-caption large_white" data-x="right" data-y="200" data-start="500" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;o:0;s:1000;e:Power4.easeInOut;"
-                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
-                  <span class="logo-font">The Project</span> - Excepteur sint and Layouts
-                </div>
-                <div class="tp-caption large_white tp-resizeme" data-x="right" data-y="270" data-start="750" data-transform_idle="o:1;" data-transform_in="o:0;s:2000;e:Power4.easeInOut;">
-                  <div class="separator-3 light"></div>
-                </div>
-                <div class="tp-caption medium_white" data-x="right" data-y="290" data-start="750" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;s:750;e:Power4.easeInOut;"
-                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  <br> Nesciunt, maiores, aliquid. Repellat eum numquam aliquid culpa offici,
-                  <br> tenetur fugiat dolorum sapiente eligendi
-                </div>
-                <div class="tp-caption small_white" data-x="right" data-y="410" data-start="1000" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;o:0;s:500;e:Power4.easeInOut;"
-                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
-                  <a href="" class="btn btn-gray radius-50 btn-lg btn-animated margin-clear">Learn More
-                    <i class="fa fa-info-circle"></i>
-                  </a>
-                  <span class="pl-1 pr-1">or</span>
-                  <a href="" class="btn btn-lg radius-50 btn-animated margin-clear">Contact Us
-                    <i class="fa fa-envelope"></i>
-                  </a>
-                </div>
-                <div class="tp-caption" data-x="center" data-y="bottom" data-voffset="100" data-start="1250" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;o:0;s:2000;e:Power4.easeInOut;"
-                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
-                  <a href="#page-start" class="btn btn-lg moving smooth-scroll">
-                    <i class="fa fa-angle-down"></i>
-                    <i class="fa fa-angle-down"></i>
-                    <i class="fa fa-angle-down"></i>
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div> -->
-
         <div class="slider-revolution-5-container">
           <div id="slider-banner-fullwidth-big-height" class="slider-banner-fullwidth-big-height rev_slider" data-version="5.0">
             <ul class="slides">
-              <!-- slide 1 start -->
-              <!-- ================ -->
               <li data-transition="slidehorizontal" data-slotamount="default" data-masterspeed="default" data-title="">
 
-                <!-- main image -->
                 <img src="images/home6.jpg" alt="slidebg1" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover" style="object-fit: cover !important"
                   class="rev-slidebg">
 
-                <!-- Transparent Background -->
                 <!-- <div class="tp-caption dark-translucent-bg" data-x="center" data-y="center" data-start="0" data-transform_idle="o:1;" data-transform_in="o:0;s:600;e:Power2.easeInOut;"
                   data-transform_out="o:0;s:600;" data-width="5000" data-height="5000">
                 </div> -->
 
-                <!-- LAYER NR. 1 -->
                 <!-- <div class="tp-caption large_white" data-x="left" data-y="150" data-start="1000" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;"
                   data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
                   data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">Next Generation Template
-                </div> -->
+                </div>
 
-                <!-- LAYER NR. 2 -->
-                <!-- <div class="tp-caption medium_white" data-x="left" data-y="230" data-speed="500" data-start="1200" data-transform_idle="o:1;"
+                <div class="tp-caption medium_white" data-x="left" data-y="230" data-speed="500" data-start="1200" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-laptop"></i>
                   </span> 100% Responsive
-                </div> -->
+                </div>
 
-                <!-- LAYER NR. 3 -->
-                <!-- <div class="tp-caption medium_white" data-x="left" data-y="290" data-speed="500" data-start="1400" data-transform_idle="o:1;"
+                <div class="tp-caption medium_white" data-x="left" data-y="290" data-speed="500" data-start="1400" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-check"></i>
                   </span> Bootstrap Based
-                </div> -->
+                </div>
 
-                <!-- LAYER NR. 4 -->
-                <!-- <div class="tp-caption medium_white" data-x="left" data-y="350" data-speed="500" data-start="1600" data-transform_idle="o:1;"
+                <div class="tp-caption medium_white" data-x="left" data-y="350" data-speed="500" data-start="1600" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-gift"></i>
                   </span> Packed Full of Features
-                </div> -->
+                </div>
 
-                <!-- LAYER NR. 5 -->
-                <!-- <div class="tp-caption medium_white" data-x="left" data-y="410" data-speed="500" data-start="1800" data-transform_idle="o:1;"
+                <div class="tp-caption medium_white" data-x="left" data-y="410" data-speed="500" data-start="1800" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-hourglass-half"></i>
                   </span> Very Elegant Design
-                </div> -->
+                </div>
 
-                <!-- LAYER NR. 6 -->
-                <!-- <div class="tp-caption small_white" data-x="left" data-y="480" data-speed="500" data-start="2000" data-transform_idle="o:1;"
+                <div class="tp-caption small_white" data-x="left" data-y="480" data-speed="500" data-start="2000" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <a href="" class="btn btn-default btn-lg btn-animated">Purchase
@@ -779,64 +629,52 @@
                 </div> -->
 
               </li>
-              <!-- slide 1 end -->
-
-              <!-- slide 2 start -->
-              <!-- ================ -->
               <li data-transition="slidehorizontal" data-slotamount="default" data-masterspeed="default" data-title="">
 
-                <!-- main image -->
                 <img src="images/home7.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover" class="rev-slidebg">
 
-                <!-- Transparent Background -->
                 <!-- <div class="tp-caption dark-translucent-bg" data-x="center" data-y="center" data-start="0" data-transform_idle="o:1;" data-transform_in="o:0;s:600;e:Power2.easeInOut;"
                   data-transform_out="o:0;s:600;" data-width="5000" data-height="5000">
                 </div> -->
 
-                <!-- LAYER NR. 1 -->
                 <!-- <div class="tp-caption large_white" data-x="left" data-y="150" data-start="1000" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;"
                   data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
                   data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">Premium HTML5 Bootstrap Theme
-                </div> -->
+                </div>
 
-                <!-- LAYER NR. 2 -->
-                <!-- <div class="tp-caption medium_white" data-x="left" data-y="230" data-speed="500" data-start="1200" data-transform_idle="o:1;"
+                <div class="tp-caption medium_white" data-x="left" data-y="230" data-speed="500" data-start="1200" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-laptop"></i>
                   </span> W3C Validated
-                </div> -->
+                </div>
 
-                <!-- LAYER NR. 3 -->
-                <!-- <div class="tp-caption medium_white" data-x="left" data-y="290" data-speed="500" data-start="1400" data-transform_idle="o:1;"
+                <div class="tp-caption medium_white" data-x="left" data-y="290" data-speed="500" data-start="1400" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-check"></i>
                   </span> Unt loremcu dolor
-                </div> -->
+                </div>
 
-                <!-- LAYER NR. 4 -->
-                <!-- <div class="tp-caption medium_white" data-x="left" data-y="350" data-speed="500" data-start="1600" data-transform_idle="o:1;"
+                <div class="tp-caption medium_white" data-x="left" data-y="350" data-speed="500" data-start="1600" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-gift"></i>
                   </span> Crossbrowser Compatible
-                </div> -->
+                </div>
 
-                <!-- LAYER NR. 5 -->
-                <!-- <div class="tp-caption medium_white" data-x="left" data-y="410" data-speed="500" data-start="1800" data-transform_idle="o:1;"
+                <div class="tp-caption medium_white" data-x="left" data-y="410" data-speed="500" data-start="1800" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <span class="icon default-bg circle small hidden-sm-down">
                     <i class="fa fa-hourglass-half"></i>
                   </span> Very Elegant Design
-                </div> -->
+                </div>
 
-                <!-- LAYER NR. 6 -->
-                <!-- <div class="tp-caption small_white" data-x="left" data-y="480" data-speed="500" data-start="2000" data-transform_idle="o:1;"
+                <div class="tp-caption small_white" data-x="left" data-y="480" data-speed="500" data-start="2000" data-transform_idle="o:1;"
                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
                   <a href="" class="btn btn-default-transparent btn-lg btn-animated">Purchase
@@ -845,22 +683,15 @@
                 </div> -->
 
               </li>
-              <!-- slide 2 end -->
             </ul>
             <div class="tp-bannertimer"></div>
           </div>
         </div>
-
       </div>
-      <!-- slideshow end -->
-
-    </div>
-    <!-- banner end -->
+    </div> 
 
 
     <div ng-view></div>
-
-    <!-- <div>Angular seed app: v<span app-version></span></div> -->
 
     <!-- footer top start -->
     <!-- ================ -->
@@ -903,30 +734,30 @@
               <div class="col-lg-6">
                 <div class="footer-content text-center padding-ver-clear">
                   <div class="logo-footer">
-                    <div class="col-md-12 paddingBottom20">
-                      <div class="row">
-                        <div class="col-md-4">
-                          <img id="logo-footer" class="mx-auto paddingTop25" src="images/LogoHoopa.png" alt="">
-                        </div>
-                        <div class="col-md-4 borderLeft">
-                          <img id="qr-footer" class="mx-auto" src="images/qrcode.jpg" alt="">
-                        </div>
-                        <div class="col-md-4 borderLeft">
-                          <img id="qr-footer" class="mx-auto" src="images/qrmini.jpg" alt="">
-                        </div>
-                      </div>
+                    <div>
+                        <ul class="listStyleNone paddingLeft0">
+                          <li class="liFooter">
+                              <img id="logo-footer" class="imageFooter mx-auto" src="images/LogoHoopa.png" alt="">
+                          </li>
+                          <li class="liFooter">
+                              <img id="qr-footer" class="imageFooter mx-auto" src="images/qrcode.jpg" alt="">
+                          </li>
+                          <li class="liFooter">
+                              <img id="qr-mini" class="imageFooter mx-auto" src="images/qrmini.jpg" alt="">
+                          </li>
+                        </ul>
                     </div>
                     <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus illo vel dolorum soluta consectetur
                       doloribus sit. Delectus non tenetur odit dicta vitae debitis suscipit doloribus. Lorem ipsum dolor
                       sit amet, illo vel dolorum soluta consectetur.</p> -->
                     <ul class="list-inline mb-20">
-                      <li class="list-inline-item" ng-cloak>
+                      <li class="list-inline-item marginTop10" ng-cloak>
                         <i class="text-default fa fa-map-marker pr-1"></i>{{'COMPANYADDRESS' | translate}}</li>
-                      <li class="list-inline-item" ng-cloak>
+                      <li class="list-inline-item marginTop10" ng-cloak>
                         <a href="tel:+86 0571 85267521" class="link-dark">
                           <i class="text-default fa fa-phone pl-10 pr-1"></i>+86 0571 85267521</a>
                       </li>
-                      <li class="list-inline-item" ng-cloak>
+                      <li class="list-inline-item marginTop10" ng-cloak>
                         <a href="mailto:email@domain.com" class="link-dark">
                           <i class="text-default fa fa-envelope-o pl-10 pr-1"></i>email@domain.com</a>
                       </li>
