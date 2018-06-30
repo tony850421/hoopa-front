@@ -684,6 +684,14 @@ ul.pagination .page-item.active .page-link,
     .padding0XS{
         padding: 0 !important;
     }
+
+    .padding10XS{
+        padding: 10px !important;
+    }
+
+    .marginTop5PXS{
+        margin-top: 5% !important;
+    }
 }
 
 @media(min-width: 360px){
@@ -724,6 +732,10 @@ ul.pagination .page-item.active .page-link,
     .imageNewsSlide {
         object-fit: cover;
     }
+
+    .padding10XS{
+        padding: 10px !important;
+    }
 }
 
 @media(min-width: 375px){
@@ -755,6 +767,10 @@ ul.pagination .page-item.active .page-link,
 
     .imageNewsSlide {
         object-fit: cover;
+    }
+
+    .padding10XS{
+        padding: 10px !important;
     }
 }
 
@@ -805,6 +821,10 @@ ul.pagination .page-item.active .page-link,
         padding-top: 15px !important;
         padding-bottom: 15px !important;
     }
+
+    .padding10XS{
+        padding: 10px !important;
+    }
 }
 
 @media(min-width: 480px){
@@ -836,6 +856,10 @@ ul.pagination .page-item.active .page-link,
 
     .imageNewsSlide {
         object-fit: cover;
+    }
+
+    .padding10XS{
+        padding: 10px !important;
     }
 }
 
@@ -892,6 +916,10 @@ ul.pagination .page-item.active .page-link,
         object-fit: cover;
         width: 100% !important;
     }
+
+    .padding10XS{
+        padding: 10px !important;
+    }
 }
 
 @media(min-width: 992px){
@@ -932,6 +960,18 @@ ul.pagination .page-item.active .page-link,
     .padding0XS{
         padding: 15px !important;
     }
+
+    .paddingTop78LG{
+        padding-top: 78px !important;
+    }
+
+    .padding10XS{
+        padding: 0px !important;
+    }
+
+    .marginTop5PXS{
+        margin-top: auto !important;
+    }
 }
 
 .header-dropdown-buttons .btn-group.show > .btn {
@@ -940,4 +980,9 @@ ul.pagination .page-item.active .page-link,
 
 .tp-bannertimer{
     background-color: #ff6700 !important;
+}
+
+.logo_img_mobile{
+    width: 100px !important;
+    max-width: 100px !important;
 }
