@@ -43,5 +43,5 @@ angular.module('myApp.BussinesProcess', ['ngRoute'])
             });
         };
 
-        $scope.init();
+        // $scope.init();
     }])

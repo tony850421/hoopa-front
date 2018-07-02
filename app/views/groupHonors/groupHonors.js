@@ -43,5 +43,5 @@ angular.module('myApp.GroupHonors', ['ngRoute'])
             });
         };
 
-        $scope.init();
+        // $scope.init();
     }])
