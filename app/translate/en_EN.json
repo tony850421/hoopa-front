@@ -1,6 +1,7 @@
 {
     "SIGNUP": "Sign Up",
     "LOGIN": "Log In",
+    "LOGOUT": "Log Out",
     "ENGLISH": "English",
     "CHINESE": "Chinese",
     "SPANISH": "Spanish",
@@ -108,5 +109,6 @@
     "COPYRIGHT": "Copyright © 2018 Hoopa. All Rights Reserved",
     "COMPANYADDRESS": "Room 2701, 3 Building, Qianjiang International Times Square, No. 111th, Jianggan District City, Hangzhou, China",
     "MUSTBELOGGED": "You must be logged in to make a comment",
-    "OFFERMADE": "Offer made correctly"
+    "OFFERMADE": "Offer made correctly",
+    "SEARCH": "Search"
 }

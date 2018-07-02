@@ -1,7 +1,6 @@
 <!-- main-container start -->
 <!-- ================ -->
-<section class="main-container paddingNews">
-
+<section class="main-container paddingBoxHome">
   <div class="container">
     <div class="row">
 
@@ -16,7 +15,7 @@
         <!-- page-title end -->
 
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-4 padding0">
             <!-- pills start -->
             <!-- ================ -->
             <!-- Nav tabs -->
@@ -55,7 +54,7 @@
               <del>$199.00</del> $150.00</span> -->
             <!-- pills end -->
           </div>
-          <div class="col-lg-8 pv-30">
+          <div class="col-lg-8 pv-30 padding0">
             <h3 class="mt-4">{{'PDESC' | translate}}</h3>
             <p>{{project.get('description')}}</p>
             <h4>{{'CHIGHL' | translate}}</h4>
@@ -95,7 +94,7 @@
         </div>
       </div>
       <!-- main end -->
-      <div class="col-md-12 light-gray-bg p-20 bordered row styleFactBox">
+      <div class="col-md-12 light-gray-bg p-20 bordered row styleFactBox paddingXSFact">
         <div class="col-md-3 marginTop5">
           <span class="factProject">
             <i class="icon-Value-projects"></i>{{'DAMOUNT' | translate}}:</span>
@@ -117,7 +116,7 @@
           </span>
         </div>
         <div class="col-md-4">
-          <a ng-hide="flagBid" ng-click="makeAnOffer()" class="margin-clear btn btn-default backgroundColorBlue pull-right height40">
+          <a ng-hide="flagBid" ng-click="makeAnOffer()" class="margin-clear btn btn-default backgroundColorBlue pull-right height40 width100SendCode">
             <i class="icon-Total-offers spanSignUp"></i> {{'MAKEANOFFER' | translate}}</a>
           <div ng-show="flagBid" class="input-group">
             <input type="text" ng-model="offerValue" class="form-control">
