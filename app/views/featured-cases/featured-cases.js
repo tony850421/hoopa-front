@@ -43,5 +43,5 @@ angular.module('myApp.FeaturedCases', ['ngRoute'])
             });
         };
 
-        $scope.init();
+        // $scope.init();
     }])

@@ -43,5 +43,5 @@ angular.module('myApp.Charman', ['ngRoute'])
             });
         };
 
-        $scope.init();
+        // $scope.init();
     }])

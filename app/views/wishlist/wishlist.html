@@ -1,24 +1,10 @@
-<!-- main-container start -->
-<!-- ================ -->
 <section class="main-container">
-
-  <!-- main-container start -->
-  <!-- ================ -->
   <section class="main-container">
-
     <div class="container">
       <div class="row">
-
-        <!-- main start -->
-        <!-- ================ -->
         <div class="main col-12">
-
-          <!-- page-title start -->
-          <!-- ================ -->
           <h1 class="page-title">{{'WISHLIST' | translate}}</h1>
           <div class="separator-2"></div>
-          <!-- page-title end -->
-
           <table class="table cart table-hover table-colored">
             <thead>
               <tr>
@@ -36,7 +22,7 @@
                   <p class="fontSize12 cursorDefault">{{cartObject.get('project').get('description')}}</p>
                 </td>
                 <td class="price colorPrimary cursorDefault textcenter">
-                    ¥{{cartObject.get('project').get('debitAmount')}}万</td>
+                  ¥{{cartObject.get('project').get('debitAmount')}}万</td>
                 <td class="price">
                   <small class="cursorDefault">{{cartObject.get('project').get('province')}}</small>
                 </td>
@@ -49,19 +35,14 @@
               </tr>
               <tr>
                 <td class="total-quantity" colspan="6">{{shopCartArray.length}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
-                <!-- <td class="total-amount">$1997.00</td> -->
               </tr>
             </tbody>
           </table>
           <div class="text-right">
             <a href="" class="btn btn-group fa fa-trash-o btn-default backgroundColorBlue"> {{'CLEARALL' | translate}}</a>
           </div>
-
         </div>
-        <!-- main end -->
       </div>
     </div>
   </section>
-  <!-- main-container end -->
 </section>
-<!-- section end -->

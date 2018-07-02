@@ -43,5 +43,5 @@ angular.module('myApp.BranchesOffices', ['ngRoute'])
             });
         };
 
-        $scope.init();
+        // $scope.init();
     }])
