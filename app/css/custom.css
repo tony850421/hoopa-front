@@ -692,6 +692,10 @@ ul.pagination .page-item.active .page-link,
     .marginTop5PXS{
         margin-top: 5% !important;
     }
+
+    .minHeightCases{
+        min-height: auto !important;
+    }
 }
 
 @media(min-width: 360px){
@@ -920,6 +924,10 @@ ul.pagination .page-item.active .page-link,
     .padding10XS{
         padding: 10px !important;
     }
+    
+    .minHeightCases{
+        min-height: 305px !important;
+    }
 }
 
 @media(min-width: 992px){
@@ -972,6 +980,14 @@ ul.pagination .page-item.active .page-link,
     .marginTop5PXS{
         margin-top: auto !important;
     }
+
+    .menuBarPage{
+        width: 250px !important;
+    }
+
+    .minHeightCases{
+        min-height: 269px !important
+    }
 }
 
 .header-dropdown-buttons .btn-group.show > .btn {
@@ -985,4 +1001,18 @@ ul.pagination .page-item.active .page-link,
 .logo_img_mobile{
     width: 100px !important;
     max-width: 100px !important;
+}
+
+.btn-gray-transparent:hover, .btn-gray-transparent:focus, .btn-gray-transparent.focus, .btn-gray-transparent:active, .btn-gray-transparent.active, .show > .dropdown-toggle.btn-gray-transparent {
+	color: #ffffff !important;
+	background-color: #22447a !important;
+	border-color: #22447a !important;
+}
+
+.modal-content .modal-header {
+	background-color: #22447a !important;
+}
+
+.modal-content .modal-title {
+	color: #ffffff !important;
 }
