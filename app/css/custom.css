@@ -374,14 +374,14 @@ ul[rn-carousel] li {
 }
 
 .backgroundColorBlue {
-    background-color: #22447a !important;
-    border-color: #22447a !important;
+    background-color: #283a52 !important;
+    border-color: #283a52 !important;
     color: white !important;
 }
 
 .backgroundColorBlue:hover {
-    background-color: #283a52 !important;
-    border-color: #283a52 !important;
+    background-color: #22447a !important;
+    border-color: #22447a !important;
     color: white !important;
 }
 
@@ -990,6 +990,12 @@ ul.pagination .page-item.active .page-link,
     max-width: 100px !important;
 }
 
+.btn-gray-transparent{
+    color: #283a52 !important;
+    border-color: white !important;
+    background-color: white !important;
+}
+
 .btn-gray-transparent:hover,
 .btn-gray-transparent:focus,
 .btn-gray-transparent.focus,
@@ -998,7 +1004,7 @@ ul.pagination .page-item.active .page-link,
 .show>.dropdown-toggle.btn-gray-transparent {
     color: #ffffff !important;
     background-color: #22447a !important;
-    border-color: #22447a !important;
+    border-color: white !important;
 }
 
 .modal-content .modal-header {
@@ -1022,5 +1028,5 @@ ul.pagination .page-item.active .page-link,
 }
 
 .marginTop80{
-    margin-top: 80px !important;
+    margin-top: 78px !important;
 }
