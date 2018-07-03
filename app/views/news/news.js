@@ -9,7 +9,7 @@ angular.module('myApp.News', ['ngRoute'])
     });
   }])
 
-  .controller('NewsCtrl', ['$rootScope', '$scope', '$routeParams', '$window', function ($rootScope, $scope, $routeParams, $window) {
+  .controller('NewsCtrl', ['$rootScope', '$scope', '$routeParams', '$window', '$translate', function ($rootScope, $scope, $routeParams, $window, $translate) {
 
     $rootScope.showBanner = false;
     
@@ -24,19 +24,28 @@ angular.module('myApp.News', ['ngRoute'])
 
     $scope.loading = false;
 
-    $scope.month = new Array();
-    $scope.month[0] = "January";
-    $scope.month[1] = "February";
-    $scope.month[2] = "March";
-    $scope.month[3] = "April";
-    $scope.month[4] = "May";
-    $scope.month[5] = "June";
-    $scope.month[6] = "July";
-    $scope.month[7] = "August";
-    $scope.month[8] = "September";
-    $scope.month[9] = "October";
-    $scope.month[10] = "November";
-    $scope.month[11] = "December";
+    $scope.getDay =  function(date){
+
+    };
+
+    $scope.getMonth =  function(monthNum){
+      $scope.month = new Array();
+      $scope.month[0] = $translate.instant('JANUARY');
+      $scope.month[1] = $translate.instant('FEBRUARY');
+      $scope.month[2] = $translate.instant('MARCH');
+      $scope.month[3] = $translate.instant('APRIL');
+      $scope.month[4] = $translate.instant('MAY');
+      $scope.month[5] = $translate.instant('JUNE');
+      $scope.month[6] = $translate.instant('JULY');
+      $scope.month[7] = $translate.instant('AUGUST');
+      $scope.month[8] = $translate.instant('SEPTEMBER');
+      $scope.month[9] = $translate.instant('OCTOBER');
+      $scope.month[10] = $translate.instant('NOVEMBER');
+      $scope.month[11] = $translate.instant('DECEMBER');
+
+      return $scope.month[monthNum];
+
+    };    
 
     $scope.init = function () {
       $scope.loading = true;

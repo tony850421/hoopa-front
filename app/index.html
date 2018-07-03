@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html lang="en" ng-app="myApp" class="no-js">
-<!--<![endif]-->
 
 <head>
   <meta charset="utf-8">
@@ -17,12 +12,6 @@
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="images/favicon.ico">
-
-  <!-- Web Fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet"> -->
 
   <!-- Bootstrap core CSS -->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -65,17 +54,6 @@
     <i class="fa fa-angle-up"></i>
   </div>
 
-  <!-- <ul class="menu">
-    <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/view2">view2</a></li>
-  </ul> -->
-
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-
-  <!-- page wrapper start -->
-  <!-- ================ -->
   <div class="page-wrapper">
 
     <!-- header-container start -->
@@ -89,8 +67,6 @@
         <div class="container">
           <div class="row">
             <div class="col-3 col-sm-6 col-lg-9">
-              <!-- header-top-first start -->
-              <!-- ================ -->
               <div class="header-top-first clearfix">
                 <div class="hidden-lg-up">
                   <div id="logo-mobile" class="logo">
@@ -106,27 +82,12 @@
                     <a href="tel:+86 0571 85267521" class="link-dark">
                       <i class="text-default icon-Phone pr-1 pl-2"></i>+86 0571 85267521</a>
                   </li>
-                  <!-- <li class="list-inline-item">
-                    <a href="mailto:hoopa@hoopa.cn" class="link-dark">
-                      <i class="text-default fa fa-envelope-o pl-10 pr-1"></i>hoopa@hoopa.cn</a>
-                  </li> -->
                 </ul>
               </div>
-              <!-- header-top-first end -->
             </div>
             <div class="col-9 col-sm-6 col-lg-3">
-              <!-- header-top-second start -->
-              <!-- ================ -->
               <div id="header-top-second" class="clearfix">
-                <!-- header top dropdowns start -->
-                <!-- ================ -->
                 <div class="header-top-dropdown text-right marginTop5PXS">
-                  <!-- <div class="btn-group">
-                    <a href="" class="btn btn-sm paddingLR10">
-                      <span class="icon-user spanSignUp"></span>
-                      {{'SIGNUP' | translate}}
-                    </a>
-                  </div> -->
                   <div class="btn-group">
                     <button ng-hide="loginUser" ng-click="customGoTo('login/home')" type="button" class="btn paddingLR10 btn-sm backgroundGray colorTextGray hoverPrimary"
                       ng-cloak>
@@ -163,9 +124,7 @@
                     </ul>
                   </div>
                 </div>
-                <!--  header top dropdowns end -->
               </div>
-              <!-- header-top-second end -->
             </div>
           </div>
         </div>
@@ -184,37 +143,18 @@
         <div class="container">
           <div class="row">
             <div class="col-md-auto hidden-md-down">
-              <!-- header-first start -->
-              <!-- ================ -->
               <div class="header-first clearfix">
-
-                <!-- logo -->
                 <div id="logo" class="logo">
                   <a href="index.html">
                     <img class="logo_img" id="logo_img" src="images/LogoHoopa.png" alt="Hoopa">
                   </a>
                 </div>
-
-                <!-- name-and-slogan -->
-                <!-- <div class="site-slogan">
-                          Multipurpose HTML5 Template
-                        </div> -->
-
               </div>
-              <!-- header-first end -->
-
             </div>
             <div class="col-lg-12 ml-auto widthDropdown">
               <div class="header-second clearfix">
                 <div class="main-navigation main-navigation--mega-menu main-navigation--style-2  animated">
                   <nav class="navbar navbar-expand-lg navbar-light p-0">
-                    <!-- <div class="navbar-brand clearfix hidden-lg-up">
-                      <div id="logo-mobile" class="logo">
-                        <a href="index.html">
-                          <img class="logo_img" id="logo-img-mobile" src="images/LogoHoopa.png" alt="Hoopa">
-                        </a>
-                      </div>
-                    </div> -->
                     <div class="header-dropdown-buttons hidden-lg-up p-0 padding10XS mr-3">
                       <div class="btn-group">
                         <button type="button" ng-click="customGoTo('projects')" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3"
@@ -298,9 +238,6 @@
                                 </tr>
                               </tbody>
                             </table>
-                            <!-- <div class="panel-body text-right">
-                                <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm"> {{'VWISHLIST' | translate}}</a>
-                              </div> -->
                           </li>
                         </ul>
                       </div>
@@ -340,7 +277,7 @@
                                 <i class="icon-Group-honors iconMenuClass pr-2"></i>{{'GROUPHONORS' | translate }}</a>
                             </li>
                             <li>
-                              <a href="" ng-click="customGoTo('charman')" ng-cloak>
+                              <a href="" ng-click="customGoTo('chairman')" ng-cloak>
                                 <i class="icon-Chairmans-Message iconMenuClass pr-2"></i>{{'CHAIRMAN' | translate }}</a>
                             </li>
                           </ul>
@@ -516,19 +453,14 @@
                           </tr>
                         </tbody>
                       </table>
-                      <!-- <div class="panel-body text-right">
-                        <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm"> {{'VWISHLIST' | translate}}</a>
-                      </div> -->
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- header dropdown buttons end -->
             </div>
           </div>
         </div>
       </header>
-      <!-- header end -->
     </div>
     <!-- header-container end -->
 
@@ -738,10 +670,8 @@
           </div>
         </div>
       </div>
-      <!-- footer top end -->
-
     </section>
-    <!-- section end -->
+    <!-- footer top end -->
 
     <!-- footer start (Add "dark" class to #footer in order to enable dark footer) -->
     <!-- ================ -->
@@ -766,9 +696,6 @@
                         </li>
                       </ul>
                     </div>
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus illo vel dolorum soluta consectetur
-                      doloribus sit. Delectus non tenetur odit dicta vitae debitis suscipit doloribus. Lorem ipsum dolor
-                      sit amet, illo vel dolorum soluta consectetur.</p> -->
                     <ul class="list-inline mb-20">
                       <li class="list-inline-item marginTop10" ng-cloak>
                         <i class="text-default fa fa-map-marker pr-1"></i>{{'COMPANYADDRESS' | translate}}</li>
@@ -781,33 +708,6 @@
                           <i class="text-default fa fa-envelope-o pl-10 pr-1"></i>hoopa@hoopa.cn</a>
                       </li>
                     </ul>
-                    <ul class="social-links circle animated-effect-1 margin-clear">
-                      <!-- <li class="facebook">
-                        <a href="">
-                          <i class="fa fa-facebook"></i>
-                        </a>
-                      </li>
-                      <li class="twitter">
-                        <a href="">
-                          <i class="fa fa-twitter"></i>
-                        </a>
-                      </li> -->
-                      <!-- <li class="googleplus">
-                        <a href="">
-                          <i class="fa fa-google-plus"></i>
-                        </a>
-                      </li> -->
-                      <!-- <li class="linkedin">
-                        <a href="">
-                          <i class="fa fa-linkedin"></i>
-                        </a>
-                      </li>
-                      <li class="xing">
-                        <a href="">
-                          <i class="fa fa-xing"></i>
-                        </a>
-                      </li> -->
-                    </ul>
                     <div class="separator"></div>
                     <p class="text-center margin-clear" ng-cloak>{{'COPYRIGHT' | translate}}</p>
                   </div>
@@ -816,6 +716,7 @@
             </div>
           </div>
         </div>
+      </div>
     </footer>
     <!-- footer end -->
 
@@ -1222,85 +1123,78 @@
       </div>
     </div>
 
-    </div>
-    <!-- page-wrapper end -->
+  </div>
+  <!-- page-wrapper end -->
+  <script src="js/av-live-query.js"></script>
+  <script src="js/initLeanCloud.js"></script>
 
-    <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-    <script src="js/av-live-query.js"></script>
-    <script src="js/initLeanCloud.js"></script>
+  <!-- Jquery and Bootstap core js files -->
+  <!-- <script src="plugins/jquery.min.js"></script> -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery Revolution Slider  -->
+  <script src="plugins/rs-plugin-5/js/jquery.themepunch.tools.min.js"></script>
+  <script src="plugins/rs-plugin-5/js/jquery.themepunch.revolution.min.js"></script>
+  <!-- Isotope javascript -->
+  <script src="plugins/isotope/imagesloaded.pkgd.min.js"></script>
+  <script src="plugins/isotope/isotope.pkgd.min.js"></script>
+  <!-- Magnific Popup javascript -->
+  <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Appear javascript -->
+  <script src="plugins/waypoints/jquery.waypoints.min.js"></script>
+  <script src="plugins/waypoints/sticky.min.js"></script>
+  <!-- Count To javascript -->
+  <script src="plugins/countTo/jquery.countTo.js"></script>
 
-    <!-- Jquery and Bootstap core js files -->
-    <!-- <script src="plugins/jquery.min.js"></script> -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- jQuery Revolution Slider  -->
-    <script src="plugins/rs-plugin-5/js/jquery.themepunch.tools.min.js"></script>
-    <script src="plugins/rs-plugin-5/js/jquery.themepunch.revolution.min.js"></script>
-    <!-- Isotope javascript -->
-    <script src="plugins/isotope/imagesloaded.pkgd.min.js"></script>
-    <script src="plugins/isotope/isotope.pkgd.min.js"></script>
-    <!-- Magnific Popup javascript -->
-    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <!-- Appear javascript -->
-    <script src="plugins/waypoints/jquery.waypoints.min.js"></script>
-    <script src="plugins/waypoints/sticky.min.js"></script>
-    <!-- Count To javascript -->
-    <script src="plugins/countTo/jquery.countTo.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="app.js"></script>
+  <script src="views/home/home.js"></script>
+  <script src="views/news/news.js"></script>
+  <script src="views/viewNews/viewNews.js"></script>
+  <script src="views/projects/projects.js"></script>
+  <script src="views/project-details/project-details.js"></script>
+  <script src="views/wishlist/wishlist.js"></script>
+  <script src="views/login/login.js"></script>
+  <script src="views/groupIntroduction/groupIntroduction.js"></script>
+  <script src="views/organizationStructure/organizationStructure.js"></script>
+  <script src="views/coreTeam/coreTeam.js"></script>
+  <script src="views/devHistory/devHistory.js"></script>
+  <script src="views/groupHonors/groupHonors.js"></script>
+  <script src="views/charman/charman.js"></script>
+  <script src="views/bussinesSystem/bussinesSystem.js"></script>
+  <script src="views/bussinesProcess/bussinesProcess.js"></script>
+  <script src="views/featured-cases/featured-cases.js"></script>
+  <script src="views/branches-offices/branches-offices.js"></script>
 
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="app.js"></script>
-    <script src="views/home/home.js"></script>
-    <script src="views/news/news.js"></script>
-    <script src="views/viewNews/viewNews.js"></script>
-    <script src="views/projects/projects.js"></script>
-    <script src="views/project-details/project-details.js"></script>
-    <script src="views/wishlist/wishlist.js"></script>
-    <script src="views/login/login.js"></script>
-    <script src="views/groupIntroduction/groupIntroduction.js"></script>
-    <script src="views/organizationStructure/organizationStructure.js"></script>
-    <script src="views/coreTeam/coreTeam.js"></script>
-    <script src="views/devHistory/devHistory.js"></script>
-    <script src="views/groupHonors/groupHonors.js"></script>
-    <script src="views/charman/charman.js"></script>
-    <script src="views/bussinesSystem/bussinesSystem.js"></script>
-    <script src="views/bussinesProcess/bussinesProcess.js"></script>
-    <script src="views/featured-cases/featured-cases.js"></script>
-    <script src="views/branches-offices/branches-offices.js"></script>
+  <script src="mainControllers/main.js"></script>
 
-    <script src="mainControllers/main.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
 
-    <script src="components/version/version.js"></script>
-    <script src="components/version/version-directive.js"></script>
-    <script src="components/version/interpolate-filter.js"></script>
+  <!-- Google Maps javascript -->
+  <!-- <script src="js/google.map.config.js"></script> -->
+  <!-- Slick carousel javascript -->
+  <script src="plugins/slick/slick.min.js"></script>
 
-    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
-    <script src="bower_components/angular-carousel/dist/angular-carousel.min.js"></script>
+  <!-- Bootstrap Notify javascript -->
+  <script src="plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
 
-    <!-- Google Maps javascript -->
-    <!-- <script src="js/google.map.config.js"></script> -->
-    <!-- Slick carousel javascript -->
-    <script src="plugins/slick/slick.min.js"></script>
+  <!-- Initialization of Plugins -->
+  <script src="js/template.js"></script>
+  <!-- Custom Scripts -->
+  <script src="js/custom.js"></script>
 
-    <!-- Bootstrap Notify javascript -->
-    <script src="plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
 
-    <!-- Initialization of Plugins -->
-    <script src="js/template.js"></script>
-    <!-- Custom Scripts -->
-    <script src="js/custom.js"></script>
-
-    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
-
-    <!-- Angular Translate -->
-    <script src="bower_components/angular-translate/angular-translate.min.js"></script>
-    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
-    <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
-    <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
-    <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+  <!-- Angular Translate -->
+  <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+  <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+  <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+  <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+  <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
 </body>
 
 </html>

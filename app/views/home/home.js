@@ -25,20 +25,7 @@ angular.module('myApp.Home', ['ngRoute'])
       query.limit('4');
       query.descending('createdAt');
       query.find().then(function (res) {
-        // var arrivalType = [];
         for (var i = 0; i < res.length; i++) {
-          // var typeArr = res[i].get('typeArrivalString');
-          // arrivalType = typeArr.split('+');
-          // arrivalType.splice(0, 1);
-
-          // if (res[i].get('title').length >= 15) {
-          //   var title = '';
-          //   for (var x = 0; x < 14; x++) {
-          //     title = title + res[i].get('title')[x];
-          //   }
-          //   title = title + "...";
-          //   res[i].set('title', title);
-          // }
 
           if (res[i].get('description').length >= 50) {
             var desc = '';
@@ -50,22 +37,6 @@ angular.module('myApp.Home', ['ngRoute'])
           }
 
           res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
-
-          // var arrivalTypeTags = [];
-
-          // for (var x = 0; x < arrivalType.length; x++) {
-          //   var flag = false;
-          //   for (var t = 0; t < arrivalTypeTags.length; t++) {
-          //     if (arrivalType[x] == arrivalTypeTags[t]) {
-          //       flag = true;
-          //     }
-          //   }
-          //   if (!flag) {
-          //     arrivalTypeTags.push(arrivalType[x])
-          //   }
-          // }
-
-          // res[i].set('tags', arrivalTypeTags)
         }
 
         $scope.productsHot = res;
@@ -79,20 +50,7 @@ angular.module('myApp.Home', ['ngRoute'])
       query.limit('4');
       query.descending('createdAt');
       query.find().then(function (res) {
-        // var arrivalType = [];
         for (var i = 0; i < res.length; i++) {
-          // var typeArr = res[i].get('typeArrivalString');
-          // arrivalType = typeArr.split('+');
-          // arrivalType.splice(0, 1);
-
-          // if (res[i].get('title').length >= 15) {
-          //   var title = '';
-          //   for (var x = 0; x < 14; x++) {
-          //     title = title + res[i].get('title')[x];
-          //   }
-          //   title = title + "...";
-          //   res[i].set('title', title);
-          // }
 
           if (res[i].get('description').length >= 50) {
             var desc = '';
@@ -104,22 +62,6 @@ angular.module('myApp.Home', ['ngRoute'])
           }
 
           res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
-
-          // var arrivalTypeTags = [];
-
-          // for (var x = 0; x < arrivalType.length; x++) {
-          //   var flag = false;
-          //   for (var t = 0; t < arrivalTypeTags.length; t++) {
-          //     if (arrivalType[x] == arrivalTypeTags[t]) {
-          //       flag = true;
-          //     }
-          //   }
-          //   if (!flag) {
-          //     arrivalTypeTags.push(arrivalType[x])
-          //   }
-          // }
-
-          // res[i].set('tags', arrivalTypeTags)
         }
 
         $scope.productsHouse = res;
@@ -133,20 +75,7 @@ angular.module('myApp.Home', ['ngRoute'])
       query.limit('4');
       query.descending('createdAt');
       query.find().then(function (res) {
-        // var arrivalType = [];
         for (var i = 0; i < res.length; i++) {
-          // var typeArr = res[i].get('typeArrivalString');
-          // arrivalType = typeArr.split('+');
-          // arrivalType.splice(0, 1);
-
-          // if (res[i].get('title').length >= 15) {
-          //   var title = '';
-          //   for (var x = 0; x < 14; x++) {
-          //     title = title + res[i].get('title')[x];
-          //   }
-          //   title = title + "...";
-          //   res[i].set('title', title);
-          // }
 
           if (res[i].get('description').length >= 50) {
             var desc = '';
@@ -158,22 +87,6 @@ angular.module('myApp.Home', ['ngRoute'])
           }
 
           res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
-
-          // var arrivalTypeTags = [];
-
-          // for (var x = 0; x < arrivalType.length; x++) {
-          //   var flag = false;
-          //   for (var t = 0; t < arrivalTypeTags.length; t++) {
-          //     if (arrivalType[x] == arrivalTypeTags[t]) {
-          //       flag = true;
-          //     }
-          //   }
-          //   if (!flag) {
-          //     arrivalTypeTags.push(arrivalType[x])
-          //   }
-          // }
-
-          // res[i].set('tags', arrivalTypeTags)
         }
 
         $scope.productsFactory = res;
@@ -187,20 +100,7 @@ angular.module('myApp.Home', ['ngRoute'])
       query.limit('4');
       query.descending('createdAt');
       query.find().then(function (res) {
-        // var arrivalType = [];
         for (var i = 0; i < res.length; i++) {
-          // var typeArr = res[i].get('typeArrivalString');
-          // arrivalType = typeArr.split('+');
-          // arrivalType.splice(0, 1);
-
-          // if (res[i].get('title').length >= 15) {
-          //   var title = '';
-          //   for (var x = 0; x < 14; x++) {
-          //     title = title + res[i].get('title')[x];
-          //   }
-          //   title = title + "...";
-          //   res[i].set('title', title);
-          // }
 
           if (res[i].get('description').length >= 50) {
             var desc = '';
@@ -212,22 +112,6 @@ angular.module('myApp.Home', ['ngRoute'])
           }
 
           res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
-
-          // var arrivalTypeTags = [];
-
-          // for (var x = 0; x < arrivalType.length; x++) {
-          //   var flag = false;
-          //   for (var t = 0; t < arrivalTypeTags.length; t++) {
-          //     if (arrivalType[x] == arrivalTypeTags[t]) {
-          //       flag = true;
-          //     }
-          //   }
-          //   if (!flag) {
-          //     arrivalTypeTags.push(arrivalType[x])
-          //   }
-          // }
-
-          // res[i].set('tags', arrivalTypeTags)
         }
 
         $scope.productsShop = res;
@@ -261,10 +145,4 @@ angular.module('myApp.Home', ['ngRoute'])
     $scope.goToProject = function (id) {
       $rootScope.customGoTo('project-details/' + id);
     };
-
-    $(window).load('/app/views/home/home.js', function () {
-      $("span.rn-carousel-control-next").addClass("icon-next");
-      $("span.rn-carousel-control-prev").addClass("icon-previous");
-    });
-
   }]);

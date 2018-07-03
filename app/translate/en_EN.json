@@ -110,5 +110,19 @@
     "COMPANYADDRESS": "Room 2701, 3 Building, Qianjiang International Times Square, No. 111th, Jianggan District City, Hangzhou, China",
     "MUSTBELOGGED": "You must be logged in to make a comment",
     "OFFERMADE": "Offer made correctly",
-    "SEARCH": "Search"
+    "SEARCH": "Search",
+    "JANUARY": "January",
+    "FEBRUARY": "February",
+    "MARCH": "March",
+    "APRIL": "April",
+    "MAY": "May",
+    "JUNE": "June",
+    "JULY": "July",
+    "AUGUST": "August",
+    "SEPTEMBER": "September",
+    "OCTOBER": "October",
+    "NOVEMBER": "November",
+    "DECEMBER": "December",
+    "DAY": "",
+    "YEAR": ","
 }
