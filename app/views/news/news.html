@@ -1,11 +1,12 @@
 <div class="paddingBoxHome">
   <div class="container">
     <div class="row">
-      <div class="main col-lg-8 ml-xl-auto paddingLeft0 paddingRight0">
+      <div class="main paddingLeft0 paddingRight0">
+      <!-- <div class="main col-lg-8 ml-xl-auto paddingLeft0 paddingRight0"> -->
         <div class="space-top">
           <article class="blogpost" ng-repeat="f in news" ng-class="{'marginBottom0': $index == ((news.length)-1)}">
             <div class="row grid-space-10">
-              <div class="col-lg-6">
+              <div class="col-lg-3">
                 <div id="{{f.id}}" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
                   <ol class="carousel-indicators bottom margin-clear">
@@ -25,7 +26,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-9">
                 <header>
                   <h3>
                     <a href="">{{f.title}}</a>
@@ -33,17 +34,9 @@
                   <div class="post-info">
                     <span class="post-date">
                       <i class="fa fa-calendar-o pr-1"></i>
-                      <span class="day">{{f.date.getDate()}}</span>
-                      <span class="month">{{month[f.date.getMonth()]}} {{f.date.getFullYear()}}</span>
+                      <span class="month">{{f.date.getFullYear()}} {{'YEAR' | translate}} {{getMonth(f.date.getMonth())}}</span>
+                      <span class="day">{{f.date.getDate()}} {{'DAY' | translate}} </span>
                     </span>
-                    <!-- <span class="submitted">
-                        <i class="fa fa-user pr-1 pl-1"></i> by
-                        <a href="#">John Doe</a>
-                      </span> -->
-                    <!-- <span class="comments">
-                        <i class="fa fa-comments-o pl-1 pr-1"></i>
-                        <a href="#">22 comments</a>
-                      </span> -->
                   </div>
                 </header>
                 <div class="blogpost-content">
@@ -80,7 +73,7 @@
         </nav>
         <!-- pagination end -->
       </div>
-      <aside class="col-lg-4 col-xl-3 ml-xl-auto">
+      <!-- <aside class="col-lg-4 col-xl-3 ml-xl-auto">
         <div class="sidebar">
           <div class="block clearfix">
             <h3 class="title">News</h3>
@@ -98,7 +91,7 @@
                 </li>
               </ul>
             </nav>
-          </div>
+          </div> -->
           <!-- <div class="block clearfix">
               <h3 class="title">Hot News</h3>
               <div class="separator-2"></div>
@@ -121,7 +114,7 @@
               </div>
             </div> -->
 
-          <div class="block clearfix">
+          <!-- <div class="block clearfix">
             <h3 class="title">{{'LASTEStNEWS' | translate }}</h3>
             <div class="separator-2"></div>
             <div class="media margin-clear marginBottom5" ng-repeat="n in news">
@@ -144,7 +137,7 @@
             <hr>
           </div>
         </div>
-      </aside>
+      </aside> -->
     </div>
   </div>
 </div>

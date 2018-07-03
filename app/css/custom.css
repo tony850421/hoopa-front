@@ -944,6 +944,9 @@ ul.pagination .page-item.active .page-link,
     .heightCharman{
         min-height: 600px !important;
     }
+    .marginMap{
+        margin-left: 8% !important;
+    }
 }
 
 @media(min-width: 1080px) {
@@ -956,6 +959,9 @@ ul.pagination .page-item.active .page-link,
     .minHeightThird4Team {
         min-height: 250px !important;
     }
+    .marginMap{
+        margin-left: 12% !important;
+    }
 }
 
 @media(min-width: 1250px) {
@@ -967,6 +973,9 @@ ul.pagination .page-item.active .page-link,
     }
     .minHeightThird4Team {
         min-height: 205px !important;
+    }
+    .marginMap{
+        margin-left: 15% !important;
     }
 }
 
@@ -1008,4 +1017,8 @@ ul.pagination .page-item.active .page-link,
 
 .timeline-date-label::after {
 	background-color: #22447a;
+}
+
+.marginBottom30{
+    margin-bottom: 30px !important;
 }

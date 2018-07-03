@@ -110,5 +110,19 @@
     "COMPANYADDRESS": "Sala 2701, Edificio 3, Plaza de los tiempos de Qianjiang International, No. 111, Ciudad del distrito de Jianggan, Hangzhou, China",
     "MUSTBELOGGED": "Debe estar logueado para hacer un comentario",
     "OFFERMADE": "Oferta hecha correctamente",
-    "SEARCH": "Buscar"
+    "SEARCH": "Buscar",
+    "JANUARY": "Enero",
+    "FEBRUARY": "Febrero",
+    "MARCH": "Marzo",
+    "APRIL": "Abril",
+    "MAY": "Mayo",
+    "JUNE": "Junio",
+    "JULY": "Julio",
+    "AUGUST": "Agosto",
+    "SEPTEMBER": "Septiembre",
+    "OCTOBER": "Octubre",
+    "NOVEMBER": "Noviembre",
+    "DECEMBER": "Diciembre",
+    "DAY": "",
+    "YEAR": ","
 }
