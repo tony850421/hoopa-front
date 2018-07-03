@@ -1005,3 +1005,7 @@ ul.pagination .page-item.active .page-link,
 .colorTextGray {
     color: #3c3c3c !important;
 }
+
+.timeline-date-label::after {
+	background-color: #22447a;
+}

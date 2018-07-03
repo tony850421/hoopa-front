@@ -14,7 +14,6 @@ angular.module('myApp', [
   'myApp.ProjectDetails',
   'myApp.version',
   'myApp.Login',
-  'angular-carousel',
   'myApp.Wishlist',
   'myApp.GroupIntroduction',
   'myApp.OrganizationStructure',
