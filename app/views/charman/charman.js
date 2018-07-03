@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.Charman', ['ngRoute'])
+angular.module('myApp.Chairman', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/charman', {
+        $routeProvider.when('/chairman', {
             templateUrl: 'views/charman/charman.html',
-            controller: 'CharmanCtrl'
+            controller: 'ChairmanCtrl'
         });
     }])
 
-    .controller('CharmanCtrl', ['$rootScope', '$scope', '$routeParams', function ($rootScope, $scope, $routeParams) {
+    .controller('ChairmanCtrl', ['$rootScope', '$scope', '$routeParams', function ($rootScope, $scope, $routeParams) {
 
         $rootScope.showBanner = false;
         

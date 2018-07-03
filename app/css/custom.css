@@ -941,6 +941,9 @@ ul.pagination .page-item.active .page-link,
     .minHeightThird4Team {
         min-height: 295px !important;
     }
+    .heightCharman{
+        min-height: 600px !important;
+    }
 }
 
 @media(min-width: 1080px) {
