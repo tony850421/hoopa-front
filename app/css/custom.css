@@ -903,10 +903,7 @@ ul.pagination .page-item.active .page-link,
         padding-top: 80px !important;
     }
     .paddingBoxHome {
-        padding-top: 120px;
-        padding-left: 60px;
-        padding-right: 60px;
-        padding-bottom: 60px;
+        padding: 60px;
         background-color: #fafafa !important;
     }
     .paddingLeftButtonSendCode {
@@ -942,7 +939,7 @@ ul.pagination .page-item.active .page-link,
         min-height: 295px !important;
     }
     .heightCharman{
-        min-height: 600px !important;
+        min-height: 480px !important;
     }
     .marginMap{
         margin-left: 8% !important;
@@ -985,6 +982,7 @@ ul.pagination .page-item.active .page-link,
 
 .tp-bannertimer {
     background-color: #ff6700 !important;
+    width: 100% !important;
 }
 
 .logo_img_mobile {
@@ -1021,4 +1019,8 @@ ul.pagination .page-item.active .page-link,
 
 .marginBottom30{
     margin-bottom: 30px !important;
+}
+
+.marginTop80{
+    margin-top: 80px !important;
 }
