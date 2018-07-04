@@ -478,6 +478,10 @@ ul.pagination .page-item.active .page-link,
     margin-top: 5% !important;
 }
 
+.marginTop10P {
+    margin-top: 10% !important;
+}
+
 .backgroundGray {
     background-color: #f2f2f2;
 }
