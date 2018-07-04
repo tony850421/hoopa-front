@@ -11,36 +11,36 @@
 </div>
 <section class="paddingBoxHome">
   <div class="container">
-    <div class="row">
+    <!-- <div class="row">
       <h2 class="page-title">{{'EXPASSETS' | translate}}</h2>
-    </div>
+    </div> -->
 
     <div class="row">
-      <div class="sorting-filters text-center mb-20 d-flex justify-content-center pull-right">
-        <form class="form-inline col-md-12">
-          <div class="form-group ml-1">
+      <div class="sorting-filters col-md-12 paddingLeft0 paddingRight0 text-center mb-20 d-flex justify-content-center pull-right">
+        <form class="form-inline col-md-12 paddingLeft0 paddingRight0">
+          <div class="form-group col-md-2 paddingLeft0 paddingRight5">
             <a href="" class="btn btn-default backgroundColorBlue" ng-click="resetFilters()">{{'RESETFILTERS' | translate}}</a>
           </div>
-          <div class="form-group ml-1">
+          <div class="form-group col-md-2 paddingLeft0 paddingRight5">
             <label>{{'TEXT' | translate}}</label>
             <input type="text" class="form-control" ng-model="filters.text">
           </div>
-          <div class="form-group ml-1">
+          <div class="form-group col-md-2 paddingLeft0 paddingRight5">
             <label>{{'TYPE' | translate}}</label>
             <select id="type" class="form-control" ng-model="filters.type" ng-options="x for x in typeArrivalArray">
             </select>
           </div>
-          <div class="form-group ml-1">
+          <div class="form-group col-md-2 paddingLeft0 paddingRight5">
             <label>{{'PROVINCE' | translate}}</label>
             <select id="province" class="form-control" ng-model="filters.province" ng-options="x for x in provinces">
             </select>
           </div>
-          <div class="form-group ml-1">
+          <div class="form-group col-md-2 paddingLeft0 paddingRight5">
             <label>{{'AMOUNT' | translate}}</label>
             <select id="amount" class="form-control" ng-model="filters.amount" ng-options="x for x in amountArray">
             </select>
           </div>
-          <div class="form-group ml-1">
+          <div class="form-group col-md-2 paddingLeft0 paddingRight0">
             <a href="" class="btn btn-default backgroundColorBlue" ng-click="applyFiltersClick()">{{'APPLYFILTERS' | translate}}</a>
           </div>
         </form>
