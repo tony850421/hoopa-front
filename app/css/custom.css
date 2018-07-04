@@ -932,13 +932,13 @@ ul.pagination .page-item.active .page-link,
         -o-transform: scale(1);
         transform: scale(1);
     }
-    .logo_img{
+    .logo_img {
         display: none !important;
     }
-    .hiddenLG{
+    .hiddenLG {
         display: none !important;
     }
-    .hiddenLGAddressPhone{
+    .hiddenLGAddressPhone {
         display: none !important;
     }
 }
@@ -1009,16 +1009,16 @@ ul.pagination .page-item.active .page-link,
     .BoxBranchesSizesOthers {
         height: 241px !important;
     }
-    .maxWidth100{
+    .maxWidth100 {
         max-width: 100px !important;
     }
     .marginTop80 {
         margin-top: 78px !important;
     }
-    .logo_img{
+    .logo_img {
         display: block !important;
     }
-    .hiddenLGAddressPhone{
+    .hiddenLGAddressPhone {
         display: block !important;
     }
 }
@@ -1173,4 +1173,8 @@ li.colorIconBarDark a {
 .paddingBarBlue {
     padding-top: 12px;
     padding-bottom: 15px;
+}
+
+.width700px{
+    width: 700px !important;
 }
