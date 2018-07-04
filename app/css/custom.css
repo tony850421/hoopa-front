@@ -975,6 +975,9 @@ ul.pagination .page-item.active .page-link,
     .BoxBranchesSizesOthers{
         height: 220px !important;
     }
+    .marginLeftServiceHome{
+        margin-left: 2% !important;
+    }
 }
 
 @media(min-width: 1250px) {
@@ -995,6 +998,10 @@ ul.pagination .page-item.active .page-link,
     }
     .BoxBranchesSizesOthers{
         height: 190px !important;
+    }
+
+    .marginLeftServiceHome{
+        margin-left: 4% !important;
     }
 }
 
