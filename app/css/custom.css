@@ -829,6 +829,12 @@ ul.pagination .page-item.active .page-link,
     }
 }
 
+@media (max-width: 767px) {
+    .animated-text h4+h4 {
+        display: none;
+    }
+}
+
 @media(min-width: 768px) {
     .widthDropdown {
         max-width: 100% !important;
@@ -891,6 +897,41 @@ ul.pagination .page-item.active .page-link,
     .minHeightFour3Team {
         min-height: 295px !important;
     }
+    .animated-text h4 {
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .animated-text h4+h4 {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transform: scale(1.15);
+        -moz-transform: scale(1.15);
+        -ms-transform: scale(1.15);
+        -o-transform: scale(1.15);
+        transform: scale(1.15);
+    }
+    .animated-text:hover h4 {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transform: scale(0.85);
+        -moz-transform: scale(0.85);
+        -ms-transform: scale(0.85);
+        -o-transform: scale(0.85);
+        transform: scale(0.85);
+    }
+    .animated-text:hover h4+h4 {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
 }
 
 @media(min-width: 992px) {
@@ -952,10 +993,10 @@ ul.pagination .page-item.active .page-link,
     .marginMap {
         margin-left: 8% !important;
     }
-    .BoxBranchesSizes{
+    .BoxBranchesSizes {
         height: 261px !important;
     }
-    .BoxBranchesSizesOthers{
+    .BoxBranchesSizesOthers {
         height: 241px !important;
     }
 }
@@ -973,13 +1014,13 @@ ul.pagination .page-item.active .page-link,
     .marginMap {
         margin-left: 12% !important;
     }
-    .BoxBranchesSizes{
+    .BoxBranchesSizes {
         height: 261px !important;
     }
-    .BoxBranchesSizesOthers{
+    .BoxBranchesSizesOthers {
         height: 220px !important;
     }
-    .marginLeftServiceHome{
+    .marginLeftServiceHome {
         margin-left: 2% !important;
     }
 }
@@ -997,14 +1038,13 @@ ul.pagination .page-item.active .page-link,
     .marginMap {
         margin-left: 15% !important;
     }
-    .BoxBranchesSizes{
+    .BoxBranchesSizes {
         height: 220px !important;
     }
-    .BoxBranchesSizesOthers{
+    .BoxBranchesSizesOthers {
         height: 190px !important;
     }
-
-    .marginLeftServiceHome{
+    .marginLeftServiceHome {
         margin-left: 4% !important;
     }
 }
@@ -1081,7 +1121,7 @@ ul.pagination .page-item.active .page-link,
     background-color: rgba(30, 30, 30, 0.8) !important;
 }
 
-.separatorCoreTeam{    
+.separatorCoreTeam {
     margin: 5px !important;
 }
 
@@ -1090,23 +1130,28 @@ ul.pagination .page-item.active .page-link,
     background-image: linear-gradient(to right, rgb(55, 55, 55) 0%, rgb(175, 175, 175) 35%, rgb(175, 175, 175) 70%, rgb(55, 55, 55) 100%) !important;
 }
 
-.iconBranches{
+.iconBranches {
     font-size: 44px !important;
     color: #ff6700 !important;
 }
 
-.textDecorationNone{
+.textDecorationNone {
     text-decoration: none !important;
 }
 
-.colorIconBarDark{
+.colorIconBarDark {
     color: #7c7c7c !important;
 }
 
-.colorIconBarDark:hover{
+.colorIconBarDark:hover {
     color: #ff6700 !important;
 }
 
 li.colorIconBarDark a {
     color: #7c7c7c !important;
+}
+
+.paddingBarBlue {
+    padding-top: 12px;
+    padding-bottom: 15px;
 }
