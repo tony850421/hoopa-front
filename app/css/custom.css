@@ -1158,6 +1158,10 @@ ul.pagination .page-item.active .page-link,
     text-decoration: none !important;
 }
 
+.textDecorationNone:hover {
+    text-decoration: none !important;
+}
+
 .colorIconBarDark {
     color: #7c7c7c !important;
 }
