@@ -7,7 +7,8 @@ angular.module('myApp.Main', ['ngRoute'])
         // $scope.baseUrl = 'https://hoopa.org/front-end/#!/';
         // $scope.baseUrl = 'http://127.0.0.1:8000/#!/';
         // $scope.baseUrl = 'http://192.168.3.113:8000/#!/';
-        $scope.baseUrl = 'http://localhost/hoopa-front/app/#!/';
+        // $scope.baseUrl = 'http://localhost/hoopa-front/app/#!/';
+        $scope.baseUrl = 'http://192.168.3.126/hoopa-front/app/#!/';
 
         $scope.languageShort = "English";
 

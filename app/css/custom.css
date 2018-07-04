@@ -946,7 +946,8 @@ ul.pagination .page-item.active .page-link,
         width: 30% !important;
     }
     #logo-footer {
-        margin-bottom: 30px !important;
+        margin-bottom: 20px !important;
+        margin-right: 0 !important;
     }
     .paddingTopSlider {
         padding-top: 80px !important;
@@ -998,6 +999,9 @@ ul.pagination .page-item.active .page-link,
     }
     .BoxBranchesSizesOthers {
         height: 241px !important;
+    }
+    .maxWidth100{
+        max-width: 100px !important;
     }
 }
 
@@ -1056,6 +1060,7 @@ ul.pagination .page-item.active .page-link,
 .tp-bannertimer {
     background-color: #ff6700 !important;
     /* width: 100% !important; */
+    display: none !important;
 }
 
 .logo_img_mobile {
