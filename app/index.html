@@ -21,6 +21,7 @@
 
   <!-- Font and Icon Hoopa CSS -->
   <link href="fonts/font-hoopa/style.css" rel="stylesheet">
+  <link href="fonts/font-weibo/style.css" rel="stylesheet">
 
 
   <!-- Plugins -->
@@ -75,8 +76,8 @@
                   </div>
                 </div>
                 <ul class="list-inline hidden-md-down hiddenLGAddressPhone">
-                  <li class="list-inline-item" ng-cloak>
-                    <i class="text-default fa fa-map-marker pr-1 pl-2"></i>{{'COMPANYADDRESS' | translate}}</li>
+                  <!-- <li class="list-inline-item" ng-cloak>
+                    <i class="text-default fa fa-map-marker pr-1 pl-2"></i>{{'COMPANYADDRESS' | translate}}</li> -->
                   <li class="list-inline-item">
                     <a href="tel:+86 0571 85267521" class="link-dark textDecorationNone">
                       <i class="text-default icon-Phone pr-1 pl-2"></i>+86 0571 85267521</a>
@@ -271,20 +272,19 @@
                               <a class="colorIconBarDark" href="" ng-click="customGoTo('devhistory')" ng-cloak>
                                 <i class="icon-Development-history iconMenuClass colorInherit pr-2"></i>{{'DEVHISTORY' | translate }}</a>
                             </li>
-                            <li>
+                            <!-- <li>
                               <a class="colorIconBarDark" href="" ng-cloak>
                                 <i class="icon-Group-honors iconMenuClass colorInherit pr-2"></i>{{'GROUPHONORS' | translate }}</a>
                             </li>
                             <li>
                               <a class="colorIconBarDark" href="" ng-click="customGoTo('chairman')" ng-cloak>
                                 <i class="icon-Chairmans-Message iconMenuClass colorInherit pr-2"></i>{{'CHAIRMAN' | translate }}</a>
-                            </li>
+                            </li> -->
                           </ul>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a href="" class="nav-link dropdown-toggle colorIconBarDark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                            ng-cloak>{{'SERVICES' | translate }}</a>
-                          <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
+                          <a ng-click="customGoTo('bussinessystem')" href="" class="nav-link colorIconBarDark" ng-cloak>{{'SERVICES' | translate }}</a>
+                          <!-- <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
                             <li>
                               <a class="colorIconBarDark" href="" ng-click="customGoTo('bussinessystem')" ng-cloak>
                                 <i class="icon-Business-System iconMenuClass colorInherit pr-2"></i>{{'BSYSTEM' | translate }}</a>
@@ -297,12 +297,11 @@
                               <a class="colorIconBarDark" href="" ng-cloak>
                                 <i class="icon-Service-Advantages iconMenuClass colorInherit pr-2"></i>{{'SADVANTAGES' | translate }}</a>
                             </li>
-                          </ul>
+                          </ul> -->
                         </li>
                         <li class="nav-item dropdown">
-                          <a href="" class="nav-link dropdown-toggle colorIconBarDark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                            ng-cloak>{{'NEWS' | translate }}</a>
-                          <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
+                          <a ng-click="customGoTo('news/1')" href="" class="nav-link colorIconBarDark" ng-cloak>{{'NEWS' | translate }}</a>
+                          <!-- <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
                             <li>
                               <a class="colorIconBarDark" href="" ng-click="customGoTo('news/1')" ng-cloak>
                                 <i class="icon-Media-coverage iconMenuClass colorInherit pr-2"></i>{{'MCOVERAGE' | translate }}</a>
@@ -315,7 +314,7 @@
                               <a class="colorIconBarDark" href="" ng-click="customGoTo('news/3')" ng-cloak>
                                 <i class="icon-Industry-News iconMenuClass colorInherit pr-2"></i>{{'INEWS' | translate }}</a>
                             </li>
-                          </ul>
+                          </ul> -->
                         </li>
                         <li class="nav-item dropdown ">
                           <a href="" class="nav-link dropdown-toggle colorIconBarDark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
@@ -325,17 +324,17 @@
                               <a class="colorIconBarDark" href="" ng-click="customGoTo('projects')" ng-cloak>
                                 <i class="icon-Investment-Promotion iconMenuClass colorInherit pr-2"></i>{{'IPROMOTION' | translate }}</a>
                             </li>
-                            <li>
+                            <!-- <li>
                               <a class="colorIconBarDark" href="" ng-cloak>
                                 <i class="icon-Project-list iconMenuClass colorInherit pr-2"></i>{{'PLIST' | translate }}</a>
-                            </li>
+                            </li> -->
                             <li>
                               <a class="colorIconBarDark" href="" ng-click="customGoTo('featured-cases')" ng-cloak>
                                 <i class="icon-Featured-Cases iconMenuClass colorInherit pr-2"></i>{{'FCASES' | translate }}</a>
                             </li>
                           </ul>
                         </li>
-                        <li class="nav-item dropdown ">
+                        <!-- <li class="nav-item dropdown ">
                           <a href="" class="nav-link dropdown-toggle colorIconBarDark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                             ng-cloak>{{'RESEARCH' | translate }}</a>
                           <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
@@ -344,14 +343,13 @@
                                 <i class="icon-Research-Report iconMenuClass colorInherit pr-2"></i>{{'RREPORT' | translate }}</a>
                             </li>
                           </ul>
-                        </li>
-                        <li class="nav-item colorIconBarDark">
+                        </li> -->
+                        <!-- <li class="nav-item colorIconBarDark">
                           <a href="" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'MBA' | translate }}</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item dropdown ">
-                          <a href="" class="nav-link dropdown-toggle colorIconBarDark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                            ng-cloak>{{'CONTACTUS' | translate }}</a>
-                          <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
+                          <a ng-click="customGoTo('branches-offices')" href="" class="nav-link colorIconBarDark" ng-cloak>{{'CONTACTUS' | translate }}</a>
+                          <!-- <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
                             <li>
                               <a class="colorIconBarDark" href="" ng-click="customGoTo('branches-offices')" ng-cloak>
                                 <i class="icon-Branch-offices iconMenuClass colorInherit pr-2"></i>{{'BOFFICES' | translate }}</a>
@@ -360,7 +358,7 @@
                               <a class="colorIconBarDark" href="" ng-cloak>
                                 <i class="icon-Talent-Recruitment iconMenuClass colorInherit pr-2"></i>{{'TRECRUIMENT' | translate }}</a>
                             </li>
-                          </ul>
+                          </ul> -->
                         </li>
                       </ul>
                     </div>
@@ -656,7 +654,7 @@
       </div> -->
     <!-- </section> -->
 
-    <div class="backgroundColorBlue paddingBarBlue default-hovered footer-top animated-text">
+    <!-- <div class="backgroundColorBlue paddingBarBlue default-hovered footer-top animated-text">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -678,20 +676,20 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- footer top end -->
 
     <!-- footer start (Add "dark" class to #footer in order to enable dark footer) -->
     <!-- ================ -->
     <footer id="footer" class="clearfix">
-      <div class="footer">
+      <div class="footer paddingBottom0 paddingTop0 backgroundGray">
         <div class="container">
           <div class="footer-inner">
             <div class="row justify-content-lg-center">
-              <div class="col-lg-6">
+              <div class="col-lg-12">
                 <div class="footer-content text-center padding-ver-clear">
                   <div class="logo-footer">
-                    <div>
+                    <!-- <div>
                       <ul class="listStyleNone paddingLeft0">
                         <li class="liFooter">
                           <img id="logo-footer" class="imageFooter mx-auto maxWidth100" src="images/LogoHoopa.png" alt="">
@@ -703,10 +701,12 @@
                           <img id="qr-mini" class="imageFooter mx-auto maxWidth100" src="images/qrmini.jpg" alt="">
                         </li>
                       </ul>
-                    </div>
-                    <ul class="list-inline mb-20">
+                    </div> -->
+                    <ul class="list-inline marginBottom0">
                       <li class="list-inline-item marginTop10" ng-cloak>
                         <i class="text-default fa fa-map-marker pr-1"></i>{{'COMPANYADDRESS' | translate}}</li>
+                    </ul>
+                    <ul class="list-inline marginBottom15 marginTop0">
                       <li class="list-inline-item marginTop10" ng-cloak>
                         <a href="tel:+86 0571 85267521" class="link-dark textDecorationNone">
                           <i class="text-default icon-Phone pl-10 pr-1"></i>+86 0571 85267521</a>
@@ -715,9 +715,16 @@
                         <a href="mailto:hoopa@hoopa.cn" class="link-dark textDecorationNone">
                           <i class="text-default fa fa-envelope-o pl-10 pr-1"></i>hoopa@hoopa.cn</a>
                       </li>
+                      <li class="list-inline-item marginTop10" ng-cloak>
+                        <a href="" class="link-dark textDecorationNone">
+                          <!-- <div class="row"> -->
+                          <i class="text-default icon-weibo pl-10 pr-1"></i>胡巴微博
+                          <!-- </div> -->
+                        </a>
+                      </li>
                     </ul>
-                    <div class="separator"></div>
-                    <p class="text-center margin-clear" ng-cloak>{{'COPYRIGHT' | translate}}</p>
+                    <!-- <div class="separator"></div>
+                    <p class="text-center margin-clear" ng-cloak>{{'COPYRIGHT' | translate}}</p> -->
                   </div>
                 </div>
               </div>
@@ -737,61 +744,13 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-lg-3 col-md-4">
-                <div id="carousel-portfolio-sidebar" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-portfolio-sidebar" data-slide-to="0"></li>
-                    <li data-target="#carousel-portfolio-sidebar" data-slide-to="1"></li>
-                    <li data-target="#carousel-portfolio-sidebar" data-slide-to="2"></li>
-                  </ol>
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                      <div class="image-box shadow bordered text-center mb-20">
-                        <div class="overlay-container">
-                          <img class="imageProjectRecommended" ng-src="images/media.jpg">
-                          <a href="" class="overlay-link">
-                            <i class="fa fa-link"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="image-box shadow bordered text-center mb-20">
-                        <div class="overlay-container">
-                          <img class="imageProjectRecommended" ng-src="images/media.jpg">
-                          <a href="" class="overlay-link">
-                            <i class="fa fa-link"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="image-box shadow bordered text-center mb-20">
-                        <div class="overlay-container">
-                          <img class="imageProjectRecommended" ng-src="images/media.jpg">
-                          <a href="" class="overlay-link">
-                            <i class="fa fa-link"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-9 col-md-8">
+              <div class="col-md-12">
                 <ol type="1">
                   <li>
                     <p class="fontWeightBold">案情简介</p>
                     <p>A集团向某行借款X亿元，并以其持有的流通股做质押担保。后来A集团到期不能偿还借款形成不良。处置团队受托负责该项目，经前期尽职调查，依据公证文书向省高院申请强制执行。</p>
                   </li>
-                </ol>
-              </div>
-              <div class="col-md-12">
-                <ol type="1">
-                  <li value="2">
+                  <li>
                     <p class="fontWeightBold">案件焦点</p>
                     <ul>
                       <li>
@@ -831,61 +790,13 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-lg-3 col-md-4">
-                <div id="carousel-portfolio-sidebar" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-portfolio-sidebar" data-slide-to="0"></li>
-                    <li data-target="#carousel-portfolio-sidebar" data-slide-to="1"></li>
-                    <li data-target="#carousel-portfolio-sidebar" data-slide-to="2"></li>
-                  </ol>
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                      <div class="image-box shadow bordered text-center mb-20">
-                        <div class="overlay-container">
-                          <img class="imageProjectRecommended" ng-src="images/media.jpg">
-                          <a href="" class="overlay-link">
-                            <i class="fa fa-link"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="image-box shadow bordered text-center mb-20">
-                        <div class="overlay-container">
-                          <img class="imageProjectRecommended" ng-src="images/media.jpg">
-                          <a href="" class="overlay-link">
-                            <i class="fa fa-link"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="image-box shadow bordered text-center mb-20">
-                        <div class="overlay-container">
-                          <img class="imageProjectRecommended" ng-src="images/media.jpg">
-                          <a href="" class="overlay-link">
-                            <i class="fa fa-link"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-9 col-md-8">
+              <div class="col-md-12">
                 <ol type="1">
                   <li>
                     <p class="fontWeightBold">案情简介</p>
                     <p>抵押物为钱江新城某处高端房产，整案处于执行中该户债权执行主体为长城资产管理公司杭州办事处，目前仍以长城的名义推进司法程序，管辖法院为绍兴柯桥区人民法院</p>
                   </li>
-                </ol>
-              </div>
-              <div class="col-md-12">
-                <ol type="1">
-                  <li value="2">
+                  <li>
                     <p class="fontWeightBold">案件焦点</p>
                     <ul>
                       <li>
@@ -928,61 +839,13 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-lg-3 col-md-4">
-                <div id="carousel-portfolio-sidebar" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-portfolio-sidebar" data-slide-to="0"></li>
-                    <li data-target="#carousel-portfolio-sidebar" data-slide-to="1"></li>
-                    <li data-target="#carousel-portfolio-sidebar" data-slide-to="2"></li>
-                  </ol>
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                      <div class="image-box shadow bordered text-center mb-20">
-                        <div class="overlay-container">
-                          <img class="imageProjectRecommended" ng-src="images/media.jpg">
-                          <a href="" class="overlay-link">
-                            <i class="fa fa-link"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="image-box shadow bordered text-center mb-20">
-                        <div class="overlay-container">
-                          <img class="imageProjectRecommended" ng-src="images/media.jpg">
-                          <a href="" class="overlay-link">
-                            <i class="fa fa-link"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="image-box shadow bordered text-center mb-20">
-                        <div class="overlay-container">
-                          <img class="imageProjectRecommended" ng-src="images/media.jpg">
-                          <a href="" class="overlay-link">
-                            <i class="fa fa-link"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-9 col-md-8">
+              <div class="col-md-12">
                 <ol type="1">
                   <li>
                     <p class="fontWeightBold">案情简介</p>
                     <p>南京XX船务有限公司一户债权剩余本金人民币2700万元，利息人民币1089129.16元，保证人连带责任保证，抵押物为旗下两艘多用途船舶。南京XX贸易有限公司一户债权剩余本金1990万元，利息人民币524852.89元保证人连带责任保证，抵押物为公司名下散货船1艘。</p>
                   </li>
-                </ol>
-              </div>
-              <div class="col-md-12">
-                <ol type="1">
-                  <li value="2">
+                  <li>
                     <p class="fontWeightBold">案件焦点</p>
                     <ul>
                       <li>
@@ -1018,61 +881,13 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-lg-3 col-md-4">
-                <div id="carousel-portfolio-sidebar" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-portfolio-sidebar" data-slide-to="0"></li>
-                    <li data-target="#carousel-portfolio-sidebar" data-slide-to="1"></li>
-                    <li data-target="#carousel-portfolio-sidebar" data-slide-to="2"></li>
-                  </ol>
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                      <div class="image-box shadow bordered text-center mb-20">
-                        <div class="overlay-container">
-                          <img class="imageProjectRecommended" ng-src="images/media.jpg">
-                          <a href="" class="overlay-link">
-                            <i class="fa fa-link"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="image-box shadow bordered text-center mb-20">
-                        <div class="overlay-container">
-                          <img class="imageProjectRecommended" ng-src="images/media.jpg">
-                          <a href="" class="overlay-link">
-                            <i class="fa fa-link"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="image-box shadow bordered text-center mb-20">
-                        <div class="overlay-container">
-                          <img class="imageProjectRecommended" ng-src="images/media.jpg">
-                          <a href="" class="overlay-link">
-                            <i class="fa fa-link"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-9 col-md-8">
+              <div class="col-md-12">
                 <ol type="1">
                   <li>
                     <p class="fontWeightBold">案情简介</p>
                     <p>本户债权受让于宁波浙商资产管理有限公司，抵押物位于舟山市普陀区某处的土地使用权，土地面积为21333.3平方米，保证人为舟山XX房地产开发有限公司、浙江某控股集团有限公司、浙江XX置业有限公司及自然人。目前司法状态为破产，抵押物现状为烂尾的在建工程。</p>
                   </li>
-                </ol>
-              </div>
-              <div class="col-md-12">
-                <ol type="1">
-                  <li value="2">
+                  <li>
                     <p class="fontWeightBold">案件焦点</p>
                     <ul>
                       <li>
