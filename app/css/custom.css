@@ -61,12 +61,12 @@ a {
   color: #78787a !important;
 }
 
-.header-dropdown-buttons .btn-group > .btn:hover {
+.header-dropdown-buttons .btn-group>.btn:hover {
   background-color: #d8d8d8 !important;
   border-color: #d8d8d8 !important;
 }
 
-.header-dropdown-buttons .btn-group > .btn {
+.header-dropdown-buttons .btn-group>.btn {
   background-color: #f2f2f2 !important;
   border-color: #f2f2f2 !important;
 }
@@ -76,10 +76,10 @@ a {
   color: #ffffff;
 }
 
-header:not(.dark) .mega-menu .menu > li > a:hover i,
-header:not(.dark) .dropdown-menu > li > a:hover i,
-header:not(.dark) .mega-menu .menu > li.active > a i,
-header:not(.dark) .dropdown-menu > li.active > a i {
+header:not(.dark) .mega-menu .menu>li>a:hover i,
+header:not(.dark) .dropdown-menu>li>a:hover i,
+header:not(.dark) .mega-menu .menu>li.active>a i,
+header:not(.dark) .dropdown-menu>li.active>a i {
   color: #ff6700;
 }
 
@@ -257,7 +257,7 @@ h6 {
   color: inherit !important;
 }
 
-.fixed.header .main-navigation.animated .navbar-nav > li > a {
+.fixed.header .main-navigation.animated .navbar-nav>li>a {
   font-size: 14px !important;
 }
 
@@ -437,9 +437,9 @@ ul.pagination .page-item.active .page-link,
   padding-right: -15px !important;
 }
 
-.nav-tabs.style-4 > li > a.active,
-.nav-tabs.style-4 > li > a.active:hover,
-.nav-tabs.style-4 > li > a.active:focus {
+.nav-tabs.style-4>li>a.active,
+.nav-tabs.style-4>li>a.active:hover,
+.nav-tabs.style-4>li>a.active:focus {
   color: #ffffff !important;
   cursor: default;
   background-color: #283a52 !important;
@@ -447,7 +447,7 @@ ul.pagination .page-item.active .page-link,
   border-bottom-color: transparent;
 }
 
-.nav-tabs.style-4 > li > a:hover {
+.nav-tabs.style-4>li>a:hover {
   color: #ffffff !important;
   background-color: #22447a !important;
   border-color: #22447a !important;
@@ -495,7 +495,7 @@ ul.pagination .page-item.active .page-link,
   color: #22447a !important;
 }
 
-.table-colored > thead > tr > th {
+.table-colored>thead>tr>th {
   border-color: #22447a;
   background-color: #22447a;
   color: #ffffff;
@@ -584,7 +584,7 @@ ul.pagination .page-item.active .page-link,
   margin-bottom: 30px !important;
 }
 
-.timeline .timeline-item.pull-right + .timeline-date-label {
+.timeline .timeline-item.pull-right+.timeline-date-label {
   padding-top: 30px !important;
 }
 
@@ -830,8 +830,11 @@ ul.pagination .page-item.active .page-link,
 }
 
 @media (max-width: 767px) {
-  .animated-text h4 + h4 {
+  .animated-text h4+h4 {
     display: none;
+  }
+  .hiddenLG {
+    display: none !important;
   }
 }
 
@@ -905,7 +908,7 @@ ul.pagination .page-item.active .page-link,
     top: 0;
     width: 100%;
   }
-  .animated-text h4 + h4 {
+  .animated-text h4+h4 {
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-transform: scale(1.15);
@@ -923,7 +926,7 @@ ul.pagination .page-item.active .page-link,
     -o-transform: scale(0.85);
     transform: scale(0.85);
   }
-  .animated-text:hover h4 + h4 {
+  .animated-text:hover h4+h4 {
     opacity: 1;
     filter: alpha(opacity=100);
     -webkit-transform: scale(1);
@@ -933,9 +936,6 @@ ul.pagination .page-item.active .page-link,
     transform: scale(1);
   }
   .logo_img {
-    display: none !important;
-  }
-  .hiddenLG {
     display: none !important;
   }
   .hiddenLGAddressPhone {
@@ -1021,6 +1021,9 @@ ul.pagination .page-item.active .page-link,
   .hiddenLGAddressPhone {
     display: block !important;
   }
+  .marginTopLogin {
+    margin-top: 25% !important;
+  }
 }
 
 @media (min-width: 1080px) {
@@ -1071,7 +1074,7 @@ ul.pagination .page-item.active .page-link,
   }
 }
 
-.header-dropdown-buttons .btn-group.show > .btn {
+.header-dropdown-buttons .btn-group.show>.btn {
   color: #ff6700;
 }
 
@@ -1097,7 +1100,7 @@ ul.pagination .page-item.active .page-link,
 .btn-gray-transparent.focus,
 .btn-gray-transparent:active,
 .btn-gray-transparent.active,
-.show > .dropdown-toggle.btn-gray-transparent {
+.show>.dropdown-toggle.btn-gray-transparent {
   color: #ffffff !important;
   background-color: #22447a !important;
   border-color: white !important;
@@ -1146,13 +1149,7 @@ ul.pagination .page-item.active .page-link,
 
 .separatorCoreTeam::after {
   background-color: rgba(255, 255, 255, 0) !important;
-  background-image: linear-gradient(
-    to right,
-    rgb(55, 55, 55) 0%,
-    rgb(175, 175, 175) 35%,
-    rgb(175, 175, 175) 70%,
-    rgb(55, 55, 55) 100%
-  ) !important;
+  background-image: linear-gradient( to right, rgb(55, 55, 55) 0%, rgb(175, 175, 175) 35%, rgb(175, 175, 175) 70%, rgb(55, 55, 55) 100%) !important;
 }
 
 .iconBranches {
@@ -1193,47 +1190,76 @@ li.colorIconBarDark a {
   text-indent: 20px;
 }
 
-.marginBottom10{
-    margin-bottom: 10px !important;
+.marginBottom10 {
+  margin-bottom: 10px !important;
 }
 
-.marginBottom20{
-    margin-bottom: 20px !important;
+.marginBottom20 {
+  margin-bottom: 20px !important;
 }
 
-.marginBottom15{
-    margin-bottom: 15px !important;
+.marginBottom15 {
+  margin-bottom: 15px !important;
 }
 
 .vertical .nav-tabs {
-	border-bottom-color: transparent;
-	background-color: transparent;
+  border-bottom-color: transparent;
+  background-color: transparent;
 }
 
-.vertical .nav-tabs > li > a:hover, .vertical .nav-tabs > li > a:focus {
-	border-bottom: 1px solid #f2f2f2 !important;
+.vertical .nav-tabs>li>a:hover,
+.vertical .nav-tabs>li>a:focus {
+  border-bottom: 1px solid #f2f2f2 !important;
 }
 
-.vertical .nav-tabs > li a {
-	border-bottom: 1px solid #f2f2f2 !important;
-}
-ul li.nav-item a.tabCoreTeam{
-    background-color: #f2f2f2 !important;
+.vertical .nav-tabs>li a {
+  border-bottom: 1px solid #f2f2f2 !important;
 }
 
-ul li.nav-item a.tabCoreTeam.active{
-    background-color: white !important;
+ul li.nav-item a.tabCoreTeam {
+  background-color: #f2f2f2 !important;
 }
 
-.iconFooter{
-    width: 17px !important;
-    height: 17px !important;
+ul li.nav-item a.tabCoreTeam.active {
+  background-color: white !important;
 }
 
-.paddingBottom40{
-    padding-bottom: 40px !important;
+.iconFooter {
+  width: 17px !important;
+  height: 17px !important;
 }
 
-.padding10{
-    padding: 10px !important;
+.paddingBottom40 {
+  padding-bottom: 40px !important;
+}
+
+.padding10 {
+  padding: 10px !important;
+}
+
+.backgroundTransparent {
+  background-color: transparent !important;
+}
+
+.backgroundNumber {
+  font-size: 144px;
+  margin-left: 10%;
+  font-weight: 700;
+  color: #f2f2f2;
+}
+
+.sizeIconBProcess {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.divCenter {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.liSignature {
+  width: 200px;
+  margin-left: auto !important;
+  margin-right: 10% !important;
 }

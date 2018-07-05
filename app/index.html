@@ -94,7 +94,7 @@
                       <i class="icon-Login spanSignUp"></i>
                       {{'LOGIN' | translate}}
                     </button>
-                    <button ng-show="loginUser" id="header-top-drop-2" type="button" class="btn dropdown-toggle colorIconBarDark paddingLR10 btn-sm dropdown-toggle colorIconBarDark--no-caret backgroundGray colorTextGray"
+                    <button ng-show="loginUser" id="header-top-drop-2" type="button" class="btn dropdown-toggle colorIconBarDark paddingLR10 btn-sm dropdown-toggle--no-caret backgroundGray colorTextGray"
                       style="height:30px !important;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
                       <img ng-hide="avatar !=''" class="avatarImageBanner" src="images/avatar.jpg">
                       <img ng-show="avatar !=''" class="avatarImageBanner" ng-src="{{avatar}}">
@@ -129,15 +129,7 @@
           </div>
         </div>
       </div>
-      <!-- header-top end -->
-
-      <!-- header start -->
-      <!-- classes:  -->
-      <!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
-      <!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
-      <!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
-      <!-- "dark": dark version of header e.g. class="header dark clearfix" -->
-      <!-- "centered": mandatory class for the centered logo layout -->
+      <!-- header-top end -->   
       <!-- ================ -->
       <header class="header fixed fixed-desktop clearfix backgroundWhite">
         <div class="container">
@@ -153,7 +145,7 @@
             </div>
             <div class="col-lg-12 ml-auto widthDropdown">
               <div class="header-second clearfix">
-                <div class="main-navigation main-navigation--mega-menu main-navigation--style-2  animated">
+                <div class="main-navigation main-navigation--mega-menu main-navigation--style-2 animated">
                   <nav class="navbar navbar-expand-lg navbar-light p-0">
                     <div class="header-dropdown-buttons hidden-lg-up p-0 padding10XS mr-3">
                       <div class="btn-group">
@@ -173,7 +165,7 @@
                         </ul>
                       </div>
                       <div class="btn-group" ng-hide="!loginUser">
-                        <a type="button" class="btn dropdown-toggle colorIconBarDark dropdown-toggle colorIconBarDark--no-caret" id="header-drop-4"
+                        <a type="button" class="btn dropdown-toggle colorIconBarDark dropdown-toggle--no-caret" id="header-drop-4"
                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-click="initWishList()" ng-cloak>
                           <i class="fa fa-heart-o marginLeft5"></i>
                           <span class="cart-count default-bg" ng-show="shopCartArray.length > 0">{{shopCartCount}}</span>
@@ -209,7 +201,7 @@
                         </ul>
                       </div>
                       <div class="btn-group" ng-hide="!loginUser">
-                        <button type="button" class="btn dropdown-toggle colorIconBarDark dropdown-toggle colorIconBarDark--no-caret backgroundGray"
+                        <button type="button" class="btn dropdown-toggle colorIconBarDark dropdown-toggle--no-caret backgroundGray"
                           id="header-drop-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-click="initOffersList()">
                           <i class="icon-Total-offers marginLeft5"></i>
                           <span class="cart-count default-bg" ng-show="offersCartCount > 0" ng-cloak>{{offersCartCount}}</span>
@@ -283,8 +275,8 @@
                           </ul>
                         </li>
                         <li class="nav-item dropdown ">
-                          <a ng-click="customGoTo('bussinessystem')" href="" class="nav-link colorIconBarDark" ng-cloak>{{'SERVICES' | translate }}</a>
-                          <!-- <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
+                          <a href="" class="nav-link dropdown-toggle colorIconBarDark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'SERVICES' | translate }}</a>
+                          <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
                             <li>
                               <a class="colorIconBarDark" href="" ng-click="customGoTo('bussinessystem')" ng-cloak>
                                 <i class="icon-Business-System iconMenuClass colorInherit pr-2"></i>{{'BSYSTEM' | translate }}</a>
@@ -293,11 +285,11 @@
                               <a class="colorIconBarDark" href="" ng-click="customGoTo('bussinesprocess')" ng-cloak>
                                 <i class="icon-Service-process iconMenuClass colorInherit pr-2"></i>{{'SPROCESS' | translate }}</a>
                             </li>
-                            <li>
+                            <!-- <li>
                               <a class="colorIconBarDark" href="" ng-cloak>
                                 <i class="icon-Service-Advantages iconMenuClass colorInherit pr-2"></i>{{'SADVANTAGES' | translate }}</a>
-                            </li>
-                          </ul> -->
+                            </li> -->
+                          </ul>
                         </li>
                         <li class="nav-item dropdown">
                           <a ng-click="customGoTo('news/1')" href="" class="nav-link colorIconBarDark" ng-cloak>{{'NEWS' | translate }}</a>
@@ -385,7 +377,7 @@
                   </ul>
                 </div>
                 <div class="btn-group" ng-hide="!loginUser">
-                  <button type="button" class="btn dropdown-toggle colorIconBarDark dropdown-toggle colorIconBarDark--no-caret backgroundGray"
+                  <button type="button" class="btn dropdown-toggle colorIconBarDark dropdown-toggle--no-caret backgroundGray"
                     id="header-drop-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-click="initWishList()">
                     <i class="fa fa-heart-o marginLeft5"></i>
                     <span class="cart-count default-bg" ng-show="shopCartArray.length > 0" ng-cloak>{{shopCartCount}}</span>
@@ -421,7 +413,7 @@
                   </ul>
                 </div>
                 <div class="btn-group" ng-hide="!loginUser">
-                  <a type="button" class="btn dropdown-toggle colorIconBarDark dropdown-toggle colorIconBarDark--no-caret" id="header-drop-2"
+                  <a type="button" class="btn dropdown-toggle colorIconBarDark dropdown-toggle--no-caret" id="header-drop-2"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-click="initOffersList()" ng-cloak>
                     <i class="icon-Total-offers marginLeft5"></i>
                     <span class="cart-count default-bg" ng-show="offersCartCount > 0">{{offersCartCount}}</span>
@@ -948,8 +940,8 @@
 
     <!-- Modal Login -->
     <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg width700px" role="document">
-        <div class="modal-content">
+      <div class="modal-dialog modal-lg width700px" role="document" ng-controller="LoginCtrl">
+        <div class="modal-content marginTopLogin">
           <div class="modal-header">
             <h4 class="modal-title" id="myModalLabel">{{'LOGIN' | translate}}</h4>
           </div>
@@ -963,9 +955,9 @@
                         <span class="text-danger small">*</span>
                       </label>
                       <div class="col-md-5 col-xs-12">
-                        <input type="text" class="form-control" id="phoneNumber" placeholder="{{'PHONENUMBER' | translate}}" ng-model="phoneNumber"
+                        <input type="text" class="form-control" id="phoneNumber" placeholder="{{'PLACEPHONENUMBER' | translate}}" ng-model="phoneNumber"
                           required>
-                        <i class="fa fa-pencil form-control-feedback pr-4"></i>
+                        <i class="icon-Phone form-control-feedback pr-4"></i>
                       </div>
                       <div class="col-md-3 col-xs-12 paddingLeftButtonSendCode">
                         <a class="btn btn-group btn-default btn-animated marginTop0 marginBottom0 backgroundColorBlue width100SendCode" ng-click="requestSmsCode()">{{'SENDCODE' | translate}}
@@ -977,13 +969,13 @@
                       <label for="smsCode" class="col-md-3 control-label text-md-right col-form-label">{{'SMSCODE' | translate}}
                         <span class="text-danger small">*</span>
                       </label>
-                      <div class="col-md-8">
+                      <div class="col-md-5">
                         <input type="text" class="form-control" id="smsCode" placeholder="{{'SMSCODE' | translate}}" ng-model="smsCode" required>
                         <i class="fa fa-envelope-open-o form-control-feedback pr-4"></i>
                       </div>
                     </div>
                     <div class="form-group row">
-                      <div class="ml-md-auto col-md-9">
+                      <div class="col-md-9">
                         <button class="btn btn-group btn-default btn-animated backgroundColorBlue width100Login" ng-click="loginWithSmsCode()">{{'LOGIN' | translate}}
                           <i class="icon-Login fontSize18"></i>
                         </button>

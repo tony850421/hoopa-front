@@ -33,11 +33,12 @@ angular.module('myApp.Login', ['ngRoute'])
 
         $scope.loginWithSmsCode = function () {
             AV.User.signUpOrlogInWithMobilePhone($scope.phoneNumber, $scope.smsCode).then(res => {
+                $('#modalLogin').modal('toggle');
                 $rootScope.getUser();
                 $rootScope.initWishList();
                 $rootScope.initOffersList();
-                if($scope.id != ''){
-                    $rootScope.customGoTo($scope.option+"/"+ $scope.id);
+                if ($scope.id != '') {
+                    $rootScope.customGoTo($scope.option + "/" + $scope.id);
                 } else {
                     $rootScope.customGoTo($scope.option);
                 }
