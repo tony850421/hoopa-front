@@ -334,57 +334,59 @@
     </section>-->
 
     <section class="section light-gray-bg clearfix">
-        <div class="row paddingHome">
-            <div class="col-md-8 col-xs-12 row">
-                <h3 class="page-title">{{'NEWS' | translate }}</h3>
-                <div class="separator-2"></div>
-                <div class="col-md-6 paddingLeft0">
-                    <div class="image-box text-center style-2 mb-20">
-                        <div class="overlay-container overlay-visible">
-                            <img class="width100P" ng-src="{{news[0].mainImage}}">
-                            <a href="" class="overlay-link">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <div class="overlay-bottom hidden-sm-down">
-                                <div class="text">
-                                    <p class="lead margin-clear">{{news[0].title}}</p>
+        <div class="paddingHome">
+            <div class="row">
+                <div class="col-md-8 col-xs-12 row">
+                    <h3 class="page-title">{{'NEWS' | translate }}</h3>
+                    <div class="separator-2"></div>
+                    <div class="col-md-6 paddingLeft0">
+                        <div class="image-box text-center style-2 mb-20">
+                            <div class="overlay-container overlay-visible">
+                                <img class="width100P" ng-src="{{news[0].mainImage}}">
+                                <a href="" ng-click="goToNews(news[0].id)" class="overlay-link">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <div class="overlay-bottom hidden-sm-down">
+                                    <div class="text">
+                                        <p class="lead margin-clear">{{news[0].title}}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div ng-repeat="n in news">
-                        <div class="media margin-clear">
-                            <div class="d-flex pr-2">
-                                <div class="overlay-container">
-                                    <img class="media-object newsHomeImage" ng-src="{{n.mainImage}}" alt="blog-thumb">
-                                    <a href="" class="overlay-link small">
-                                        <i class="fa fa-link"></i>
-                                    </a>
+                    <div class="col-md-6">
+                        <div ng-repeat="n in news">
+                            <div class="media margin-clear">
+                                <div class="d-flex pr-2">
+                                    <div class="overlay-container">
+                                        <img class="media-object newsHomeImage" ng-src="{{n.mainImage}}" alt="blog-thumb">
+                                        <a href="" class="overlay-link small">
+                                            <i class="fa fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading">
+                                        <a href="" ng-click="goToNews(n.id)" class="textDecorationNone">{{n.title}}</a>
+                                    </h5>
+                                    <p class="margin-clear small">{{n.contentMin}}</p>
+                                    <!-- <a href="">{{'READMORE' | translate}}</a> -->
                                 </div>
                             </div>
-                            <div class="media-body">
-                                <h5 class="media-heading">
-                                    <a href="" class="textDecorationNone">{{n.title}}</a>
-                                </h5>
-                                <p class="margin-clear small">{{n.contentMin}}</p>
-                                <!-- <a href="">{{'READMORE' | translate}}</a> -->
-                            </div>
+                            <hr class="marginBottom10 marginTop10" ng-hide="$index == news.length-1">
                         </div>
-                        <hr class="marginBottom10 marginTop10" ng-hide="$index == news.length-1">
-                    </div>                    
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4 col-xs-12 paddingRight0 marginLeftAuto">
-                <h3 class="page-title">{{'VIDEO' | translate }}</h3>
-                <div class="separator-2"></div>
-                <video class="videoHoopa" src="videos/hoopa.mp4" controls></video>
+                <div class="col-md-4 col-xs-12 paddingRight0 marginLeftAuto">
+                    <h3 class="page-title">{{'VIDEO' | translate }}</h3>
+                    <div class="separator-2"></div>
+                    <video class="videoHoopa" src="http://lc-qpv1wnqe.cn-n1.lcfile.com/7ded4d8f482e88bcf676.mp4" controls></video>
+                </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="row paddingHome">
+        <div class="paddingHome">
             <h3 class="page-title">{{'NEWS' | translate }}</h3>
             <div class="separator-2"></div>
             <div class="row">
@@ -392,7 +394,7 @@
                     <div class="image-box text-center style-2 mb-20">
                         <div class="overlay-container overlay-visible">
                             <img class="width100P" ng-src="{{n.mainImage}}">
-                            <a href="" class="overlay-link">
+                            <a href="" ng-click="goToNews(n.id)" class="overlay-link">
                                 <i class="fa fa-link"></i>
                             </a>
                             <div class="overlay-bottom hidden-sm-down">

@@ -186,4 +186,9 @@ angular.module('myApp.Home', ['ngRoute'])
     };
 
     $scope.fetchNews();
+
+
+    $scope.goToNews = function (id) {
+      $rootScope.customGoTo('viewNews/' + id);
+    };
   }]);
