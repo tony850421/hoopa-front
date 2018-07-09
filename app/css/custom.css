@@ -401,9 +401,9 @@ ul.pager .page-item .page-link {
   padding: 0;
   height: 40px;
   width: 40px;
-  border: 1px solid #283a52;
+  border: 1px solid #767676;
   line-height: 39px;
-  background-color: #283a52;
+  background-color: #767676;
   color: #ffffff;
   display: inline-block;
   -webkit-border-radius: 100%;
@@ -411,25 +411,24 @@ ul.pager .page-item .page-link {
   border-radius: 100%;
 }
 
-ul.pagination .page-item .page-link:hover,
 ul.pagination .page-item .page-link {
-  background-color: #283a52;
-  border-color: #283a52;
+  background-color: #767676;
+  border-color: #767676;
   color: white !important;
 }
 
 ul.pagination .page-item .page-link:hover,
 ul.pagination .page-item .page-link:focus {
-  background-color: #22447a;
-  border-color: #22447a;
+  background-color: #ff6700;
+  border-color: #ff6700;
   color: white !important;
 }
 
 ul.pagination .page-item.active .page-link,
 .page-item.active .page-link:hover,
 .page-item.active .page-link:focus {
-  background-color: #22447a;
-  border-color: #22447a;
+  background-color: #ff6700;
+  border-color: #ff6700;
 }
 
 .padding--15 {
@@ -1605,8 +1604,8 @@ ul li.nav-item a.tabCoreTeam.active {
 }
 
 .buttonProjectStyle{
-  border: 1px solid #c3c3c3 !important;
-  color: #3c3c3c !important;
+  border: 1px solid #7c7c7c !important;
+  color: #7c7c7c !important;
 }
 
 .buttonProjectStyleHeart{
@@ -1665,4 +1664,16 @@ ul li.nav-item a.tabCoreTeam.active {
 .FRW{
   float: right !important;
   width: 100% !important;
+}
+
+.buttonFiltersProjects{
+  border: 1px solid #7c7c7c !important;
+  color: #7c7c7c !important;
+  background-color: transparent !important;
+}
+
+.buttonFiltersProjects:hover{
+  border: 1px solid #ff6700 !important;
+  color: #ff6700 !important;
+  background-color: transparent !important;
 }
