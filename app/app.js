@@ -44,7 +44,7 @@ angular.module('myApp', [
 
         // Since you've now registered more then one translation table, angular-translate has to know which one to use.
         // This is where preferredLanguage(langKey) comes in.
-        $translateProvider.preferredLanguage('en_EN');
+        $translateProvider.preferredLanguage('cn_CN');
 
         // Store the language in the local storage
         $translateProvider.useLocalStorage();

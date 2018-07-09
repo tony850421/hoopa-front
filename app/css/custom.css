@@ -1344,6 +1344,7 @@ ul li.nav-item a.tabCoreTeam.active {
 
 .liSignature {
   width: 200px;
+  height: 100px;
   margin-left: auto !important;
   margin-right: 10% !important;
 }

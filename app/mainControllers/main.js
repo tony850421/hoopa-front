@@ -10,7 +10,7 @@ angular.module('myApp.Main', ['ngRoute'])
         $scope.baseUrl = 'http://localhost:8080/hoopa-front/app/#!/';
         // $scope.baseUrl = 'http://192.168.3.126/hoopa-front/app/#!/';
 
-        $scope.languageShort = "English";
+        $scope.languageShort = "中文";
 
         $rootScope.avatar = '';
 
