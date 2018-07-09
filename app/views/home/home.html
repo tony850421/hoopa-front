@@ -335,11 +335,11 @@
 
     <section class="section light-gray-bg clearfix">
         <div class="paddingHome">
-            <div class="row">
-                <div class="col-md-8 col-xs-12 row">
+            <div class="row marginRight0XS">
+                <div class="col-md-8 col-xs-12 row paddingRight0XS">
                     <h3 class="page-title">{{'NEWS' | translate }}</h3>
                     <div class="separator-2"></div>
-                    <div class="col-md-6 paddingLeft0">
+                    <div class="col-md-6 col-xs-12 paddingLeft0">
                         <div class="image-box text-center style-2 mb-20">
                             <div class="overlay-container overlay-visible">
                                 <img class="width100P" ng-src="{{news[0].mainImage}}">
@@ -354,7 +354,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-xs-12 paddingLeft0XS">
                         <div ng-repeat="n in news | limitTo: 3">
                             <div class="media margin-clear">
                                 <div class="d-flex pr-2">
@@ -373,11 +373,11 @@
                                     <!-- <a href="">{{'READMORE' | translate}}</a> -->
                                 </div>
                             </div>
-                            <hr class="marginBottom10 marginTop10" ng-hide="$index == news.length-1">
+                            <hr class="marginBottom10 marginTop10" ng-hide="$index > 2">
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 paddingRight0 marginLeftAuto">
+                <div class="col-md-4 col-xs-12 paddingLeft0XS paddingRight0 marginLeftAutoLG width90P">
                     <h3 class="page-title">{{'VIDEO' | translate }}</h3>
                     <div class="separator-2"></div>
                     <video class="videoHoopa" src="http://lc-qpv1wnqe.cn-n1.lcfile.com/7ded4d8f482e88bcf676.mp4" controls></video>
@@ -386,14 +386,14 @@
         </div>
     </section>
     <section>
-        <div class="paddingHome">
-            <h3 class="page-title">{{'NEWS' | translate }}</h3>
-            <div class="separator-2"></div>
+        <div class="paddingHome width90P textCenterXS">
+            <h3 class="page-title marginLeft--15">{{'NEWS' | translate }}</h3>
+            <div class="separator-2 marginLeft--15"></div>
             <div class="row">
-                <div class="col-md-3" ng-repeat="n in news">
+                <div class="col-md-3 paddingLeft0" ng-repeat="n in news">
                     <div class="image-box text-center style-2 mb-20">
                         <div class="overlay-container overlay-visible">
-                            <img class="width100P" ng-src="{{n.mainImage}}">
+                            <img class="imageNewsListHome" ng-src="{{n.mainImage}}">
                             <a href="" ng-click="goToNews(n.id)" class="overlay-link">
                                 <i class="fa fa-link"></i>
                             </a>

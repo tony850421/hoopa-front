@@ -622,551 +622,6 @@ ul.pagination .page-item.active .page-link,
   color: #ff6700 !important;
 }
 
-@media (min-width: 320px) {
-  .widthDropdown {
-    max-width: 100% !important;
-    flex: 0 0 100%;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-  #searchPage {
-    transform: translate3d(255px, -10px, 0px) !important;
-    min-width: 320px;
-  }
-  .margingTop25XS {
-    margin-top: 25px !important;
-  }
-  #logo-footer {
-    width: 80% !important;
-  }
-  .liFooter {
-    display: inline-block !important;
-    width: 30% !important;
-  }
-  #qr-mini {
-    margin-left: 10px !important;
-  }
-  .paddingTopSlider {
-    padding-top: 0 !important;
-  }
-  .paddingBoxHome {
-    padding: 30px;
-    background-color: #fafafa !important;
-  }
-  .paddingLeftButtonSendCode {
-    margin-top: 10px !important;
-    height: 40px !important;
-  }
-  .width100Login {
-    width: 100% !important;
-  }
-  .width100SendCode {
-    width: 100% !important;
-  }
-  .menuBarPage {
-    width: 290px !important;
-  }
-  .imageNewsSlide {
-    object-fit: cover;
-  }
-  .paddingXSFact {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-  }
-  .padding0XS {
-    padding: 0 !important;
-  }
-  .padding10XS {
-    padding: 10px !important;
-  }
-  .marginTop5PXS {
-    margin-top: 5% !important;
-  }
-  .minHeightCases {
-    min-height: auto !important;
-  }
-  .timeline .timeline-item::before {
-    position: relative;
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
-    height: 30px;
-    width: 40px;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 50%;
-    top: -10px;
-    right: -42%;
-    padding: 3px;
-    text-align: center;
-  }
-}
-
-@media (min-width: 360px) {
-  .widthDropdown {
-    max-width: 100% !important;
-    flex: 0 0 100%;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-  #searchPage {
-    transform: translate3d(295px, -10px, 0px) !important;
-    min-width: 360px;
-  }
-  #logo-footer {
-    width: 100% !important;
-  }
-  .liFooter {
-    display: inline-block !important;
-    width: 30% !important;
-  }
-  #qr-mini {
-    margin-left: 10px !important;
-  }
-  .paddingBoxHome {
-    padding: 30px;
-    background-color: #fafafa !important;
-  }
-  .menuBarPage {
-    width: 330px !important;
-  }
-  .imageNewsSlide {
-    object-fit: cover;
-  }
-  .padding10XS {
-    padding: 10px !important;
-  }
-  .timeline .timeline-item::before {
-    position: relative;
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
-    height: 30px;
-    width: 40px;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 50%;
-    top: -10px;
-    right: -44%;
-    padding: 3px;
-    text-align: center;
-  }
-}
-
-@media (min-width: 375px) {
-  .widthDropdown {
-    max-width: 100% !important;
-    flex: 0 0 100%;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-  #searchPage {
-    transform: translate3d(310px, -10px, 0px) !important;
-    min-width: 375px;
-  }
-  .liFooter {
-    display: inline-block !important;
-    width: 30% !important;
-  }
-  .paddingBoxHome {
-    padding: 40px;
-    background-color: #fafafa !important;
-  }
-  .menuBarPage {
-    width: 345px !important;
-  }
-  .imageNewsSlide {
-    object-fit: cover;
-  }
-  .padding10XS {
-    padding: 10px !important;
-  }
-  .timeline .timeline-item::before {
-    position: relative;
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
-    height: 30px;
-    width: 40px;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 50%;
-    top: -10px;
-    right: -44%;
-    padding: 3px;
-    text-align: center;
-  }
-}
-
-@media (min-width: 420px) {
-  .widthDropdown {
-    max-width: 100% !important;
-    flex: 0 0 100%;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-  #searchPage {
-    transform: translate3d(355px, -10px, 0px) !important;
-    min-width: 420px;
-  }
-  .liFooter {
-    display: inline-block !important;
-    width: 30% !important;
-  }
-  .paddingBoxHome {
-    padding: 60px;
-    background-color: #fafafa !important;
-  }
-  .width100Login {
-    width: auto !important;
-    float: right !important;
-  }
-  .width100SendCode {
-    width: auto !important;
-    float: right !important;
-  }
-  .menuBarPage {
-    width: 390px !important;
-  }
-  .imageNewsSlide {
-    object-fit: cover;
-  }
-  .paddingXSFact {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
-  }
-  .padding10XS {
-    padding: 10px !important;
-  }
-  .timeline .timeline-item::before {
-    position: relative;
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
-    height: 30px;
-    width: 40px;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 50%;
-    top: -10px;
-    right: -44%;
-    padding: 3px;
-    text-align: center;
-  }
-}
-
-@media (min-width: 480px) {
-  .widthDropdown {
-    max-width: 100% !important;
-    flex: 0 0 100%;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-  #searchPage {
-    transform: translate3d(415px, -10px, 0px) !important;
-    min-width: 480px;
-  }
-  .liFooter {
-    display: inline-block !important;
-    width: 30% !important;
-  }
-  .paddingBoxHome {
-    padding: 60px;
-    background-color: #fafafa !important;
-  }
-  .menuBarPage {
-    width: 450px !important;
-  }
-  .imageNewsSlide {
-    object-fit: cover;
-  }
-  .padding10XS {
-    padding: 10px !important;
-  }
-  .timeline .timeline-item::before {
-    position: relative;
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
-    height: 30px;
-    width: 40px;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 50%;
-    top: -10px;
-    right: -45%;
-    padding: 3px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 767px) {
-  .animated-text h4+h4 {
-    display: none;
-  }
-  .hiddenLG {
-    display: none !important;
-  }
-  .timeline .timeline-item.pull-right+.timeline-date-label {
-    padding-top: 0px !important;
-  }
-  article {
-    text-align: center !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .widthDropdown {
-    max-width: 100% !important;
-    flex: 0 0 100%;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-  #searchPage {
-    transform: translate3d(330px, -10px, 0px) !important;
-    min-width: 420px;
-  }
-  .liFooter {
-    display: inline-block !important;
-    width: 30% !important;
-  }
-  #logo-footer {
-    margin-bottom: 50px !important;
-  }
-  .paddingBoxHome {
-    padding: 60px;
-    background-color: #fafafa !important;
-  }
-  .paddingLeftButtonSendCode {
-    padding-left: 0px !important;
-    margin-top: 0 !important;
-    height: 40px !important;
-  }
-  .width100Login {
-    width: auto !important;
-    float: right !important;
-    margin-right: 12% !important;
-    width: 130px !important;
-  }
-  .width100SendCode {
-    width: auto !important;
-    float: right !important;
-  }
-  .menuBarPage {
-    width: 689px !important;
-  }
-  .imageNewsSlide {
-    object-fit: cover;
-    width: 100% !important;
-  }
-  .padding10XS {
-    padding: 10px !important;
-  }
-  .minHeightCases {
-    min-height: 305px !important;
-  }
-  .minHeightFirst3Team {
-    min-height: 230px !important;
-  }
-  .minHeightSecond3Team {
-    min-height: 206px !important;
-  }
-  .minHeightThird3Team {
-    min-height: 250px !important;
-  }
-  .minHeightFour3Team {
-    min-height: 295px !important;
-  }
-  .animated-text h4 {
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-  .animated-text h4+h4 {
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transform: scale(1.15);
-    -moz-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    -o-transform: scale(1.15);
-    transform: scale(1.15);
-  }
-  .animated-text:hover h4 {
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transform: scale(0.85);
-    -moz-transform: scale(0.85);
-    -ms-transform: scale(0.85);
-    -o-transform: scale(0.85);
-    transform: scale(0.85);
-  }
-  .animated-text:hover h4+h4 {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-  }
-  .logo_img {
-    display: none !important;
-  }
-  .hiddenLGAddressPhone {
-    display: none !important;
-  }
-  .timeline .timeline-item::before {
-    position: absolute;
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
-    height: 30px;
-    width: 40px;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 50%;
-    top: 5px;
-    right: -20px;
-    padding: 3px;
-    text-align: center;
-  }
-  .timeline .timeline-item.pull-right::before {
-    left: -20px;
-  }
-}
-
-@media (min-width: 992px) {
-  .widthDropdown {
-    max-width: 72% !important;
-    flex: 0 0 72%;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  .liFooter {
-    display: inline-block !important;
-    width: 30% !important;
-  }
-  #logo-footer {
-    margin-bottom: 20px !important;
-    margin-right: 0 !important;
-  }
-  .paddingTopSlider {
-    padding-top: 80px !important;
-  }
-  .paddingBoxHome {
-    padding: 60px;
-    background-color: #fafafa !important;
-  }
-  .paddingLeftButtonSendCode {
-    padding-left: 0px !important;
-    margin-top: 0 !important;
-    height: 40px !important;
-  }
-  .padding0XS {
-    padding: 15px !important;
-  }
-  .paddingTop78LG {
-    padding-top: 78px !important;
-  }
-  .padding10XS {
-    padding: 0px !important;
-  }
-  .marginTop5PXS {
-    margin-top: auto !important;
-  }
-  .menuBarPage {
-    width: 250px !important;
-  }
-  .minHeightCases {
-    min-height: 269px !important;
-  }
-  .minHeightFirst4Team {
-    min-height: 230px !important;
-  }
-  .minHeightSecond4Team {
-    min-height: 250px !important;
-  }
-  .minHeightThird4Team {
-    min-height: 295px !important;
-  }
-  .heightCharman {
-    min-height: 480px !important;
-  }
-  .marginMap {
-    margin-left: 8% !important;
-  }
-  .BoxBranchesSizes {
-    height: 261px !important;
-  }
-  .BoxBranchesSizesOthers {
-    height: 241px !important;
-  }
-  .maxWidth100 {
-    max-width: 100px !important;
-  }
-  .marginTop80 {
-    margin-top: 78px !important;
-  }
-  .logo_img {
-    display: block !important;
-  }
-  .hiddenLGAddressPhone {
-    display: block !important;
-  }
-  .marginTopLogin {
-    margin-top: 25% !important;
-  }
-}
-
-@media (min-width: 1080px) {
-  .minHeightFirst4Team {
-    min-height: 206px !important;
-  }
-  .minHeightSecond4Team {
-    min-height: 230px !important;
-  }
-  .minHeightThird4Team {
-    min-height: 250px !important;
-  }
-  .marginMap {
-    margin-left: 12% !important;
-  }
-  .BoxBranchesSizes {
-    height: 261px !important;
-  }
-  .BoxBranchesSizesOthers {
-    height: 220px !important;
-  }
-  .marginLeftServiceHome {
-    margin-left: 2% !important;
-  }
-}
-
-@media (min-width: 1250px) {
-  .minHeightFirst4Team {
-    min-height: 165px !important;
-  }
-  .minHeightSecond4Team {
-    min-height: 185px !important;
-  }
-  .minHeightThird4Team {
-    min-height: 205px !important;
-  }
-  .marginMap {
-    margin-left: 15% !important;
-  }
-  .BoxBranchesSizes {
-    height: 220px !important;
-  }
-  .BoxBranchesSizesOthers {
-    height: 190px !important;
-  }
-  .marginLeftServiceHome {
-    margin-left: 4% !important;
-  }
-}
-
 .header-dropdown-buttons .btn-group.show>.btn {
   color: #ff6700;
 }
@@ -1499,12 +954,6 @@ ul li.nav-item a.tabCoreTeam.active {
   content: "2月" !important;
 }
 
-.videoHoopa {
-  width: 100% !important;
-  height: 80% !important;
-  background-color: black !important;
-}
-
 .newsHomeImage {
   width: 95px !important;
   height: 75px !important;
@@ -1523,13 +972,6 @@ ul li.nav-item a.tabCoreTeam.active {
   padding-right: 15px !important;
 }
 
-.paddingHome {
-  padding-left: 120px !important;
-  padding-right: 120px !important;
-  padding-bottom: 30px !important;
-  padding-top: 30px !important;
-}
-
 .marginLeftAuto {
   margin-left: auto !important;
 }
@@ -1541,5 +983,623 @@ ul li.nav-item a.tabCoreTeam.active {
 .width100P {
   width: 100% !important;
   object-fit: cover;
+}
+
+.imageNewsListHome {
+  width: 100% !important;
+  object-fit: cover;
   height: 200px !important;
+}
+
+@media (min-width: 320px) {
+  .widthDropdown {
+    max-width: 100% !important;
+    flex: 0 0 100%;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  #searchPage {
+    transform: translate3d(255px, -10px, 0px) !important;
+    min-width: 320px;
+  }
+  .margingTop25XS {
+    margin-top: 25px !important;
+  }
+  #logo-footer {
+    width: 80% !important;
+  }
+  .liFooter {
+    display: inline-block !important;
+    width: 30% !important;
+  }
+  #qr-mini {
+    margin-left: 10px !important;
+  }
+  .paddingTopSlider {
+    padding-top: 0 !important;
+  }
+  .paddingBoxHome {
+    padding: 30px;
+    background-color: #fafafa !important;
+  }
+  .paddingLeftButtonSendCode {
+    margin-top: 10px !important;
+    height: 40px !important;
+  }
+  .width100Login {
+    width: 100% !important;
+  }
+  .width100SendCode {
+    width: 100% !important;
+  }
+  .menuBarPage {
+    width: 290px !important;
+  }
+  .imageNewsSlide {
+    object-fit: cover;
+  }
+  .paddingXSFact {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  .padding0XS {
+    padding: 0 !important;
+  }
+  .padding10XS {
+    padding: 10px !important;
+  }
+  .marginTop5PXS {
+    margin-top: 5% !important;
+  }
+  .minHeightCases {
+    min-height: auto !important;
+  }
+  .timeline .timeline-item::before {
+    position: relative;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    height: 30px;
+    width: 40px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 50%;
+    top: -10px;
+    right: -42%;
+    padding: 3px;
+    text-align: center;
+  }
+  .paddingHome {
+    padding-left: 50px !important;
+    padding-bottom: 30px !important;
+    padding-top: 30px !important;
+  }
+  .videoHoopa {
+    width: 100% !important;
+    height: 80% !important;
+    background-color: black !important;
+  }
+  .width90P{
+    width: 84% !important;
+  }
+}
+
+@media (min-width: 360px) {
+  .widthDropdown {
+    max-width: 100% !important;
+    flex: 0 0 100%;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  #searchPage {
+    transform: translate3d(295px, -10px, 0px) !important;
+    min-width: 360px;
+  }
+  #logo-footer {
+    width: 100% !important;
+  }
+  .liFooter {
+    display: inline-block !important;
+    width: 30% !important;
+  }
+  #qr-mini {
+    margin-left: 10px !important;
+  }
+  .paddingBoxHome {
+    padding: 30px;
+    background-color: #fafafa !important;
+  }
+  .menuBarPage {
+    width: 330px !important;
+  }
+  .imageNewsSlide {
+    object-fit: cover;
+  }
+  .padding10XS {
+    padding: 10px !important;
+  }
+  .timeline .timeline-item::before {
+    position: relative;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    height: 30px;
+    width: 40px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 50%;
+    top: -10px;
+    right: -44%;
+    padding: 3px;
+    text-align: center;
+  }
+  .width90P{
+    width: 86% !important;
+  }
+}
+
+@media (min-width: 375px) {
+  .widthDropdown {
+    max-width: 100% !important;
+    flex: 0 0 100%;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  #searchPage {
+    transform: translate3d(310px, -10px, 0px) !important;
+    min-width: 375px;
+  }
+  .liFooter {
+    display: inline-block !important;
+    width: 30% !important;
+  }
+  .paddingBoxHome {
+    padding: 40px;
+    background-color: #fafafa !important;
+  }
+  .menuBarPage {
+    width: 345px !important;
+  }
+  .imageNewsSlide {
+    object-fit: cover;
+  }
+  .padding10XS {
+    padding: 10px !important;
+  }
+  .timeline .timeline-item::before {
+    position: relative;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    height: 30px;
+    width: 40px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 50%;
+    top: -10px;
+    right: -44%;
+    padding: 3px;
+    text-align: center;
+  }
+  .width90P{
+    width: 88% !important;
+  }
+}
+
+@media (min-width: 420px) {
+  .widthDropdown {
+    max-width: 100% !important;
+    flex: 0 0 100%;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  #searchPage {
+    transform: translate3d(355px, -10px, 0px) !important;
+    min-width: 420px;
+  }
+  .liFooter {
+    display: inline-block !important;
+    width: 30% !important;
+  }
+  .paddingBoxHome {
+    padding: 60px;
+    background-color: #fafafa !important;
+  }
+  .width100Login {
+    width: auto !important;
+    float: right !important;
+  }
+  .width100SendCode {
+    width: auto !important;
+    float: right !important;
+  }
+  .menuBarPage {
+    width: 390px !important;
+  }
+  .imageNewsSlide {
+    object-fit: cover;
+  }
+  .paddingXSFact {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+  .padding10XS {
+    padding: 10px !important;
+  }
+  .timeline .timeline-item::before {
+    position: relative;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    height: 30px;
+    width: 40px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 50%;
+    top: -10px;
+    right: -44%;
+    padding: 3px;
+    text-align: center;
+  }
+  .width90P{
+    width: 88% !important;
+  }
+}
+
+@media (min-width: 480px) {
+  .widthDropdown {
+    max-width: 100% !important;
+    flex: 0 0 100%;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  #searchPage {
+    transform: translate3d(415px, -10px, 0px) !important;
+    min-width: 480px;
+  }
+  .liFooter {
+    display: inline-block !important;
+    width: 30% !important;
+  }
+  .paddingBoxHome {
+    padding: 60px;
+    background-color: #fafafa !important;
+  }
+  .menuBarPage {
+    width: 450px !important;
+  }
+  .imageNewsSlide {
+    object-fit: cover;
+  }
+  .padding10XS {
+    padding: 10px !important;
+  }
+  .timeline .timeline-item::before {
+    position: relative;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    height: 30px;
+    width: 40px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 50%;
+    top: -10px;
+    right: -45%;
+    padding: 3px;
+    text-align: center;
+  }
+  .width90P{
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .animated-text h4+h4 {
+    display: none;
+  }
+  .hiddenLG {
+    display: none !important;
+  }
+  .timeline .timeline-item.pull-right+.timeline-date-label {
+    padding-top: 0px !important;
+  }
+  article {
+    text-align: center !important;
+  }
+  .width90P{
+    width: 90% !important;
+  }
+  .marginLeft--15{
+    margin-left: -15px !important;
+  }
+  .paddingLeft0XS{
+    padding-left: 0 !important;
+  }
+  .paddingRight0XS{
+    padding-right: 0 !important;
+  }
+  .marginRight0XS{
+    margin-right: 0 !important;
+  }
+  .textCenterXS{
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .widthDropdown {
+    max-width: 100% !important;
+    flex: 0 0 100%;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  #searchPage {
+    transform: translate3d(330px, -10px, 0px) !important;
+    min-width: 420px;
+  }
+  .liFooter {
+    display: inline-block !important;
+    width: 30% !important;
+  }
+  #logo-footer {
+    margin-bottom: 50px !important;
+  }
+  .paddingBoxHome {
+    padding: 60px;
+    background-color: #fafafa !important;
+  }
+  .paddingLeftButtonSendCode {
+    padding-left: 0px !important;
+    margin-top: 0 !important;
+    height: 40px !important;
+  }
+  .width100Login {
+    width: auto !important;
+    float: right !important;
+    margin-right: 12% !important;
+    width: 130px !important;
+  }
+  .width100SendCode {
+    width: auto !important;
+    float: right !important;
+  }
+  .menuBarPage {
+    width: 689px !important;
+  }
+  .imageNewsSlide {
+    object-fit: cover;
+    width: 100% !important;
+  }
+  .padding10XS {
+    padding: 10px !important;
+  }
+  .minHeightCases {
+    min-height: 305px !important;
+  }
+  .minHeightFirst3Team {
+    min-height: 230px !important;
+  }
+  .minHeightSecond3Team {
+    min-height: 206px !important;
+  }
+  .minHeightThird3Team {
+    min-height: 250px !important;
+  }
+  .minHeightFour3Team {
+    min-height: 295px !important;
+  }
+  .animated-text h4 {
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .animated-text h4+h4 {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+  .animated-text:hover h4 {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    -o-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+  .animated-text:hover h4+h4 {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  .logo_img {
+    display: none !important;
+  }
+  .hiddenLGAddressPhone {
+    display: none !important;
+  }
+  .timeline .timeline-item::before {
+    position: absolute;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    height: 30px;
+    width: 40px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 50%;
+    top: 5px;
+    right: -20px;
+    padding: 3px;
+    text-align: center;
+  }
+  .timeline .timeline-item.pull-right::before {
+    left: -20px;
+  }
+  .marginLeftAutoLG {
+    margin-left: auto !important;
+  }
+  .width90P{
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .widthDropdown {
+    max-width: 72% !important;
+    flex: 0 0 72%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .liFooter {
+    display: inline-block !important;
+    width: 30% !important;
+  }
+  #logo-footer {
+    margin-bottom: 20px !important;
+    margin-right: 0 !important;
+  }
+  .paddingTopSlider {
+    padding-top: 80px !important;
+  }
+  .paddingBoxHome {
+    padding: 60px;
+    background-color: #fafafa !important;
+  }
+  .paddingLeftButtonSendCode {
+    padding-left: 0px !important;
+    margin-top: 0 !important;
+    height: 40px !important;
+  }
+  .padding0XS {
+    padding: 15px !important;
+  }
+  .paddingTop78LG {
+    padding-top: 78px !important;
+  }
+  .padding10XS {
+    padding: 0px !important;
+  }
+  .marginTop5PXS {
+    margin-top: auto !important;
+  }
+  .menuBarPage {
+    width: 250px !important;
+  }
+  .minHeightCases {
+    min-height: 269px !important;
+  }
+  .minHeightFirst4Team {
+    min-height: 230px !important;
+  }
+  .minHeightSecond4Team {
+    min-height: 250px !important;
+  }
+  .minHeightThird4Team {
+    min-height: 295px !important;
+  }
+  .heightCharman {
+    min-height: 480px !important;
+  }
+  .marginMap {
+    margin-left: 8% !important;
+  }
+  .BoxBranchesSizes {
+    height: 261px !important;
+  }
+  .BoxBranchesSizesOthers {
+    height: 241px !important;
+  }
+  .maxWidth100 {
+    max-width: 100px !important;
+  }
+  .marginTop80 {
+    margin-top: 78px !important;
+  }
+  .logo_img {
+    display: block !important;
+  }
+  .hiddenLGAddressPhone {
+    display: block !important;
+  }
+  .marginTopLogin {
+    margin-top: 25% !important;
+  }
+  .paddingHome {
+    padding-left: 120px !important;
+    padding-right: 120px !important;
+    padding-bottom: 30px !important;
+    padding-top: 30px !important;
+  }
+}
+
+@media (min-width: 1080px) {
+  .minHeightFirst4Team {
+    min-height: 206px !important;
+  }
+  .minHeightSecond4Team {
+    min-height: 230px !important;
+  }
+  .minHeightThird4Team {
+    min-height: 250px !important;
+  }
+  .marginMap {
+    margin-left: 12% !important;
+  }
+  .BoxBranchesSizes {
+    height: 261px !important;
+  }
+  .BoxBranchesSizesOthers {
+    height: 220px !important;
+  }
+  .marginLeftServiceHome {
+    margin-left: 2% !important;
+  }
+}
+
+@media (min-width: 1250px) {
+  .minHeightFirst4Team {
+    min-height: 165px !important;
+  }
+  .minHeightSecond4Team {
+    min-height: 185px !important;
+  }
+  .minHeightThird4Team {
+    min-height: 205px !important;
+  }
+  .marginMap {
+    margin-left: 15% !important;
+  }
+  .BoxBranchesSizes {
+    height: 220px !important;
+  }
+  .BoxBranchesSizesOthers {
+    height: 190px !important;
+  }
+  .marginLeftServiceHome {
+    margin-left: 4% !important;
+  }
+  .videoHoopa {
+    width: 100% !important;
+    height: 80% !important;
+    background-color: black !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .videoHoopa {
+    width: 100% !important;
+    height: 88% !important;
+    background-color: black !important;
+  }
 }
