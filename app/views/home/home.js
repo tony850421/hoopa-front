@@ -160,9 +160,9 @@ angular.module('myApp.Home', ['ngRoute'])
           var contentMin = element.get('content');
           var id = element.id;
 
-          if (contentMin.length >= 50) {
+          if (contentMin.length >= 48) {
             var desc = '';
-            for (var x = 0; x < 50; x++) {
+            for (var x = 0; x < 48; x++) {
               desc = desc + contentMin[x];
             }
             desc = desc + "...";

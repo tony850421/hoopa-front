@@ -1518,26 +1518,28 @@ ul li.nav-item a.tabCoreTeam.active {
   padding: 60px !important;
 }
 
-.paddingNewsHome{
+.paddingNewsHome {
   padding-left: 60px !important;
   padding-right: 15px !important;
 }
 
-.paddingHome{
+.paddingHome {
   padding-left: 120px !important;
   padding-right: 120px !important;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
 
-.marginLeftAuto{
+.marginLeftAuto {
   margin-left: auto !important;
 }
 
-.marginRightAuto{
+.marginRightAuto {
   margin-right: auto !important;
 }
 
-.width100P{
+.width100P {
   width: 100% !important;
+  object-fit: cover;
+  height: 200px !important;
 }
