@@ -22,11 +22,11 @@ angular.module('myApp.Projects', ['ngRoute'])
     $scope.phoneNumber = '';
     $scope.smsCode = '';
 
-    $scope.provinces = ['区域无限制', '安徽省', '北京市', '重庆市', '福建省', '广东省', '甘肃省', '广西壮族自治区', '贵州省', '河南省', '湖北省', '河北省','海南省', '香港特别行政区', '黑龙江省', '湖南省', '吉林省', '江苏省', '江西省', '辽宁省', '澳门特别行政区', '內蒙古自治区','宁夏回族自治区', '青海省', '四川省', '山东省', '上海市', '陕西省', '山西省', '天津市', '台湾省', '新疆维吾尔自治区','西藏自治区', '云南省', '浙江省'];
+    $scope.provinces = ['区域无限制', '安徽省', '北京市', '重庆市', '福建省', '广东省', '甘肃省', '广西壮族自治区', '贵州省', '河南省', '湖北省', '河北省', '海南省', '香港特别行政区', '黑龙江省', '湖南省', '吉林省', '江苏省', '江西省', '辽宁省', '澳门特别行政区', '內蒙古自治区', '宁夏回族自治区', '青海省', '四川省', '山东省', '上海市', '陕西省', '山西省', '天津市', '台湾省', '新疆维吾尔自治区', '西藏自治区', '云南省', '浙江省'];
 
-    $scope.typeArrivalArray = ['抵押物类型', '住宅', '商铺', '写字楼', '厂房', '在建工程', '机械设备，存货，原材料', '土地（无厂房',      '林权', '海城使用权', '商住', '无抵押', '其他'];
+    $scope.typeArrivalArray = ['抵押物类型', '住宅', '商铺', '写字楼', '厂房', '在建工程', '机械设备，存货，原材料', '土地（无厂房', '林权', '海城使用权', '商住', '无抵押', '其他'];
 
-    $scope.amountArray = ['本金无限制', '500万', '500-1000万', '1000-1500万', '1500-2000万', '2000-2500万', '2500-3000万', '3000-3500万','3500-4000万', '4000-4500万', '4500-5000万', '5000-5500万', '5500-6000万', '6000万'];
+    $scope.amountArray = ['本金无限制', '500万', '500-1000万', '1000-1500万', '1500-2000万', '2000-2500万', '2500-3000万', '3000-3500万', '3500-4000万', '4000-4500万', '4500-5000万', '5000-5500万', '5500-6000万', '6000万'];
 
     $scope.filters = {
       province: '区域无限制',
@@ -46,13 +46,13 @@ angular.module('myApp.Projects', ['ngRoute'])
       };
     };
 
-    $scope.$on("searchTextUpdated", function(evt, data) { 
+    $scope.$on("searchTextUpdated", function (evt, data) {
       $scope.filters.text = $rootScope.searchFilterText;
       $scope.applyFilters();
     });
 
     $scope.applyFilters = function () {
-      
+
       $scope.products = [];
       var currentUser = AV.User.current();
 
@@ -197,9 +197,9 @@ angular.module('myApp.Projects', ['ngRoute'])
 
           var productDescription = product.get('description');
           var productDesc = productDescription;
-          if (productDescription.length > 50) {
+          if (productDescription.length >= 40) {
             productDesc = ''
-            for (var i = 0; i < 50; i++) {
+            for (var i = 0; i < 40; i++) {
               productDesc += productDescription[i];
             }
             productDesc += "...";
@@ -213,7 +213,7 @@ angular.module('myApp.Projects', ['ngRoute'])
           var productAddress = product.get('plainAddress');
           var productImageUrl;
           if (productImage) {
-            productImageUrl = productImage.thumbnailURL(320, 200);
+            productImageUrl = productImage.thumbnailURL(480, 260);
           } else {
             productImageUrl = 'img/LogoHoopa.png';
           }
@@ -335,7 +335,7 @@ angular.module('myApp.Projects', ['ngRoute'])
             shop.set('checked', false);
             shop.set('project', project);
             shop.save().then(res => {
-              var addedWishList= $translate.instant('ADDEDWISHLIST');
+              var addedWishList = $translate.instant('ADDEDWISHLIST');
               $rootScope.displayAlert('success', addedWishList);
               $scope.applyFilters();
             });
@@ -343,11 +343,11 @@ angular.module('myApp.Projects', ['ngRoute'])
         });
 
       } else {
-        $rootScope.customGoTo('login/projects');
+        $('#modalLogin').modal('show');
       }
     };
 
-    $scope.removeToWhishList = function(id){
+    $scope.removeToWhishList = function (id) {
       var currentUser = AV.User.current();
 
       if (currentUser) {
@@ -356,10 +356,10 @@ angular.module('myApp.Projects', ['ngRoute'])
         var query = new AV.Query("ShopCar")
         query.equalTo('project', project);
         query.equalTo('user', currentUser);
-        query.find().then( res => {
-          res.forEach(function(element){
+        query.find().then(res => {
+          res.forEach(function (element) {
             element.destroy();
-            var removeWishList= $translate.instant('REMOVEDWISHLIST');
+            var removeWishList = $translate.instant('REMOVEDWISHLIST');
             $rootScope.displayAlert('success', removeWishList);
           });
 

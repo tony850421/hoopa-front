@@ -37,11 +37,11 @@ angular.module('myApp.Login', ['ngRoute'])
                 $rootScope.getUser();
                 $rootScope.initWishList();
                 $rootScope.initOffersList();
-                if ($scope.id != '') {
-                    $rootScope.customGoTo($scope.option + "/" + $scope.id);
-                } else {
-                    $rootScope.customGoTo($scope.option);
-                }
+                // if ($scope.id != '') {
+                //     $rootScope.customGoTo($scope.option + "/" + $scope.id);
+                // } else {
+                //     $rootScope.customGoTo($scope.option);
+                // }
             }).catch(function (error) {
                 console.log(error);
             });

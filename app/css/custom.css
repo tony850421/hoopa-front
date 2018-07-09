@@ -1309,7 +1309,7 @@ ul li.nav-item a.tabCoreTeam.active {
   .width90P{
     width: 90% !important;
   }
-  .marginLeft--15{
+  .marginLeft--15Home{
     margin-left: -15px !important;
   }
   .paddingLeft0XS{
@@ -1602,4 +1602,67 @@ ul li.nav-item a.tabCoreTeam.active {
     height: 88% !important;
     background-color: black !important;
   }
+}
+
+.buttonProjectStyle{
+  border: 1px solid #c3c3c3 !important;
+  color: #3c3c3c !important;
+}
+
+.buttonProjectStyleHeart{
+  border: none;
+  color: #ff6700 !important;
+}
+
+.buttonProjectStyle:hover{
+  border: 1px solid #ff6700 !important;
+  color: #ff6700 !important;
+  background-color: transparent !important;
+}
+
+.buttonProjectStyleHeart:hover{
+  border: none !important;
+  color: #ff6700 !important;
+  background-color: transparent !important;
+}
+
+.marginLeft--15{
+  margin-left: -15px !important;
+}
+
+.width5P{
+  width: 5% !important;
+}
+
+.width25P{
+  width: 25% !important;
+}
+
+.width75P{
+  width: 75% !important;
+}
+
+.width70P{
+  width: 70% !important;
+}
+
+.width20P{
+  width: 20% !important;
+}
+
+.width40P{
+  width: 40% !important;
+}
+
+.width30P{
+  width: 30% !important;
+}
+
+.aligItemCenter{
+  align-items: center !important;
+}
+
+.FRW{
+  float: right !important;
+  width: 100% !important;
 }

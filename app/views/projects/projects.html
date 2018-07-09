@@ -1,49 +1,47 @@
 <div class="breadcrumb-container marginTop80">
   <div class="container">
-      <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-              <i class="fa fa-home pr-2"></i>
-              <a href="index.html">{{'HOME' | translate}}</a>
-          </li>
-          <li class="breadcrumb-item active">{{'IPROMOTION' | translate }}</li>
-      </ol>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <i class="fa fa-home pr-2"></i>
+        <a href="index.html">{{'HOME' | translate}}</a>
+      </li>
+      <li class="breadcrumb-item active">{{'IPROMOTION' | translate }}</li>
+    </ol>
   </div>
 </div>
 <section class="paddingBoxHome">
   <div class="container">
-    <!-- <div class="row">
-      <h2 class="page-title">{{'EXPASSETS' | translate}}</h2>
-    </div> -->
-
-    <div class="row">
-      <div class="sorting-filters col-md-12 paddingLeft0 paddingRight0 text-center mb-20 d-flex justify-content-center pull-right">
-        <form class="form-inline col-md-12 paddingLeft0 paddingRight0">
-          <div class="form-group col-md-12 col-lg-2 paddingLeft0 paddingRight5">
-            <a href="" class="btn btn-default backgroundColorBlue" ng-click="resetFilters()">{{'RESETFILTERS' | translate}}</a>
-          </div>
-          <div class="form-group col-md-12 col-lg-2 paddingLeft0 paddingRight5">
-            <label>{{'TEXT' | translate}}</label>
-            <input type="text" class="form-control" ng-model="filters.text">
-          </div>
-          <div class="form-group col-md-12 col-lg-2 paddingLeft0 paddingRight5">
-            <label>{{'TYPE' | translate}}</label>
-            <select id="type" class="form-control" ng-model="filters.type" ng-options="x for x in typeArrivalArray">
-            </select>
-          </div>
-          <div class="form-group col-md-12 col-lg-2 paddingLeft0 paddingRight5">
-            <label>{{'PROVINCE' | translate}}</label>
-            <select id="province" class="form-control" ng-model="filters.province" ng-options="x for x in provinces">
-            </select>
-          </div>
-          <div class="form-group col-md-12 col-lg-2 paddingLeft0 paddingRight5">
-            <label>{{'AMOUNT' | translate}}</label>
-            <select id="amount" class="form-control" ng-model="filters.amount" ng-options="x for x in amountArray">
-            </select>
-          </div>
-          <div class="form-group col-md-12 col-lg-2 paddingLeft0 paddingRight0">
-            <a href="" class="btn btn-default backgroundColorBlue" ng-click="applyFiltersClick()">{{'APPLYFILTERS' | translate}}</a>
-          </div>
-        </form>
+    <h3 class="page-title text-center marginLeft--15 marginBottom20">{{'IPROMOTION' | translate }}</h3>
+    <div class="separator-2  marginLeft--15"></div>
+    <div class="row marginBottom20">
+      <div class="row col-md-6 aligItemCenter">
+        <label class="width25P">{{'TEXT' | translate}}</label>
+        <input type="text" class="form-control width75P" ng-model="filters.text">
+      </div>
+      <div class="col-md-2 aligItemCenter"></div>
+      <div class="col-md-2 pull-right marginLeftAuto">
+        <a href="" class="btn btn-default backgroundColorBlue FRW" ng-click="resetFilters()">{{'RESETFILTERS' | translate}}</a>
+      </div>
+      <div class="col-md-2 pull-right paddingRight0 aligItemCenter marginLeftAuto">
+        <a href="" class="btn btn-default backgroundColorBlue FRW" ng-click="applyFiltersClick()">{{'APPLYFILTERS' | translate}}</a>
+      </div>
+    </div>
+    <div class="row marginBottom20">
+      <div class="row col-md-4 aligItemCenter">
+        <label class="width25P">{{'TYPE' | translate}}</label>
+        <select id="type" class="form-control width75P" ng-model="filters.type" ng-options="x for x in typeArrivalArray">
+        </select>
+      </div>
+      <div class="row col-md-4 aligItemCenter marginLeftAuto">
+        <label class="width30P">{{'PROVINCE' | translate}}</label>
+        <select id="province" class="form-control width70P" ng-model="filters.province" ng-options="x for x in provinces">
+        </select>
+      </div>
+      <div class="row col-md-4 aligItemCenter marginLeftAuto">
+        <label class="width25P marginLeftAuto">{{'AMOUNT' | translate}}</label>
+        <input type="text" class="form-control width30P marginLeftAuto" ng-model="filters.amount">
+        <label class="width5P marginLeftAuto">~</label>
+        <input type="text" class="form-control width30P marginLeftAuto" ng-model="filters.amount">
       </div>
     </div>
   </div>
@@ -76,7 +74,7 @@
                   <div class="overlay-container">
                     <img class="imageProjectHome" ng-src="{{project.imageUrl}}">
                     <!-- <span class="badge">30% OFF</span> -->
-                    <div class="overlay-to-top links">
+                    <!-- <div class="overlay-to-top links">
                       <span class="small">
                         <a ng-hide="project.wished" href="" class="btn-sm-link textWhite" ng-click="addToWhishList(project.id)">
                           <i class="fa fa-heart-o pr-10"></i>{{'ADDWISHLIST' | translate}}
@@ -87,7 +85,7 @@
                         <a href="" class="btn-sm-link textWhite" ng-click="goToProject(project.id)">
                           <i class="fa fa-link pr-1"></i>{{'VIEWDETAILS' | translate}}</a>
                       </span>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="body">
                     <h3>
@@ -97,8 +95,14 @@
                     <div class="elements-list clearfix">
                       <span class="price colorPrimary">
                         ¥{{project.debitAmount}}万</span>
-                      <a href="" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated backgroundColorBlue" ng-click="goToProject(project.id)">{{'VIEWMORE' | translate}}
+                      <a href="" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated buttonProjectStyle" ng-click="goToProject(project.id)">{{'VIEWMORE' | translate}}
                         <i class="fa fa-arrow-right"></i>
+                      </a>
+                      <a href="" ng-hide="project.wished" ng-click="addToWhishList(project.id)" class="pull-right margin-clear btn btn-sm btn-default-transparent buttonProjectStyleHeart">
+                        <i class="fa fa-heart-o"></i>
+                      </a>
+                      <a href="" ng-hide="!project.wished" ng-click="removeToWhishList(project.id)" class="pull-right margin-clear btn btn-sm btn-default-transparent buttonProjectStyleHeart">
+                        <i class="fa fa-heart"></i>
                       </a>
                     </div>
                   </div>

@@ -123,7 +123,7 @@ angular.module('myApp.Main', ['ngRoute'])
 
         $rootScope.initOffersList = function(){
             var user = AV.User.current();
-            var query9 = new AV.Query('Offert');            
+            var query9 = new AV.Query('Offert');
             query9.equalTo('user', user);
             query9.include('project');
 
@@ -132,7 +132,7 @@ angular.module('myApp.Main', ['ngRoute'])
             })
 
             query9.limit(4);
-            query9.find().then(function (offers) {           
+            query9.find().then(function (offers) {
                 $scope.offersArray = offers;
                 $scope.$apply();
             })
