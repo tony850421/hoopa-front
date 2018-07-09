@@ -12,137 +12,178 @@ angular.module('myApp.Home', ['ngRoute'])
   .controller('HomeCtrl', ['$rootScope', '$scope', function ($rootScope, $scope) {
 
     $rootScope.showBanner = true;
-    $scope.productsShop = [];
-    $scope.productsFactory = [];
-    $scope.productsHouse = [];
-    $scope.productsHot = [];
+    // $scope.productsShop = [];
+    // $scope.productsFactory = [];
+    // $scope.productsHouse = [];
+    // $scope.productsHot = [];
 
-    $scope.projectActive = 1;
+    $scope.news = [];
 
-    $scope.fetchProjectHot = function () {
-      var query = new AV.Query('Project');
-      query.equalTo('isHot', true);
-      query.limit('4');
-      query.descending('createdAt');
-      query.find().then(function (res) {
-        for (var i = 0; i < res.length; i++) {
+    // $scope.projectActive = 1;
 
-          if (res[i].get('description').length >= 50) {
-            var desc = '';
-            for (var x = 0; x < 50; x++) {
-              desc = desc + res[i].get('description')[x];
-            }
-            desc = desc + "...";
-            res[i].set('description', desc);
-          }
+    // $scope.fetchProjectHot = function () {
+    //   var query = new AV.Query('Project');
+    //   query.equalTo('isHot', true);
+    //   query.limit('4');
+    //   query.descending('createdAt');
+    //   query.find().then(function (res) {
+    //     for (var i = 0; i < res.length; i++) {
 
-          res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
-        }
+    //       if (res[i].get('description').length >= 50) {
+    //         var desc = '';
+    //         for (var x = 0; x < 50; x++) {
+    //           desc = desc + res[i].get('description')[x];
+    //         }
+    //         desc = desc + "...";
+    //         res[i].set('description', desc);
+    //       }
 
-        $scope.productsHot = res;
-        $scope.$apply();
-      });
-    };
+    //       res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
+    //     }
 
-    $scope.fetchProjectHouse = function () {
-      var query = new AV.Query('Project');
-      query.equalTo('isHouse', true);
-      query.limit('4');
-      query.descending('createdAt');
-      query.find().then(function (res) {
-        for (var i = 0; i < res.length; i++) {
+    //     $scope.productsHot = res;
+    //     $scope.$apply();
+    //   });
+    // };
 
-          if (res[i].get('description').length >= 50) {
-            var desc = '';
-            for (var x = 0; x < 50; x++) {
-              desc = desc + res[i].get('description')[x];
-            }
-            desc = desc + "...";
-            res[i].set('description', desc);
-          }
+    // $scope.fetchProjectHouse = function () {
+    //   var query = new AV.Query('Project');
+    //   query.equalTo('isHouse', true);
+    //   query.limit('4');
+    //   query.descending('createdAt');
+    //   query.find().then(function (res) {
+    //     for (var i = 0; i < res.length; i++) {
 
-          res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
-        }
+    //       if (res[i].get('description').length >= 50) {
+    //         var desc = '';
+    //         for (var x = 0; x < 50; x++) {
+    //           desc = desc + res[i].get('description')[x];
+    //         }
+    //         desc = desc + "...";
+    //         res[i].set('description', desc);
+    //       }
 
-        $scope.productsHouse = res;
-        $scope.$apply();
-      });
-    };
+    //       res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
+    //     }
 
-    $scope.fetchProjectFactory = function () {
-      var query = new AV.Query('Project');
-      query.equalTo('isFactory', true);
-      query.limit('4');
-      query.descending('createdAt');
-      query.find().then(function (res) {
-        for (var i = 0; i < res.length; i++) {
+    //     $scope.productsHouse = res;
+    //     $scope.$apply();
+    //   });
+    // };
 
-          if (res[i].get('description').length >= 50) {
-            var desc = '';
-            for (var x = 0; x < 50; x++) {
-              desc = desc + res[i].get('description')[x];
-            }
-            desc = desc + "...";
-            res[i].set('description', desc);
-          }
+    // $scope.fetchProjectFactory = function () {
+    //   var query = new AV.Query('Project');
+    //   query.equalTo('isFactory', true);
+    //   query.limit('4');
+    //   query.descending('createdAt');
+    //   query.find().then(function (res) {
+    //     for (var i = 0; i < res.length; i++) {
 
-          res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
-        }
+    //       if (res[i].get('description').length >= 50) {
+    //         var desc = '';
+    //         for (var x = 0; x < 50; x++) {
+    //           desc = desc + res[i].get('description')[x];
+    //         }
+    //         desc = desc + "...";
+    //         res[i].set('description', desc);
+    //       }
 
-        $scope.productsFactory = res;
-        $scope.$apply();
-      });
-    };
+    //       res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
+    //     }
 
-    $scope.fetchProjectShop = function () {
-      var query = new AV.Query('Project');
-      query.equalTo('isShop', true);
-      query.limit('4');
-      query.descending('createdAt');
-      query.find().then(function (res) {
-        for (var i = 0; i < res.length; i++) {
+    //     $scope.productsFactory = res;
+    //     $scope.$apply();
+    //   });
+    // };
 
-          if (res[i].get('description').length >= 50) {
-            var desc = '';
-            for (var x = 0; x < 50; x++) {
-              desc = desc + res[i].get('description')[x];
-            }
-            desc = desc + "...";
-            res[i].set('description', desc);
-          }
+    // $scope.fetchProjectShop = function () {
+    //   var query = new AV.Query('Project');
+    //   query.equalTo('isShop', true);
+    //   query.limit('4');
+    //   query.descending('createdAt');
+    //   query.find().then(function (res) {
+    //     for (var i = 0; i < res.length; i++) {
 
-          res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
-        }
+    //       if (res[i].get('description').length >= 50) {
+    //         var desc = '';
+    //         for (var x = 0; x < 50; x++) {
+    //           desc = desc + res[i].get('description')[x];
+    //         }
+    //         desc = desc + "...";
+    //         res[i].set('description', desc);
+    //       }
 
-        $scope.productsShop = res;
-        $scope.$apply();
-      });
-    };
+    //       res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
+    //     }
 
-    $scope.changeActive = function (num) {
-      $scope.projectActive = num;
-      switch (num) {
-        case 1:
-          $scope.fetchProjectHot();
-          break;
-        case 2:
-          $scope.fetchProjectHouse();
-          break;
-        case 3:
-          $scope.fetchProjectFactory();
-          break;
-        case 4:
-          $scope.fetchProjectShop();
-          break;
-        default:
-          $scope.fetchProjectHot();
-          break;
-      }
-    };
+    //     $scope.productsShop = res;
+    //     $scope.$apply();
+    //   });
+    // };
 
-    $scope.changeActive(1);
+    // $scope.changeActive = function (num) {
+    //   $scope.projectActive = num;
+    //   switch (num) {
+    //     case 1:
+    //       $scope.fetchProjectHot();
+    //       break;
+    //     case 2:
+    //       $scope.fetchProjectHouse();
+    //       break;
+    //     case 3:
+    //       $scope.fetchProjectFactory();
+    //       break;
+    //     case 4:
+    //       $scope.fetchProjectShop();
+    //       break;
+    //     default:
+    //       $scope.fetchProjectHot();
+    //       break;
+    //   }
+    // };
+
+    // $scope.changeActive(1);
 
     $scope.goToProject = function (id) {
       $rootScope.customGoTo('project-details/' + id);
     };
+
+    $scope.fetchNews = function () {
+      var queryNews = new AV.Query('News');
+      queryNews.limit(4);
+      queryNews.find().then(function (res) {
+        $scope.news = [];
+        res.forEach(function (element) {
+          var mainImage = element.get('image').thumbnailURL(300, 200);
+          var title = element.get('title');
+          var content = element.get('content');
+          var contentMin = element.get('content');
+          var id = element.id;
+
+          if (contentMin.length >= 50) {
+            var desc = '';
+            for (var x = 0; x < 50; x++) {
+              desc = desc + contentMin[x];
+            }
+            desc = desc + "...";
+            contentMin = desc;
+          }
+
+          $scope.news.push({
+            id: id,
+            mainImage: mainImage,
+            title: title,
+            content: content,
+            contentMin: contentMin
+          })
+          $scope.$apply();
+        });
+        $scope.$apply();
+
+      }).catch(function (error) {
+        alert(JSON.stringify(error));
+      });
+    };
+
+    $scope.fetchNews();
   }]);
