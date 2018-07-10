@@ -837,7 +837,6 @@ ul li.nav-item a.tabCoreTeam.active {
 .imageServices {
   object-fit: cover !important;
   width: 100% !important;
-  height: 700px !important;
 }
 
 .servicesWhite {
@@ -1599,6 +1598,12 @@ ul li.nav-item a.tabCoreTeam.active {
     height: 88% !important;
     background-color: black !important;
   }
+  .heigthOfficial{
+    height: 668px !important;
+  }
+  .marginBottom65{
+    margin-bottom: 65px !important;
+  }
 }
 
 .buttonProjectStyle {
@@ -1680,6 +1685,7 @@ html,
 body,
 button,
 div,
+section,
 a,
 h1,
 h2,
@@ -1708,4 +1714,8 @@ h6{
 
 .marginLeft6p3P{
   margin-left: 6.3% !important;
+}
+
+.height100P{
+  height: 100% !important;
 }
