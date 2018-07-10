@@ -1308,9 +1308,6 @@ ul li.nav-item a.tabCoreTeam.active {
   .width90P {
     width: 90% !important;
   }
-  .marginLeft--15Home {
-    margin-left: -15px !important;
-  }
   .paddingLeft0XS {
     padding-left: 0 !important;
   }
@@ -1691,4 +1688,24 @@ h4,
 h5,
 h6{
   font-family: "MicrosoftYaHei" !important;
+}
+
+.industryNewsBox{
+  width: 20% !important;
+}
+
+.marginLeft--15Home {
+  margin-left: -15px !important;
+}
+
+.marginRight5P{
+  margin-right: 5% !important;
+}
+
+.marginLeft5P{
+  margin-left: 5% !important;
+}
+
+.marginLeft6p3P{
+  margin-left: 6.3% !important;
 }

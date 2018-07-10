@@ -390,7 +390,7 @@
             <h3 class="page-title marginLeft--15Home">{{'NEWS' | translate }}</h3>
             <div class="separator-2 marginLeft--15Home"></div>
             <div class="row">
-                <div class="col-md-3 paddingLeft0" ng-repeat="n in industryNews">
+                <div class="industryNewsBox" ng-repeat="n in industryNews" ng-class="{'marginLeft6p3P': $index != 0}">
                     <div class="image-box text-center style-2 mb-20">
                         <div class="overlay-container overlay-visible">
                             <img class="imageNewsListHome" ng-src="{{n.mainImage}}">
@@ -406,6 +406,10 @@
                     </div>
                     <div class="body padding-horizontal-clear">
                         <p>{{n.contentMin}}</p>
+                    </div>
+                    <div class="link text-center">
+                        <i class="fa fa-link pr-1 fontSize12"></i>
+                        <a class="fontSize12" ng-click="goToNews(n.id)" href="">{{'READMORE' | translate}}</a>
                     </div>
                 </div>
             </div>
