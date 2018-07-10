@@ -1768,3 +1768,21 @@ h6 {
 .aligSelftCenter{
   align-self: center !important;
 }
+
+.width250{
+  width: 250px !important;
+}
+
+.marginTopWeChat{
+  margin-top: 80% !important;
+}
+
+.btn.focus, .btn:focus {
+	outline: 0;
+	box-shadow: 0 0 0 .2rem transparent !important;
+}
+
+.btn-default-transparent:hover, .btn-default-transparent:focus, .btn-default-transparent.focus, .btn-default-transparent:active, .btn-default-transparent.active, .show > .dropdown-toggle.btn-default-transparent {
+	background-color: transparent !important;
+	border-color: transparent !important;
+}
