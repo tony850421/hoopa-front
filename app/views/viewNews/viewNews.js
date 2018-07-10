@@ -9,7 +9,7 @@ angular.module('myApp.ViewNews', ['ngRoute'])
         });
     }])
 
-    .controller('ViewNewsCtrl', ['$rootScope', '$scope', '$routeParams', function ($rootScope, $scope, $routeParams) {
+    .controller('ViewNewsCtrl', ['$rootScope', '$scope', '$routeParams', '$translate', function ($rootScope, $scope, $routeParams, $translate) {
 
         $rootScope.showBanner = false;
         
@@ -20,19 +20,24 @@ angular.module('myApp.ViewNews', ['ngRoute'])
         $scope.newsMedia = [];
         $scope.projectId = $routeParams.param1;
 
-        $scope.month = new Array();
-        $scope.month[0] = "January";
-        $scope.month[1] = "February";
-        $scope.month[2] = "March";
-        $scope.month[3] = "April";
-        $scope.month[4] = "May";
-        $scope.month[5] = "June";
-        $scope.month[6] = "July";
-        $scope.month[7] = "August";
-        $scope.month[8] = "September";
-        $scope.month[9] = "October";
-        $scope.month[10] = "November";
-        $scope.month[11] = "December";
+        $scope.getMonth =  function(monthNum){
+            $scope.month = new Array();
+            $scope.month[0] = $translate.instant('JANUARY');
+            $scope.month[1] = $translate.instant('FEBRUARY');
+            $scope.month[2] = $translate.instant('MARCH');
+            $scope.month[3] = $translate.instant('APRIL');
+            $scope.month[4] = $translate.instant('MAY');
+            $scope.month[5] = $translate.instant('JUNE');
+            $scope.month[6] = $translate.instant('JULY');
+            $scope.month[7] = $translate.instant('AUGUST');
+            $scope.month[8] = $translate.instant('SEPTEMBER');
+            $scope.month[9] = $translate.instant('OCTOBER');
+            $scope.month[10] = $translate.instant('NOVEMBER');
+            $scope.month[11] = $translate.instant('DECEMBER');
+      
+            return $scope.month[monthNum];
+      
+          };  
 
         $scope.init = function () {
             var query = new AV.Query("News")
@@ -60,12 +65,14 @@ angular.module('myApp.ViewNews', ['ngRoute'])
                     var title = element.get('title');
                     var content = element.get('content');
                     var id = element.id;
+                    var date = element.get('createdAt');
 
                     $scope.news.push({
                         id: id,
                         mainImage: mainImage,
                         title: title,
-                        content: content
+                        content: content,
+                        date: date
                     })
                     $scope.$apply();
                 });

@@ -1,32 +1,41 @@
 <div class="breadcrumb-container marginTop80">
   <div class="container">
-      <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-              <i class="fa fa-home pr-2"></i>
-              <a href="index.html">{{'HOME' | translate}}</a>
-          </li>
-          <li class="breadcrumb-item cursorDefault active">{{'NEWS' | translate }}</li>
-      </ol>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <i class="fa fa-home pr-2"></i>
+        <a href="index.html">{{'HOME' | translate}}</a>
+      </li>
+      <li class="breadcrumb-item cursorDefault active">{{'NEWS' | translate }}</li>
+    </ol>
   </div>
 </div>
 <div class="paddingBoxHome">
   <div class="container">
     <div class="row paddingBottom60">
       <div class="main paddingLeft0 paddingRight0">
-      <!-- <div class="main col-lg-8 ml-xl-auto paddingLeft0 paddingRight0"> -->
+        <!-- <div class="main col-lg-8 ml-xl-auto paddingLeft0 paddingRight0"> -->
         <div class="space-top">
-          <article class="blogpost" ng-repeat="f in news" ng-class="{'marginBottom0': $index == ((news.length)-1)}">
+          <article class="blogpost marginBottom15" ng-repeat="f in news" ng-class="{'marginBottom0': $index == ((news.length)-1)}">
             <div class="row grid-space-10">
               <div class="col-lg-3">
                 <div id="{{f.id}}" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
                   <ol class="carousel-indicators bottom margin-clear">
-                    <li data-target="#{{f.id}}" data-slide-to="{{$index}}" ng-class="{'active': $index == 0}" ng-repeat="n in f.newsMedia"></li>
+                    <li data-target="#{{f.id}}" data-slide-to="0" class="active"></li>
+                    <li data-target="#{{f.id}}" data-slide-to="{{$index+1}}" ng-class="{'active': $index == $index+1}" ng-repeat="n in f.newsMedia"></li>
                   </ol>
 
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item" ng-class="{'active': $index==0}" ng-repeat="n in f.newsMedia">
+                    <div class="carousel-item active">
+                      <div class="overlay-container">
+                        <img class="imageNewsSlide" ng-src="{{f.mainImage}}">
+                        <a class="overlay-link" href="" ng-click="goToProject(f.id)">
+                          <i class="fa fa-link"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel-item" ng-class="{'active': $index==$index+1}" ng-repeat="n in f.newsMedia">
                       <div class="overlay-container">
                         <img class="imageNewsSlide" ng-src="{{n.image}}">
                         <a class="overlay-link" href="" ng-click="goToProject(f.id)">
@@ -103,7 +112,7 @@
               </ul>
             </nav>
           </div> -->
-          <!-- <div class="block clearfix">
+      <!-- <div class="block clearfix">
               <h3 class="title">Hot News</h3>
               <div class="separator-2"></div>
               <div id="carousel-portfolio-sidebar" class="carousel slide" data-ride="carousel">
@@ -125,7 +134,7 @@
               </div>
             </div> -->
 
-          <!-- <div class="block clearfix">
+      <!-- <div class="block clearfix">
             <h3 class="title">{{'LASTEStNEWS' | translate }}</h3>
             <div class="separator-2"></div>
             <div class="media margin-clear marginBottom5" ng-repeat="n in news">

@@ -1079,7 +1079,7 @@ ul li.nav-item a.tabCoreTeam.active {
     height: 80% !important;
     background-color: black !important;
   }
-  .width90P{
+  .width90P {
     width: 84% !important;
   }
 }
@@ -1132,7 +1132,7 @@ ul li.nav-item a.tabCoreTeam.active {
     padding: 3px;
     text-align: center;
   }
-  .width90P{
+  .width90P {
     width: 86% !important;
   }
 }
@@ -1179,7 +1179,7 @@ ul li.nav-item a.tabCoreTeam.active {
     padding: 3px;
     text-align: center;
   }
-  .width90P{
+  .width90P {
     width: 88% !important;
   }
 }
@@ -1240,7 +1240,7 @@ ul li.nav-item a.tabCoreTeam.active {
     padding: 3px;
     text-align: center;
   }
-  .width90P{
+  .width90P {
     width: 88% !important;
   }
 }
@@ -1287,7 +1287,7 @@ ul li.nav-item a.tabCoreTeam.active {
     padding: 3px;
     text-align: center;
   }
-  .width90P{
+  .width90P {
     width: 90% !important;
   }
 }
@@ -1305,22 +1305,22 @@ ul li.nav-item a.tabCoreTeam.active {
   article {
     text-align: center !important;
   }
-  .width90P{
+  .width90P {
     width: 90% !important;
   }
-  .marginLeft--15Home{
+  .marginLeft--15Home {
     margin-left: -15px !important;
   }
-  .paddingLeft0XS{
+  .paddingLeft0XS {
     padding-left: 0 !important;
   }
-  .paddingRight0XS{
+  .paddingRight0XS {
     padding-right: 0 !important;
   }
-  .marginRight0XS{
+  .marginRight0XS {
     margin-right: 0 !important;
   }
-  .textCenterXS{
+  .textCenterXS {
     text-align: center !important;
   }
 }
@@ -1368,6 +1368,7 @@ ul li.nav-item a.tabCoreTeam.active {
   .imageNewsSlide {
     object-fit: cover;
     width: 100% !important;
+    height: 185px !important;
   }
   .padding10XS {
     padding: 10px !important;
@@ -1448,7 +1449,7 @@ ul li.nav-item a.tabCoreTeam.active {
   .marginLeftAutoLG {
     margin-left: auto !important;
   }
-  .width90P{
+  .width90P {
     width: 100% !important;
   }
 }
@@ -1603,77 +1604,91 @@ ul li.nav-item a.tabCoreTeam.active {
   }
 }
 
-.buttonProjectStyle{
+.buttonProjectStyle {
   border: 1px solid #7c7c7c !important;
   color: #7c7c7c !important;
 }
 
-.buttonProjectStyleHeart{
+.buttonProjectStyleHeart {
   border: none;
   color: #ff6700 !important;
 }
 
-.buttonProjectStyle:hover{
+.buttonProjectStyle:hover {
   border: 1px solid #ff6700 !important;
   color: #ff6700 !important;
   background-color: transparent !important;
 }
 
-.buttonProjectStyleHeart:hover{
+.buttonProjectStyleHeart:hover {
   border: none !important;
   color: #ff6700 !important;
   background-color: transparent !important;
 }
 
-.marginLeft--15{
+.marginLeft--15 {
   margin-left: -15px !important;
 }
 
-.width5P{
+.width5P {
   width: 5% !important;
 }
 
-.width25P{
+.width25P {
   width: 25% !important;
 }
 
-.width75P{
+.width75P {
   width: 75% !important;
 }
 
-.width70P{
+.width70P {
   width: 70% !important;
 }
 
-.width20P{
+.width20P {
   width: 20% !important;
 }
 
-.width40P{
+.width40P {
   width: 40% !important;
 }
 
-.width30P{
+.width30P {
   width: 30% !important;
 }
 
-.aligItemCenter{
+.aligItemCenter {
   align-items: center !important;
 }
 
-.FRW{
+.FRW {
   float: right !important;
   width: 100% !important;
 }
 
-.buttonFiltersProjects{
+.buttonFiltersProjects {
   border: 1px solid #7c7c7c !important;
   color: #7c7c7c !important;
   background-color: transparent !important;
 }
 
-.buttonFiltersProjects:hover{
+.buttonFiltersProjects:hover {
   border: 1px solid #ff6700 !important;
   color: #ff6700 !important;
   background-color: transparent !important;
+}
+
+html,
+body,
+button,
+div,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: "MicrosoftYaHei" !important;
 }

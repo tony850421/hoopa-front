@@ -29,26 +29,18 @@
                         <header>
                             <div class="post-info mb-4">
                                 <span class="post-date">
-                                    <i class="fa fa-calendar-o pr-1"></i>
-                                    <span class="day">{{date.getDate()}}</span>
-                                    <span class="month">{{month[date.getMonth()]}} {{date.getFullYear()}}</span>
+                                  <i class="fa fa-calendar-o pr-1"></i>
+                                  <span class="month">{{date.getFullYear()}} {{'YEAR' | translate}} {{getMonth(date.getMonth())}}</span>
+                                  <span class="day">{{date.getDate()}} {{'DAY' | translate}} </span>
                                 </span>
-                                <!-- <span class="submitted">
-                                    <i class="fa fa-user pr-1 pl-1"></i> by
-                                    <a href="#">John Doe</a>
-                                </span> -->
-                                <!-- <span class="comments">
-                                    <i class="fa fa-comments-o pl-1 pr-1"></i>
-                                    <a href="#">22 comments</a>
-                                </span> -->
-                            </div>
+                              </div>
                         </header>
                         <div class="blogpost-content">
                             <div id="carousel-blog-post" class="carousel slide mb-5" data-ride="carousel">
                                 <div class="carousel-inner" role="listbox">
                                     <div class="carousel-item active">
                                         <div class="overlay-container">
-                                            <img ng-src="{{new.get('image').get('url')}}">
+                                            <img class="width100P" ng-src="{{new.get('image').get('url')}}">
                                             <!-- <a class="overlay-link popup-img" href="images/blog-1.jpg">
                                                 <i class="fa fa-search-plus"></i>
                                             </a> -->

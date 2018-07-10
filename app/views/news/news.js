@@ -24,10 +24,6 @@ angular.module('myApp.News', ['ngRoute'])
 
     $scope.loading = false;
 
-    $scope.getDay =  function(date){
-
-    };
-
     $scope.getMonth =  function(monthNum){
       $scope.month = new Array();
       $scope.month[0] = $translate.instant('JANUARY');
@@ -72,6 +68,7 @@ angular.module('myApp.News', ['ngRoute'])
 
       var queryNews = new AV.Query('News');
       queryNews.limit(5);
+      queryNews.descending('createdAt');
       queryNews.find().then(function (res) {
         $scope.news = [];
 
@@ -132,6 +129,7 @@ angular.module('myApp.News', ['ngRoute'])
       $scope.skip += 5;
       var queryNews = new AV.Query('News');
       queryNews.limit(5);
+      queryNews.descending('createdAt');
       queryNews.skip($scope.skip);
       queryNews.find().then(function (res) {
         $scope.news = [];
@@ -140,12 +138,14 @@ angular.module('myApp.News', ['ngRoute'])
           var title = element.get('title');
           var content = element.get('content');
           var id = element.id;
+          var date = element.get('createdAt');
 
           $scope.news.push({
             id: id,
             mainImage: mainImage,
             title: title,
-            content: content
+            content: content,
+            date: date
           })
           $('html,body').scrollTop(0);
           $scope.$apply();
@@ -170,6 +170,7 @@ angular.module('myApp.News', ['ngRoute'])
         $scope.skip -= 5;
         var queryNews = new AV.Query('News');
         queryNews.limit(5);
+        queryNews.descending('createdAt');
         queryNews.skip($scope.skip);
         queryNews.find().then(function (res) {
           $scope.news = [];
@@ -178,12 +179,14 @@ angular.module('myApp.News', ['ngRoute'])
             var title = element.get('title');
             var content = element.get('content');
             var id = element.id;
+            var date = element.get('createdAt');
 
             $scope.news.push({
               id: id,
               mainImage: mainImage,
               title: title,
-              content: content
+              content: content,
+              date: date
             })
             $('html,body').scrollTop(0);
             $scope.$apply();
@@ -224,6 +227,7 @@ angular.module('myApp.News', ['ngRoute'])
       $scope.skip = ((n - 1) * 5);
       var queryNews = new AV.Query('News');
       queryNews.limit(5);
+      queryNews.descending('createdAt');
       queryNews.skip($scope.skip);
       queryNews.find().then(function (res) {
         $scope.news = [];
@@ -232,12 +236,14 @@ angular.module('myApp.News', ['ngRoute'])
           var title = element.get('title');
           var content = element.get('content');
           var id = element.id;
+          var date = element.get('createdAt');
 
           $scope.news.push({
             id: id,
             mainImage: mainImage,
             title: title,
-            content: content
+            content: content,
+            date: date
           })
           $('html,body').scrollTop(0);
           $scope.$apply();

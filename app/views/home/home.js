@@ -18,6 +18,7 @@ angular.module('myApp.Home', ['ngRoute'])
     // $scope.productsHot = [];
 
     $scope.news = [];
+    $scope.industryNews = [];
 
     // $scope.projectActive = 1;
 
@@ -150,7 +151,9 @@ angular.module('myApp.Home', ['ngRoute'])
 
     $scope.fetchNews = function () {
       var queryNews = new AV.Query('News');
-      queryNews.limit(4);
+      queryNews.limit(3);
+      queryNews.descending('createdAt');
+      queryNews.equalTo('type', '0');
       queryNews.find().then(function (res) {
         $scope.news = [];
         res.forEach(function (element) {
@@ -191,4 +194,46 @@ angular.module('myApp.Home', ['ngRoute'])
     $scope.goToNews = function (id) {
       $rootScope.customGoTo('viewNews/' + id);
     };
+
+
+    $scope.fetchIndustryNews = function () {
+      var queryNews = new AV.Query('News');
+      queryNews.limit(4);
+      queryNews.descending('createdAt');
+      queryNews.equalTo('type', '1');
+      queryNews.find().then(function (res) {
+        $scope.industryNews = [];
+        res.forEach(function (element) {
+          var mainImage = element.get('image').thumbnailURL(300, 200);
+          var title = element.get('title');
+          var content = element.get('content');
+          var contentMin = element.get('content');
+          var id = element.id;
+
+          if (contentMin.length >= 48) {
+            var desc = '';
+            for (var x = 0; x < 48; x++) {
+              desc = desc + contentMin[x];
+            }
+            desc = desc + "...";
+            contentMin = desc;
+          }
+
+          $scope.industryNews.push({
+            id: id,
+            mainImage: mainImage,
+            title: title,
+            content: content,
+            contentMin: contentMin
+          })
+          $scope.$apply();
+        });
+        $scope.$apply();
+
+      }).catch(function (error) {
+        alert(JSON.stringify(error));
+      });
+    };
+
+    $scope.fetchIndustryNews();
   }]);
