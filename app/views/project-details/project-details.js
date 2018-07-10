@@ -321,9 +321,8 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                         });
                     }
                 });
-
             } else {
-                $rootScope.customGoTo('login/projects');
+                $('#modalLogin').modal('show');
             }
         };
 
@@ -356,7 +355,7 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
             if (user) {
                 $scope.flagBid = !$scope.flagBid;
             } else {
-                $rootScope.customGoTo('login/project-details/' + $scope.project.id);
+                $('#modalLogin').modal('show');
             }
         };
 
@@ -394,7 +393,7 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                     $scope.$apply();
                 })
             } else {
-                $rootScope.customGoTo('login/project-details/' + $scope.project.id);
+                $('#modalLogin').modal('show');
             }
         };
 

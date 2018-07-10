@@ -1719,3 +1719,15 @@ h6{
 .height100P{
   height: 100% !important;
 }
+
+.fontSize40{
+  font-size: 40px !important;
+}
+
+.colorRed{
+  color: #b31217 !important;
+}
+
+.fontSize20{
+  font-size: 20px !important;
+}

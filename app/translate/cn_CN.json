@@ -91,7 +91,7 @@
     "SENDCODE": "发送验证码",
     "SMSCODE": "验证码",
     "PACKAGE": "包",
-    "DAMOUNT": "债务金额",
+    "DAMOUNT": "债权本金",
     "VWISHLIST": "查看收藏",
     "TOTAL": "总",
     "ITEMS": "项目",
@@ -132,5 +132,7 @@
     "HOOPANAME": "单位名称:杭州胡巴资产管理有限公司",
     "CORETEAMTAB1": "董事长",
     "CORETEAMTAB2": "核心管理团队",
-    "WEIBO": "胡巴微博"
+    "WEIBO": "胡巴微博",
+    "PROJECTMANAGER": "项目经理",
+    "CONTACTPHONE": "联系电话"
 }

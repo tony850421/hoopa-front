@@ -1,34 +1,22 @@
 <div class="breadcrumb-container marginTop80">
   <div class="container">
-      <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-              <i class="fa fa-home pr-2"></i>
-              <a href="index.html">{{'HOME' | translate}}</a>
-          </li>
-          <li class="breadcrumb-item cursorDefault active">{{'IPROMOTION' | translate }}</li>
-      </ol>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <i class="fa fa-home pr-2"></i>
+        <a href="index.html">{{'HOME' | translate}}</a>
+      </li>
+      <li class="breadcrumb-item cursorDefault active">{{'IPROMOTION' | translate }}</li>
+    </ol>
   </div>
 </div>
 <section class="main-container paddingBoxHome">
   <div class="container">
     <div class="row">
-
-      <!-- main start -->
-      <!-- ================ -->
-      <div class="main">
-
-        <!-- page-title start -->
-        <!-- ================ -->
-        <h2 class="page-title">{{project.get('title')}}</h2>
-        <div class="separator-2"></div>
-        <!-- page-title end -->
-
-        <div class="row">
-          <div class="col-lg-4 padding0">
-            <!-- pills start -->
-            <!-- ================ -->
-            <!-- Nav tabs -->
-            <ul class="nav nav-pills">
+      <h2 class="page-title marginLeft--15">{{project.get('title')}}</h2>
+      <div class="separator-2 marginLeft--15"></div>
+      <div class="row col-lg-12 paddingLeft0 paddingRight0">
+        <div class="col-lg-6 paddingLeft0 paddingRight0">
+          <!-- <ul class="nav nav-pills">
               <li class="nav-item">
                 <a class="nav-link active" href="" data-toggle="tab" title="images">
                   <i class="fa fa-camera pr-1"></i>{{'PHOTO' | translate}}</a>
@@ -37,141 +25,132 @@
                 <a class="nav-link" href="" data-toggle="tab" title="video">
                   <i class="fa fa-video-camera pr-1"></i>{{'VIDEO' | translate}}</a>
               </li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content clear-style">
-              <div class="tab-pane active" id="pill-1">
-                <div id="carousel-sidebar" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators top">
-                    <li data-target="#carousel-sidebar" data-slide-to="{{$index}}" ng-repeat="image in imageList"></li>
-                  </ol>
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item" ng-class="{'active': $index==0}" ng-repeat="i in imageList">
-                      <div class="listing-item">
-                        <div class="overlay-container">
-                          <img ng-src="{{i.get('url')}}">
-                        </div>
+            </ul> -->
+          <div class="tab-content clear-style">
+            <div class="tab-pane active" id="pill-1">
+              <div id="carousel-sidebar" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators top">
+                  <li data-target="#carousel-sidebar" data-slide-to="{{$index}}" ng-repeat="image in imageList"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item" ng-class="{'active': $index==0}" ng-repeat="i in imageList">
+                    <div class="listing-item">
+                      <div class="overlay-container">
+                        <img ng-src="{{i.get('url')}}">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- <span class="price">
-              <del>$199.00</del> $150.00</span> -->
-            <!-- pills end -->
           </div>
-          <div class="col-lg-8 pv-30 padding0XS">
-            <h3 class="mt-4">{{'PDESC' | translate}}</h3>
+          <!-- <span class="price">
+              <del>$199.00</del> $150.00</span> -->
+          <!-- pills end -->
+        </div>
+        <div class="col-lg-6 pv-30 padding0XS">
+          <div class="col-lg-12 marginTop5">
+            <p class="factProject fontSize40 text-center">
+              {{'DAMOUNT' | translate}}:
+              <strong class="colorPrimary">¥{{project.get('debitAmount')}}万</strong>
+            </p>
+          </div>
+          <div class="col-lg-12 marginTop5">
+            <p class="factProject text-center">
+              {{'DUPRINCIPALI' | translate}}
+              <strong class="colorPrimary">¥{{project.get('debitPricipalInterest')}}万</strong>
+            </p>
+          </div>
+          <div class="col-lg-12 marginTop5">
+            <p class="factProject text-center">
+              {{'DAMOUNT' | translate}}:
+              <strong class="colorRed">¥{{project.get('debitAmount')}}万</strong>
+            </p>
+          </div>
+          <div class="col-lg-12 marginTop5" ng-show="project.get('projectManager').get(name)">
+            <p class="factProject text-center">
+              {{'PROJECTMANAGER' | translate}}: {{project.get('projectManager').get(name)}}
+            </p>
+          </div>
+          <div class="col-lg-12 marginTop5" ng-show="project.get('projectManager').get(phone)">
+            <p class="factProject text-center">
+              {{'CONTACTPHONE' | translate}}: {{project.get('projectManager').get(phone)}}
+            </p>
+          </div>
+          <!-- <h3 class="mt-4">{{'PDESC' | translate}}</h3>
             <p>{{project.get('description')}}</p>
             <h4>{{'CHIGHL' | translate}}</h4>
             <p>{{project.get('creditHighlights')}}</p>
-            <hr class="mb-10">
-            <div class="clearfix mb-20">
-              <span>
-                <i class="fa fa-star text-default"></i>
-                <i class="fa fa-star text-default"></i>
-                <i class="fa fa-star text-default"></i>
-                <i class="fa fa-star text-default"></i>
-                <i class="fa fa-star"></i>
-              </span>
-              <a href="" ng-hide="project.wished" class="wishlist" ng-click="addToWhishList()">
-                <i class="fa fa-heart-o pl-10 pr-1"></i>{{'ADDWISHLIST' | translate}}</a>
-              <a href="" ng-hide="!project.wished" class="wishlist" ng-click="removeToWhishList()">
-                <i class="fa fa-heart pl-10 pr-1"></i>{{'REMOVEWISHLIST' | translate}}</a>
-              <!-- <ul class="pl-20 pull-right social-links circle small clearfix margin-clear animated-effect-1">
-                <li class="twitter">
-                  <a href="">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="googleplus">
-                  <a href="">
-                    <i class="fa fa-google-plus"></i>
-                  </a>
-                </li>
-                <li class="facebook">
-                  <a href="">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-              </ul> -->
+            <hr class="mb-10"> -->
+          <div class="row marginTop30">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-2">
+              <button href="" class="pull-right margin-clear btn btn-default-transparent buttonProjectStyleHeart fontSize24">
+                <i class="icon-wechat"></i>
+              </button>
+            </div>
+            <div class="col-lg-2">
+              <button href="" ng-hide="project.wished" ng-click="addToWhishList(project.id)" class="pull-right margin-clear btn btn-default-transparent buttonProjectStyleHeart fontSize24">
+                <i class="fa fa-heart-o"></i>
+              </button>
+              <button href="" ng-hide="!project.wished" ng-click="removeToWhishList(project.id)" class="pull-right margin-clear btn btn-default-transparent buttonProjectStyleHeart fontSize24">
+                <i class="fa fa-heart"></i>
+              </button>
+            </div>
+            <div class="col-lg-6">
+              <a ng-hide="flagBid" ng-click="makeAnOffer()" class="margin-clear btn btn-default backgroundColorBlue pull-right height40 width100SendCode">
+                <i class="icon-Total-offers spanSignUp"></i> {{'MAKEANOFFER' | translate}}</a>
+              <div ng-show="flagBid" class="input-group">
+                <input type="text" ng-model="offerValue" class="form-control">
+                <div class="input-group-append">
+                  <a ng-click="makeABid()" class="input-group-text backgroundColorBlue cursorPointer">
+                    <i class="icon-Offertas spanSignUp"></i> {{'MAKEABID' | translate}}</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- main end -->
-      <div class="col-md-12 light-gray-bg p-20 bordered row styleFactBox paddingXSFact">
-        <div class="col-md-3 marginTop5">
-          <span class="factProject">
-            <i class="icon-Value-projects"></i>{{'DAMOUNT' | translate}}:</span>
-          <span class="factProject colorPrimary">
-            ¥{{project.get('debitAmount')}}万</span>
-        </div>
-        <div class="col-md-2 marginTop5">
-          <span class="factProject">
-            <i class="icon-Total-offers"></i>{{'TOFFER' | translate}}:</span>
-          <span class="factProject colorPrimary">
-            {{totalOffers}}
-          </span>
-        </div>
-        <div class="col-md-3 marginTop5">
-          <span class="factProject">
-            <i class="icon-Offertas"></i>{{'POFFER' | translate}}:</span>
-          <span class="factProject colorPrimary">
-              ¥{{promOffers}}万
-          </span>
-        </div>
-        <div class="col-md-4">
-          <a ng-hide="flagBid" ng-click="makeAnOffer()" class="margin-clear btn btn-default backgroundColorBlue pull-right height40 width100SendCode">
-            <i class="icon-Total-offers spanSignUp"></i> {{'MAKEANOFFER' | translate}}</a>
-          <div ng-show="flagBid" class="input-group">
-            <input type="text" ng-model="offerValue" class="form-control">
-            <div class="input-group-append">
-              <a ng-click="makeABid()" class="input-group-text backgroundColorBlue cursorPointer">
-                <i class="icon-Offertas spanSignUp"></i> {{'MAKEABID' | translate}}</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row col-md-12 marginTop20">
-        <div class="col-md-4">
-          <ul class="list margin-clear">
-            <li>
-              <strong>{{'PUCOMPANY' | translate}}</strong>
-              <span class="text-right">{{project.get('companyName')}}</span>
-            </li>
-            <li>
-              <strong>{{'PUPROVINCE' | translate}}</strong>
-              <span class="text-right">{{project.get('province')}}</span>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul class="list margin-clear">
-            <li>
-              <strong>{{'CUFROM' | translate}}</strong>
-              <span class="text-right">{{project.get('comefrom')}}</span>
-            </li>
-            <li>
-              <strong>{{'DUPRINCIPALI' | translate}}</strong>
-              <span class="text-right colorPrimary">
-                ¥{{project.get('debitPricipalInterest')}}万</span>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul class="list margin-clear">
-            <li>
-              <strong>{{'PUADDRESS' | translate}} </strong>
-              <span class="text-right">{{project.get('plainAddress')}}</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- <div class="mt-3">
+    </div>
+  </div>
+  <!-- <div class="row col-md-12 marginTop20">
+    <div class="col-md-4">
+      <ul class="list margin-clear">
+        <li>
+          <strong>{{'PUCOMPANY' | translate}}</strong>
+          <span class="text-right">{{project.get('companyName')}}</span>
+        </li>
+        <li>
+          <strong>{{'PUPROVINCE' | translate}}</strong>
+          <span class="text-right">{{project.get('province')}}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <ul class="list margin-clear">
+        <li>
+          <strong>{{'CUFROM' | translate}}</strong>
+          <span class="text-right">{{project.get('comefrom')}}</span>
+        </li>
+        <li>
+          <strong>{{'DUPRINCIPALI' | translate}}</strong>
+          <span class="text-right colorPrimary">
+            ¥{{project.get('debitPricipalInterest')}}万</span>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <ul class="list margin-clear">
+        <li>
+          <strong>{{'PUADDRESS' | translate}} </strong>
+          <span class="text-right">{{project.get('plainAddress')}}</span>
+        </li>
+      </ul>
+    </div>
+  </div> -->
+  <!-- <div class="mt-3">
         <ul class="list margin-clear">
           <li>
             <strong>{{'PUCOMPANY' | translate}}</strong>
@@ -196,7 +175,7 @@
           </li>
         </ul>
       </div> -->
-    </div>
+  </div>
   </div>
 </section>
 <!-- main-container end -->

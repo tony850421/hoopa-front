@@ -341,7 +341,6 @@ angular.module('myApp.Projects', ['ngRoute'])
             });
           }
         });
-
       } else {
         $('#modalLogin').modal('show');
       }
