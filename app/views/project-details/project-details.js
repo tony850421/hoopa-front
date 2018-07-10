@@ -39,6 +39,7 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
         $scope.projectId = $routeParams.id;
 
         $scope.project = {};
+        $scope.typeArrivalString = [];
         $scope.sponsorsList = [];
         $scope.assetsList = [];
         $scope.borrowerList = [];
@@ -78,9 +79,13 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
             query.get(id).then(function (p) {
 
                 $scope.project = p;
+                console.log(p);
                 $scope.project.wished = false;
 
                 $scope.fectComments();
+
+                $scope.typeArrivalString = $scope.project.get('typeArrivalString').split("+");
+                $scope.typeArrivalString.splice(0,1);
 
                 $scope.projectTitle = p.get('title');
                 $scope.projectCompany = p.get('companyName');
@@ -102,22 +107,22 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                 $scope.projectDebt = p.get('isDebt');
                 $scope.projectShop = p.get('isShop');
 
-                var query1 = new AV.Query("Sponsorship")
-                query1.equalTo('project', p)
+                var query1 = new AV.Query("Sponsorship");
+                query1.equalTo('project', p);
                 query1.find().then(function (sponsors) {
                     $scope.sponsorsList = sponsors;
                     $scope.$apply();
                 })
 
-                var query2 = new AV.Query("Asset")
-                query2.equalTo('project', p)
+                var query2 = new AV.Query("Asset");
+                query2.equalTo('project', p);
                 query2.find().then(function (assets) {
                     $scope.assetsList = assets;
                     $scope.$apply();
                 })
 
-                var query3 = new AV.Query("Borrower")
-                query3.equalTo('project', p)
+                var query3 = new AV.Query("Borrower");
+                query3.equalTo('project', p);
                 query3.find().then(function (borrowers) {
                     for (var i = 0; i < borrowers.length; i++) {
                         borrowers[i].set('totalInterest', parseFloat(borrowers[i].get('principalDebit')) + parseFloat(borrowers[i].get('interestCreditor')));
@@ -126,16 +131,14 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                     $scope.$apply();
                 })
 
-                var query4 = new AV.Query("ProjectMedia")
-                query4.equalTo('project', p)
+                var query4 = new AV.Query("ProjectMedia");
+                query4.equalTo('project', p);
                 query4.find().then(function (images) {
                     $scope.loadData = false;                    
                     $scope.imageListActive = images[0].get('image').thumbnailURL(1280, 720);
                     $scope.$apply();
-                    
-                    for (var i = 0; i < images.length; i++) {
-                        // images[i].set('imageUrl', images[i].get('image').thumbnailURL(200, 150));
-                        // images[i].set('url', images[i].get('image').thumbnailURL(1280, 720));                        
+
+                    for (var i = 0; i < images.length; i++) {                      
                         $scope.imageList.push({
                             imageUrl: images[i].get('image').thumbnailURL(200, 150),
                             url: images[i].get('image').thumbnailURL(1280, 720)
@@ -145,28 +148,28 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                     $scope.$apply();
                 })
 
-                var query5 = new AV.Query("ProjectVisit")
-                query5.equalTo('project', p)
+                var query5 = new AV.Query("ProjectVisit");
+                query5.equalTo('project', p);
                 query5.count().then(function (count) {
                     $scope.countVisit = count;
                     $scope.$apply();
                 })
 
-                var query6 = new AV.Query("ShopCar")
-                query6.equalTo('project', p)
+                var query6 = new AV.Query("ShopCar");
+                query6.equalTo('project', p);
                 query6.count().then(function (count) {
                     $scope.countShopCar = count;
                     $scope.$apply();
                 })
 
-                var query7 = new AV.Query("Offert")
-                query7.equalTo('project', p)
+                var query7 = new AV.Query("Offert");
+                query7.equalTo('project', p);
                 query7.count().then(function (count) {
                     $scope.countOffers = count;
                     $scope.$apply();
                 })
 
-                var query8 = new AV.Query("ShopCar")
+                var query8 = new AV.Query("ShopCar");
                 query8.equalTo('project', p);
                 query8.equalTo('user', AV.User.current());
                 query8.count().then(res => {
