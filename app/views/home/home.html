@@ -346,11 +346,11 @@
                                 <a href="" ng-click="goToNews(news[0].id)" class="overlay-link">
                                     <i class="fa fa-link"></i>
                                 </a>
-                                <div class="overlay-bottom hidden-sm-down">
+                                <!-- <div class="overlay-bottom hidden-sm-down">
                                     <div class="text">
                                         <p class="lead margin-clear">{{news[0].title}}</p>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -373,7 +373,7 @@
                                     <!-- <a href="">{{'READMORE' | translate}}</a> -->
                                 </div>
                             </div>
-                            <hr class="marginBottom10 marginTop10" ng-hide="$index > 2">
+                            <hr class="marginBottom10 marginTop10" ng-hide="$index >= 2">
                         </div>
                     </div>
                 </div>

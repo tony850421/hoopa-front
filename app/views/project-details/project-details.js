@@ -9,6 +9,11 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
         });
     }])
 
+    .config(['slickCarouselConfig', function (slickCarouselConfig) {
+        slickCarouselConfig.dots = true;
+        slickCarouselConfig.autoplay = false;
+    }])
+
     .controller('ProjectDetailsCtrl', ['$rootScope', '$scope', '$routeParams', '$translate', function ($rootScope, $scope, $routeParams, $translate) {
 
         $('html,body').scrollTop(0);
@@ -19,6 +24,8 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
         $scope.tabBorrowersVisible = false;
         $scope.tabSponsorsVisible = false;
         $scope.tabCommentsVisible = false;
+
+        $scope.imageListActive = '';
 
         $scope.titleReview = '';
         $scope.ratingReview = '';
@@ -122,14 +129,19 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                 var query4 = new AV.Query("ProjectMedia")
                 query4.equalTo('project', p)
                 query4.find().then(function (images) {
-                    console.log(images.length);
-
+                    $scope.loadData = false;                    
+                    $scope.imageListActive = images[0].get('image').thumbnailURL(1280, 720);
+                    $scope.$apply();
+                    
                     for (var i = 0; i < images.length; i++) {
-                        images[i].set('imageUrl', images[i].get('image').thumbnailURL(200, 150));
-                        images[i].set('url', images[i].get('image').thumbnailURL(1280, 720));
+                        // images[i].set('imageUrl', images[i].get('image').thumbnailURL(200, 150));
+                        // images[i].set('url', images[i].get('image').thumbnailURL(1280, 720));                        
+                        $scope.imageList.push({
+                            imageUrl: images[i].get('image').thumbnailURL(200, 150),
+                            url: images[i].get('image').thumbnailURL(1280, 720)
+                        });
                     }
-
-                    $scope.imageList = images;
+                    $scope.loadData = true;
                     $scope.$apply();
                 })
 
@@ -173,7 +185,7 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                         sum += parseFloat(offers[i].get('amount'));
                     }
                     $scope.promOffers = parseFloat(sum / $scope.totalOffers);
-                    $scope.promOffers = Math.round($scope.promOffers*Math.pow(10,2))/Math.pow(10,2);
+                    $scope.promOffers = Math.round($scope.promOffers * Math.pow(10, 2)) / Math.pow(10, 2);
                     $scope.$apply();
                 })
 
@@ -289,7 +301,6 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                         }
                     }
 
-                    console.log(comments);
                     $scope.reviews = comments;
                 })
             }
@@ -389,12 +400,52 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                         sum += parseFloat(offers[i].get('amount'));
                     }
                     $scope.promOffers = parseFloat(sum / $scope.totalOffers);
-                    $scope.promOffers = Math.round($scope.promOffers*Math.pow(10,2))/Math.pow(10,2);
+                    $scope.promOffers = Math.round($scope.promOffers * Math.pow(10, 2)) / Math.pow(10, 2);
                     $scope.$apply();
                 })
             } else {
                 $('#modalLogin').modal('show');
             }
+        };
+
+        //====================================
+        // Slick
+        //====================================        
+        $scope.slickConfig = {
+            method: {},
+            infinite: false,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        };
+
+        $scope.changeImageActive = function (url) {
+            $scope.imageListActive = url;
+            $scope.$apply();
         };
 
     }]);

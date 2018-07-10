@@ -436,21 +436,27 @@ ul.pagination .page-item.active .page-link,
   padding-right: -15px !important;
 }
 
+.nav-tabs.style-4 {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #f2f2f2;
+  background-color: #f2f2f2;
+}
+
 .nav-tabs.style-4>li>a.active,
 .nav-tabs.style-4>li>a.active:hover,
 .nav-tabs.style-4>li>a.active:focus {
-  color: #ffffff !important;
+  color: #ff6700 !important;
   cursor: default;
-  background-color: #283a52 !important;
-  border-color: #283a52 !important;
+  background-color: #f2f2f2 !important;
+  border-color: #f2f2f2 !important;
   border-bottom-color: transparent;
 }
 
 .nav-tabs.style-4>li>a:hover {
-  color: #ffffff !important;
-  background-color: #22447a !important;
-  border-color: #22447a !important;
-  border-bottom-color: #22447a !important;
+  color: #ff6700 !important;
+  background-color: #f2f2f2 !important;
+  border-color: #f2f2f2 !important;
+  border-bottom-color: transparent !important;
 }
 
 .recommendedProjectClass {
@@ -1598,10 +1604,10 @@ ul li.nav-item a.tabCoreTeam.active {
     height: 88% !important;
     background-color: black !important;
   }
-  .heigthOfficial{
+  .heigthOfficial {
     height: 668px !important;
   }
-  .marginBottom65{
+  .marginBottom65 {
     margin-bottom: 65px !important;
   }
 }
@@ -1692,11 +1698,11 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6 {
   font-family: "MicrosoftYaHei" !important;
 }
 
-.industryNewsBox{
+.industryNewsBox {
   width: 20% !important;
 }
 
@@ -1704,30 +1710,61 @@ h6{
   margin-left: -15px !important;
 }
 
-.marginRight5P{
+.marginRight5P {
   margin-right: 5% !important;
 }
 
-.marginLeft5P{
+.marginLeft5P {
   margin-left: 5% !important;
 }
 
-.marginLeft6p3P{
+.marginLeft6p3P {
   margin-left: 6.3% !important;
 }
 
-.height100P{
+.height100P {
   height: 100% !important;
 }
 
-.fontSize40{
+.fontSize40 {
   font-size: 40px !important;
 }
 
-.colorRed{
+.colorRed {
   color: #b31217 !important;
 }
 
-.fontSize20{
+.fontSize20 {
   font-size: 20px !important;
+}
+
+.imageProjectDetail {
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.slick-slide {
+  margin-right: 8px !important;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: #ff6700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.projectButtonsAction {
+  margin-left: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.aligSelftCenter{
+  align-self: center !important;
 }

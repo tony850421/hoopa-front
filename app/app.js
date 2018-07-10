@@ -5,6 +5,7 @@ angular.module('myApp', [
   'ngRoute',  
   'ngCookies',
   // 'ngSanitize',
+  'slickCarousel',
   'pascalprecht.translate',
   'myApp.Main',
   'myApp.Home',
