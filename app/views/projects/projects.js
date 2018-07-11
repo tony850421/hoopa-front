@@ -12,7 +12,7 @@ angular.module('myApp.Projects', ['ngRoute'])
   .controller('ProjectsCtrl', ['$rootScope', '$scope', '$routeParams', '$window', '$translate', 'localStorageService', function ($rootScope, $scope, $routeParams, $window, $translate, localStorageService) {
 
     $rootScope.showBanner = false;
-
+    $rootScope.divBottomLiActive = 'ASSETS';
     $scope.products = [];
 
     $scope.currentPage = 1;

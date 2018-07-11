@@ -13,6 +13,7 @@ angular.module('myApp.Main', ['ngRoute'])
         $scope.languageShort = "中文";
 
         $rootScope.avatar = '';
+        $rootScope.divBottomLiActive = 'HOME';
 
         $rootScope.customGoTo = function (route) {
             $window.location.href = $scope.baseUrl + route;

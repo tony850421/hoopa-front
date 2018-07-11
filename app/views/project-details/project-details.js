@@ -17,7 +17,7 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
     .controller('ProjectDetailsCtrl', ['$rootScope', '$scope', '$routeParams', '$translate', 'localStorageService', function ($rootScope, $scope, $routeParams, $translate, localStorageService) {
 
         $('html,body').scrollTop(0);
-
+        $rootScope.divBottomLiActive = 'ASSETS';
         $rootScope.showBanner = false;
 
         $scope.tabAssetsVisible = true;

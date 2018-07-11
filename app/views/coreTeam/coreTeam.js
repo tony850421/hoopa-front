@@ -13,5 +13,6 @@ angular.module('myApp.CoreTeam', ['ngRoute'])
 
     $rootScope.showBanner = false;
     $scope.selectedTab = 1;
+    $rootScope.divBottomLiActive = 'GROUP';
     
   }])

@@ -12,6 +12,7 @@ angular.module('myApp.Home', ['ngRoute'])
   .controller('HomeCtrl', ['$rootScope', '$scope', function ($rootScope, $scope) {
 
     $rootScope.showBanner = true;
+    $rootScope.divBottomLiActive = 'HOME';
     // $scope.productsShop = [];
     // $scope.productsFactory = [];
     // $scope.productsHouse = [];

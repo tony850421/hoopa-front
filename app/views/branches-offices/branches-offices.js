@@ -12,6 +12,8 @@ angular.module('myApp.BranchesOffices', ['ngRoute'])
     .controller('BranchesOfficesCtrl', ['$rootScope', '$scope', '$routeParams', function ($rootScope, $scope, $routeParams) {
 
         $rootScope.showBanner = false;
+
+        $rootScope.divBottomLiActive = 'CONTACT';
         
         $scope.projects = [];
 

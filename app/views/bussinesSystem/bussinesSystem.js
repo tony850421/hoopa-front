@@ -13,6 +13,8 @@ angular.module('myApp.BussinesSystem', ['ngRoute'])
         
         $rootScope.showBanner = false;
 
+        $rootScope.divBottomLiActive = 'SERVICES';
+
         $scope.focusOn = function(id){
             document.getElementById(id).scrollIntoView();
         };

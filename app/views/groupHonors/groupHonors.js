@@ -12,7 +12,7 @@ angular.module('myApp.GroupHonors', ['ngRoute'])
     .controller('GroupHonorsCtrl', ['$rootScope', '$scope', '$routeParams', function ($rootScope, $scope, $routeParams) {
 
         $rootScope.showBanner = false;
-        
+        $rootScope.divBottomLiActive = 'GROUP';
         $scope.projects = [];
 
         $scope.init = function () {

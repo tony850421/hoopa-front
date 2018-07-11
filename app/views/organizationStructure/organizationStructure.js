@@ -12,7 +12,7 @@ angular.module('myApp.OrganizationStructure', ['ngRoute'])
   .controller('OrganizationStructureCtrl', ['$rootScope', '$scope', '$routeParams', function ($rootScope, $scope, $routeParams) {
 
     $rootScope.showBanner = false;
-    
+    $rootScope.divBottomLiActive = 'GROUP';
     $scope.projects = [];
 
     $scope.init = function () {

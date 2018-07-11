@@ -14,7 +14,7 @@ angular.module('myApp.Wishlist', ['ngRoute'])
         $('html,body').scrollTop(0);
 
         $rootScope.showBanner = false;
-
+        $rootScope.divBottomLiActive = 'ASSETS';
         $scope.shopCartArray = [];
 
         // $scope.projectId = $routeParams.id;

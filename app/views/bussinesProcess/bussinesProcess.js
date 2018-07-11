@@ -13,6 +13,8 @@ angular.module('myApp.BussinesProcess', ['ngRoute'])
         
         $rootScope.showBanner = false;
 
+        $rootScope.divBottomLiActive = 'SERVICES';
+
         $scope.projects = [];
 
         $scope.init = function () {

@@ -12,7 +12,8 @@ angular.module('myApp.ViewNews', ['ngRoute'])
     .controller('ViewNewsCtrl', ['$rootScope', '$scope', '$routeParams', '$translate', function ($rootScope, $scope, $routeParams, $translate) {
 
         $rootScope.showBanner = false;
-        
+        $rootScope.divBottomLiActive = 'NEWS';
+
         $scope.new = {};
         $scope.news = [];
         $scope.projects = [];

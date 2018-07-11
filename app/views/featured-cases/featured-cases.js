@@ -12,7 +12,7 @@ angular.module('myApp.FeaturedCases', ['ngRoute'])
     .controller('FeaturedCasesCtrl', ['$rootScope', '$scope', '$routeParams', function ($rootScope, $scope, $routeParams) {
 
         $rootScope.showBanner = false;
-        
+        $rootScope.divBottomLiActive = 'ASSETS';
         $scope.projects = [];
 
         $scope.init = function () {

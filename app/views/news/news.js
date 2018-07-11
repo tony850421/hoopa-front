@@ -12,7 +12,7 @@ angular.module('myApp.News', ['ngRoute'])
   .controller('NewsCtrl', ['$rootScope', '$scope', '$routeParams', '$window', '$translate', function ($rootScope, $scope, $routeParams, $window, $translate) {
 
     $rootScope.showBanner = false;
-    
+    $rootScope.divBottomLiActive = 'NEWS';
     $scope.activeSideBar = $routeParams.param1;
 
     $scope.news = [];

@@ -12,6 +12,8 @@ angular.module('myApp.Chairman', ['ngRoute'])
     .controller('ChairmanCtrl', ['$rootScope', '$scope', '$routeParams', function ($rootScope, $scope, $routeParams) {
 
         $rootScope.showBanner = false;
+
+        $rootScope.divBottomLiActive = 'GROUP';
         
         $scope.projects = [];
 
