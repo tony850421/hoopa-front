@@ -32,6 +32,8 @@ angular.module('myApp.Projects', ['ngRoute'])
       province: '区域无限制',
       type: '抵押物类型',
       amount: '本金无限制',
+      amountMin: '',
+      amountMax: '',
       text: ''
     };
 
@@ -42,6 +44,8 @@ angular.module('myApp.Projects', ['ngRoute'])
         province: '区域无限制',
         type: '抵押物类型',
         amount: '本金无限制',
+        amountMin: '',
+        amountMax: '',
         text: '',
       };
     };
@@ -66,99 +70,116 @@ angular.module('myApp.Projects', ['ngRoute'])
         queryProvince.contains('provinceString', $scope.filters.province);
       }
 
+      // var query = '';
+      // switch ($scope.filters.amount) {
+      //   case '本金无限制':
+      //     query = new AV.Query('Project');
+      //     break;
+      //   case '500万':
+      //     query = new AV.Query('Project');
+      //     query.lessThanOrEqualTo('debitAmount', 500);
+      //     break;
+      //   case '500-1000万':
+      //     var query2 = new AV.Query('Project');
+      //     query2.greaterThan('debitAmount', 500);
+      //     var query1 = new AV.Query('Project');
+      //     query1.lessThanOrEqualTo('debitAmount', 1000);
+      //     var query = AV.Query.and(query2, query1);
+      //     break;
+      //   case '1000-1500万':
+      //     var query2 = new AV.Query('Project');
+      //     query2.greaterThan('debitAmount', 1000);
+      //     var query1 = new AV.Query('Project');
+      //     query1.lessThanOrEqualTo('debitAmount', 1500);
+      //     var query = AV.Query.and(query2, query1);
+      //     break;
+      //   case '1500-2000万':
+      //     var query2 = new AV.Query('Project');
+      //     query2.greaterThan('debitAmount', 1500);
+      //     var query1 = new AV.Query('Project');
+      //     query1.lessThanOrEqualTo('debitAmount', 2000);
+      //     var query = AV.Query.and(query2, query1);
+      //     break;
+      //   case '2000-2500万':
+      //     var query2 = new AV.Query('Project');
+      //     query2.greaterThan('debitAmount', 2000);
+      //     var query1 = new AV.Query('Project');
+      //     query1.lessThanOrEqualTo('debitAmount', 2500);
+      //     var query = AV.Query.and(query2, query1);
+      //     break;
+      //   case '2500-3000万':
+      //     var query2 = new AV.Query('Project');
+      //     query2.greaterThan('debitAmount', 2500);
+      //     var query1 = new AV.Query('Project');
+      //     query1.lessThanOrEqualTo('debitAmount', 3000);
+      //     var query = AV.Query.and(query2, query1);
+      //     break;
+      //   case '3000-3500万':
+      //     var query2 = new AV.Query('Project');
+      //     query2.greaterThan('debitAmount', 3000);
+      //     var query1 = new AV.Query('Project');
+      //     query1.lessThanOrEqualTo('debitAmount', 3500);
+      //     var query = AV.Query.and(query2, query1);
+      //     break;
+      //   case '3500-4000万':
+      //     var query2 = new AV.Query('Project');
+      //     query2.greaterThan('debitAmount', 3500);
+      //     var query1 = new AV.Query('Project');
+      //     query1.lessThanOrEqualTo('debitAmount', 4000);
+      //     var query = AV.Query.and(query2, query1);
+      //     break;
+      //   case '4000-4500万':
+      //     var query2 = new AV.Query('Project');
+      //     query2.greaterThan('debitAmount', 4000);
+      //     var query1 = new AV.Query('Project');
+      //     query1.lessThanOrEqualTo('debitAmount', 4500);
+      //     var query = AV.Query.and(query2, query1);
+      //     break;
+      //   case '4500-5000万':
+      //     var query2 = new AV.Query('Project');
+      //     query2.greaterThan('debitAmount', 4500);
+      //     var query1 = new AV.Query('Project');
+      //     query1.lessThanOrEqualTo('debitAmount', 5000);
+      //     var query = AV.Query.and(query2, query1);
+      //     break;
+      //   case '5000-5500万':
+      //     var query2 = new AV.Query('Project');
+      //     query2.greaterThan('debitAmount', 5000);
+      //     var query1 = new AV.Query('Project');
+      //     query1.lessThanOrEqualTo('debitAmount', 5500);
+      //     var query = AV.Query.and(query2, query1);
+      //     break;
+      //   case '5500-6000万':
+      //     var query2 = new AV.Query('Project');
+      //     query2.greaterThan('debitAmount', 5500);
+      //     var query1 = new AV.Query('Project');
+      //     query1.lessThanOrEqualTo('debitAmount', 6000);
+      //     var query = AV.Query.and(query2, query1);
+      //     break;
+      //   case '6000万':
+      //     query = new AV.Query('Project');
+      //     query.greaterThan('debitAmount', 6000);
+      //     break;
+      //   default:
+      //     query = new AV.Query('Project');
+      //     break;
+      // }
+
       var query = '';
-      switch ($scope.filters.amount) {
-        case '本金无限制':
-          query = new AV.Query('Project');
-          break;
-        case '500万':
-          query = new AV.Query('Project');
-          query.lessThanOrEqualTo('debitAmount', 500);
-          break;
-        case '500-1000万':
-          var query2 = new AV.Query('Project');
-          query2.greaterThan('debitAmount', 500);
-          var query1 = new AV.Query('Project');
-          query1.lessThanOrEqualTo('debitAmount', 1000);
-          var query = AV.Query.and(query2, query1);
-          break;
-        case '1000-1500万':
-          var query2 = new AV.Query('Project');
-          query2.greaterThan('debitAmount', 1000);
-          var query1 = new AV.Query('Project');
-          query1.lessThanOrEqualTo('debitAmount', 1500);
-          var query = AV.Query.and(query2, query1);
-          break;
-        case '1500-2000万':
-          var query2 = new AV.Query('Project');
-          query2.greaterThan('debitAmount', 1500);
-          var query1 = new AV.Query('Project');
-          query1.lessThanOrEqualTo('debitAmount', 2000);
-          var query = AV.Query.and(query2, query1);
-          break;
-        case '2000-2500万':
-          var query2 = new AV.Query('Project');
-          query2.greaterThan('debitAmount', 2000);
-          var query1 = new AV.Query('Project');
-          query1.lessThanOrEqualTo('debitAmount', 2500);
-          var query = AV.Query.and(query2, query1);
-          break;
-        case '2500-3000万':
-          var query2 = new AV.Query('Project');
-          query2.greaterThan('debitAmount', 2500);
-          var query1 = new AV.Query('Project');
-          query1.lessThanOrEqualTo('debitAmount', 3000);
-          var query = AV.Query.and(query2, query1);
-          break;
-        case '3000-3500万':
-          var query2 = new AV.Query('Project');
-          query2.greaterThan('debitAmount', 3000);
-          var query1 = new AV.Query('Project');
-          query1.lessThanOrEqualTo('debitAmount', 3500);
-          var query = AV.Query.and(query2, query1);
-          break;
-        case '3500-4000万':
-          var query2 = new AV.Query('Project');
-          query2.greaterThan('debitAmount', 3500);
-          var query1 = new AV.Query('Project');
-          query1.lessThanOrEqualTo('debitAmount', 4000);
-          var query = AV.Query.and(query2, query1);
-          break;
-        case '4000-4500万':
-          var query2 = new AV.Query('Project');
-          query2.greaterThan('debitAmount', 4000);
-          var query1 = new AV.Query('Project');
-          query1.lessThanOrEqualTo('debitAmount', 4500);
-          var query = AV.Query.and(query2, query1);
-          break;
-        case '4500-5000万':
-          var query2 = new AV.Query('Project');
-          query2.greaterThan('debitAmount', 4500);
-          var query1 = new AV.Query('Project');
-          query1.lessThanOrEqualTo('debitAmount', 5000);
-          var query = AV.Query.and(query2, query1);
-          break;
-        case '5000-5500万':
-          var query2 = new AV.Query('Project');
-          query2.greaterThan('debitAmount', 5000);
-          var query1 = new AV.Query('Project');
-          query1.lessThanOrEqualTo('debitAmount', 5500);
-          var query = AV.Query.and(query2, query1);
-          break;
-        case '5500-6000万':
-          var query2 = new AV.Query('Project');
-          query2.greaterThan('debitAmount', 5500);
-          var query1 = new AV.Query('Project');
-          query1.lessThanOrEqualTo('debitAmount', 6000);
-          var query = AV.Query.and(query2, query1);
-          break;
-        case '6000万':
-          query = new AV.Query('Project');
-          query.greaterThan('debitAmount', 6000);
-          break;
-        default:
-          query = new AV.Query('Project');
-          break;
+      if ($scope.filters.amountMin == '' && $scope.filters.amountMax == '') {
+        query = new AV.Query('Project');
+      } else if($scope.filters.amountMin == '') {
+        query = new AV.Query('Project');
+        query.lessThanOrEqualTo('debitAmount', parseFloat($scope.filters.amountMax));
+      } else if($scope.filters.amountMax == ''){
+        query = new AV.Query('Project');
+        query.greaterThan('debitAmount', parseFloat($scope.filters.amountMin));
+      } else {
+        var query2 = new AV.Query('Project');
+        query2.greaterThan('debitAmount', parseFloat($scope.filters.amountMin));
+        var query1 = new AV.Query('Project');
+        query1.lessThanOrEqualTo('debitAmount', parseFloat($scope.filters.amountMax));
+        var query = AV.Query.and(query2, query1);
       }
 
       var queryAnd = AV.Query.and(queryProvince, query, queryType);
