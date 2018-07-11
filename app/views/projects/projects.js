@@ -9,7 +9,7 @@ angular.module('myApp.Projects', ['ngRoute'])
     });
   }])
 
-  .controller('ProjectsCtrl', ['$rootScope', '$scope', '$routeParams', '$window', '$translate', function ($rootScope, $scope, $routeParams, $window, $translate) {
+  .controller('ProjectsCtrl', ['$rootScope', '$scope', '$routeParams', '$window', '$translate', 'localStorageService', function ($rootScope, $scope, $routeParams, $window, $translate, localStorageService) {
 
     $rootScope.showBanner = false;
 
@@ -168,10 +168,10 @@ angular.module('myApp.Projects', ['ngRoute'])
       var query = '';
       if ($scope.filters.amountMin == '' && $scope.filters.amountMax == '') {
         query = new AV.Query('Project');
-      } else if($scope.filters.amountMin == '') {
+      } else if ($scope.filters.amountMin == '') {
         query = new AV.Query('Project');
         query.lessThanOrEqualTo('debitAmount', parseFloat($scope.filters.amountMax));
-      } else if($scope.filters.amountMax == ''){
+      } else if ($scope.filters.amountMax == '') {
         query = new AV.Query('Project');
         query.greaterThan('debitAmount', parseFloat($scope.filters.amountMin));
       } else {
@@ -363,6 +363,8 @@ angular.module('myApp.Projects', ['ngRoute'])
           }
         });
       } else {
+        localStorageService.cookie.set('action', 'AddToWishList');
+        localStorageService.cookie.set('projectId', id);
         $('#modalLogin').modal('show');
       }
     };
@@ -387,4 +389,8 @@ angular.module('myApp.Projects', ['ngRoute'])
         })
       }
     };
+
+    $scope.$on('AddToWishList', function (event, args) {
+      $scope.addToWhishList(args.id);
+    });
   }]);

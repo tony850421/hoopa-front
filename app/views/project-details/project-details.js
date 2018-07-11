@@ -14,7 +14,7 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
         slickCarouselConfig.autoplay = false;
     }])
 
-    .controller('ProjectDetailsCtrl', ['$rootScope', '$scope', '$routeParams', '$translate', function ($rootScope, $scope, $routeParams, $translate) {
+    .controller('ProjectDetailsCtrl', ['$rootScope', '$scope', '$routeParams', '$translate', 'localStorageService', function ($rootScope, $scope, $routeParams, $translate, localStorageService) {
 
         $('html,body').scrollTop(0);
 
@@ -79,13 +79,12 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
             query.get(id).then(function (p) {
 
                 $scope.project = p;
-                console.log(p);
                 $scope.project.wished = false;
 
                 $scope.fectComments();
 
                 $scope.typeArrivalString = $scope.project.get('typeArrivalString').split("+");
-                $scope.typeArrivalString.splice(0,1);
+                $scope.typeArrivalString.splice(0, 1);
 
                 $scope.projectTitle = p.get('title');
                 $scope.projectCompany = p.get('companyName');
@@ -134,11 +133,11 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                 var query4 = new AV.Query("ProjectMedia");
                 query4.equalTo('project', p);
                 query4.find().then(function (images) {
-                    $scope.loadData = false;                    
+                    $scope.loadData = false;
                     $scope.imageListActive = images[0].get('image').thumbnailURL(1280, 720);
                     $scope.$apply();
 
-                    for (var i = 0; i < images.length; i++) {                      
+                    for (var i = 0; i < images.length; i++) {
                         $scope.imageList.push({
                             imageUrl: images[i].get('image').thumbnailURL(200, 150),
                             url: images[i].get('image').thumbnailURL(1280, 720)
@@ -336,6 +335,8 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                     }
                 });
             } else {
+                localStorageService.cookie.set('action', 'AddToWishList');
+                localStorageService.cookie.set('projectId', $scope.project.id);
                 $('#modalLogin').modal('show');
             }
         };
@@ -369,6 +370,8 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
             if (user) {
                 $scope.flagBid = !$scope.flagBid;
             } else {
+                localStorageService.cookie.set('action', 'MakeAnOffer');
+                localStorageService.cookie.set('projectId', $scope.project.id);
                 $('#modalLogin').modal('show');
             }
         };
@@ -450,5 +453,13 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
             $scope.imageListActive = url;
             $scope.$apply();
         };
+
+        $scope.$on('AddToWishList', function (event, args) {
+            $scope.addToWhishList(args.id);
+        });
+
+        $scope.$on('MakeAnOffer', function (event, args) {
+            $scope.makeAnOffer();
+        });
 
     }]);

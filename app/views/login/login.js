@@ -15,7 +15,7 @@ angular.module('myApp.Login', ['ngRoute'])
         });
     }])
 
-    .controller('LoginCtrl', ['$rootScope', '$scope', '$routeParams', '$translate', function ($rootScope, $scope, $routeParams, $translate) {
+    .controller('LoginCtrl', ['$rootScope', '$scope', '$routeParams', '$translate', 'localStorageService', function ($rootScope, $scope, $routeParams, $translate, localStorageService) {
 
         $('html,body').scrollTop(0);
 
@@ -33,7 +33,13 @@ angular.module('myApp.Login', ['ngRoute'])
 
         $scope.loginWithSmsCode = function () {
             AV.User.signUpOrlogInWithMobilePhone($scope.phoneNumber, $scope.smsCode).then(res => {
-                $('#modalLogin').modal('toggle');
+                var action = localStorageService.cookie.get('action');
+                if (action == 'AddToWishList'){
+                    var id = localStorageService.cookie.get('projectId');
+                    $rootScope.$broadcast('AddToWishList', {id: id});
+                } else if (action == 'MakeAnOffer'){
+                    $rootScope.$broadcast('MakeAnOffer');
+                }
                 $rootScope.getUser();
                 $rootScope.initWishList();
                 $rootScope.initOffersList();
@@ -41,7 +47,9 @@ angular.module('myApp.Login', ['ngRoute'])
                 //     $rootScope.customGoTo($scope.option + "/" + $scope.id);
                 // } else {
                 //     $rootScope.customGoTo($scope.option);
-                // }
+                // }                
+                $('#modalLogin').modal('toggle');
+                
             }).catch(function (error) {
                 console.log(error);
             });

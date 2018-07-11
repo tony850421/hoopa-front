@@ -6,6 +6,7 @@ angular.module('myApp', [
   'ngCookies',
   // 'ngSanitize',
   'slickCarousel',
+  'LocalStorageModule',
   'pascalprecht.translate',
   'myApp.Main',
   'myApp.Home',
@@ -57,4 +58,11 @@ angular.module('myApp', [
         $translateProvider.useSanitizeValueStrategy('escape');
 
     }
-]);
+])
+
+.config(['localStorageServiceProvider', function (localStorageServiceProvider) {
+    localStorageServiceProvider
+        .setPrefix('HoopaFront')
+        .setStorageType('sessionStorage')
+        .setNotify(true, true)
+}]);
