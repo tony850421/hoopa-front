@@ -572,10 +572,6 @@ ul.pagination .page-item.active .page-link,
   margin-top: 30px !important;
 }
 
-.marginTop35 {
-  margin-top: 35px !important;
-}
-
 [ng\:cloak],
 [ng-cloak],
 .ng-cloak {
@@ -611,11 +607,6 @@ ul.pagination .page-item.active .page-link,
   height: 30px;
   border-radius: 50%;
   margin-top: -5px;
-}
-
-#userDropdown {
-  min-width: 150px !important;
-  transform: translate3d(0px, 32px, 0px) !important;
 }
 
 .iconUnloginClass {
@@ -1102,6 +1093,20 @@ ul li.nav-item a.tabCoreTeam.active {
   .industryNews {
     width: 100% !important;
   }
+  #userDropdown {
+    min-width: 150px !important;
+    transform: translate3d(90px, 0px, 0px) !important;
+  }
+  .imageNewsListCompanyHome {
+    width: 100% !important;
+    object-fit: cover;
+    min-height: 180px !important;
+  }
+  .imageNewsListHome {
+    width: 100% !important;
+    object-fit: cover;
+    min-height: 180px !important;
+  }
 }
 
 @media (min-width: 360px) {
@@ -1376,6 +1381,9 @@ ul li.nav-item a.tabCoreTeam.active {
   .marginLeftAutoXS {
     margin-left: auto !important;
   }
+  .pullRightXS{
+    float: right;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1532,6 +1540,9 @@ ul li.nav-item a.tabCoreTeam.active {
     width: 100% !important;
     object-fit: cover;
   }
+  .marginTop35 {
+    margin-top: 35px !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1642,12 +1653,12 @@ ul li.nav-item a.tabCoreTeam.active {
   .imageNewsListHome {
     width: 100% !important;
     object-fit: cover;
-    min-height: 180px !important;
+    min-height: 200px !important;
   }
   .imageNewsListCompanyHome {
     width: 100% !important;
     object-fit: cover;
-    min-height: 180px !important;
+    min-height: 200px !important;
   }
 }
 
@@ -1744,6 +1755,10 @@ ul li.nav-item a.tabCoreTeam.active {
     z-index: 1100 !important;
     position: relative;
     border: none;
+  }
+  #userDropdown {
+    min-width: 150px !important;
+    transform: translate3d(-90px, 50px, 0px) !important;
   }
 }
 
@@ -2129,4 +2144,10 @@ ul.ulStyleFooter li a#address:hover {
 
 .textEnd {
   text-align: end !important;
+}
+
+.header-top-dropdown .dropdown-menu{
+  z-index: 2000 !important;
+  border: 1px solid white !important;
+  background: white !important;
 }

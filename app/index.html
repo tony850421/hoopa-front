@@ -239,7 +239,7 @@
                 </li>
               </ul>
             </div>
-            <div class="btn-group pull-right">
+            <div class="btn-group pullRightXS">
               <button id="header-top-drop-1" type="button" class="btn styleButtonsBanner borderRightLanguage" ng-class="{'activeLanguage': languageShort == '中文'}"
                 ng-click="setLanguage('cn_CN')" ng-cloak>
                 {{'CHINESE' | translate}}</button>
@@ -263,78 +263,7 @@
           <div class="header-second clearfix">
             <div class="main-navigation main-navigation--mega-menu main-navigation--style-2 animated">
               <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <div class="header-dropdown-buttons hidden-lg-up p-0 padding10XS mr-3">                  
-                  <div class="btn-group" ng-hide="!loginUser">
-                    <a type="button" class="btn dropdown-toggle colorIconBarDark dropdown-toggle--no-caret" id="header-drop-4" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false" ng-click="initWishList()" ng-cloak>
-                      <i class="fa fa-heart-o marginLeft5"></i>
-                      <span class="cart-count default-bg" ng-show="shopCartArray.length > 0">{{shopCartCount}}</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-4">
-                      <li>
-                        <table class="table table-hover">
-                          <thead>
-                            <tr>
-                              <th class="product" ng-cloak>{{'PACKAGE' | translate}}</th>
-                              <th class="amount" ng-cloak>{{'DAMOUNT' | translate}}</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr class="cursorPointer" ng-repeat="product in shopCartArray" ng-click="goToProject(product.get('project').id)">
-                              <td class="product">
-                                <a href="" ng-click="goToProject(product.get('project').id)">
-                                  <span class="small" ng-cloak>{{product.get('project').get('title')}}</span>
-                                </a>
-                              </td>
-                              <td class="amount colorPrimary" ng-cloak>
-                                ¥{{product.get('project').get('debitAmount')}}万</td>
-                            </tr>
-                            <tr>
-                              <td class="total-quantity" colspan="2" ng-cloak>{{shopCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <div class="panel-body text-right">
-                          <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm" ng-cloak> {{'VWISHLIST' | translate}}</a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="btn-group" ng-hide="!loginUser">
-                    <button type="button" class="btn dropdown-toggle colorIconBarDark dropdown-toggle--no-caret backgroundGray" id="header-drop-2"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-click="initOffersList()">
-                      <i class="icon-Total-offers marginLeft5"></i>
-                      <span class="cart-count default-bg" ng-show="offersCartCount > 0" ng-cloak>{{offersCartCount}}</span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-2">
-                      <li>
-                        <table class="table table-hover">
-                          <thead>
-                            <tr>
-                              <th class="product" ng-cloak>{{'PACKAGE' | translate}}</th>
-                              <th class="amount" ng-cloak>{{'AMOUNT' | translate}}</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr ng-repeat="offer in offersArray " ng-click="goToProject(offer.get('project').id)">
-                              <td class="product">
-                                <a href="" ng-click="goToProject(offer.get('project').id)">
-                                  <span class="small" ng-cloak>{{offer.get('project').get('title')}}</span>
-                                </a>
-                              </td>
-                              <td class="amount colorPrimary" ng-cloak>
-                                ¥{{offer.get( 'amount')}}万</td>
-                            </tr>
-                            <tr>
-                              <td class="total-quantity" colspan="2" ng-cloak>{{offersCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <button class="navbar-toggler backgroundWhite" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1"
+                <button class="navbar-toggler backgroundWhite marginLeftAuto" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1"
                   aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
