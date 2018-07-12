@@ -34,12 +34,6 @@
   min-width: 260px;
   max-height: 160px;
 }
-
-.logo_img {
-  margin-top: -5px !important;
-  width: 200px !important;
-}
-
 .padding0 {
   padding: 0px !important;
 }
@@ -577,6 +571,10 @@ ul.pagination .page-item.active .page-link,
   margin-top: 30px !important;
 }
 
+.marginTop35 {
+  margin-top: 35px !important;
+}
+
 [ng\:cloak],
 [ng-cloak],
 .ng-cloak {
@@ -991,12 +989,6 @@ ul li.nav-item a.tabCoreTeam.active {
   object-fit: cover;
 }
 
-.imageNewsListHome {
-  width: 100% !important;
-  object-fit: cover;
-  height: 200px !important;
-}
-
 @media (min-width: 320px) {
   .widthDropdown {
     max-width: 100% !important;
@@ -1077,17 +1069,37 @@ ul li.nav-item a.tabCoreTeam.active {
     text-align: center;
   }
   .paddingHome {
-    padding-left: 50px !important;
+    padding-left: 30px !important;
     padding-bottom: 30px !important;
     padding-top: 30px !important;
   }
   .videoHoopa {
     width: 100% !important;
-    height: 80% !important;
-    background-color: black !important;
+    height: auto !important;
+    background-color: transparent !important;
+    margin-top: -10px !important;
   }
   .width90P {
     width: 84% !important;
+  }
+  .ulHomeCar{
+    min-width: 350px !important;
+    z-index: 2000;
+    transform: translate3d(-10px, 0px, 0px) !important;
+  }
+  .logo_img {
+    margin-top: 0 !important;
+    width: 80px !important;
+  }
+  .backgroundSectionHome {
+    background-color: transparent !important;
+    margin-top: -20px !important;
+    z-index: 1100 !important;
+    position: relative;
+    border: none;
+  }  
+  .industryNews{
+    width: 100% !important;
   }
 }
 
@@ -1142,6 +1154,11 @@ ul li.nav-item a.tabCoreTeam.active {
   .width90P {
     width: 86% !important;
   }
+  .ulHomeCar{
+    min-width: 350px !important;
+    z-index: 2000;
+    transform: translate3d(-10px, 0px, 0px) !important;
+  }
 }
 
 @media (min-width: 375px) {
@@ -1188,6 +1205,11 @@ ul li.nav-item a.tabCoreTeam.active {
   }
   .width90P {
     width: 88% !important;
+  }
+  .ulHomeCar{
+    min-width: 350px !important;
+    z-index: 2000;
+    transform: translate3d(-10px, 0px, 0px) !important;
   }
 }
 
@@ -1250,6 +1272,11 @@ ul li.nav-item a.tabCoreTeam.active {
   .width90P {
     width: 88% !important;
   }
+  .ulHomeCar{
+    min-width: 350px !important;
+    z-index: 2000;
+    transform: translate3d(-10px, 0px, 0px) !important;
+  }
 }
 
 @media (min-width: 480px) {
@@ -1297,13 +1324,23 @@ ul li.nav-item a.tabCoreTeam.active {
   .width90P {
     width: 90% !important;
   }
+  .ulHomeCar{
+    min-width: 350px !important;
+    z-index: 2000;
+    transform: translate3d(-10px, 0px, 0px) !important;
+  }  
+  .imageNewsListHome {
+    width: 100% !important;
+    object-fit: cover;
+    min-height: 180px !important;
+  }
 }
 
 @media (max-width: 767px) {
   .animated-text h4+h4 {
     display: none;
   }
-  .hiddenLG {
+  .hiddenXS {
     display: none !important;
   }
   .timeline .timeline-item.pull-right+.timeline-date-label {
@@ -1313,7 +1350,7 @@ ul li.nav-item a.tabCoreTeam.active {
     text-align: center !important;
   }
   .width90P {
-    width: 90% !important;
+    width: 100% !important;
   }
   .paddingLeft0XS {
     padding-left: 0 !important;
@@ -1321,11 +1358,20 @@ ul li.nav-item a.tabCoreTeam.active {
   .paddingRight0XS {
     padding-right: 0 !important;
   }
+  .marginLeft0XS {
+    margin-left: 0 !important;
+  }
   .marginRight0XS {
     margin-right: 0 !important;
   }
   .textCenterXS {
     text-align: center !important;
+  }
+  .marginLeftAutoXS{
+    margin-left: auto !important;
+  }
+  .marginTop40XS{
+    margin-top: 40px !important;
   }
 }
 
@@ -1335,6 +1381,9 @@ ul li.nav-item a.tabCoreTeam.active {
     flex: 0 0 100%;
     padding-left: 15px !important;
     padding-right: 15px !important;
+  }
+  .hiddenLG{
+    display: none !important;
   }
   #searchPage {
     transform: translate3d(330px, -10px, 0px) !important;
@@ -1367,7 +1416,7 @@ ul li.nav-item a.tabCoreTeam.active {
     float: right !important;
   }
   .menuBarPage {
-    width: 689px !important;
+    width: 100% !important;
   }
   .imageNewsSlide {
     object-fit: cover;
@@ -1427,9 +1476,6 @@ ul li.nav-item a.tabCoreTeam.active {
     -o-transform: scale(1);
     transform: scale(1);
   }
-  .logo_img {
-    display: none !important;
-  }
   .hiddenLGAddressPhone {
     display: none !important;
   }
@@ -1455,6 +1501,27 @@ ul li.nav-item a.tabCoreTeam.active {
   }
   .width90P {
     width: 100% !important;
+  }
+  .ulHomeCar{
+    min-width: 350px !important;
+    z-index: 2000;
+    transform: translate3d(-10px, 0px, 0px) !important;
+  }
+  .logo_img {
+    margin-top: -5px !important;
+    width: 200px !important;
+  }
+  .marginTop40LG{
+    margin-top: 40px !important;
+  }
+  .industryNews{
+    width: 20% !important;
+  }
+}
+
+@media (max-width: 991px){
+  .hidden-sm{
+    display: none;
   }
 }
 
@@ -1545,6 +1612,15 @@ ul li.nav-item a.tabCoreTeam.active {
     padding-bottom: 30px !important;
     padding-top: 30px !important;
   }
+  .ulHomeCar{
+    min-width: 350px !important;
+    z-index: 2000;
+    transform: translate3d(-280px, 61px, 0px) !important;
+    padding: 10px;
+  }
+  .marginLeft6p3P {
+    margin-left: 6.3% !important;
+  }  
 }
 
 @media (min-width: 1080px) {
@@ -1568,6 +1644,12 @@ ul li.nav-item a.tabCoreTeam.active {
   }
   .marginLeftServiceHome {
     margin-left: 2% !important;
+  }
+  .ulHomeCar{
+    min-width: 350px !important;
+    z-index: 2000;
+    transform: translate3d(-280px, 61px, 0px) !important;
+    padding: 10px;
   }
 }
 
@@ -1596,7 +1678,13 @@ ul li.nav-item a.tabCoreTeam.active {
   .videoHoopa {
     width: 100% !important;
     height: 80% !important;
-    background-color: black !important;
+    background-color: transparent !important;
+  }
+  .ulHomeCar{
+    min-width: 350px !important;
+    z-index: 2000;
+    transform: translate3d(-280px, 61px, 0px) !important;
+    padding: 10px;
   }
 }
 
@@ -1604,13 +1692,30 @@ ul li.nav-item a.tabCoreTeam.active {
   .videoHoopa {
     width: 100% !important;
     height: 88% !important;
-    background-color: black !important;
+    background-color: transparent !important;
+    margin-top: -40px !important;
   }
   .heigthOfficial {
     height: 668px !important;
   }
   .marginBottom65 {
     margin-bottom: 65px !important;
+  }
+  .menuBarPage {
+    width: 260px !important;
+  }
+  .ulHomeCar{
+    min-width: 350px !important;
+    z-index: 2000;
+    transform: translate3d(-280px, 61px, 0px) !important;
+    padding: 10px;
+  }
+  .backgroundSectionHome {
+    background-color: transparent !important;
+    margin-top: -80px !important;
+    z-index: 1100 !important;
+    position: relative;
+    border: none;
   }
 }
 
@@ -1704,10 +1809,6 @@ h6 {
   font-family: "MicrosoftYaHei" !important;
 }
 
-.industryNewsBox {
-  width: 20% !important;
-}
-
 .marginLeft--15Home {
   margin-left: -15px !important;
 }
@@ -1718,10 +1819,6 @@ h6 {
 
 .marginLeft5P {
   margin-left: 5% !important;
-}
-
-.marginLeft6p3P {
-  margin-left: 6.3% !important;
 }
 
 .height100P {
@@ -1844,7 +1941,7 @@ h6 {
 }
 
 .zIndex1 {
-  z-index: 10\ !important;
+  z-index: 1 !important;
 }
 
 .header .navbar-nav li ul {
@@ -1955,4 +2052,49 @@ ul.ulStyleFooter li a#address:hover {
   height: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.backgroundBlue {
+  background-color: #161920 !important;
+}
+
+.marginTop--40 {
+  margin-top: -40px !important;
+}
+
+.titleNewsHome {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff6700;
+  z-index: 1000 !important;
+  margin-top: -9% !important;
+  position: inherit;
+  padding: 10px;
+}
+
+.buttonMoreNewsHome {
+  width: 50px;
+  height: 63px;
+  right: -3px;
+  position: absolute;
+  z-index: 1000;
+  top: 9px;
+}
+
+.marginBottom60 {
+  margin-bottom: 60px !important;
+}
+
+.cart-count {
+  top: 10px !important;
+  right: 20px !important;
+}
+
+.header .navbar-nav .dropdown.show > .dropdown-toggle::after{
+  color: #161920 !important;
+}
+
+zIndex5000{
+  z-index: 5000 !important;
 }

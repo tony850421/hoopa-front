@@ -13,138 +13,9 @@ angular.module('myApp.Home', ['ngRoute'])
 
     $rootScope.showBanner = true;
     $rootScope.divBottomLiActive = 'HOME';
-    // $scope.productsShop = [];
-    // $scope.productsFactory = [];
-    // $scope.productsHouse = [];
-    // $scope.productsHot = [];
 
     $scope.news = [];
     $scope.industryNews = [];
-
-    // $scope.projectActive = 1;
-
-    // $scope.fetchProjectHot = function () {
-    //   var query = new AV.Query('Project');
-    //   query.equalTo('isHot', true);
-    //   query.limit('4');
-    //   query.descending('createdAt');
-    //   query.find().then(function (res) {
-    //     for (var i = 0; i < res.length; i++) {
-
-    //       if (res[i].get('description').length >= 50) {
-    //         var desc = '';
-    //         for (var x = 0; x < 50; x++) {
-    //           desc = desc + res[i].get('description')[x];
-    //         }
-    //         desc = desc + "...";
-    //         res[i].set('description', desc);
-    //       }
-
-    //       res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
-    //     }
-
-    //     $scope.productsHot = res;
-    //     $scope.$apply();
-    //   });
-    // };
-
-    // $scope.fetchProjectHouse = function () {
-    //   var query = new AV.Query('Project');
-    //   query.equalTo('isHouse', true);
-    //   query.limit('4');
-    //   query.descending('createdAt');
-    //   query.find().then(function (res) {
-    //     for (var i = 0; i < res.length; i++) {
-
-    //       if (res[i].get('description').length >= 50) {
-    //         var desc = '';
-    //         for (var x = 0; x < 50; x++) {
-    //           desc = desc + res[i].get('description')[x];
-    //         }
-    //         desc = desc + "...";
-    //         res[i].set('description', desc);
-    //       }
-
-    //       res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
-    //     }
-
-    //     $scope.productsHouse = res;
-    //     $scope.$apply();
-    //   });
-    // };
-
-    // $scope.fetchProjectFactory = function () {
-    //   var query = new AV.Query('Project');
-    //   query.equalTo('isFactory', true);
-    //   query.limit('4');
-    //   query.descending('createdAt');
-    //   query.find().then(function (res) {
-    //     for (var i = 0; i < res.length; i++) {
-
-    //       if (res[i].get('description').length >= 50) {
-    //         var desc = '';
-    //         for (var x = 0; x < 50; x++) {
-    //           desc = desc + res[i].get('description')[x];
-    //         }
-    //         desc = desc + "...";
-    //         res[i].set('description', desc);
-    //       }
-
-    //       res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
-    //     }
-
-    //     $scope.productsFactory = res;
-    //     $scope.$apply();
-    //   });
-    // };
-
-    // $scope.fetchProjectShop = function () {
-    //   var query = new AV.Query('Project');
-    //   query.equalTo('isShop', true);
-    //   query.limit('4');
-    //   query.descending('createdAt');
-    //   query.find().then(function (res) {
-    //     for (var i = 0; i < res.length; i++) {
-
-    //       if (res[i].get('description').length >= 50) {
-    //         var desc = '';
-    //         for (var x = 0; x < 50; x++) {
-    //           desc = desc + res[i].get('description')[x];
-    //         }
-    //         desc = desc + "...";
-    //         res[i].set('description', desc);
-    //       }
-
-    //       res[i].mainImage = res[i].get('image').thumbnailURL(320, 200);
-    //     }
-
-    //     $scope.productsShop = res;
-    //     $scope.$apply();
-    //   });
-    // };
-
-    // $scope.changeActive = function (num) {
-    //   $scope.projectActive = num;
-    //   switch (num) {
-    //     case 1:
-    //       $scope.fetchProjectHot();
-    //       break;
-    //     case 2:
-    //       $scope.fetchProjectHouse();
-    //       break;
-    //     case 3:
-    //       $scope.fetchProjectFactory();
-    //       break;
-    //     case 4:
-    //       $scope.fetchProjectShop();
-    //       break;
-    //     default:
-    //       $scope.fetchProjectHot();
-    //       break;
-    //   }
-    // };
-
-    // $scope.changeActive(1);
 
     $scope.goToProject = function (id) {
       $rootScope.customGoTo('project-details/' + id);
@@ -160,9 +31,19 @@ angular.module('myApp.Home', ['ngRoute'])
         res.forEach(function (element) {
           var mainImage = element.get('image').thumbnailURL(300, 200);
           var title = element.get('title');
+          var titleMin = element.get('title');
           var content = element.get('content');
           var contentMin = element.get('content');
           var id = element.id;
+
+          if (titleMin.length >= 25) {
+            var tit = '';
+            for (var x = 0; x < 25; x++) {
+              tit = tit + titleMin[x];
+            }
+            tit = tit + "...";
+            titleMin = tit;
+          }
 
           if (contentMin.length >= 48) {
             var desc = '';
@@ -177,6 +58,7 @@ angular.module('myApp.Home', ['ngRoute'])
             id: id,
             mainImage: mainImage,
             title: title,
+            titleMin: titleMin,
             content: content,
             contentMin: contentMin
           })
@@ -207,9 +89,19 @@ angular.module('myApp.Home', ['ngRoute'])
         res.forEach(function (element) {
           var mainImage = element.get('image').thumbnailURL(300, 200);
           var title = element.get('title');
+          var titleMin = element.get('title');
           var content = element.get('content');
           var contentMin = element.get('content');
           var id = element.id;
+
+          if (titleMin.length >= 25) {
+            var tit = '';
+            for (var x = 0; x < 25; x++) {
+              tit = tit + titleMin[x];
+            }
+            tit = tit + "...";
+            titleMin = tit;
+          }
 
           if (contentMin.length >= 48) {
             var desc = '';
@@ -224,6 +116,7 @@ angular.module('myApp.Home', ['ngRoute'])
             id: id,
             mainImage: mainImage,
             title: title,
+            titleMin: titleMin,
             content: content,
             contentMin: contentMin
           })
