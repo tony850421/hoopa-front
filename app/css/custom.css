@@ -212,6 +212,10 @@ h6 {
   vertical-align: middle;
 }
 
+.iconSpanBranch {
+  font-size: 34px;
+}
+
 .verticalAlignMiddel {
   vertical-align: middle !important;
 }
@@ -1107,6 +1111,10 @@ ul li.nav-item a.tabCoreTeam.active {
     object-fit: cover;
     min-height: 180px !important;
   }
+  .widthBranches {
+    width: 100% !important;
+    margin-left: 5.3% !important;
+  }
 }
 
 @media (min-width: 360px) {
@@ -1381,7 +1389,7 @@ ul li.nav-item a.tabCoreTeam.active {
   .marginLeftAutoXS {
     margin-left: auto !important;
   }
-  .pullRightXS{
+  .pullRightXS {
     float: right;
   }
 }
@@ -1543,6 +1551,10 @@ ul li.nav-item a.tabCoreTeam.active {
   .marginTop35 {
     margin-top: 35px !important;
   }
+  .widthBranches {
+    width: 40% !important;
+    margin-left: 7% !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1653,7 +1665,7 @@ ul li.nav-item a.tabCoreTeam.active {
   .imageNewsListHome {
     width: 100% !important;
     object-fit: cover;
-    min-height: 200px !important;
+    min-height: 215px !important;
   }
   .imageNewsListCompanyHome {
     width: 100% !important;
@@ -1690,6 +1702,10 @@ ul li.nav-item a.tabCoreTeam.active {
     transform: translate3d(-280px, 61px, 0px) !important;
     padding: 10px;
   }
+  .widthBranches {
+    width: 28% !important;
+    margin-left: 5.3% !important;
+  }
 }
 
 @media (min-width: 1250px) {
@@ -1725,6 +1741,10 @@ ul li.nav-item a.tabCoreTeam.active {
     transform: translate3d(-280px, 61px, 0px) !important;
     padding: 10px;
   }
+  .widthBranches {
+    width: 28% !important;
+    margin-left: 5.3% !important;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -1759,6 +1779,10 @@ ul li.nav-item a.tabCoreTeam.active {
   #userDropdown {
     min-width: 150px !important;
     transform: translate3d(-90px, 50px, 0px) !important;
+  }
+  .widthBranches {
+    width: 28% !important;
+    margin-left: 5.3% !important;
   }
 }
 
@@ -2116,6 +2140,17 @@ ul.ulStyleFooter li a#address:hover {
   padding: 10px;
 }
 
+.titleGroupIntroduction {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff6700;
+  z-index: 1000 !important;
+  margin-top: -4% !important;
+  position: inherit;
+  padding: 10px;
+}
+
 .buttonMoreNewsHome {
   width: 50px;
   height: 63px;
@@ -2146,8 +2181,49 @@ ul.ulStyleFooter li a#address:hover {
   text-align: end !important;
 }
 
-.header-top-dropdown .dropdown-menu{
+.header-top-dropdown .dropdown-menu {
   z-index: 2000 !important;
   border: 1px solid white !important;
   background: white !important;
+}
+
+.shadow:before,
+.shadow-narrow:before {
+  background-color: #f2f2f2 !important;
+}
+
+.shadow,
+.shadow-narrow {
+  background-color: #f2f2f2 !important;
+}
+
+span.iconBranches {
+  position: fixed !important;
+  left: -14% !important;
+  background-color: #ff6700 !important;
+  color: white !important;
+  border-radius: 0 !important;
+}
+
+.imageBanner {
+  width: 100% !important;
+  height: 300px !important;
+  object-fit: cover !important;
+}
+
+.textBanner {
+  font-size: 32px !important;
+  text-align: center !important;
+  position: absolute;
+  top: 300px !important;
+  margin-left: 47% !important;
+}
+
+.lineBlueBanner{
+  height: 16px;
+  position: absolute;
+  width: 60%;
+  margin-left: 20%;
+  background-color: #161920;
+  margin-top: -8px;
 }
