@@ -55,23 +55,6 @@
   <div class="container">
     <div class="row">
       <div class="main col-12 padding0">
-        <!-- pills start -->
-        <!-- ================ -->
-        <!-- Nav tabs -->
-        <!-- <ul class="nav nav-pills" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" href="#pill-1" role="tab" data-toggle="tab" title="Latest Arrivals">
-              <i class="fa fa-star"></i> Latest Arrivals</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#pill-2" role="tab" data-toggle="tab" title="Featured">
-              <i class="fa fa-heart"></i> Featured</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#pill-3" role="tab" data-toggle="tab" title="Top Sellers">
-              <i class=" fa fa-arrow-up"></i> Top Sellers</a>
-          </li>
-        </ul> -->
         <!-- Tab panes -->
         <div class="tab-content clear-style">
           <div class="tab-pane active" id="pill-1">
@@ -79,20 +62,7 @@
               <div class="col-lg-3 col-md-6" ng-repeat="project in products">
                 <div class="listing-item white-bg bordered mb-20">
                   <div class="overlay-container">
-                    <img class="imageProjectHome" ng-src="{{project.imageUrl}}">
-                    <!-- <span class="badge">30% OFF</span> -->
-                    <!-- <div class="overlay-to-top links">
-                      <span class="small">
-                        <a ng-hide="project.wished" href="" class="btn-sm-link textWhite" ng-click="addToWhishList(project.id)">
-                          <i class="fa fa-heart-o pr-10"></i>{{'ADDWISHLIST' | translate}}
-                        </a>
-                        <a ng-hide="!project.wished" href="" class="btn-sm-link textWhite" ng-click="removeToWhishList(project.id)">
-                          <i class="fa fa-heart pr-10"></i>{{'REMOVEWISHLIST' | translate}}
-                        </a>
-                        <a href="" class="btn-sm-link textWhite" ng-click="goToProject(project.id)">
-                          <i class="fa fa-link pr-1"></i>{{'VIEWDETAILS' | translate}}</a>
-                      </span>
-                    </div> -->
+                    <img ng-click="goToProject(project.id)" class="imageProjectHome cursorPointer" ng-src="{{project.imageUrl}}">                    
                   </div>
                   <div class="body">
                     <h3>

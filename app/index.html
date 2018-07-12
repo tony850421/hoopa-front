@@ -722,7 +722,7 @@
   <!-- Modal Login -->
   <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg width700px" role="document" ng-controller="LoginCtrl">
-      <div class="modal-content marginTopLogin">
+      <div class="modal-content marginTopLogin borderNone">
         <div class="modal-header">
           <h4 class="modal-title" id="myModalLabel">{{'LOGIN' | translate}}</h4>
         </div>
@@ -741,7 +741,7 @@
                       <i class="icon-Phone form-control-feedback pr-4"></i>
                     </div>
                     <div class="col-md-3 col-xs-12 paddingLeftButtonSendCode">
-                      <a class="btn btn-group btn-default btn-animated marginTop0 marginBottom0 backgroundColorBlue width100SendCode" ng-click="requestSmsCode()">{{'SENDCODE' | translate}}
+                      <a class="btn btn-group btn-default btn-animated marginTop0 marginBottom0 hoverColorWhite backgroundColorPrimary textWhite width100SendCode" ng-click="requestSmsCode()">{{'SENDCODE' | translate}}
                         <i class="fa fa-check"></i>
                       </a>
                     </div>
@@ -758,7 +758,7 @@
                   </div>
                   <div class="form-group row">
                     <div class="col-md-9">
-                      <button class="btn btn-group btn-default btn-animated backgroundColorBlue width100Login" ng-click="loginWithSmsCode()">{{'LOGIN' | translate}}
+                      <button class="btn btn-group btn-default btn-animated backgroundColorPrimary width100Login" ng-click="loginWithSmsCode()">{{'LOGIN' | translate}}
                         <i class="icon-Login fontSize18"></i>
                       </button>
                     </div>

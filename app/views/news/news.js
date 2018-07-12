@@ -15,6 +15,10 @@ angular.module('myApp.News', ['ngRoute'])
     $rootScope.divBottomLiActive = 'NEWS';
     $scope.activeSideBar = $routeParams.param1;
 
+    $scope.newsCount = 0;
+    $scope.currentPage = 1;
+    $scope.pageSize = 5;
+
     $scope.news = [];
     $scope.newsPagination = 0;
     $scope.page = 1;
@@ -24,7 +28,7 @@ angular.module('myApp.News', ['ngRoute'])
 
     $scope.loading = false;
 
-    $scope.getMonth =  function(monthNum){
+    $scope.getMonth = function (monthNum) {
       $scope.month = new Array();
       $scope.month[0] = $translate.instant('JANUARY');
       $scope.month[1] = $translate.instant('FEBRUARY');
@@ -41,28 +45,14 @@ angular.module('myApp.News', ['ngRoute'])
 
       return $scope.month[monthNum];
 
-    };    
+    };
 
     $scope.init = function () {
       $scope.loading = true;
 
       var queryNewsCount = new AV.Query('News');
       queryNewsCount.count().then(function (count) {
-        if (count >= 5) {
-          if (count % 5 == 0) {
-            $scope.newsPagination = parseInt(count / 5);
-            for (var i = 1; i < $scope.newsPagination; i++) {
-              $scope.pagNum[i - 1] = i;
-            }
-          } else {
-            $scope.newsPagination = parseInt(count / 5) + 1;
-            for (var i = 1; i <= $scope.newsPagination; i++) {
-              $scope.pagNum[i - 1] = i;
-            }
-          }
-        } else {
-          $scope.newsPagination = 0;
-        }
+        $scope.newsCount = count;
         $scope.$apply();
       });
 
@@ -123,90 +113,43 @@ angular.module('myApp.News', ['ngRoute'])
       })
     };
 
-    $scope.next = function () {
-      // $scope.loading = true;
-      $scope.page += 1;
-      $scope.skip += 5;
-      var queryNews = new AV.Query('News');
-      queryNews.limit(5);
-      queryNews.descending('createdAt');
-      queryNews.skip($scope.skip);
-      queryNews.find().then(function (res) {
-        $scope.news = [];
-        res.forEach(function (element) {
-          var mainImage = element.get('image').thumbnailURL(720, 480);
-          var title = element.get('title');
-          var content = element.get('content');
-          var id = element.id;
-          var date = element.get('createdAt');
+    $scope.nextPage = function () {
+      var quotient = Math.floor($scope.newsCount / $scope.pageSize);
+      var remainder = $scope.newsCount % $scope.pageSize;
 
-          $scope.news.push({
-            id: id,
-            mainImage: mainImage,
-            title: title,
-            content: content,
-            date: date
-          })
-          $('html,body').scrollTop(0);
-          $scope.$apply();
-        });
+      if ($scope.currentPage == quotient) {
+        if (remainder > 0) {
+          $scope.currentPage = quotient + 1;
+        }
+      }
 
-        // $scope.loading = false;
-        $scope.$apply();
-
-      }).catch(function (error) {
-
-        $scope.loading = false;
-        $scope.$apply();
-        alert(JSON.stringify(error));
-      });
+      if ($scope.currentPage < quotient) {
+        $scope.currentPage = $scope.currentPage + 1;
+      }
+      $scope.goToPagination();
     };
 
-    $scope.previous = function () {
-      if ($scope.skip >= 5) {
-        $scope.page -= 1;
-        // $scope.loading = true;
-
-        $scope.skip -= 5;
-        var queryNews = new AV.Query('News');
-        queryNews.limit(5);
-        queryNews.descending('createdAt');
-        queryNews.skip($scope.skip);
-        queryNews.find().then(function (res) {
-          $scope.news = [];
-          res.forEach(function (element) {
-            var mainImage = element.get('image').thumbnailURL(720, 480);
-            var title = element.get('title');
-            var content = element.get('content');
-            var id = element.id;
-            var date = element.get('createdAt');
-
-            $scope.news.push({
-              id: id,
-              mainImage: mainImage,
-              title: title,
-              content: content,
-              date: date
-            })
-            $('html,body').scrollTop(0);
-            $scope.$apply();
-          });
-
-          // $scope.loading = false;
-          $scope.$apply();
-
-        }).catch(function (error) {
-
-          $scope.loading = false;
-          $scope.$apply();
-          alert(JSON.stringify(error));
-        });
+    $scope.previousPage = function () {
+      if ($scope.currentPage > 1) {
+        $scope.currentPage = $scope.currentPage - 1;
+        $scope.goToPagination();
       }
     };
 
-    $scope.goToNews = function (index) {
-      localStorageService.cookie.set('newsId', $scope.news[index].id);
-      // $state.go('newsView');
+    $scope.begin = function () {
+      $scope.init();
+      $('html,body').scrollTop(0);
+    };
+
+    $scope.end = function () {
+      var quotient = Math.floor($scope.newsCount / $scope.pageSize);
+      var remainder = $scope.newsCount % $scope.pageSize;
+
+      $scope.currentPage = quotient;
+      if (remainder > 0) {
+        $scope.currentPage = quotient + 1;
+      }
+      $scope.goToPagination();
     };
 
     $scope.deleteNews = function (id) {
@@ -220,15 +163,15 @@ angular.module('myApp.News', ['ngRoute'])
       $scope.activeSideBar = num;
     };
 
-    $scope.goToPage = function (n) {
-      // $scope.loading = true;
-      $scope.page = n;
+    $scope.goToProject = function (id) {
+      $rootScope.customGoTo('viewNews/' + id);
+    };
 
-      $scope.skip = ((n - 1) * 5);
+    $scope.goToPagination = function () {
       var queryNews = new AV.Query('News');
       queryNews.limit(5);
       queryNews.descending('createdAt');
-      queryNews.skip($scope.skip);
+      queryNews.skip(($scope.currentPage - 1) * 5);
       queryNews.find().then(function (res) {
         $scope.news = [];
         res.forEach(function (element) {
@@ -249,19 +192,13 @@ angular.module('myApp.News', ['ngRoute'])
           $scope.$apply();
         });
 
-        // $scope.loading = false;
         $scope.$apply();
 
       }).catch(function (error) {
-
         $scope.loading = false;
         $scope.$apply();
         alert(JSON.stringify(error));
       });
-    };
-
-    $scope.goToProject = function (id) {
-      $rootScope.customGoTo('viewNews/' + id);
     };
 
   }]);

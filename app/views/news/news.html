@@ -10,11 +10,11 @@
   </div>
 </div> -->
 <div>
-    <img class="imageBanner" src="images/hoopaDark.jpg" />
-    <div class="textBanner">
-        <p class="textWhite">{{'NEWS' | translate }}</p>
-    </div>
-    <div class="lineBlueBanner"></div>
+  <img class="imageBanner" src="images/hoopaDark.jpg" />
+  <div class="textBanner">
+    <p class="textWhite">{{'NEWS' | translate }}</p>
+  </div>
+  <div class="lineBlueBanner"></div>
 </div>
 <div class="paddingBoxHome">
   <div class="container">
@@ -57,7 +57,7 @@
               <div class="col-lg-9">
                 <header>
                   <h3>
-                    <a href="" ng-click="goToProject(f.id)">{{f.title}}</a>
+                    <a class="textDecorationNone" href="" ng-click="goToProject(f.id)">{{f.title}}</a>
                   </h3>
                   <div class="post-info">
                     <span class="post-date">
@@ -80,92 +80,35 @@
           </article>
         </div>
         <!-- pagination start -->
-        <nav aria-label="Page navigation" ng-show="newsPagination != 0">
+        <nav aria-label="Page navigation">
           <ul class="pagination justify-content-center">
-            <li class="page-item" ng-hide="page == 1">
-              <a class="page-link" ng-click="previous()" href="" aria-label="Previous">
-                <i aria-hidden="true" class="fa fa-angle-left"></i>
-                <span class="sr-only">{{'PREVIOUS' | translate}}</span>
+            <li class="page-item">
+              <a class="page-link" href="" aria-label="Previous" ng-click="begin()">
+                <i aria-hidden="true" class="fa fa-angle-double-left"></i>
               </a>
             </li>
-            <li ng-repeat="n in pagNum" class="page-item" ng-class="{'active': page == n}">
-              <a class="page-link" ng-click="goToPage(n)" href="">{{n}}</a>
+            <li class="page-item">
+              <a class="page-link" href="" aria-label="Previous" ng-click="previousPage()">
+                <i aria-hidden="true" class="fa fa-angle-left"></i>
+              </a>
             </li>
-            <li class="page-item" ng-hide="page == pagNum[pagNum.length-1]">
-              <a class="page-link" ng-click="next()" href="" aria-label="Next">
+            <li class="page-item active">
+              <a class="page-link" href="">{{currentPage}}</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="" aria-label="Next" ng-click="nextPage()">
                 <i aria-hidden="true" class="fa fa-angle-right"></i>
-                <span class="sr-only">{{'NEXT' | translate}}</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="" aria-label="Next" ng-click="end()">
+                <i aria-hidden="true" class="fa fa-angle-double-right"></i>
               </a>
             </li>
           </ul>
         </nav>
         <!-- pagination end -->
       </div>
-      <!-- <aside class="col-lg-4 col-xl-3 ml-xl-auto">
-        <div class="sidebar">
-          <div class="block clearfix">
-            <h3 class="title">News</h3>
-            <div class="separator-2"></div>
-            <nav>
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link" href="" ng-click="ChangeNews(1)" ng-class="{'active': activeSideBar == 1}">Media Coverage</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="" ng-click="ChangeNews(2)" ng-class="{'active': activeSideBar == 2}">Latest News</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="" ng-click="ChangeNews(3)" ng-class="{'active': activeSideBar == 3}">Industry News</a>
-                </li>
-              </ul>
-            </nav>
-          </div> -->
-      <!-- <div class="block clearfix">
-              <h3 class="title">Hot News</h3>
-              <div class="separator-2"></div>
-              <div id="carousel-portfolio-sidebar" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li ng-repeat="f in news" data-target="#carousel-portfolio-sidebar" data-slide-to="{{$index}}"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                  <div class="carousel-item" ng-class="{'active': $index==0}" ng-repeat="n in news">
-                    <div class="image-box shadow text-center mb-20">
-                      <div class="overlay-container" ng-click="goToProject(n.id)">
-                        <img ng-src="{{n.mainImage}}">
-                        <a class="overlay-link">
-                          <i class="fa fa-link"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
-      <!-- <div class="block clearfix">
-            <h3 class="title">{{'LASTEStNEWS' | translate }}</h3>
-            <div class="separator-2"></div>
-            <div class="media margin-clear marginBottom5" ng-repeat="n in news">
-              <div class="d-flex pr-2">
-                <div class="overlay-container">
-                  <img class="media-object" ng-src="{{n.mainImage}}">
-                  <a ng-click="goToProject(n.id)" href="" class="overlay-link small">
-                    <i class="fa fa-link"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="media-body">
-                <h6 class="media-heading">
-                  <a ng-click="goToProject(n.id)" href="">{{n.title}}</a>
-                </h6>
-                <p class="small margin-clear">
-                  <i class="fa fa-calendar pr-10"></i>{{month[n.date.getMonth()]}} {{n.date.getDate()}}, {{n.date.getFullYear()}} </p>
-              </div>
-            </div>
-            <hr>
-          </div>
-        </div>
-      </aside> -->
     </div>
   </div>
 </div>

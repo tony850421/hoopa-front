@@ -656,7 +656,7 @@ ul.pagination .page-item.active .page-link,
 }
 
 .modal-content .modal-header {
-  background-color: #22447a !important;
+  background-color: #161920 !important;
 }
 
 .modal-content .modal-title {
@@ -1436,7 +1436,7 @@ ul li.nav-item a.tabCoreTeam.active {
     padding: 10px !important;
   }
   .minHeightCases {
-    min-height: 305px !important;
+    min-height: 275px !important;
   }
   .minHeightFirst3Team {
     min-height: 230px !important;
@@ -1602,7 +1602,7 @@ ul li.nav-item a.tabCoreTeam.active {
     width: 210px !important;
   }
   .minHeightCases {
-    min-height: 269px !important;
+    min-height: 245px !important;
   }
   .minHeightFirst4Team {
     min-height: 230px !important;
@@ -2219,4 +2219,12 @@ span.iconBranches {
   margin-left: 20%;
   background-color: #161920;
   margin-top: -8px;
+}
+
+.hoverColorWhite:hover{
+  color: white !important;
+}
+
+.borderNone{
+  border: none !important;
 }
