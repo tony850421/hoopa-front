@@ -34,6 +34,7 @@
   min-width: 260px;
   max-height: 160px;
 }
+
 .padding0 {
   padding: 0px !important;
 }
@@ -1082,7 +1083,7 @@ ul li.nav-item a.tabCoreTeam.active {
   .width90P {
     width: 84% !important;
   }
-  .ulHomeCar{
+  .ulHomeCar {
     min-width: 350px !important;
     z-index: 2000;
     transform: translate3d(-10px, 0px, 0px) !important;
@@ -1097,8 +1098,8 @@ ul li.nav-item a.tabCoreTeam.active {
     z-index: 1100 !important;
     position: relative;
     border: none;
-  }  
-  .industryNews{
+  }
+  .industryNews {
     width: 100% !important;
   }
 }
@@ -1154,7 +1155,7 @@ ul li.nav-item a.tabCoreTeam.active {
   .width90P {
     width: 86% !important;
   }
-  .ulHomeCar{
+  .ulHomeCar {
     min-width: 350px !important;
     z-index: 2000;
     transform: translate3d(-10px, 0px, 0px) !important;
@@ -1206,7 +1207,7 @@ ul li.nav-item a.tabCoreTeam.active {
   .width90P {
     width: 88% !important;
   }
-  .ulHomeCar{
+  .ulHomeCar {
     min-width: 350px !important;
     z-index: 2000;
     transform: translate3d(-10px, 0px, 0px) !important;
@@ -1272,7 +1273,7 @@ ul li.nav-item a.tabCoreTeam.active {
   .width90P {
     width: 88% !important;
   }
-  .ulHomeCar{
+  .ulHomeCar {
     min-width: 350px !important;
     z-index: 2000;
     transform: translate3d(-10px, 0px, 0px) !important;
@@ -1324,12 +1325,17 @@ ul li.nav-item a.tabCoreTeam.active {
   .width90P {
     width: 90% !important;
   }
-  .ulHomeCar{
+  .ulHomeCar {
     min-width: 350px !important;
     z-index: 2000;
     transform: translate3d(-10px, 0px, 0px) !important;
-  }  
+  }
   .imageNewsListHome {
+    width: 100% !important;
+    object-fit: cover;
+    min-height: 180px !important;
+  }
+  .imageNewsListCompanyHome {
     width: 100% !important;
     object-fit: cover;
     min-height: 180px !important;
@@ -1367,11 +1373,8 @@ ul li.nav-item a.tabCoreTeam.active {
   .textCenterXS {
     text-align: center !important;
   }
-  .marginLeftAutoXS{
+  .marginLeftAutoXS {
     margin-left: auto !important;
-  }
-  .marginTop40XS{
-    margin-top: 40px !important;
   }
 }
 
@@ -1381,9 +1384,6 @@ ul li.nav-item a.tabCoreTeam.active {
     flex: 0 0 100%;
     padding-left: 15px !important;
     padding-right: 15px !important;
-  }
-  .hiddenLG{
-    display: none !important;
   }
   #searchPage {
     transform: translate3d(330px, -10px, 0px) !important;
@@ -1502,7 +1502,7 @@ ul li.nav-item a.tabCoreTeam.active {
   .width90P {
     width: 100% !important;
   }
-  .ulHomeCar{
+  .ulHomeCar {
     min-width: 350px !important;
     z-index: 2000;
     transform: translate3d(-10px, 0px, 0px) !important;
@@ -1511,17 +1511,35 @@ ul li.nav-item a.tabCoreTeam.active {
     margin-top: -5px !important;
     width: 200px !important;
   }
-  .marginTop40LG{
+  .marginTop40LG {
     margin-top: 40px !important;
   }
-  .industryNews{
+  .industryNews {
     width: 20% !important;
+  }
+  .styleBannerLG {
+    height: 160px !important;
+  }
+  .marginLeft6p3P {
+    margin-left: 6.3% !important;
+  }
+  .imageNewsListHome {
+    width: 100% !important;
+    object-fit: cover;
+    min-height: 140px !important;
+  }
+  .imageNewsListCompanyHome {
+    width: 100% !important;
+    object-fit: cover;
   }
 }
 
-@media (max-width: 991px){
-  .hidden-sm{
+@media (max-width: 991px) {
+  .hidden-sm {
     display: none;
+  }
+  .marginTop40XS {
+    margin-top: 40px !important;
   }
 }
 
@@ -1612,15 +1630,25 @@ ul li.nav-item a.tabCoreTeam.active {
     padding-bottom: 30px !important;
     padding-top: 30px !important;
   }
-  .ulHomeCar{
+  .ulHomeCar {
     min-width: 350px !important;
     z-index: 2000;
     transform: translate3d(-280px, 61px, 0px) !important;
     padding: 10px;
   }
-  .marginLeft6p3P {
-    margin-left: 6.3% !important;
-  }  
+  .hiddenLG {
+    display: none !important;
+  }
+  .imageNewsListHome {
+    width: 100% !important;
+    object-fit: cover;
+    min-height: 180px !important;
+  }
+  .imageNewsListCompanyHome {
+    width: 100% !important;
+    object-fit: cover;
+    min-height: 180px !important;
+  }
 }
 
 @media (min-width: 1080px) {
@@ -1645,7 +1673,7 @@ ul li.nav-item a.tabCoreTeam.active {
   .marginLeftServiceHome {
     margin-left: 2% !important;
   }
-  .ulHomeCar{
+  .ulHomeCar {
     min-width: 350px !important;
     z-index: 2000;
     transform: translate3d(-280px, 61px, 0px) !important;
@@ -1680,7 +1708,7 @@ ul li.nav-item a.tabCoreTeam.active {
     height: 80% !important;
     background-color: transparent !important;
   }
-  .ulHomeCar{
+  .ulHomeCar {
     min-width: 350px !important;
     z-index: 2000;
     transform: translate3d(-280px, 61px, 0px) !important;
@@ -1704,7 +1732,7 @@ ul li.nav-item a.tabCoreTeam.active {
   .menuBarPage {
     width: 260px !important;
   }
-  .ulHomeCar{
+  .ulHomeCar {
     min-width: 350px !important;
     z-index: 2000;
     transform: translate3d(-280px, 61px, 0px) !important;
@@ -1837,7 +1865,7 @@ h6 {
   font-size: 20px !important;
 }
 
-.fontSize16{
+.fontSize16 {
   font-size: 16px !important;
 }
 
@@ -1894,10 +1922,6 @@ h6 {
 .show>.dropdown-toggle.btn-default-transparent {
   background-color: transparent !important;
   border-color: transparent !important;
-}
-
-.styleBannerLG {
-  height: 160px !important;
 }
 
 .marginTop40 {
@@ -2095,14 +2119,14 @@ ul.ulStyleFooter li a#address:hover {
   right: 20px !important;
 }
 
-.header .navbar-nav .dropdown.show > .dropdown-toggle::after{
+.header .navbar-nav .dropdown.show>.dropdown-toggle::after {
   color: #161920 !important;
 }
 
-.zIndex5000{
+.zIndex5000 {
   z-index: 5000 !important;
 }
 
-.textEnd{
+.textEnd {
   text-align: end !important;
 }

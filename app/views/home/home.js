@@ -21,6 +21,28 @@ angular.module('myApp.Home', ['ngRoute'])
       $rootScope.customGoTo('project-details/' + id);
     };
 
+    // $scope.limitNews = 3;
+
+    // if ($(window).width() >= 992) {
+    //   $scope.limitNews = 3;
+    // } else if ($(window).width() >= 768) {
+    //   $scope.limitNews = 2;
+    // } else {
+    //   $scope.limitNews = 3;
+    // }
+
+    // $(window).on("resize.doResize", function () {
+    //   $scope.$apply(function () {
+    //     if ($(window).width() >= 992) {
+    //       $scope.limitNews = 3;
+    //     } else if ($(window).width() >= 768) {
+    //       $scope.limitNews = 2;
+    //     } else {
+    //       $scope.limitNews = 3;
+    //     }
+    //   });
+    // });
+
     $scope.fetchNews = function () {
       var queryNews = new AV.Query('News');
       queryNews.limit(3);

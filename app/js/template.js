@@ -1238,7 +1238,6 @@
 		//Scroll totop
 		//-----------------------------------------------
 		$(window).scroll(function() {
-			console.log("entro aqui");
 			if($(this).scrollTop() != 0) {
 				$(".scrollToTop").addClass("fadeToTop");
 				$(".scrollToTop").removeClass("fadeToBottom");

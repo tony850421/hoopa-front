@@ -105,21 +105,21 @@
     <section class="section light-gray-bg clearfix backgroundSectionHome">
         <div class="col-12 paddingHome">
             <div class="row marginRight0XS">
-                <div class="col-md-4 col-12 paddingLeft0XS paddingRight0XS width90P backgroundBlue">
+                <div class="col-lg-4 col-sm-12 col-12 paddingLeft0XS paddingRight0XS width90P backgroundBlue">
                     <h3 class="col-lg-12 page-title textWhite marginBottom20 marginTop20">{{'VIDEO' | translate }}</h3>
                     <video class="videoHoopa" src="http://lc-qpv1wnqe.cn-n1.lcfile.com/7ded4d8f482e88bcf676.mp4" controls></video>
                 </div>
-                <div class="col-md-1 hidden-sm"></div>
-                <div class="col-md-7 col-12 row paddingRight0XS marginTop40XS paddingLeft0XS marginLeft0XS">
+                <div class="col-lg-1 hidden-sm"></div>
+                <div class="col-lg-7 col-sm-12 col-12 row paddingRight0XS marginTop40XS paddingLeft0XS marginLeft0XS">
                     <div class="col-lg-12 backgroundBlue">
                         <h3 class="page-title textWhite marginTop20 marginBottom20">{{'COMPANYNEWS' | translate }}</h3>
                         <img src="images/more.png" class="buttonMoreNewsHome cursorPointer" ng-click="customGoTo('news/1')">
                     </div>
                     <div class="row marginTop20 paddingLeft0XS">
-                        <div class="col-lg-4" ng-repeat="n in news | limitTo: 3">
+                        <div class="col-lg-4 col-md-4 col-sm-4" ng-repeat="n in news | limitTo: 3" ng-cloak>
                             <div class="image-box text-center style-2 mb-20">
                                 <div class="overlay-container overlay-visible">
-                                    <img ng-click="goToNews(n.id)" class="imageNewsListHome cursorPointer" ng-src="{{n.mainImage}}">
+                                    <img ng-click="goToNews(n.id)" class="imageNewsListCompanyHome cursorPointer" ng-src="{{n.mainImage}}">
                                     <div class="titleNewsHome cursorPointer" ng-click="goToNews(n.id)">
                                         <p class="lead margin-clear textWhite fontSize14">{{n.titleMin}}</p>
                                     </div>

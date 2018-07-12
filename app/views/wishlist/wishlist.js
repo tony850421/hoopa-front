@@ -29,9 +29,7 @@ angular.module('myApp.Wishlist', ['ngRoute'])
                 query.include('image');
                 query.include('project');
                 query.descending('createdAt');
-                query.find().then(res => {
-                    
-                    
+                query.find().then(res => {                    
 
                     for (var i=0; i<res.length; i++){
                         var aux = res[i].get('project').get('description');
