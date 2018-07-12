@@ -1837,6 +1837,10 @@ h6 {
   font-size: 20px !important;
 }
 
+.fontSize16{
+  font-size: 16px !important;
+}
+
 .imageProjectDetail {
   width: 100% !important;
   object-fit: cover !important;
@@ -2095,6 +2099,10 @@ ul.ulStyleFooter li a#address:hover {
   color: #161920 !important;
 }
 
-zIndex5000{
+.zIndex5000{
   z-index: 5000 !important;
+}
+
+.textEnd{
+  text-align: end !important;
 }
