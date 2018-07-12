@@ -845,13 +845,6 @@ ul li.nav-item a.tabCoreTeam.active {
   color: white !important;
 }
 
-.textServiceBox {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  margin-top: 280px;
-}
-
 .separatorCoreTeam {
   width: 50% !important;
   margin-left: 25% !important;
