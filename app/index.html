@@ -64,7 +64,7 @@
         <div class="col-lg-3 col-sm-4 col-4">
           <div class="header-first clearfix">
             <div id="logo" class="logo">
-              <a href="index.html">
+              <a ng-click="customGoTo('home')">
                 <img class="logo_img marginLeftAuto" id="logo_img" src="images/LogoHoopa.png" alt="Hoopa">
               </a>
             </div>
@@ -191,7 +191,7 @@
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                   <ul class="navbar-nav ml-xl-auto paddingBottom0">
                     <li class="nav-item colorIconBarDark">
-                      <a href="index.html" class="nav-link" ng-cloak>{{'HOME' | translate }}</a>
+                      <a ng-click="customGoTo('home')" class="nav-link" ng-cloak>{{'HOME' | translate }}</a>
                     </li>
                     <li class="nav-item dropdown">
                       <a href="" class="nav-link dropdown-toggle colorIconBarDark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
