@@ -722,10 +722,6 @@ li.colorIconBarDark a {
   padding-bottom: 15px;
 }
 
-.width700px {
-  width: 700px !important;
-}
-
 .marginFirstLine {
   text-indent: 20px;
 }
@@ -1120,6 +1116,9 @@ ul li.nav-item a.tabCoreTeam.active {
     margin-left: auto;
     margin-right: auto;
   }
+  .width700px {
+    width: 305px !important;
+  }
 }
 
 @media (min-width: 360px) {
@@ -1183,6 +1182,9 @@ ul li.nav-item a.tabCoreTeam.active {
     z-index: 2000;
     transform: translate3d(97px, 0px, 0px) !important;
   }
+  .width700px {
+    width: 355px !important;
+  }
 }
 
 @media (min-width: 375px) {
@@ -1239,6 +1241,9 @@ ul li.nav-item a.tabCoreTeam.active {
     min-width: 375px !important;
     z-index: 2000;
     transform: translate3d(97px, 0px, 0px) !important;
+  }
+  .width700px {
+    width: 360px !important;
   }
 }
 
@@ -1311,6 +1316,9 @@ ul li.nav-item a.tabCoreTeam.active {
     z-index: 2000;
     transform: translate3d(97px, 0px, 0px) !important;
   }
+  .width700px {
+    width: 405px !important;
+  }
 }
 
 @media (min-width: 480px) {
@@ -1377,6 +1385,9 @@ ul li.nav-item a.tabCoreTeam.active {
     width: 100% !important;
     object-fit: cover;
     min-height: 180px !important;
+  }
+  .width700px {
+    width: 465px !important;
   }
 }
 
@@ -1495,6 +1506,9 @@ ul li.nav-item a.tabCoreTeam.active {
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+}
+.marginLeft20XS{
+  margin-left: 20px !important;
 }
 }
 
@@ -1736,6 +1750,9 @@ ul li.nav-item a.tabCoreTeam.active {
     transform: translate3d(0, 0, 0);
   }
 }
+.width700px {
+  width: 700px !important;
+}
 }
 
 @media (max-width: 991px) {
@@ -1908,6 +1925,9 @@ ul li.nav-item a.tabCoreTeam.active {
   .marginTopWeChat {
     margin-top: 80% !important;
   }
+  .width700px {
+    width: 700px !important;
+  }
 }
 
 @media (min-width: 1080px) {
@@ -2061,6 +2081,9 @@ ul li.nav-item a.tabCoreTeam.active {
     margin-left: auto;
     margin-right: auto;
   }
+  .width700px {
+    width: 700px !important;
+  }
 }
 
 .buttonProjectStyle {
@@ -2192,6 +2215,13 @@ h6 {
 .imageProjectDetail {
   width: 100% !important;
   object-fit: cover !important;
+  max-height: 325px !important;
+}
+
+.sliderImageProject{
+  width: 100% !important;
+  object-fit: cover !important;
+  max-height: 77px !important;
 }
 
 .slick-slide {

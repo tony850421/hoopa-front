@@ -58,7 +58,7 @@
           <img class="imageProjectDetail marginBottom10" ng-src="{{imageListActive}}">
           <slick class="slider" settings="slickConfig" ng-if="loadData" ng-cloak>
             <div ng-repeat="i in imageList">
-              <img ng-click="changeImageActive(i.url)" ng-src="{{i.imageUrl}}">
+              <img class="sliderImageProject" ng-click="changeImageActive(i.url)" ng-src="{{i.imageUrl}}">
             </div>
           </slick>
 
