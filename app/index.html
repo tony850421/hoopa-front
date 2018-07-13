@@ -21,9 +21,7 @@
   <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- Font and Icon Hoopa CSS -->
-  <link href="fonts/font-hoopa/style.css" rel="stylesheet">
-  <link href="fonts/font/style.css" rel="stylesheet">
-
+  <link href="fonts/hoopa-font/style.css" rel="stylesheet">
 
   <!-- Plugins -->
   <link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -50,86 +48,18 @@
 </head>
 
 <body class="front-page transparent-header" ng-controller="MainCtrl">
-  <!-- scrollToTop -->
-  <!-- ================ -->
-  <div class="scrollToTop zIndex5000">
+  <div class="scrollToTopHoopa zIndex5000">
     <i class="fa fa-angle-up"></i>
   </div>
-  <div class="scrollQR">
-    <img class="iconWhite" src="images/iconWhite.png">
+  <div class="scrollQR zIndex5000">
+      <i class="icon-51" data-toggle="modal" data-target="#modalWeChat"></i>
   </div>
 
   <div class="page-wrapper">
     <div class="header-container">
-      <!-- <div class="header-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-3 col-sm-6 col-lg-9">
-              <div class="header-top-first clearfix">
-                <div class="hidden-lg-up">
-                  <div id="logo-mobile" class="logo">
-                    <a href="index.html">
-                      <img class="logo_img_mobile" id="logo-img-mobile" src="images/LogoHoopa.png">
-                    </a>
-                  </div>
-                </div>
-                <ul class="list-inline hidden-md-down hiddenLGAddressPhone">
-                  <li class="list-inline-item">
-                    <a href="tel:+86 0571 85267521" class="link-dark textDecorationNone">
-                      <i class="text-default icon-Phone pr-1 pl-2"></i>+86 0571 85267521</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-9 col-sm-6 col-lg-3">
-              <div id="header-top-second" class="clearfix">
-                <div class="header-top-dropdown text-right marginTop5PXS">
-                  <div class="btn-group">
-                    <button ng-hide="loginUser" data-toggle="modal" data-target="#modalLogin" type="button" class="btn paddingLR10 btn-sm colorIconBarDark"
-                      ng-cloak>
-                      <i class="icon-Login spanSignUp"></i>
-                      {{'LOGIN' | translate}}
-                    </button>
-                    <button ng-show="loginUser" id="header-top-drop-2" type="button" class="btn dropdown-toggle colorIconBarDark paddingLR10 btn-sm dropdown-toggle--no-caret backgroundGray colorTextGray"
-                      style="height:30px !important;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
-                      <img ng-hide="avatar !=''" class="avatarImageBanner" src="images/avatar.jpg">
-                      <img ng-show="avatar !=''" class="avatarImageBanner" ng-src="{{avatar}}">
-                    </button>
-                    <ul id="userDropdown" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
-                      <li class="cursorPointer languageActive" ng-cloak>
-                        <a class="fontSize14" ng-click="logout()">
-                          <i class="icon-Unlogin iconUnloginClass pr-2"></i>
-                          {{'LOGOUT' | translate}}</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="btn-group">
-                    <button id="header-top-drop-1" type="button" class="btn dropdown-toggle colorIconBarDark btn-sm paddingLR10 backgroundGray colorTextGray hoverPrimary"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
-                      {{languageShort}}</button>
-                    <ul id="language" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-1">
-                      <li href="" class="languageActive" ng-click="setLanguage('cn_CN')">
-                        <a class="colorIconBarDark">{{'CHINESE' | translate}}</a>
-                      </li>
-                      <li href="" class="languageActive" ng-click="setLanguage('en_EN')">
-                        <a class="colorIconBarDark">{{'ENGLISH' | translate}}</a>
-                      </li>
-                      <li href="" class="languageActive" ng-click="setLanguage('es_ES')">
-                        <a class="colorIconBarDark">{{'SPANISH' | translate}}</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
       <div class="backgroundColorPrimary" style="height: 8px;"></div>
     </div>
-    <!-- header-top end -->
-    <!-- ================ -->
     <header class="header fixed fixed-desktop clearfix backgroundWhite styleBannerLG">
-      <!-- <div class="container"> -->
       <div class="row marginRight0">
         <div class="col-lg-3 col-sm-4 col-4">
           <div class="header-first clearfix">
@@ -143,16 +73,16 @@
         <div class="col-lg-3 hidden-sm">
           <ul class="list-inline marginBottom15 textPhoneHome">
             <li class="list-inline-item marginTop10" ng-cloak>
-              <a href="tel:+86 0571 85267521" class="link-dark textDecorationNone fontSize16">
-                <i class="text-default icon-Phone pl-10 pr-1"></i>+86 0571 85267521</a>
+              <a href="tel:+86 0571 85267521" class="link-dark textDecorationNone">
+                <i class="text-default icon-35 pl-10 pr-1"></i>4008001682</a>
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-sm-3 col-8">
-          <div class="btn-group marginTop35 pull-right" ng-hide="!loginUser">
+        <div class="col-lg-3 col-sm-3 col-8 padding0">
+          <div class="btn-group marginTop45 pull-right" ng-hide="!loginUser">
             <button class="btn dropdown-toggle dropdown-toggle--no-caret fontSize24 backgroundTransparent" id="header-drop-4" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false" ng-click="initWishList()" ng-cloak>
-              <i class="fa fa-heart-o marginLeft5"></i>
+              <i class="icon-49 marginLeft5 fontSize28"></i>
               <span class="cart-count default-bg" ng-show="shopCartArray.length > 0">{{shopCartCount}}</span>
             </button>
             <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation ulHomeCar" aria-labelledby="header-drop-4">
@@ -179,19 +109,19 @@
                     </tr>
                   </tbody>
                 </table>
-                <div class="panel-body text-right">
+                <div class="panel-body text-right paddingRight10">
                   <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm" ng-cloak> {{'VWISHLIST' | translate}}</a>
                 </div>
               </li>
             </ul>
           </div>
-          <div class="btn-group marginTop35 pull-right" ng-hide="!loginUser">
+          <div class="btn-group marginTop45 pull-right" ng-hide="!loginUser">
             <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret fontSize24 backgroundTransparent" id="header-drop-2"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-click="initOffersList()" ng-cloak>
-              <i class="icon-Total-offers marginLeft5"></i>
+              <i class="icon-26 marginLeft5 fontSize28"></i>
               <span class="cart-count default-bg" ng-show="offersCartCount > 0" ng-cloak>{{offersCartCount}}</span>
             </button>
-            <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation ulHomeCar" aria-labelledby="header-drop-2">
+            <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation ulHomeCarOffer" aria-labelledby="header-drop-2">
               <li>
                 <table class="table table-hover">
                   <thead>
@@ -219,11 +149,11 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-3 col-sm-5 col-12">
+        <div class="col-lg-3 col-sm-5 col-12 padding0">
           <div class="header-top-dropdown marginTop40LG fontSize24">
             <div class="btn-group">
-              <button ng-hide="loginUser" data-toggle="modal" data-target="#modalLogin" type="button" class="btn styleButtonsBanner" ng-cloak>
-                <!-- <i class="icon-Login spanSignUp"></i> -->
+              <button ng-hide="loginUser" data-toggle="modal" data-target="#modalLogin" type="button" class="btn styleButtonsBanner fontSize20"
+                ng-cloak>
                 {{'LOGIN' | translate}}
               </button>
               <button ng-show="loginUser" id="header-top-drop-2" type="button" class="btn dropdown-toggle dropdown-toggle--no-caret styleButtonsBanner"
@@ -233,38 +163,28 @@
               </button>
               <ul id="userDropdown" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
                 <li class="cursorPointer languageActive" ng-cloak>
-                  <a class="fontSize14" ng-click="logout()">
-                    <i class="icon-Unlogin iconUnloginClass pr-2"></i>
+                  <a class="fontSize20" ng-click="logout()">
+                    <i class="icon-34 iconUnloginClass pr-2"></i>
                     {{'LOGOUT' | translate}}</a>
                 </li>
               </ul>
             </div>
             <div class="btn-group pullRightXS">
-              <button id="header-top-drop-1" type="button" class="btn styleButtonsBanner borderRightLanguage" ng-class="{'activeLanguage': languageShort == '中文'}"
+              <button id="header-top-drop-1" type="button" class="btn styleButtonsBanner borderRightLanguage fontSize20" ng-class="{'activeLanguage': languageShort == '中文'}"
                 ng-click="setLanguage('cn_CN')" ng-cloak>
                 {{'CHINESE' | translate}}</button>
-              <button id="header-top-drop-1" type="button" class="btn styleButtonsBanner borderLeftLanguage" ng-class="{'activeLanguage': languageShort != '中文'}"
+              <button id="header-top-drop-1" type="button" class="btn styleButtonsBanner borderLeftLanguage fontSize20" ng-class="{'activeLanguage': languageShort != '中文'}"
                 ng-click="setLanguage('en_EN')" ng-cloak>
                 {{'ENGLISH' | translate}}</button>
             </div>
           </div>
         </div>
-
-        <!-- <div class="col-md-auto">
-            <div class="header-first clearfix">
-              <div id="logo" class="logo">
-                <a href="index.html">
-                  <img class="logo_img" id="logo_img" src="images/LogoHoopa.png" alt="Hoopa">
-                </a>
-              </div>
-            </div>
-          </div> -->
         <div class="col-lg-12 ml-auto widthDropdown padding10 backgroundBlue zIndex1000 hiddenLG">
           <div class="header-second clearfix">
             <div class="main-navigation main-navigation--mega-menu main-navigation--style-2 animated">
               <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <button class="navbar-toggler backgroundWhite marginLeftAuto" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1"
-                  aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler backgroundWhite marginLeftAuto" type="button" data-toggle="collapse" data-target="#navbar-collapse-1"
+                  aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -279,19 +199,19 @@
                       <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
                         <li>
                           <a class="colorIconBarDark" href="" ng-click="customGoTo('groupIntroduction')" ng-cloak>
-                            <i class="icon-Group-Introduction iconMenuClass colorInherit pr-2"></i>{{'GROUPINTRODUCTION' | translate }}</a>
+                            <i class="icon-41 iconMenuClass colorInherit pr-2"></i>{{'GROUPINTRODUCTION' | translate }}</a>
                         </li>
                         <li>
                           <a class="colorIconBarDark" href="" ng-click="customGoTo('organizationStructure')" ng-cloak>
-                            <i class="icon-Organization-structure iconMenuClass colorInherit pr-2"></i>{{'STRUCTURE' | translate }}</a>
+                            <i class="icon-42 iconMenuClass colorInherit pr-2"></i>{{'STRUCTURE' | translate }}</a>
                         </li>
                         <li>
                           <a class="colorIconBarDark" href="" ng-click="customGoTo('coreteam')" ng-cloak>
-                            <i class="icon-Core-Team iconMenuClass colorInherit pr-2"></i>{{'CORETEAM' | translate }}</a>
+                            <i class="icon-43 iconMenuClass colorInherit pr-2"></i>{{'CORETEAM' | translate }}</a>
                         </li>
                         <li>
                           <a class="colorIconBarDark" href="" ng-click="customGoTo('devhistory')" ng-cloak>
-                            <i class="icon-Development-history iconMenuClass colorInherit pr-2"></i>{{'DEVHISTORY' | translate }}</a>
+                            <i class="icon-44 iconMenuClass colorInherit pr-2"></i>{{'DEVHISTORY' | translate }}</a>
                         </li>
                       </ul>
                     </li>
@@ -301,11 +221,11 @@
                       <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
                         <li>
                           <a class="colorIconBarDark" href="" ng-click="customGoTo('bussinessystem')" ng-cloak>
-                            <i class="icon-Business-System iconMenuClass colorInherit pr-2"></i>{{'BSYSTEM' | translate }}</a>
+                            <i class="icon-47 iconMenuClass colorInherit pr-2"></i>{{'BSYSTEM' | translate }}</a>
                         </li>
                         <li>
                           <a class="colorIconBarDark" href="" ng-click="customGoTo('bussinesprocess')" ng-cloak>
-                            <i class="icon-Service-process iconMenuClass colorInherit pr-2"></i>{{'SPROCESS' | translate }}</a>
+                            <i class="icon-48 iconMenuClass colorInherit pr-2"></i>{{'SPROCESS' | translate }}</a>
                         </li>
                       </ul>
                     </li>
@@ -318,11 +238,11 @@
                       <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
                         <li>
                           <a class="colorIconBarDark" href="" ng-click="customGoTo('projects')" ng-cloak>
-                            <i class="icon-Investment-Promotion iconMenuClass colorInherit pr-2"></i>{{'IPROMOTION' | translate }}</a>
+                            <i class="icon-64 iconMenuClass colorInherit pr-2"></i>{{'IPROMOTION' | translate }}</a>
                         </li>
                         <li>
                           <a class="colorIconBarDark" href="" ng-click="customGoTo('featured-cases')" ng-cloak>
-                            <i class="icon-Featured-Cases iconMenuClass colorInherit pr-2"></i>{{'FCASES' | translate }}</a>
+                            <i class="icon-61 iconMenuClass colorInherit pr-2"></i>{{'FCASES' | translate }}</a>
                         </li>
                       </ul>
                     </li>
@@ -343,68 +263,68 @@
               <div class="collapse navbar-collapse" id="navbar-collapse-1">
                 <ul class="navbar-nav" id="menuBar">
                   <li class="nav-item colorIconBarDark">
-                    <a href="index.html" class="nav-link" ng-cloak>{{'HOME' | translate }}</a>
+                    <a href="index.html" class="nav-link fontSize20" ng-cloak>{{'HOME' | translate }}</a>
                     <div class="divLiUl" ng-class="{'divBottomLiActive': divBottomLiActive != 'HOME'}" ng-cloak></div>
                   </li>
                   <li class="nav-item dropdown">
-                    <a href="" class="nav-link dropdown-toggle colorIconBarDark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    <a href="" class="nav-link dropdown-toggle colorIconBarDark fontSize20" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                       ng-cloak>{{'GROUPOVERVIEW' | translate }}</a>
                     <div class="divLiUl" ng-class="{'divBottomLiActive': divBottomLiActive != 'GROUP'}" ng-cloak></div>
                     <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
                       <li>
-                        <a class="colorIconBarDark" href="" ng-click="customGoTo('groupIntroduction')" ng-cloak>
-                          <i class="icon-Group-Introduction iconMenuClass colorInherit pr-2"></i>{{'GROUPINTRODUCTION' | translate }}</a>
+                        <a class="colorIconBarDark fontSize20" href="" ng-click="customGoTo('groupIntroduction')" ng-cloak>
+                          <i class="icon-41 iconMenuClass colorInherit pr-2 fontSize20"></i>{{'GROUPINTRODUCTION' | translate }}</a>
                       </li>
                       <li>
-                        <a class="colorIconBarDark" href="" ng-click="customGoTo('organizationStructure')" ng-cloak>
-                          <i class="icon-Organization-structure iconMenuClass colorInherit pr-2"></i>{{'STRUCTURE' | translate }}</a>
+                        <a class="colorIconBarDark fontSize20" href="" ng-click="customGoTo('organizationStructure')" ng-cloak>
+                          <i class="icon-42 iconMenuClass colorInherit pr-2 fontSize20"></i>{{'STRUCTURE' | translate }}</a>
                       </li>
                       <li>
-                        <a class="colorIconBarDark" href="" ng-click="customGoTo('coreteam')" ng-cloak>
-                          <i class="icon-Core-Team iconMenuClass colorInherit pr-2"></i>{{'CORETEAM' | translate }}</a>
+                        <a class="colorIconBarDark fontSize20" href="" ng-click="customGoTo('coreteam')" ng-cloak>
+                          <i class="icon-43 iconMenuClass colorInherit pr-2 v"></i>{{'CORETEAM' | translate }}</a>
                       </li>
                       <li>
-                        <a class="colorIconBarDark" href="" ng-click="customGoTo('devhistory')" ng-cloak>
-                          <i class="icon-Development-history iconMenuClass colorInherit pr-2"></i>{{'DEVHISTORY' | translate }}</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown ">
-                    <a href="" class="nav-link dropdown-toggle colorIconBarDark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                      ng-cloak>{{'SERVICES' | translate }}</a>
-                    <div class="divLiUl" ng-class="{'divBottomLiActive': divBottomLiActive != 'SERVICES'}" ng-cloak></div>
-                    <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
-                      <li>
-                        <a class="colorIconBarDark" href="" ng-click="customGoTo('bussinessystem')" ng-cloak>
-                          <i class="icon-Business-System iconMenuClass colorInherit pr-2"></i>{{'BSYSTEM' | translate }}</a>
-                      </li>
-                      <li>
-                        <a class="colorIconBarDark" href="" ng-click="customGoTo('bussinesprocess')" ng-cloak>
-                          <i class="icon-Service-process iconMenuClass colorInherit pr-2"></i>{{'SPROCESS' | translate }}</a>
+                        <a class="colorIconBarDark fontSize20" href="" ng-click="customGoTo('devhistory')" ng-cloak>
+                          <i class="icon-44 iconMenuClass colorInherit pr-2 fontSize20"></i>{{'DEVHISTORY' | translate }}</a>
                       </li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
-                    <a ng-click="customGoTo('news/1')" href="" class="nav-link colorIconBarDark" ng-cloak>{{'NEWS' | translate }}</a>
+                    <a href="" class="nav-link dropdown-toggle colorIconBarDark fontSize20" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                      ng-cloak>{{'SERVICES' | translate }}</a>
+                    <div class="divLiUl" ng-class="{'divBottomLiActive': divBottomLiActive != 'SERVICES'}" ng-cloak></div>
+                    <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
+                      <li>
+                        <a class="colorIconBarDark fontSize20" href="" ng-click="customGoTo('bussinessystem')" ng-cloak>
+                          <i class="icon-47 iconMenuClass colorInherit pr-2 fontSize20"></i>{{'BSYSTEM' | translate }}</a>
+                      </li>
+                      <li>
+                        <a class="colorIconBarDark fontSize20" href="" ng-click="customGoTo('bussinesprocess')" ng-cloak>
+                          <i class="icon-48 iconMenuClass colorInherit pr-2 fontSize20"></i>{{'SPROCESS' | translate }}</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a ng-click="customGoTo('news/1')" href="" class="nav-link colorIconBarDark fontSize20" ng-cloak>{{'NEWS' | translate }}</a>
                     <div class="divLiUl" ng-class="{'divBottomLiActive': divBottomLiActive != 'NEWS'}" ng-cloak></div>
                   </li>
                   <li class="nav-item dropdown ">
-                    <a href="" class="nav-link dropdown-toggle colorIconBarDark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    <a href="" class="nav-link dropdown-toggle colorIconBarDark fontSize20" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                       ng-cloak>{{'ASSETS' | translate }}</a>
                     <div class="divLiUl" ng-class="{'divBottomLiActive': divBottomLiActive != 'ASSETS'}" ng-cloak></div>
                     <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
                       <li>
-                        <a class="colorIconBarDark" href="" ng-click="customGoTo('projects')" ng-cloak>
-                          <i class="icon-Investment-Promotion iconMenuClass colorInherit pr-2"></i>{{'IPROMOTION' | translate }}</a>
+                        <a class="colorIconBarDark fontSize20" href="" ng-click="customGoTo('projects')" ng-cloak>
+                          <i class="icon-64 iconMenuClass colorInherit pr-2 fontSize20"></i>{{'IPROMOTION' | translate }}</a>
                       </li>
                       <li>
-                        <a class="colorIconBarDark" href="" ng-click="customGoTo('featured-cases')" ng-cloak>
-                          <i class="icon-Featured-Cases iconMenuClass colorInherit pr-2"></i>{{'FCASES' | translate }}</a>
+                        <a class="colorIconBarDark fontSize20" href="" ng-click="customGoTo('featured-cases')" ng-cloak>
+                          <i class="icon-61 iconMenuClass colorInherit pr-2 fontSize20"></i>{{'FCASES' | translate }}</a>
                       </li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown ">
-                    <a ng-click="customGoTo('branches-offices')" href="" class="nav-link colorIconBarDark" ng-cloak>{{'CONTACTUS' | translate }}</a>
+                    <a ng-click="customGoTo('branches-offices')" href="" class="nav-link colorIconBarDark fontSize20" ng-cloak>{{'CONTACTUS' | translate }}</a>
                     <div class="divLiUl" ng-class="{'divBottomLiActive': divBottomLiActive != 'CONTACT'}" ng-cloak></div>
                   </li>
                 </ul>
@@ -458,36 +378,37 @@
           </div>
           <div class="col-lg-4 col-12 paddingTop40 paddingBottom40 hidden-sm">
             <h3 class="page-title marginBottom20 textWhite" ng-cloak>{{'CONTENT' | translate}}</h3>
-            <div class="row">
-              <div class="col-lg-4 paddingLeft0">
+            <div class="row marginLeftAuto">
+              <div class="boxContentFooter paddingLeft0">
                 <a href="" ng-click="customGoTo('groupIntroduction')" class="nav-link textWhite" ng-cloak>{{'GROUPINTRODUCTION' | translate }}</a>
                 <a href="" ng-click="customGoTo('organizationStructure')" class="nav-link textWhite" ng-cloak>{{'STRUCTURE' | translate }}</a>
                 <a href="" ng-click="customGoTo('coreteam')" class="nav-link textWhite" ng-cloak>{{'CORETEAM' | translate }}</a>
                 <a href="" ng-click="customGoTo('devhistory')" class="nav-link textWhite" ng-cloak>{{'DEVHISTORY' | translate }}</a>
               </div>
-              <div class="col-lg-4">
+              <div class="boxContentFooter marginLeftAuto">
                 <a ng-click="customGoTo('news/1')" href="" class="nav-link textWhite" ng-cloak>{{'NEWS' | translate }}</a>
                 <a href="" ng-click="customGoTo('bussinessystem')" class="nav-link textWhite" ng-cloak>{{'BSYSTEM' | translate }}</a>
                 <a href="" ng-click="customGoTo('bussinesprocess')" class="nav-link textWhite" ng-cloak>{{'SPROCESS' | translate }}</a>
               </div>
-              <div class="col-lg-4">
+              <div class="boxContentFooter paddingRight0 marginLeftAuto">
                 <a href="" ng-click="customGoTo('projects')" class="nav-link textWhite" ng-cloak>{{'IPROMOTION' | translate }}</a>
                 <a href="" ng-click="customGoTo('featured-cases')" class="nav-link textWhite" ng-cloak>{{'FCASES' | translate }}</a>
                 <a ng-click="customGoTo('branches-offices')" href="" class="nav-link textWhite" ng-cloak>{{'CONTACTUS' | translate }}</a>
               </div>
             </div>
           </div>
+          <!-- <div class="col-lg-1 hidden-sm"></div> -->
           <div class="col-lg-4 col-sm-6 col-12 paddingTop40 paddingBottom40">
             <h3 class="page-title marginBottom20 textWhite" ng-cloak>{{'CONTACT' | translate}}</h3>
             <ul class="ulStyleFooter paddingLeft0">
               <li class="marginTop10" ng-cloak>
                 <a class="link-dark textDecorationNone" id="address">
-                  <i class="colorPrimary fa fa-map-marker pl-10 pr-1"></i>{{'COMPANYADDRESS' | translate}}
+                  <i class="colorPrimary icon-55 pl-10 pr-1"></i>{{'COMPANYADDRESS' | translate}}
                 </a>
               </li>
               <li class="marginTop10" ng-cloak>
                 <a href="tel:+86 0571 85267521" class="link-dark textDecorationNone">
-                  <i class="colorPrimary icon-Phone pl-10 pr-1"></i>+86 0571 85267521</a>
+                  <i class="colorPrimary icon-35 pl-10 pr-1"></i>4008001682</a>
               </li>
               <li class="marginTop10" ng-cloak>
                 <a href="mailto:hoopa@hoopa.cn" class="link-dark textDecorationNone">
@@ -495,7 +416,7 @@
               </li>
               <li class="marginTop10" ng-cloak>
                 <a href="https://weibo.com/6434081034/profile?topnav=1&wvr=6" class="link-dark textDecorationNone">
-                  <i class="colorPrimary icon-weibo pl-10 pr-1"></i>{{'WEIBO' | translate}}
+                  <i class="colorPrimary icon-21 pl-10 pr-1"></i>{{'WEIBO' | translate}}
                 </a>
               </li>
             </ul>
@@ -546,10 +467,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="modal-footer">
-            <button type="button" class="btn btn-sm btn-dark" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-sm btn-default">Save changes</button>
-          </div> -->
       </div>
     </div>
   </div>
@@ -738,10 +655,11 @@
                     <div class="col-md-5 col-xs-12">
                       <input type="text" class="form-control" id="phoneNumber" placeholder="{{'PLACEPHONENUMBER' | translate}}" ng-model="phoneNumber"
                         required>
-                      <i class="icon-Phone form-control-feedback pr-4"></i>
+                      <i class="icon-35 form-control-feedback pr-4"></i>
                     </div>
                     <div class="col-md-3 col-xs-12 paddingLeftButtonSendCode">
-                      <a class="btn btn-group btn-default btn-animated marginTop0 marginBottom0 hoverColorWhite backgroundColorPrimary textWhite width100SendCode" ng-click="requestSmsCode()">{{'SENDCODE' | translate}}
+                      <a class="btn btn-group btn-default btn-animated marginTop0 marginBottom0 hoverColorWhite backgroundColorPrimary textWhite width100SendCode"
+                        ng-click="requestSmsCode()">{{'SENDCODE' | translate}}
                         <i class="fa fa-check"></i>
                       </a>
                     </div>
@@ -833,8 +751,6 @@
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
 
-  <!-- Google Maps javascript -->
-  <!-- <script src="js/google.map.config.js"></script> -->
   <!-- Slick carousel javascript -->
   <script src="bower_components/slick-carousel/slick/slick.js"></script>
   <script src="bower_components/angular-slick-carousel/dist/angular-slick.js"></script>

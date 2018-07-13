@@ -139,5 +139,27 @@ angular.module('myApp.Main', ['ngRoute'])
             })
         };
 
-        $rootScope.initOffersList();        
+        $rootScope.initOffersList();       
+        
+        $(window).scroll(function() {
+			if($(this).scrollTop() != 0) {
+				$(".scrollToTopHoopa").addClass("fadeToTop");
+                $(".scrollToTopHoopa").removeClass("fadeToBottom");
+                $(".scrollQR").addClass("fadeToTop");
+				$(".scrollQR").removeClass("fadeToBottom");
+                $(".floatBox").addClass("fadeToLeft");
+				$(".floatBox").removeClass("fadeToRight");
+			} else {
+				$(".scrollToTopHoopa").removeClass("fadeToTop");
+				$(".scrollToTopHoopa").addClass("fadeToBottom");
+				$(".scrollQR").removeClass("fadeToTop");
+                $(".scrollQR").addClass("fadeToBottom");                
+                $(".floatBox").removeClass("fadeToLeft");
+				$(".floatBox").addClass("fadeToRight");
+            }
+        });
+        
+        $(".scrollToTopHoopa").click(function() {
+			$("body,html").animate({scrollTop:0},800);
+		});
     }]);

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?my01wy');
-  src:  url('fonts/icomoon.eot?my01wy#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?my01wy') format('truetype'),
-    url('fonts/icomoon.woff?my01wy') format('woff'),
-    url('fonts/icomoon.svg?my01wy#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?j5zfum');
+  src:  url('fonts/icomoon.eot?j5zfum#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?j5zfum') format('truetype'),
+    url('fonts/icomoon.woff?j5zfum') format('woff'),
+    url('fonts/icomoon.svg?j5zfum#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,195 +24,263 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-News:before {
+.icon-01:before {
   content: "\e900";
   /* color: #7c7c7c; */
 }
-.icon-Parnets:before {
+.icon-02:before {
   content: "\e901";
   /* color: #7c7c7c; */
 }
-.icon-Offices:before {
+.icon-03:before {
   content: "\e902";
   /* color: #7c7c7c; */
 }
-.icon-Team:before {
+.icon-04:before {
   content: "\e903";
   /* color: #7c7c7c; */
 }
-.icon-Services:before {
+.icon-05:before {
   content: "\e904";
   /* color: #7c7c7c; */
 }
-.icon-Favorites:before {
+.icon-06:before {
   content: "\e905";
   /* color: #7c7c7c; */
 }
-.icon-Projects:before {
+.icon-07:before {
   content: "\e906";
   /* color: #7c7c7c; */
 }
-.icon-Statistics:before {
+.icon-08:before {
   content: "\e907";
   /* color: #7c7c7c; */
 }
-.icon-Hoopa:before {
+.icon-09:before {
   content: "\e908";
   /* color: #7c7c7c; */
 }
-.icon-Number-projects:before {
+.icon-10:before {
   content: "\e909";
   /* color: #7c7c7c; */
 }
-.icon-Official-user:before {
+.icon-11:before {
   content: "\e90a";
   /* color: #7c7c7c; */
 }
-.icon-User-number:before {
+.icon-12:before {
   content: "\e90b";
   /* color: #7c7c7c; */
 }
-.icon-Value-projects:before {
+.icon-13:before {
   content: "\e90c";
   /* color: #7c7c7c; */
 }
-.icon-Total-offers:before {
+.icon-14:before {
   content: "\e90d";
   /* color: #7c7c7c; */
 }
-.icon-Chat:before {
+.icon-15:before {
   content: "\e90e";
   /* color: #7c7c7c; */
 }
-.icon-Offertas:before {
+.icon-16:before {
   content: "\e90f";
   /* color: #7c7c7c; */
 }
-.icon-Shopping-cart:before {
+.icon-17:before {
   content: "\e910";
   /* color: #7c7c7c; */
 }
-.icon-notifications:before {
+.icon-18:before {
   content: "\e911";
   /* color: #7c7c7c; */
 }
-.icon-Home:before {
+.icon-19:before {
   content: "\e912";
   /* color: #7c7c7c; */
 }
-.icon-User:before {
+.icon-20:before {
   content: "\e913";
   /* color: #7c7c7c; */
 }
-.icon-Photo:before {
+.icon-21:before {
   content: "\e914";
   /* color: #7c7c7c; */
 }
-.icon-Configuration:before {
+.icon-22:before {
   content: "\e915";
   /* color: #7c7c7c; */
 }
-.icon-Login:before {
+.icon-23:before {
   content: "\e916";
   /* color: #7c7c7c; */
 }
-.icon-Unlogin:before {
+.icon-24:before {
   content: "\e917";
   /* color: #7c7c7c; */
 }
-.icon-Phone:before {
+.icon-25:before {
   content: "\e918";
   /* color: #7c7c7c; */
 }
-.icon-Website:before {
+.icon-26:before {
   content: "\e919";
   /* color: #7c7c7c; */
 }
-.icon-Search:before {
+.icon-27:before {
   content: "\e91a";
   /* color: #7c7c7c; */
 }
-.icon-Next:before {
+.icon-28:before {
   content: "\e91b";
   /* color: #7c7c7c; */
 }
-.icon-Previous:before {
+.icon-29:before {
   content: "\e91c";
   /* color: #7c7c7c; */
 }
-.icon-Group-Overview:before {
+.icon-30:before {
   content: "\e91d";
   /* color: #7c7c7c; */
 }
-.icon-Group-Introduction:before {
+.icon-31:before {
   content: "\e91e";
   /* color: #7c7c7c; */
 }
-.icon-Organization-structure:before {
+.icon-32:before {
   content: "\e91f";
   /* color: #7c7c7c; */
 }
-.icon-Core-Team:before {
+.icon-33:before {
   content: "\e920";
   /* color: #7c7c7c; */
 }
-.icon-Development-history:before {
+.icon-34:before {
   content: "\e921";
   /* color: #7c7c7c; */
 }
-.icon-Group-honors:before {
+.icon-35:before {
   content: "\e922";
   /* color: #7c7c7c; */
 }
-.icon-Chairmans-Message:before {
+.icon-36:before {
   content: "\e923";
   /* color: #7c7c7c; */
 }
-.icon-Business-System:before {
+.icon-37:before {
   content: "\e924";
   /* color: #7c7c7c; */
 }
-.icon-Service-process:before {
+.icon-38:before {
   content: "\e925";
   /* color: #7c7c7c; */
 }
-.icon-Service-Advantages:before {
+.icon-39:before {
   content: "\e926";
   /* color: #7c7c7c; */
 }
-.icon-Media-coverage:before {
+.icon-40:before {
   content: "\e927";
   /* color: #7c7c7c; */
 }
-.icon-Latest-News:before {
+.icon-41:before {
   content: "\e928";
   /* color: #7c7c7c; */
 }
-.icon-Industry-News:before {
+.icon-42:before {
   content: "\e929";
   /* color: #7c7c7c; */
 }
-.icon-Project-list:before {
+.icon-43:before {
   content: "\e92a";
   /* color: #7c7c7c; */
 }
-.icon-Featured-Cases:before {
+.icon-44:before {
   content: "\e92b";
   /* color: #7c7c7c; */
 }
-.icon-Branch-offices:before {
+.icon-45:before {
   content: "\e92c";
   /* color: #7c7c7c; */
 }
-.icon-Talent-Recruitment:before {
+.icon-46:before {
   content: "\e92d";
   /* color: #7c7c7c; */
 }
-.icon-Investment-Promotion:before {
+.icon-47:before {
   content: "\e92e";
+  /* color: #7c7c7c; */
+}
+.icon-48:before {
+  content: "\e92f";
+  /* color: #7c7c7c; */
+}
+.icon-49:before {
+  content: "\e930";
+  /* color: #7c7c7c; */
+}
+.icon-50:before {
+  content: "\e931";
+  /* color: #7c7c7c; */
+}
+.icon-51:before {
+  content: "\e932";
+  /* color: #7c7c7c; */
+}
+.icon-52:before {
+  content: "\e933";
+  /* color: #7c7c7c; */
+}
+.icon-53:before {
+  content: "\e934";
+  /* color: #7c7c7c; */
+}
+.icon-54:before {
+  content: "\e935";
+  /* color: #7c7c7c; */
+}
+.icon-55:before {
+  content: "\e936";
+  /* color: #7c7c7c; */
+}
+.icon-56:before {
+  content: "\e937";
+  /* color: #7c7c7c; */
+}
+.icon-57:before {
+  content: "\e938";
+  /* color: #7c7c7c; */
+}
+.icon-58:before {
+  content: "\e939";
+  /* color: #7c7c7c; */
+}
+.icon-59:before {
+  content: "\e93a";
+  /* color: #7c7c7c; */
+}
+.icon-60:before {
+  content: "\e93b";
+  /* color: #7c7c7c; */
+}
+.icon-61:before {
+  content: "\e93c";
+  /* color: #7c7c7c; */
+}
+.icon-62:before {
+  content: "\e93d";
+  /* color: #7c7c7c; */
+}
+.icon-63:before {
+  content: "\e93e";
+  /* color: #7c7c7c; */
+}
+.icon-64:before {
+  content: "\e93f";
   /* color: #808080; */
 }
-.icon-Research-Report:before {
-  content: "\e92f";
+.icon-65:before {
+  content: "\e940";
   /* color: #808080; */
 }

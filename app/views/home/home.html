@@ -1,107 +1,4 @@
 <div id="page-start">
-    <!-- <section class="section light-gray-bg clearfix paddingBoxHome">
-        <div class="container">
-            <div class="row justify-content-lg-center">
-                <div class="col-lg-8">
-                    <h1 class="text-center mt-4 fontWeight400"> {{'OUR' | translate}}
-                        <strong> {{'PROJECTS' | translate}} </strong>
-                    </h1>
-                    <div class="separator"></div>
-                    <div class="text-center">
-                        <a href="" class="btn btn-sm hoverButtonProject" ng-click="changeActive(1)" ng-class="{activeProjectFilter: projectActive == 1}">
-                            {{'TOPASSETS' | translate}}
-                        </a>
-                        <a href="" class="btn btn-sm hoverButtonProject" ng-click="changeActive(2)" ng-class="{activeProjectFilter: projectActive == 2}">
-                            {{'HIGHCOST' | translate}}
-                        </a>
-                        <a href="" class="btn btn-sm hoverButtonProject" ng-click="changeActive(3)" ng-class="{activeProjectFilter: projectActive == 3}">
-                            {{'QFACTORY' | translate}}
-                        </a>
-                        <a href="" class="btn btn-sm hoverButtonProject" ng-click="changeActive(4)" ng-class="{activeProjectFilter: projectActive == 4}">
-                            {{'HOTPUSH' | translate}}
-                        </a>
-                    </div>
-                    <br>
-                    <br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 padding0" ng-show="projectActive == 1" ng-repeat="p in productsHot">
-                    <div class="image-box text-center style-2 mb-20">
-                        <div class="overlay-container overlay-visible">
-                            <img class="imageProjectHome" ng-src="{{p.mainImage}}" alt="">
-                            <a href="" ng-click="goToProject(p.id)" class="overlay-link">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <div class="overlay-bottom hidden-sm-down">
-                                <div class="text">
-                                    <p class="lead margin-clear">¥{{p.get('debitAmount')}}万</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="body padding-horizontal-clear">
-                            <p>{{p.get('description')}}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 padding0" ng-show="projectActive == 2" ng-repeat="p in productsHouse">
-                    <div class="image-box text-center style-2 mb-20">
-                        <div class="overlay-container overlay-visible">
-                            <img class="imageProjectHome" ng-src="{{p.mainImage}}" alt="">
-                            <a href="" ng-click="goToProject(p.id)" class="overlay-link">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <div class="overlay-bottom hidden-sm-down">
-                                <div class="text">
-                                    <p class="lead margin-clear">¥{{p.get('debitAmount')}}万</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="body padding-horizontal-clear">
-                            <p>{{p.get('description')}}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 padding0" ng-show="projectActive == 3" ng-repeat="p in productsFactory">
-                    <div class="image-box text-center style-2 mb-20">
-                        <div class="overlay-container overlay-visible">
-                            <img class="imageProjectHome" ng-src="{{p.mainImage}}" alt="">
-                            <a href="" ng-click="goToProject(p.id)" class="overlay-link">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <div class="overlay-bottom hidden-sm-down">
-                                <div class="text">
-                                    <p class="lead margin-clear">¥{{p.get('debitAmount')}}万</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="body padding-horizontal-clear">
-                            <p>{{p.get('description')}}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 padding0" ng-show="projectActive == 4" ng-repeat="p in productsShop">
-                    <div class="image-box text-center style-2 mb-20">
-                        <div class="overlay-container overlay-visible">
-                            <img class="imageProjectHome" ng-src="{{p.mainImage}}" alt="">
-                            <a href="" ng-click="goToProject(p.id)" class="overlay-link">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <div class="overlay-bottom hidden-sm-down">
-                                <div class="text">
-                                    <p class="lead margin-clear">¥{{p.get('debitAmount')}}万</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="body padding-horizontal-clear">
-                            <p>{{p.get('description')}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section class="section light-gray-bg clearfix backgroundSectionHome">
         <div class="col-12 paddingHome">
             <div class="row marginRight0XS">
@@ -116,7 +13,7 @@
                         <img src="images/more.png" class="buttonMoreNewsHome cursorPointer" ng-click="customGoTo('news/1')">
                     </div>
                     <div class="row marginTop20 paddingLeft0XS">
-                        <div class="col-lg-4 col-md-4 col-sm-4" ng-repeat="n in news | limitTo: 3" ng-cloak>
+                        <div class="newsCompanyBox" ng-repeat="n in news | limitTo: limitNews" ng-cloak>
                             <div class="image-box text-center style-2 mb-20">
                                 <div class="overlay-container overlay-visible">
                                     <img ng-click="goToNews(n.id)" class="imageNewsListCompanyHome cursorPointer" ng-src="{{n.mainImage}}">
