@@ -1,10 +1,10 @@
 <div>
-    <img class="imageBanner" src="images/hoopaDark.jpg" />
-    <div class="textBanner">
-        <p class="textWhite marginBottom0">{{'IPROMOTION' | translate }}</p>
-        <p class="textWhite fontSize16">{{'HOME' | translate }} / {{'IPROMOTION' | translate }}</p>
-    </div>
-    <div class="lineBlueBanner"></div>
+  <img class="imageBanner" src="images/hoopaDark.jpg" />
+  <div class="textBanner">
+    <p class="textWhite marginBottom0">{{'IPROMOTION' | translate }}</p>
+    <p class="textWhite fontSize16">{{'HOME' | translate }} / {{'IPROMOTION' | translate }}</p>
+  </div>
+  <div class="lineBlueBanner"></div>
 </div>
 <section class="main-container paddingBoxHome">
   <div class="container">
@@ -12,49 +12,71 @@
       <h2 class="page-title marginLeft--15">{{project.get('title')}}</h2>
       <div class="separator-2 marginLeft--15"></div>
       <div class="row col-lg-12 paddingLeft0 paddingRight0">
-        <div class="col-lg-6 paddingLeft0 paddingRight0" style="z-index: 10">          
+        <div class="col-lg-6 paddingLeft0 paddingRight0" style="z-index: 10">
           <img class="imageProjectDetail marginBottom10" ng-src="{{imageListActive}}">
           <slick class="slider" settings="slickConfig" ng-if="loadData" ng-cloak>
             <div ng-repeat="i in imageList">
               <img class="sliderImageProject" ng-click="changeImageActive(i.url)" ng-src="{{i.imageUrl}}">
             </div>
           </slick>
-
         </div>
         <div class="col-lg-6 pv-30 padding0XS">
-          <div class="col-lg-12 marginTop5">
-            <p class="factProject fontSize40 text-center">
-              {{'DAMOUNT' | translate}}:
-              <strong class="colorPrimary">¥{{project.get('debitAmount')}}万</strong>
-            </p>
-          </div>
-          <div class="col-lg-12 marginTop5">
-            <p class="factProject text-center">
-              {{'DUPRINCIPALI' | translate}}
-              <strong class="colorPrimary">¥{{project.get('debitPricipalInterest')}}万</strong>
-            </p>
-          </div>
-          <div class="col-lg-12 marginTop5">
-            <p class="factProject text-center">
-              {{'DAMOUNT' | translate}}:
-              <strong class="colorRed" ng-repeat="t in typeArrivalString">{{t}}</strong>
-            </p>
-          </div>
-          <div class="col-lg-12 marginTop5" ng-show="project.get('projectManager').get(name)">
-            <p class="factProject text-center">
-              {{'PROJECTMANAGER' | translate}}: {{project.get('projectManager').get(name)}}
-            </p>
-          </div>
-          <div class="col-lg-12 marginTop5" ng-show="project.get('projectManager').get(phone)">
-            <p class="factProject text-center">
-              {{'CONTACTPHONE' | translate}}: {{project.get('projectManager').get(phone)}}
-            </p>
-          </div>
-          <!-- <h3 class="mt-4">{{'PDESC' | translate}}</h3>
-            <p>{{project.get('description')}}</p>
-            <h4>{{'CHIGHL' | translate}}</h4>
-            <p>{{project.get('creditHighlights')}}</p>
-            <hr class="mb-10"> -->
+          <table class="marginLeftAuto marginRightAuto">
+            <tr class="fontSize40">
+              <td class="textEnd">{{'DAMOUNT' | translate}}:</td>
+              <td class="colorPrimary">
+                <p class="marginLeft10 marginBottom0">¥{{project.get('debitAmount')}}万</p>
+              </td>
+            </tr>
+            <tr class="fontSize18">
+              <td class="textEnd">{{'DUPRINCIPALI' | translate}}:</td>
+              <td class="colorPrimary">
+                <p class="marginLeft10 marginBottom0">¥{{project.get('debitPricipalInterest')}}万</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="textEnd">{{'TARRIVAL' | translate}}:</td>
+              <td class="colorRed marginLeft10P" ng-repeat="t in typeArrivalString">
+                <p class="marginLeft10 marginBottom0">{{t}}</p>
+              </td>
+            </tr>
+            <tr ng-show="project.get('projectManager').get(name)">
+              <td class="textEnd">{{'PROJECTMANAGER' | translate}}:</td>
+              <td class="marginLeft10P">
+                <p class="marginLeft10 marginBottom0">{{project.get('projectManager').get(name)}}</p>
+              </td>
+            </tr>
+            <tr ng-show="project.get('projectManager').get(phone)">
+              <td class="textEnd">{{'CONTACTPHONE' | translate}}:</td>
+              <td class="marginLeft10P">
+                <p class="marginLeft10 marginBottom0">{{project.get('projectManager').get(phone)}}</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="textEnd">{{'PUADDRESS' | translate}}:</td>
+              <td class="marginLeft10P">
+                <p class="marginLeft10 marginBottom0">{{project.get('plainAddress')}}</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="textEnd">{{'CUFROM' | translate}}:</td>
+              <td class="marginLeft10P">
+                <p class="marginLeft10 marginBottom0">{{project.get('comefrom')}}</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="textEnd">{{'PUCOMPANY' | translate}}:</td>
+              <td class="marginLeft10P">
+                <p class="marginLeft10 marginBottom0">{{project.get('companyName')}}</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="textEnd">{{'PUPROVINCE' | translate}}:</td>
+              <td class="marginLeft10P">
+                <p class="marginLeft10 marginBottom0">{{project.get('province')}}</p>
+              </td>
+            </tr>
+          </table>
           <div class="row projectButtonsAction">
             <div class="col-lg-2"></div>
             <div class="col-lg-2">
@@ -86,74 +108,19 @@
       </div>
     </div>
   </div>
-  <!-- <div class="row col-md-12 marginTop20">
-    <div class="col-md-4">
-      <ul class="list margin-clear">
-        <li>
-          <strong>{{'PUCOMPANY' | translate}}</strong>
-          <span class="text-right">{{project.get('companyName')}}</span>
-        </li>
-        <li>
-          <strong>{{'PUPROVINCE' | translate}}</strong>
-          <span class="text-right">{{project.get('province')}}</span>
-        </li>
-      </ul>
-    </div>
-    <div class="col-md-4">
-      <ul class="list margin-clear">
-        <li>
-          <strong>{{'CUFROM' | translate}}</strong>
-          <span class="text-right">{{project.get('comefrom')}}</span>
-        </li>
-        <li>
-          <strong>{{'DUPRINCIPALI' | translate}}</strong>
-          <span class="text-right colorPrimary">
-            ¥{{project.get('debitPricipalInterest')}}万</span>
-        </li>
-      </ul>
-    </div>
-    <div class="col-md-4">
-      <ul class="list margin-clear">
-        <li>
-          <strong>{{'PUADDRESS' | translate}} </strong>
-          <span class="text-right">{{project.get('plainAddress')}}</span>
-        </li>
-      </ul>
-    </div>
-  </div> -->
-  <!-- <div class="mt-3">
-        <ul class="list margin-clear">
-          <li>
-            <strong>{{'PUCOMPANY' | translate}}</strong>
-            <span class="text-right">{{project.get('companyName')}}</span>
-          </li>
-          <li>
-            <strong>{{'PUPROVINCE' | translate}}</strong>
-            <span class="text-right">{{project.get('province')}}</span>
-          </li>
-          <li>
-            <strong>{{'CUFROM' | translate}}</strong>
-            <span class="text-right">{{project.get('comefrom')}}</span>
-          </li>
-          <li>
-            <strong>{{'PUADDRESS' | translate}} </strong>
-            <span class="text-right">{{project.get('plainAddress')}}</span>
-          </li>
-          <li>
-            <strong>{{'DUPRINCIPALI' | translate}}</strong>
-            <span class="text-right colorPrimary">
-              ¥{{project.get('debitPricipalInterest')}}万</span>
-          </li>
-        </ul>
-      </div> -->
-  </div>
-  </div>
 </section>
 <!-- main-container end -->
-
+<section class="main-container paddingBoxHome">
+  <div class="container padding0">
+    <h4 class="mt-4">{{'PDESC' | translate}}</h4>
+    <p>{{project.get('description')}}</p>
+    <h4>{{'CHIGHL' | translate}}</h4>
+    <p>{{project.get('creditHighlights')}}</p>
+  </div>
+</section>
 <!-- section start -->
 <!-- ================ -->
-<section class="pv-30 light-gray-bg">
+<section class="main-container paddingBoxHome">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 paddingLeft0 paddingRight0">
