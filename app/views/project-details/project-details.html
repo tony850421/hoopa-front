@@ -1,18 +1,8 @@
-<!-- <div class="breadcrumb-container marginTop38">
-  <div class="container">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <i class="fa fa-home pr-2"></i>
-        <a href="index.html">{{'HOME' | translate}}</a>
-      </li>
-      <li class="breadcrumb-item cursorDefault active">{{'IPROMOTION' | translate }}</li>
-    </ol>
-  </div>
-</div> -->
 <div>
     <img class="imageBanner" src="images/hoopaDark.jpg" />
     <div class="textBanner">
-        <p class="textWhite">{{'IPROMOTION' | translate }}</p>
+        <p class="textWhite marginBottom0">{{'IPROMOTION' | translate }}</p>
+        <p class="textWhite fontSize16">{{'HOME' | translate }} / {{'IPROMOTION' | translate }}</p>
     </div>
     <div class="lineBlueBanner"></div>
 </div>
@@ -22,39 +12,7 @@
       <h2 class="page-title marginLeft--15">{{project.get('title')}}</h2>
       <div class="separator-2 marginLeft--15"></div>
       <div class="row col-lg-12 paddingLeft0 paddingRight0">
-        <div class="col-lg-6 paddingLeft0 paddingRight0" style="z-index: 10">
-          <!-- <ul class="nav nav-pills">
-              <li class="nav-item">
-                <a class="nav-link active" href="" data-toggle="tab" title="images">
-                  <i class="fa fa-camera pr-1"></i>{{'PHOTO' | translate}}</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="" data-toggle="tab" title="video">
-                  <i class="fa fa-video-camera pr-1"></i>{{'VIDEO' | translate}}</a>
-              </li>
-            </ul> -->
-          <!-- <div class="tab-content clear-style">
-            <div class="tab-pane active" id="pill-1">
-              <div id="carousel-sidebar" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators top">
-                  <li data-target="#carousel-sidebar" data-slide-to="{{$index}}" ng-repeat="image in imageList"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                  <div class="carousel-item" ng-class="{'active': $index==0}" ng-repeat="i in imageList">
-                    <div class="listing-item">
-                      <div class="overlay-container">
-                        <img ng-src="{{i.get('url')}}">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <!-- <span class="price">
-              <del>$199.00</del> $150.00</span> -->
-          <!-- pills end -->
-
+        <div class="col-lg-6 paddingLeft0 paddingRight0" style="z-index: 10">          
           <img class="imageProjectDetail marginBottom10" ng-src="{{imageListActive}}">
           <slick class="slider" settings="slickConfig" ng-if="loadData" ng-cloak>
             <div ng-repeat="i in imageList">

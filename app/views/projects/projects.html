@@ -1,25 +1,13 @@
-<!-- <div class="breadcrumb-container marginTop38">
-  <div class="container">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <i class="fa fa-home pr-2"></i>
-        <a href="index.html">{{'HOME' | translate}}</a>
-      </li>
-      <li class="breadcrumb-item active">{{'IPROMOTION' | translate }}</li>
-    </ol>
-  </div>
-</div> -->
 <div>
-    <img class="imageBanner" src="images/hoopaDark.jpg" />
-    <div class="textBanner">
-        <p class="textWhite">{{'IPROMOTION' | translate }}</p>
-    </div>
-    <div class="lineBlueBanner"></div>
+  <img class="imageBanner" src="images/hoopaDark.jpg" />
+  <div class="textBanner">
+    <p class="textWhite marginBottom0">{{'IPROMOTION' | translate }}</p>
+    <p class="textWhite fontSize16">{{'HOME' | translate }} / {{'IPROMOTION' | translate }}</p>
+  </div>
+  <div class="lineBlueBanner"></div>
 </div>
 <section class="paddingBoxHome">
   <div class="container">
-    <!-- <h3 class="page-title text-center marginLeft--15 marginBottom20">{{'IPROMOTION' | translate }}</h3>
-    <div class="separator-2  marginLeft--15"></div> -->
     <div class="row marginBottom20">
       <div class="row col-md-6 aligItemCenter">
         <label class="width25P">{{'TEXT' | translate}}</label>
@@ -59,10 +47,13 @@
         <div class="tab-content clear-style">
           <div class="tab-pane active" id="pill-1">
             <div class="row grid-space-10">
-              <div class="col-lg-3 col-md-6" ng-repeat="project in products">
+              <div class="col-md-3 col-sm-4" ng-repeat="project in products">
                 <div class="listing-item white-bg bordered mb-20">
                   <div class="overlay-container">
-                    <img ng-click="goToProject(project.id)" class="imageProjectHome cursorPointer" ng-src="{{project.imageUrl}}">                    
+                    <img ng-click="goToProject(project.id)" class="imageProjectHome cursorPointer" ng-src="{{project.imageUrl}}">
+                    <div class="titleGroupIntroduction cursorPointer" ng-click="goToProject(project.id)">
+                      <p class="lead margin-clear textWhite fontSize14">¥{{project.debitAmount}}万</p>
+                    </div>
                   </div>
                   <div class="body">
                     <h3>
@@ -70,15 +61,15 @@
                     </h3>
                     <p class="small">{{project.description}}</p>
                     <div class="elements-list clearfix">
-                      <span class="price colorPrimary">
-                        ¥{{project.debitAmount}}万</span>
-                      <a href="" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated buttonProjectStyle" ng-click="goToProject(project.id)">{{'VIEWMORE' | translate}}
-                        <i class="fa fa-arrow-right"></i>
+                      <a class="fontSize12 textDecorationNone link text-center pull-right"
+                        ng-click="goToNews(n.id)" href="">
+                        <i class="fa fa-link pr-1 fontSize12"></i>
+                        {{'READMORE' | translate}}
                       </a>
-                      <a href="" ng-hide="project.wished" ng-click="addToWhishList(project.id)" class="pull-right margin-clear btn btn-sm btn-default-transparent buttonProjectStyleHeart">
+                      <a href="" ng-hide="project.wished" ng-click="addToWhishList(project.id)" class="margin-clear btn btn-sm btn-default-transparent buttonProjectStyleHeart">
                         <i class="fa fa-heart-o"></i>
                       </a>
-                      <a href="" ng-hide="!project.wished" ng-click="removeToWhishList(project.id)" class="pull-right margin-clear btn btn-sm btn-default-transparent buttonProjectStyleHeart">
+                      <a href="" ng-hide="!project.wished" ng-click="removeToWhishList(project.id)" class="margin-clear btn btn-sm btn-default-transparent buttonProjectStyleHeart">
                         <i class="fa fa-heart"></i>
                       </a>
                     </div>

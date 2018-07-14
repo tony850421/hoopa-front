@@ -22,23 +22,61 @@ angular.module('myApp.Home', ['ngRoute'])
     };
 
     $scope.limitNews = 3;
+    $scope.limitTitle = 100;
+    $scope.limitTitleSecond = 100;
 
-    if ($(window).width() >= 1200) {
+    if ($(window).width() >= 1366) {
       $scope.limitNews = 3;
-    } else if ($(window).width() >= 768) {
+      $scope.limitTitle = 20;
+      $scope.limitTitleSecond = 22;
+    } else if ($(window).width() >= 1280) {
+      $scope.limitNews = 3;
+      $scope.limitTitle = 20;
+      $scope.limitTitleSecond = 18;
+    } else if ($(window).width() >= 1200) {
+      $scope.limitNews = 3;
+      $scope.limitTitle = 20;
+      $scope.limitTitleSecond = 20;
+    } else if ($(window).width() >= 992) {
       $scope.limitNews = 2;
+      $scope.limitTitle = 17;
+      $scope.limitTitleSecond = 13;
+    } else if ($(window).width() >= 768) {
+      $scope.limitNews = 3;
+      $scope.limitTitle = 100;
+      $scope.limitTitleSecond = 100;
     } else {
       $scope.limitNews = 3;
+      $scope.limitTitle = 100;
+      $scope.limitTitleSecond = 100;
     }
 
     $(window).on("resize.doResize", function () {
       $scope.$apply(function () {
-        if ($(window).width() >= 1200) {
+        if ($(window).width() >= 1366) {
           $scope.limitNews = 3;
-        } else if ($(window).width() >= 768) {
+          $scope.limitTitle = 20;
+          $scope.limitTitleSecond = 22;
+        } else if ($(window).width() >= 1280) {
+          $scope.limitNews = 3;
+          $scope.limitTitle = 20;
+          $scope.limitTitleSecond = 18;
+        } else if ($(window).width() >= 1200) {
+          $scope.limitNews = 3;
+          $scope.limitTitle = 20;
+          $scope.limitTitleSecond = 20;
+        } else if ($(window).width() >= 992) {
           $scope.limitNews = 2;
+          $scope.limitTitle = 17;
+          $scope.limitTitleSecond = 13;
+        } else if ($(window).width() >= 768) {
+          $scope.limitNews = 3;
+          $scope.limitTitle = 100;
+          $scope.limitTitleSecond = 100;
         } else {
           $scope.limitNews = 3;
+          $scope.limitTitle = 100;
+          $scope.limitTitleSecond = 100;
         }
       });
     });
@@ -58,9 +96,9 @@ angular.module('myApp.Home', ['ngRoute'])
           var contentMin = element.get('content');
           var id = element.id;
 
-          if (titleMin.length >= 25) {
+          if (titleMin.length >= $scope.limitTitle) {
             var tit = '';
-            for (var x = 0; x < 25; x++) {
+            for (var x = 0; x < $scope.limitTitle; x++) {
               tit = tit + titleMin[x];
             }
             tit = tit + "...";
@@ -116,9 +154,9 @@ angular.module('myApp.Home', ['ngRoute'])
           var contentMin = element.get('content');
           var id = element.id;
 
-          if (titleMin.length >= 25) {
+          if (titleMin.length >= $scope.limitTitleSecond) {
             var tit = '';
-            for (var x = 0; x < 25; x++) {
+            for (var x = 0; x < $scope.limitTitleSecond; x++) {
               tit = tit + titleMin[x];
             }
             tit = tit + "...";

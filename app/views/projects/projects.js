@@ -112,9 +112,9 @@ angular.module('myApp.Projects', ['ngRoute'])
           var productId = product.id;
           var productTitle = product.get('title');
           var productT = productTitle;
-          if (productTitle.length > 25) {
+          if (productTitle.length > 18) {
             productT = ''
-            for (var i = 0; i < 25; i++) {
+            for (var i = 0; i < 18; i++) {
               productT += productTitle[i];
             }
             productT += "...";
