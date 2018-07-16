@@ -95,8 +95,10 @@ angular.module('myApp.Main', ['ngRoute'])
             var currentUser = AV.User.current();
             
             if (currentUser) {
-                if (currentUser.get('avatarUrl') != ''){
+                if (currentUser.get('avatarUrl') != '' && currentUser.get('avatarUrl') != undefined){
                     $rootScope.avatar = currentUser.get('avatarUrl');
+                } else {
+                    $rootScope.avatar = '';
                 }
                 $rootScope.loginUser = true;
             } else {

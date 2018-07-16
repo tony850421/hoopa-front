@@ -26,26 +26,27 @@
 
                 <div class="vertical">
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item">
+                    <ul class="nav nav-tabs paddingRight40" role="tablist">
+                        <li class="nav-item" ng-class="{'marginBottom9LG': selectedTab == 2}">
                             <a class="nav-link active tabCoreTeam" href="" ng-click="selectedTab = 1" role="tab" data-toggle="tab">
-                                <!-- <i class="fa fa-magic pr-2"></i> -->
                                 {{'CORETEAMTAB1' | translate}}</a>
+                            <img src="images/more.png" ng-show="selectedTab == 1" class="buttonListCoreTeam cursorPointer">
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" ng-class="{'marginTop--30LG': selectedTab == 1}">
                             <a class="nav-link tabCoreTeam" href="" ng-click="selectedTab = 2" role="tab" data-toggle="tab">
                                 <!-- <i class="fa fa-life-saver pr-2"></i> -->
                                 {{'CORETEAMTAB2' | translate}}</a>
+                                <img src="images/more.png" ng-show="selectedTab == 2" class="buttonListCoreTeam cursorPointer">
                         </li>
                     </ul>
                     <!-- Tab panes -->
-                    <div class="tab-content backgroundWhite">
+                    <div class="tab-content">
                         <div class="tab-pane fade marginBottom65" ng-class="{'active' : selectedTab == 1,'show' : selectedTab == 1}" id="vtab1" role="tabpanel">
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/1.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>胡巴集团创始人，董事长</h4>
                                     <h5>李传宏</h5>
                                     <p>武汉大学法学硕士，精通不良资产方面的法律，具有20年的不良资产处置和管理经验，曾在广东、河南、四川、山东、浙江等地区主管不良资产的清收，主管不良资产包账面额达300亿人民币。</p>
@@ -58,130 +59,130 @@
                         </div>
                         <div class="tab-pane fade" ng-class="{'active' : selectedTab == 2,'show' : selectedTab == 2}" id="vtab2" role="tabpanel">
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/3.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>胡巴集团事务合伙人</h4>
                                     <h5>林庄</h5>
                                     <p>天使投资人，在传统企业、文化传媒等领域有丰富的投资经验，曾成功运作多个房地产项目。</p>
                                 </div>
                             </div>
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/4.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>胡巴集团事务合伙人</h4>
                                     <h5>杨林榆</h5>
                                     <p>在不良债权及不动产投资领域拥有长达25年的经验。他带领团队参与众多不良资产、特殊机会投资项目的尽职调查、投资决策、投后管理以及项目退出。投资项目遍及广东、江苏、浙江等八个省份。</p>
                                 </div>
                             </div>
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/2.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>胡巴集团事务合伙人</h4>
                                     <h5>赵昕</h5>
                                     <p>曾创立泽盛律师事务所、房地产开发和营销策划、投资基金等多家企业，在金融诉讼和房地产领域辛勤耕耘近二十年，代表银行处理经济纠纷案件数百件，在股权投资和私募基金领域中具有专业的判断性和敏锐性，积累了丰富的不良资产处置经验和优质的金融机构人脉关系。</p>
                                 </div>
                             </div>
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/5.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>胡巴集团事务合伙人，乐道胡巴总经理</h4>
                                     <h5>杜筱丹</h5>
                                     <p>从2000年起，一直从事银行、信托的不良资产处置和大型国企、上市公司的并购工作，与四大资产管理公司及地方AMC均有良好的合作关系。先后管理和处置的不良资产本金近300亿。</p>
                                 </div>
                             </div>
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/6.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>胡巴集团事务合伙人，河南事业部总经理</h4>
                                     <h5>余会林</h5>
                                     <p>曾任河南中赢旗晟律师事务所律所、合伙人。胡巴资产处置负责人。十多年律师专职工作，累计处理和参与百余起诉讼纠纷案件，具有丰富的办案经验。</p>
                                 </div>
                             </div>
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/7.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>胡巴集团事务合伙人，擎天柱事业部总经理</h4>
                                     <h5>刘杰</h5>
                                     <p>华南理工大学法学毕业，近十年的不良资产处置和管理经验，带领团队完成对河南、山东、浙江、上海等地的业务拓展，累计管理不良资产账面金额50亿元。</p>
                                 </div>
                             </div>
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/8.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>胡巴集团事务合伙人，创新事业部总经理</h4>
                                     <h5>詹柳莺</h5>
                                     <p>华东政法大学法学学士，浙江大学法学硕士。参与完成国内多个资产包项目的收购工作，累计收购金额上百亿元，具备良好的团队协作精神与全局观念。</p>
                                 </div>
                             </div>
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/9.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>胡巴集团事务合伙人，浙江大区事业部总经理</h4>
                                     <h5>王静</h5>
                                     <p>浙江大学法学学士，具有丰富的执业经验，2014年投身不良资产行业，至2018年累计管理债权规模达几十亿，不良资产包年处置回现账面值数亿元，为投资人实现超额回报。</p>
                                 </div>
                             </div>
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/10.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>胡巴集团事务合伙人，宝融胡巴总经理</h4>
                                     <h5>冯凯</h5>
                                     <p>十余年商业运作管理经验，曾创办多家企业涉及TMT、金融等领域，擅长挖掘潜在的投资项目、投资项目分析及投后管理工作；对不良资产整个产业链充分理解，对不良资产重组业务有独到见解，曾主导及参与多项东北地区不良资产收购处置业务。</p>
                                 </div>
                             </div>
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/11.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>湖南长沙锐达胡巴总经理</h4>
                                     <h5>吴刚</h5>
                                     <p>早年任职于建行信贷部门及资产保全部门，从事信贷工作以及资产保全工作，后为海岸投资资深服务商，从事不良资产行业超过15年，曾经创下资产包处置收益率638</p>
                                 </div>
                             </div>
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/15.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>合肥胡巴董事长</h4>
                                     <h5>何建安</h5>
                                     <p>注册高级经济师，从事房地产开发及经营多家民营企业多年，对各种项目投资有着精准的直觉和独特的眼光，能够结合自身多年经验综合判断资产的可操作性，充分挖掘资产的价值，以实现投资收益最大化，在浙皖等政商界拥有广泛的人脉资源。</p>
                                 </div>
                             </div>
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/12.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>合肥胡巴总经理</h4>
                                     <h5>王成宝</h5>
                                     <p>任职温州市多个民营企业总经理，精通不良资产操作环节及法律法规，优秀的融资和处置变现能力，快速判断资产的可操作性并完成项目的快速融资，善于开拓国内新市场，拥有广泛的人脉优势，四大AMC、商会、知名律所、拍卖行、资管公司等，管理、清收资产累计约25亿元。</p>
                                 </div>
                             </div>
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/13.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>无锡乐道胡巴 副总经理</h4>
                                     <h5>潘秀伟</h5>
                                     <p>对收购包有独特眼光和分析，擅长对风控的判断，对存在的风险及评估有充分的经验，对项目处置的方法有准确的决断和指导方向，卓越的资金调动能力。广泛的人脉资源，浙江四大AMC、地方性AMC、民营资管等；管理资产包金融达30亿左右，累计管理不良资产账面金额20亿。
@@ -189,10 +190,10 @@
                                 </div>
                             </div>
                             <div class="row marginBottom20">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <img src="images/team/14.jpg">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-9">
                                     <h4>胡巴资产市场部总经理</h4>
                                     <h5>魏强</h5>
                                     <p>2010年就职于阿里巴巴集团，任国际事业部资深经理、“天猫”消费者体验与发展事业部专家、浙江大学EMBA总裁班特聘老师、中国人民大学EMBA总裁班讲师、商务部培训中心讲师、中国第一届诚信大会主讲嘉宾、企业品牌营销专家、擅长SNS运营。</p>

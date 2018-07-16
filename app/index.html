@@ -73,13 +73,13 @@
         <div class="col-lg-3 hidden-sm">
           <ul class="list-inline marginBottom15 textPhoneHome">
             <li class="list-inline-item marginTop10" ng-cloak>
-              <a href="tel:4008001682" class="link-dark textDecorationNone">
-                <i class="text-default icon-35 pl-10 pr-1 margiRight10"></i>400-800-1682</a>
+              <a href="tel:4008001682" class="link-dark textDecorationNone fontSize18">
+                <i class="text-default icon-35 pl-10 pr-1 marginRight10"></i>400-800-1682</a>
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-sm-3 col-8 padding0">
-          <div class="btn-group marginTop45 pull-right" ng-hide="!loginUser">
+        <div class="col-lg-4 col-sm-3 col-8 padding0">
+          <div class="btn-group marginTop30LG pull-right" ng-hide="!loginUser">
             <button class="btn dropdown-toggle dropdown-toggle--no-caret fontSize20 backgroundTransparent" id="header-drop-4" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false" ng-click="initWishList()" ng-cloak>
               <i class="icon-49 marginLeft5 fontSize28"></i>
@@ -110,12 +110,13 @@
                   </tbody>
                 </table>
                 <div class="panel-body text-right paddingRight10">
-                  <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm" ng-cloak> {{'VWISHLIST' | translate}}</a>
+                  <a href="" ng-click="goToWishList()" class="btn btn-group btn-gray btn-sm aligItemCenter" ng-cloak>
+                    <i class="icon-49 marginRight10"></i> {{'VWISHLIST' | translate}}</a>
                 </div>
               </li>
             </ul>
           </div>
-          <div class="btn-group marginTop45 pull-right" ng-hide="!loginUser">
+          <div class="btn-group marginTop30LG pull-right" ng-hide="!loginUser">
             <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret fontSize20 backgroundTransparent" id="header-drop-2"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-click="initOffersList()" ng-cloak>
               <i class="icon-26 marginLeft5 fontSize28"></i>
@@ -152,13 +153,14 @@
         <div class="col-lg-3 col-sm-5 col-12 padding0">
           <div class="header-top-dropdown marginTop30LG fontSize20">
             <div class="btn-group">
-              <button ng-hide="loginUser" data-toggle="modal" data-target="#modalLogin" type="button" class="btn styleButtonsBanner fontSize20 marginLeft20XS"
+              <button ng-hide="loginUser" data-toggle="modal" data-target="#modalLogin" type="button" class="btn styleButtonsBanner fontSize18 marginLeft20XS"
                 ng-cloak>
                 {{'LOGIN' | translate}}
               </button>
               <button ng-show="loginUser" id="header-top-drop-2" type="button" class="btn dropdown-toggle dropdown-toggle--no-caret styleButtonsBanner"
                 style="height:30px !important;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
                 <img ng-hide="avatar !=''" class="avatarImageBanner" src="images/avatar.jpg">
+                {{avatar}}
                 <img ng-show="avatar !=''" class="avatarImageBanner" ng-src="{{avatar}}">
               </button>
               <ul id="userDropdown" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
@@ -170,10 +172,10 @@
               </ul>
             </div>
             <div class="btn-group pullRightXS">
-              <button id="header-top-drop-1" type="button" class="btn styleButtonsBanner borderRightLanguage fontSize20" ng-class="{'activeLanguage': languageShort == '中文'}"
+              <button id="header-top-drop-1" type="button" class="btn styleButtonsBanner borderRightLanguage fontSize18" ng-class="{'activeLanguage': languageShort == '中文'}"
                 ng-click="setLanguage('cn_CN')" ng-cloak>
                 {{'CHINESE' | translate}}</button>
-              <button id="header-top-drop-1" type="button" class="btn styleButtonsBanner borderLeftLanguage fontSize20" ng-class="{'activeLanguage': languageShort != '中文'}"
+              <button id="header-top-drop-1" type="button" class="btn styleButtonsBanner borderLeftLanguage fontSize18" ng-class="{'activeLanguage': languageShort != '中文'}"
                 ng-click="setLanguage('en_EN')" ng-cloak>
                 {{'ENGLISH' | translate}}</button>
             </div>
@@ -258,7 +260,7 @@
       </div>
       <div class="row marginRight0 hiddenXS">
         <div class="col-lg-12 col-12 header-second clearfix BoxGroupDark zIndex1000">
-          <div class="col-lg-10 marginLeft7P main-navigation main-navigation--mega-menu main-navigation--style-2 animated">
+          <div class="col-lg-10 marginLeftNavBar main-navigation main-navigation--mega-menu main-navigation--style-2 animated">
             <nav class="navbar navbar-expand-lg navbar-light p-0">
               <div class="collapse navbar-collapse" id="navbar-collapse-1">
                 <ul class="navbar-nav" id="menuBar">
