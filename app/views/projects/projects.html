@@ -62,9 +62,9 @@
                 <div class="listing-item white-bg bordered mb-20">
                   <div class="overlay-container">
                     <img ng-click="goToProject(project.id)" class="imageProjectHome cursorPointer" ng-src="{{project.imageUrl}}">
-                    <div class="titleGroupIntroduction cursorPointer" ng-click="goToProject(project.id)">
+                    <!-- <div class="titleGroupIntroduction cursorPointer" ng-click="goToProject(project.id)">
                       <p class="lead margin-clear textWhite fontSize14">¥{{project.debitAmount}}万</p>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="body">
                     <h3>
@@ -78,10 +78,10 @@
                         {{'READMORE' | translate}}
                       </a>
                       <a href="" ng-hide="project.wished" ng-click="addToWhishList(project.id)" class="margin-clear btn btn-sm btn-default-transparent buttonProjectStyleHeart">
-                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-heart-o fontSize18"></i>
                       </a>
                       <a href="" ng-hide="!project.wished" ng-click="removeToWhishList(project.id)" class="margin-clear btn btn-sm btn-default-transparent buttonProjectStyleHeart">
-                        <i class="fa fa-heart"></i>
+                        <i class="fa fa-heart fontSize18"></i>
                       </a>
                     </div>
                   </div>
