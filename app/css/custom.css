@@ -730,6 +730,14 @@ li.colorIconBarDark a {
   text-indent: 20px;
 }
 
+.marginFirstLine6P {
+  text-indent: 6%;
+}
+
+.marginFirstLineHome {
+  text-indent: 10%;
+}
+
 .marginBottom10 {
   margin-bottom: 10px !important;
 }
@@ -1088,7 +1096,6 @@ ul li.nav-item a.tabCoreTeam.active {
   }
   .backgroundSectionHome {
     background-color: transparent !important;
-    margin-top: -20px !important;
     z-index: 1100 !important;
     position: relative;
     border: none;
@@ -1655,8 +1662,8 @@ ul li.nav-item a.tabCoreTeam.active {
     position: absolute;
     background-color: #f2f2f2;
     border: 1px solid #f2f2f2;
-    height: 30px;
-    width: 40px;
+    height: 35px;
+    width: 42px;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 50%;
@@ -1809,6 +1816,7 @@ ul li.nav-item a.tabCoreTeam.active {
   }
   .boxGroupIntroduction {
     width: 100% !important;
+    align-self: center !important;
   }
   .scrollQR i {
     line-height: 40px;
@@ -1938,19 +1946,20 @@ ul li.nav-item a.tabCoreTeam.active {
   }
   .boxGroupIntroduction {
     width: 48% !important;
+    align-self: center !important;
   }
   .marginLeftGroupIntroduction {
     margin-left: 4% !important;
   }
   .backgroundSectionHome {
     background-color: transparent !important;
-    margin-top: -80px !important;
     z-index: 1100 !important;
     position: relative;
     border: none;
   }
   .boxContentFooter {
     width: 30%;
+    text-align: center;
   }
   .newsCompanyBox {
     width: 48%;
@@ -2129,7 +2138,6 @@ ul li.nav-item a.tabCoreTeam.active {
   }
   .backgroundSectionHome {
     background-color: transparent !important;
-    margin-top: -80px !important;
     z-index: 1100 !important;
     position: relative;
     border: none;
@@ -2159,7 +2167,8 @@ ul li.nav-item a.tabCoreTeam.active {
     min-height: 215px !important;
   }
   .boxContentFooter {
-    width: 33%;
+    width: 22%;
+    text-align: center;
   }
   .newsCompanyBox {
     width: 33%;
@@ -2182,6 +2191,9 @@ ul li.nav-item a.tabCoreTeam.active {
   }
   .marginLeftNumber3{
     margin-left: 30px !important;
+  }
+  .marginTitleContent{
+    margin-left: 5% !important;
   }
 }
 
@@ -2480,6 +2492,10 @@ ul.ulStyleFooter li a#address:hover {
   padding-top: 20px !important;
 }
 
+.paddingTop30 {
+  padding-top: 30px !important;
+}
+
 .paddingTop40 {
   padding-top: 40px !important;
 }
@@ -2489,9 +2505,7 @@ ul.ulStyleFooter li a#address:hover {
 }
 
 .logoWhite {
-  width: 300px;
-  margin-top: 5%;
-  margin-left: auto;
+  width: 280px;
   margin-right: auto;
 }
 
@@ -2532,12 +2546,12 @@ ul.ulStyleFooter li a#address:hover {
 }
 
 .buttonMoreNewsHome {
-  width: 50px;
-  height: 63px;
-  right: -3px;
+  width: 35px;
+  height: 43px;
+  right: -1px;
   position: absolute;
   z-index: 1000;
-  top: 9px;
+  top: 8px;
 }
 
 .marginBottom60 {
@@ -2756,4 +2770,8 @@ span.iconBranches {
 .styleBoxNews{
   background-color: #f2f2f2;
   padding: 10px !important;
+}
+
+.marginTop2{
+  margin-top: 2px !important;
 }

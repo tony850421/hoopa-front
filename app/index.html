@@ -52,7 +52,7 @@
     <i class="fa fa-angle-up"></i>
   </div>
   <div class="scrollQR zIndex5000">
-      <i class="icon-51" data-toggle="modal" data-target="#modalWeChat"></i>
+    <i class="icon-51" data-toggle="modal" data-target="#modalWeChat"></i>
   </div>
 
   <div class="page-wrapper">
@@ -159,8 +159,7 @@
               </button>
               <button ng-show="loginUser" id="header-top-drop-2" type="button" class="btn dropdown-toggle dropdown-toggle--no-caret styleButtonsBanner"
                 style="height:30px !important;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
-                <img ng-hide="avatar !=''" class="avatarImageBanner" src="images/avatar.jpg">
-                {{avatar}}
+                <img ng-hide="avatar !=''" class="avatarImageBanner" src="images/avatar.jpg"> {{avatar}}
                 <img ng-show="avatar !=''" class="avatarImageBanner" ng-src="{{avatar}}">
               </button>
               <ul id="userDropdown" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
@@ -269,8 +268,8 @@
                     <div class="divLiUl" ng-class="{'divBottomLiActive': divBottomLiActive != 'HOME'}" ng-cloak></div>
                   </li>
                   <li class="nav-item dropdown">
-                    <a href="" class="nav-link dropdown-toggle colorIconBarDark fontSize16 padding10 textAlignCenter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                      ng-cloak>{{'GROUPOVERVIEW' | translate }}</a>
+                    <a href="" class="nav-link dropdown-toggle colorIconBarDark fontSize16 padding10 textAlignCenter" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false" ng-cloak>{{'GROUPOVERVIEW' | translate }}</a>
                     <div class="divLiUl" ng-class="{'divBottomLiActive': divBottomLiActive != 'GROUP'}" ng-cloak></div>
                     <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
                       <li>
@@ -292,8 +291,8 @@
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
-                    <a href="" class="nav-link dropdown-toggle colorIconBarDark fontSize16 padding10 textAlignCenter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                      ng-cloak>{{'SERVICES' | translate }}</a>
+                    <a href="" class="nav-link dropdown-toggle colorIconBarDark fontSize16 padding10 textAlignCenter" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false" ng-cloak>{{'SERVICES' | translate }}</a>
                     <div class="divLiUl" ng-class="{'divBottomLiActive': divBottomLiActive != 'SERVICES'}" ng-cloak></div>
                     <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
                       <li>
@@ -307,7 +306,8 @@
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
-                    <a href="" class="nav-link dropdown-toggle colorIconBarDark fontSize16 padding10 textAlignCenter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'NEWS' | translate }}</a>
+                    <a href="" class="nav-link dropdown-toggle colorIconBarDark fontSize16 padding10 textAlignCenter" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false" ng-cloak>{{'NEWS' | translate }}</a>
                     <div class="divLiUl" ng-class="{'divBottomLiActive': divBottomLiActive != 'NEWS'}" ng-cloak></div>
                     <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
                       <li>
@@ -321,8 +321,8 @@
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
-                    <a href="" class="nav-link dropdown-toggle colorIconBarDark fontSize16 padding10 textAlignCenter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                      ng-cloak>{{'ASSETS' | translate }}</a>
+                    <a href="" class="nav-link dropdown-toggle colorIconBarDark fontSize16 padding10 textAlignCenter" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false" ng-cloak>{{'ASSETS' | translate }}</a>
                     <div class="divLiUl" ng-class="{'divBottomLiActive': divBottomLiActive != 'ASSETS'}" ng-cloak></div>
                     <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
                       <li>
@@ -336,7 +336,8 @@
                     </ul>
                   </li>
                   <li class="nav-item dropdown ">
-                    <a ng-click="customGoTo('branches-offices')" href="" class="nav-link colorIconBarDark fontSize16 padding10 textAlignCenter" ng-cloak>{{'CONTACTUS' | translate }}</a>
+                    <a ng-click="customGoTo('branches-offices')" href="" class="nav-link colorIconBarDark fontSize16 padding10 textAlignCenter"
+                      ng-cloak>{{'CONTACTUS' | translate }}</a>
                     <div class="divLiUl" ng-class="{'divBottomLiActive': divBottomLiActive != 'CONTACT'}" ng-cloak></div>
                   </li>
                 </ul>
@@ -385,24 +386,25 @@
     <div class="footer paddingBottom0 paddingTop0">
       <div class="footer-inner">
         <div class="row col-lg-10 col-12 marginLeftAuto marginRightAuto">
-          <div class="col-lg-4 col-sm-6 col-12 paddingTop40 paddingBottom40">
+          <div class="col-lg-4 col-sm-6 col-12 paddingTop30">
             <img class="logoWhite" src="images/LogoHoopaWhite.png" />
           </div>
-          <div class="col-lg-4 col-12 paddingTop40 paddingBottom40 hidden-sm">
-            <h3 class="page-title marginBottom20 textWhite" ng-cloak>{{'CONTENT' | translate}}</h3>
+          <div class="col-lg-4 col-12 paddingTop30 hidden-sm">
+            <h4 class="page-title marginBottom10 textWhite marginTitleContent" ng-cloak>{{'CONTENT' | translate}}</h4>
             <div class="row marginLeftAuto">
-              <div class="boxContentFooter paddingLeft0">
+              <div class="boxContentFooter">
                 <a href="" ng-click="customGoTo('groupIntroduction')" class="nav-link textWhite" ng-cloak>{{'GROUPINTRODUCTION' | translate }}</a>
                 <a href="" ng-click="customGoTo('organizationStructure')" class="nav-link textWhite" ng-cloak>{{'STRUCTURE' | translate }}</a>
                 <a href="" ng-click="customGoTo('coreteam')" class="nav-link textWhite" ng-cloak>{{'CORETEAM' | translate }}</a>
                 <a href="" ng-click="customGoTo('devhistory')" class="nav-link textWhite" ng-cloak>{{'DEVHISTORY' | translate }}</a>
               </div>
-              <div class="boxContentFooter marginLeftAuto">
-                <a ng-click="customGoTo('news/1')" href="" class="nav-link textWhite" ng-cloak>{{'NEWS' | translate }}</a>
+              <div class="boxContentFooter">
+                <a ng-click="customGoTo('news/0')" href="" class="nav-link textWhite" ng-cloak>{{'COMPANYNEWS' | translate }}</a>
+                <a ng-click="customGoTo('news/1')" href="" class="nav-link textWhite" ng-cloak>{{'INDUSTRYNEWS' | translate }}</a>
                 <a href="" ng-click="customGoTo('bussinessystem')" class="nav-link textWhite" ng-cloak>{{'BSYSTEM' | translate }}</a>
                 <a href="" ng-click="customGoTo('bussinesprocess')" class="nav-link textWhite" ng-cloak>{{'SPROCESS' | translate }}</a>
               </div>
-              <div class="boxContentFooter paddingRight0 marginLeftAuto">
+              <div class="boxContentFooter">
                 <a href="" ng-click="customGoTo('projects')" class="nav-link textWhite" ng-cloak>{{'IPROMOTION' | translate }}</a>
                 <a href="" ng-click="customGoTo('featured-cases')" class="nav-link textWhite" ng-cloak>{{'FCASES' | translate }}</a>
                 <a ng-click="customGoTo('branches-offices')" href="" class="nav-link textWhite" ng-cloak>{{'CONTACTUS' | translate }}</a>
@@ -410,23 +412,23 @@
             </div>
           </div>
           <!-- <div class="col-lg-1 hidden-sm"></div> -->
-          <div class="col-lg-4 col-sm-6 col-12 paddingTop40 paddingBottom40">
-            <h3 class="page-title marginBottom20 textWhite col-12" ng-cloak>{{'CONTACT' | translate}}</h3>
+          <div class="col-lg-4 col-sm-6 col-12 paddingTop30">
+            <h4 class="page-title marginBottom10 textWhite col-12" ng-cloak>{{'CONTACT' | translate}}</h4>
             <ul class="ulStyleFooter paddingLeft0">
-              <li class="marginTop10" ng-cloak>
+              <li class="marginTop2" ng-cloak>
                 <a class="link-dark textDecorationNone" id="address">
                   <i class="colorPrimary icon-55 pl-10 pr-1 marginRight10"></i>{{'COMPANYADDRESS' | translate}}
                 </a>
               </li>
-              <li class="marginTop10" ng-cloak>
+              <li class="marginTop2" ng-cloak>
                 <a href="tel:4008001682" class="link-dark textDecorationNone">
                   <i class="colorPrimary icon-35 pl-10 pr-1 marginRight10"></i>400-800-1682</a>
               </li>
-              <li class="marginTop10" ng-cloak>
+              <li class="marginTop2" ng-cloak>
                 <a href="mailto:hoopa@hoopa.cn" class="link-dark textDecorationNone">
                   <i class="colorPrimary fa fa-envelope-o pl-10 pr-1 marginRight10"></i>hoopa@hoopa.cn</a>
               </li>
-              <li class="marginTop10" ng-cloak>
+              <li class="marginTop2" ng-cloak>
                 <a href="https://weibo.com/6434081034/profile?topnav=1&wvr=6" class="link-dark textDecorationNone">
                   <i class="colorPrimary icon-21 pl-10 pr-1 marginRight10"></i>{{'WEIBO' | translate}}
                 </a>
@@ -447,6 +449,9 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title" id="myModalLabel">司法执行类</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="textWhite" aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body">
           <div class="row">
@@ -489,6 +494,9 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title" id="myModalLabel">高端住宅资产处置案例</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="textWhite" aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body">
           <div class="row">
@@ -538,6 +546,9 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title" id="myModalLabel">南京XX船务有限公司和南京XX贸易有限公司处置案例</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="textWhite" aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body">
           <div class="row">
@@ -580,6 +591,9 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title" id="myModalLabel">舟山XX置业有限公司债权案例</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="textWhite" aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body">
           <div class="row">
@@ -654,6 +668,9 @@
       <div class="modal-content marginTopLogin borderNone">
         <div class="modal-header">
           <h4 class="modal-title" id="myModalLabel">{{'LOGIN' | translate}}</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="textWhite" aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body">
           <div class="col-auto">
