@@ -757,7 +757,7 @@ ul li.nav-item a.tabCoreTeam {
 }
 
 ul li.nav-item a.tabCoreTeam.active {
-  background-color: white !important;
+  background-color: #161920 !important;
 }
 
 .iconFooter {
@@ -1648,16 +1648,17 @@ ul li.nav-item a.tabCoreTeam.active {
   }
   .logo_img {
     margin-top: -5px !important;
-    width: 200px !important;
+    width: 130px !important;
+    margin-top: 5% !important;
   }
-  .marginTop40LG {
-    margin-top: 40px !important;
+  .marginTop30LG {
+    margin-top: 30px !important;
   }
   .industryNews {
     width: 20% !important;
   }
   .styleBannerLG {
-    height: 160px !important;
+    height: 145px !important;
   }
   .marginLeft6p3P {
     margin-left: 6.3% !important;
@@ -1927,6 +1928,9 @@ ul li.nav-item a.tabCoreTeam.active {
   }
   .width700px {
     width: 700px !important;
+  }
+  .top--30PLG{
+    top: -30% !important;
   }
 }
 
@@ -2277,7 +2281,6 @@ h6 {
 .textPhoneHome {
   margin-top: 40px !important;
   font-size: 20px !important;
-  text-align: center;
 }
 
 .styleButtonsBanner {
@@ -2335,7 +2338,7 @@ ul#menuBar li {
 
 .divLiUl {
   height: 5px;
-  width: 50%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
   background-color: #ff6700;
@@ -2632,4 +2635,20 @@ span.iconBranches {
 
 .marginLeft10 {
   margin-left: 10px !important;
+}
+
+.margiRight10{
+  margin-right: 10px !important;
+}
+
+.marginLeft7P{
+  margin-left: 7% !important;
+}
+
+.textAlignCenter{
+  text-align: center !important;
+}
+
+.header .navbar-nav .dropdown-toggle::after{
+  position: relative !important;
 }

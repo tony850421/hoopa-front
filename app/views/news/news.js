@@ -51,6 +51,7 @@ angular.module('myApp.News', ['ngRoute'])
       $scope.loading = true;
 
       var queryNewsCount = new AV.Query('News');
+      queryNewsCount.equalTo('type', $scope.activeSideBar);
       queryNewsCount.count().then(function (count) {
         $scope.newsCount = count;
         $scope.$apply();
@@ -58,6 +59,7 @@ angular.module('myApp.News', ['ngRoute'])
 
       var queryNews = new AV.Query('News');
       queryNews.limit(5);
+      queryNews.equalTo('type', $scope.activeSideBar);
       queryNews.descending('createdAt');
       queryNews.find().then(function (res) {
         $scope.news = [];
@@ -114,19 +116,27 @@ angular.module('myApp.News', ['ngRoute'])
     };
 
     $scope.nextPage = function () {
-      var quotient = Math.floor($scope.newsCount / $scope.pageSize);
       var remainder = $scope.newsCount % $scope.pageSize;
+      var quotient = 0;
+      if (remainder == 0){
+        quotient = Math.floor($scope.newsCount / $scope.pageSize);
+      } else{
+        quotient = Math.floor($scope.newsCount / $scope.pageSize) + 1;
+      } 
 
-      if ($scope.currentPage == quotient) {
-        if (remainder > 0) {
-          $scope.currentPage = quotient + 1;
+      if ($scope.currentPage < quotient) {        
+        $scope.goToPagination();
+
+        if ($scope.currentPage == quotient) {
+          if (remainder > 0) {
+            $scope.currentPage = quotient + 1;
+          }
         }
-      }
-
-      if ($scope.currentPage < quotient) {
-        $scope.currentPage = $scope.currentPage + 1;
-      }
-      $scope.goToPagination();
+  
+        if ($scope.currentPage < quotient) {
+          $scope.currentPage = $scope.currentPage + 1;
+        }
+      }      
     };
 
     $scope.previousPage = function () {
@@ -170,6 +180,7 @@ angular.module('myApp.News', ['ngRoute'])
     $scope.goToPagination = function () {
       var queryNews = new AV.Query('News');
       queryNews.limit(5);
+      queryNews.equalTo('type', $scope.activeSideBar);
       queryNews.descending('createdAt');
       queryNews.skip(($scope.currentPage - 1) * 5);
       queryNews.find().then(function (res) {

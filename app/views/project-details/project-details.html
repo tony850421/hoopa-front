@@ -1,15 +1,26 @@
 <div>
   <img class="imageBanner" src="images/hoopaDark.jpg" />
   <div class="textBanner">
-    <p class="textWhite marginBottom0">{{'IPROMOTION' | translate }}</p>
-    <p class="textWhite fontSize16">{{'HOME' | translate }} / {{'IPROMOTION' | translate }}</p>
+    <p class="textWhite marginBottom0" ng-cloak>{{'IPROMOTION' | translate }}</p>
+    <!-- <p class="textWhite fontSize16" ng-cloak>{{'HOME' | translate }} / {{'IPROMOTION' | translate }}</p> -->
   </div>
-  <div class="lineBlueBanner"></div>
+  <!-- <div class="lineBlueBanner"></div> -->
+</div>
+<div class="breadcrumb-container">
+  <div class="container">
+      <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+              <i class="fa fa-home pr-2"></i>
+              <a href="index.html" class="textDecorationNone">{{'HOME' | translate}}</a>
+          </li>
+          <li class="breadcrumb-item cursorDefault active">{{'IPROMOTION' | translate }}</li>
+      </ol>
+  </div>
 </div>
 <section class="main-container paddingBoxHome">
   <div class="container">
     <div class="row">
-      <h2 class="page-title marginLeft--15">{{project.get('title')}}</h2>
+      <h2 class="page-title marginLeft--15" ng-cloak>{{project.get('title')}}</h2>
       <div class="separator-2 marginLeft--15"></div>
       <div class="row col-lg-12 paddingLeft0 paddingRight0">
         <div class="col-lg-6 paddingLeft0 paddingRight0" style="z-index: 10">
@@ -23,45 +34,45 @@
         <div class="col-lg-6 pv-30 padding0XS">
           <table class="marginLeftAuto marginRightAuto">
             <tr class="fontSize40">
-              <td class="textEnd">{{'DAMOUNT' | translate}}:</td>
+              <td class="textEnd" ng-cloak>{{'DAMOUNT' | translate}}:</td>
               <td class="colorPrimary">
-                <p class="marginLeft10 marginBottom0">¥{{project.get('debitAmount')}}万</p>
+                <p class="marginLeft10 marginBottom0" ng-cloak>¥{{project.get('debitAmount')}}万</p>
               </td>
             </tr>
             <tr class="fontSize18">
-              <td class="textEnd">{{'DUPRINCIPALI' | translate}}:</td>
+              <td class="textEnd" ng-cloak>{{'DUPRINCIPALI' | translate}}:</td>
               <td class="colorPrimary">
-                <p class="marginLeft10 marginBottom0">¥{{project.get('debitPricipalInterest')}}万</p>
+                <p class="marginLeft10 marginBottom0" ng-cloak>¥{{project.get('debitPricipalInterest')}}万</p>
               </td>
             </tr>
             <tr>
-              <td class="textEnd">{{'TARRIVAL' | translate}}:</td>
+              <td class="textEnd" ng-cloak>{{'TARRIVAL' | translate}}:</td>
               <td class="colorRed marginLeft10P" ng-repeat="t in typeArrivalString">
-                <p class="marginLeft10 marginBottom0">{{t}}</p>
+                <p class="marginLeft10 marginBottom0" ng-cloak>{{t}}</p>
               </td>
             </tr>
             <tr ng-show="project.get('projectManager').get(name)">
-              <td class="textEnd">{{'PROJECTMANAGER' | translate}}:</td>
+              <td class="textEnd" ng-cloak>{{'PROJECTMANAGER' | translate}}:</td>
               <td class="marginLeft10P">
-                <p class="marginLeft10 marginBottom0">{{project.get('projectManager').get(name)}}</p>
+                <p class="marginLeft10 marginBottom0" ng-cloak>{{project.get('projectManager').get(name)}}</p>
               </td>
             </tr>
             <tr ng-show="project.get('projectManager').get(phone)">
-              <td class="textEnd">{{'CONTACTPHONE' | translate}}:</td>
+              <td class="textEnd" ng-cloak>{{'CONTACTPHONE' | translate}}:</td>
               <td class="marginLeft10P">
                 <p class="marginLeft10 marginBottom0">{{project.get('projectManager').get(phone)}}</p>
               </td>
             </tr>
             <tr>
-              <td class="textEnd">{{'PUADDRESS' | translate}}:</td>
+              <td class="textEnd" ng-cloak>{{'PUADDRESS' | translate}}:</td>
               <td class="marginLeft10P">
-                <p class="marginLeft10 marginBottom0">{{project.get('plainAddress')}}</p>
+                <p class="marginLeft10 marginBottom0" ng-cloak>{{project.get('plainAddress')}}</p>
               </td>
             </tr>
             <tr>
-              <td class="textEnd">{{'CUFROM' | translate}}:</td>
+              <td class="textEnd" ng-cloak>{{'CUFROM' | translate}}:</td>
               <td class="marginLeft10P">
-                <p class="marginLeft10 marginBottom0">{{project.get('comefrom')}}</p>
+                <p class="marginLeft10 marginBottom0" ng-cloak>{{project.get('comefrom')}}</p>
               </td>
             </tr>
             <tr>
@@ -71,9 +82,9 @@
               </td>
             </tr>
             <tr>
-              <td class="textEnd">{{'PUPROVINCE' | translate}}:</td>
+              <td class="textEnd" ng-cloak>{{'PUPROVINCE' | translate}}:</td>
               <td class="marginLeft10P">
-                <p class="marginLeft10 marginBottom0">{{project.get('province')}}</p>
+                <p class="marginLeft10 marginBottom0" ng-cloak>{{project.get('province')}}</p>
               </td>
             </tr>
           </table>
@@ -93,12 +104,12 @@
               </button>
             </div>
             <div class="col-lg-6 aligSelftCenter">
-              <a ng-hide="flagBid" ng-click="makeAnOffer()" class="margin-clear btn btn-default backgroundColorBlue pull-right height40 width100SendCode">
+              <a ng-hide="flagBid" ng-click="makeAnOffer()" class="margin-clear btn btn-default backgroundColorBlue pull-right height40 width100SendCode" ng-cloak>
                 <i class="icon-Total-offers spanSignUp"></i> {{'MAKEANOFFER' | translate}}</a>
               <div ng-show="flagBid" class="input-group">
                 <input type="text" ng-model="offerValue" class="form-control">
                 <div class="input-group-append">
-                  <a ng-click="makeABid()" class="input-group-text backgroundColorBlue cursorPointer">
+                  <a ng-click="makeABid()" class="input-group-text backgroundColorBlue cursorPointer" ng-cloak>
                     <i class="icon-Offertas spanSignUp"></i> {{'MAKEABID' | translate}}</a>
                 </div>
               </div>
@@ -112,10 +123,10 @@
 <!-- main-container end -->
 <section class="main-container paddingBoxHome">
   <div class="container padding0">
-    <h4 class="mt-4">{{'PDESC' | translate}}</h4>
-    <p>{{project.get('description')}}</p>
-    <h4>{{'CHIGHL' | translate}}</h4>
-    <p>{{project.get('creditHighlights')}}</p>
+    <h4 class="mt-4" ng-cloak>{{'PDESC' | translate}}</h4>
+    <p ng-cloak>{{project.get('description')}}</p>
+    <h4 ng-cloak>{{'CHIGHL' | translate}}</h4>
+    <p ng-cloak>{{project.get('creditHighlights')}}</p>
   </div>
 </section>
 <!-- section start -->
@@ -127,19 +138,19 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs style-4" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = true; tabCommentsVisible = false; tabBorrowersVisible = false; tabSponsorsVisible = false">
+            <a class="nav-link active" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = true; tabCommentsVisible = false; tabBorrowersVisible = false; tabSponsorsVisible = false" ng-cloak>
               <i class="fa fa-files-o pr-1"></i>({{assetsList.length}}) {{'ASSETS' | translate}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = false; tabBorrowersVisible = true; tabSponsorsVisible = false">
+            <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = false; tabBorrowersVisible = true; tabSponsorsVisible = false" ng-cloak>
               <i class="fa fa-files-o pr-1"></i>({{borrowerList.length}}) {{'BORROWERS' | translate}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = false; tabBorrowersVisible = false; tabSponsorsVisible = true">
+            <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = false; tabBorrowersVisible = false; tabSponsorsVisible = true" ng-cloak>
               <i class="fa fa-files-o pr-1"></i>({{sponsorsList.length}}) {{'SPONSORS' | translate}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = true; tabBorrowersVisible = false; tabSponsorsVisible = false">
+            <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = true; tabBorrowersVisible = false; tabSponsorsVisible = false" ng-cloak>
               <i class="fa fa-star pr-1"></i>({{reviews.length}}) {{'REVIEWS' | translate}}</a>
           </li>
         </ul>
@@ -147,47 +158,47 @@
         <div class="tab-content padding-top-clear padding-bottom-clear">
           <div class="tab-pane" ng-class="{'active': tabAssetsVisible == true}">
             <div ng-repeat="asset in assetsList">
-              <h4 class="space-top">{{asset.get('title')}}</h4>
+              <h4 class="space-top" ng-cloak>{{asset.get('title')}}</h4>
               <hr>
               <dl class="row">
-                <dt class="col-sm-3 text-sm-right">{{'TARRIVAL' | translate}}</dt>
-                <dd class="col-sm-9">{{asset.get('typeArrival')}}</dd>
-                <dt class="col-sm-3 text-sm-right">{{'CAREA' | translate}}</dt>
-                <dd class="col-sm-9">{{asset.get('constructionArea')}}</dd>
-                <dt class="col-sm-3 text-sm-right">{{'LAREA' | translate}}</dt>
-                <dd class="col-sm-9">{{asset.get('landArea')}}</dd>
-                <dt class="col-sm-3 text-sm-right">{{'ADDRESS' | translate}}</dt>
-                <dd class="col-sm-9">{{asset.get('plainAddress')}}</dd>
-                <dt class="col-sm-3 text-sm-right">{{'PROVINCE' | translate}}</dt>
-                <dd class="col-sm-9">{{asset.get('province')}}</dd>
-                <dt class="col-sm-3 text-sm-right">{{'LONGLATASSETS' | translate}}</dt>
-                <dd class="col-sm-9">({{asset.get('location').longitude+","+asset.get('location').latitude}})</dd>
+                <dt class="col-sm-3 text-sm-right" ng-cloak>{{'TARRIVAL' | translate}}</dt>
+                <dd class="col-sm-9" ng-cloak>{{asset.get('typeArrival')}}</dd>
+                <dt class="col-sm-3 text-sm-right" ng-cloak>{{'CAREA' | translate}}</dt>
+                <dd class="col-sm-9" ng-cloak>{{asset.get('constructionArea')}}</dd>
+                <dt class="col-sm-3 text-sm-right" ng-cloak>{{'LAREA' | translate}}</dt>
+                <dd class="col-sm-9" ng-cloak>{{asset.get('landArea')}}</dd>
+                <dt class="col-sm-3 text-sm-right" ng-cloak>{{'ADDRESS' | translate}}</dt>
+                <dd class="col-sm-9" ng-cloak>{{asset.get('plainAddress')}}</dd>
+                <dt class="col-sm-3 text-sm-right" ng-cloak>{{'PROVINCE' | translate}}</dt>
+                <dd class="col-sm-9" ng-cloak>{{asset.get('province')}}</dd>
+                <dt class="col-sm-3 text-sm-right" ng-cloak>{{'LONGLATASSETS' | translate}}</dt>
+                <dd class="col-sm-9" ng-cloak>({{asset.get('location').longitude+","+asset.get('location').latitude}})</dd>
               </dl>
               <hr>
             </div>
           </div>
           <div class="tab-pane" ng-class="{'active': tabBorrowersVisible == true}">
             <div ng-repeat="borrower in borrowerList">
-              <h4 class="space-top">{{borrower.get('name')}}</h4>
+              <h4 class="space-top" ng-cloak>{{borrower.get('name')}}</h4>
               <hr>
               <dl class="row">
-                <dt class="col-sm-3 text-sm-right">{{'BORROPDEB' | translate}}</dt>
-                <dd class="col-sm-9">{{borrower.get('principalDebit')}}</dd>
-                <dt class="col-sm-3 text-sm-right">{{'BORROINTER' | translate}}</dt>
-                <dd class="col-sm-9">{{borrower.get('interestCreditor')}}</dd>
+                <dt class="col-sm-3 text-sm-right" ng-cloak>{{'BORROPDEB' | translate}}</dt>
+                <dd class="col-sm-9" ng-cloak>{{borrower.get('principalDebit')}}</dd>
+                <dt class="col-sm-3 text-sm-right" ng-cloak>{{'BORROINTER' | translate}}</dt>
+                <dd class="col-sm-9" ng-cloak>{{borrower.get('interestCreditor')}}</dd>
               </dl>
               <hr>
             </div>
           </div>
           <div class="tab-pane" ng-class="{'active': tabSponsorsVisible == true}">
             <div ng-repeat="sponsor in sponsorsList">
-              <h4 class="space-top">{{sponsor.get('name')}}</h4>
+              <h4 class="space-top" ng-cloak>{{sponsor.get('name')}}</h4>
               <hr>
               <dl class="row">
-                <dt class="col-sm-3 text-sm-right">{{'AMOUNT' | translate}}</dt>
-                <dd class="col-sm-9">{{sponsor.get('amount')}}</dd>
-                <dt class="col-sm-3 text-sm-right">{{'TYPE' | translate}}</dt>
-                <dd class="col-sm-9">{{sponsor.get('type')}}</dd>
+                <dt class="col-sm-3 text-sm-right" v>{{'AMOUNT' | translate}}</dt>
+                <dd class="col-sm-9" ng-cloak>{{sponsor.get('amount')}}</dd>
+                <dt class="col-sm-3 text-sm-right" ng-cloak>{{'TYPE' | translate}}</dt>
+                <dd class="col-sm-9"ng-cloak>{{sponsor.get('type')}}</dd>
               </dl>
               <hr>
             </div>
@@ -202,12 +213,12 @@
                 </div>
                 <header>
                   <!-- <h3>Amazing!</h3> -->
-                  <div class="comment-meta">
+                  <div class="comment-meta" ng-cloak>
                     <i class="fa fa-star {{s.class}}" ng-repeat="s in c.rating"></i> | {{c.createdAt}}</div>
                 </header>
                 <div class="comment-content">
                   <div class="comment-body clearfix">
-                    <p>{{c.get('content')}}</p>
+                    <p ng-cloak>{{c.get('content')}}</p>
                     <!-- <a href="blog-post.html" class="btn-sm-link link-dark pull-right">
                       <i class="fa fa-reply"></i> Reply</a> -->
                   </div>
@@ -216,11 +227,11 @@
               <!-- comment end -->
               <!-- comments end -->
 
-              <p ng-show="!loginUser">{{'MUSTBELOGGED' | translate}}</p>
+              <p ng-show="!loginUser" ng-cloak>{{'MUSTBELOGGED' | translate}}</p>
 
               <!-- comments form start -->
               <div class="comments-form" ng-show="loginUser">
-                <h3 class="title">{{'ADDREVIEW' | translate}}</h3>
+                <h3 class="title" ng-cloak>{{'ADDREVIEW' | translate}}</h3>
                 <form>
                   <!-- <div class="form-group has-feedback">
                   <label for="name4">{{'NAME' | translate}}</label>
@@ -233,7 +244,7 @@
                   <i class="fa fa-pencil form-control-feedback top22"></i>
                 </div> -->
                   <div class="form-group">
-                    <label>{{'RATING' | translate}}</label>
+                    <label ng-cloak>{{'RATING' | translate}}</label>
                     <select ng-model="ratingReview" class="form-control" id="review">
                       <option value="5">5</option>
                       <option value="4">4</option>
@@ -243,11 +254,11 @@
                     </select>
                   </div>
                   <div class="form-group has-feedback">
-                    <label for="message4">{{'MESSAGE' | translate}}</label>
+                    <label for="message4" ng-cloak>{{'MESSAGE' | translate}}</label>
                     <textarea ng-model="contentReview" class="form-control" rows="8" id="message4" placeholder="" required></textarea>
                     <i class="fa fa-envelope-o form-control-feedback"></i>
                   </div>
-                  <a ng-click="publishReview()" class="btn btn-default backgroundColorBlue">{{'PPUBLISH' | translate}}</a>
+                  <a ng-click="publishReview()" class="btn btn-default backgroundColorBlue" ng-cloak>{{'PPUBLISH' | translate}}</a>
                 </form>
               </div>
               <!-- comments form end -->
@@ -261,7 +272,7 @@
       <aside class="col-lg-4 col-xl-3 ml-xl-auto">
         <div class="sidebar">
           <div class="block clearfix">
-            <h4 class="title">{{"RECOMMENDEDPROJECT" | translate}}</h4>
+            <h4 class="title" ng-cloak>{{"RECOMMENDEDPROJECT" | translate}}</h4>
             <div class="separator-2"></div>
             <div class="media margin-clear" ng-repeat="p in projects" ng-hide="p.id == project.id">
               <div class="d-flex pr-2">
@@ -274,7 +285,7 @@
               </div>
               <div class="media-body">
                 <h6 class="media-heading">
-                  <a href="" ng-click="goToProject(p.id)">{{p.title}}</a>
+                  <a href="" ng-click="goToProject(p.id)" ng-cloak>{{p.title}}</a>
                 </h6>
                 <p class="margin-clear">
                   <i class="fa fa-star text-default"></i>
@@ -283,7 +294,7 @@
                   <i class="fa fa-star text-default"></i>
                   <i class="fa fa-star text-default"></i>
                 </p>
-                <p class="price colorPrimary">¥{{p.amount}}万</p>
+                <p class="price colorPrimary" ng-cloak>¥{{p.amount}}万</p>
               </div>
             </div>
             <hr>
