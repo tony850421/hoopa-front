@@ -214,14 +214,13 @@ angular.module('myApp.Projects', ['ngRoute'])
     };
 
     $scope.nextPage = function () {
-      var remainder = $scope.newsCount % $scope.pageSize;
+      var remainder = $scope.productsCount % $scope.pageSize;
       var quotient = 0;
       if (remainder == 0) {
-        quotient = Math.floor($scope.newsCount / $scope.pageSize);
+        quotient = Math.floor($scope.productsCount / $scope.pageSize);
       } else {
-        quotient = Math.floor($scope.newsCount / $scope.pageSize) + 1;
+        quotient = Math.floor($scope.productsCount / $scope.pageSize) + 1;
       }
-
 
       if ($scope.currentPage < quotient) {
         $scope.applyFilters();
