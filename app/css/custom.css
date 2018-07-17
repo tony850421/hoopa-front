@@ -1819,8 +1819,7 @@ ul li.nav-item a.tabCoreTeam.active {
     margin-top: 40px !important;
   }
   .boxGroupIntroduction {
-    width: 100% !important;
-    align-self: center !important;
+    width: 100% !important;    
   }
   .scrollQR i {
     line-height: 40px;
@@ -1950,7 +1949,6 @@ ul li.nav-item a.tabCoreTeam.active {
   }
   .boxGroupIntroduction {
     width: 48% !important;
-    align-self: center !important;
   }
   .marginLeftGroupIntroduction {
     margin-left: 4% !important;
