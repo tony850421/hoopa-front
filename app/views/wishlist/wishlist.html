@@ -30,7 +30,7 @@
                 <th class="cursorDefault">{{'PACKAGE' | translate}}</th>
                 <th class="textcenter cursorDefault">{{'DAMOUNT' | translate}}</th>
                 <th class="cursorDefault">{{'PROVINCE' | translate}}</th>
-                <th class="cursorDefault">{{'MAKEANOFFER' | translate}}</th>
+                <th class="cursorDefault hiddenXS">{{'MAKEANOFFER' | translate}}</th>
                 <th class="textcenter cursorDefault">{{'REMOVE' | translate}}</th>
               </tr>
             </thead>
@@ -45,11 +45,11 @@
                 <td class="price">
                   <small class="cursorDefault">{{cartObject.get('project').get('province')}}</small>
                 </td>
-                <td class="remove">
+                <td class="remove hiddenXS">
                   <a href="" class="btn btn-remove icon-offers backgroundColorBlue marginLeft20P"> {{'OFFER' | translate}}</a>
                 </td>
                 <td class="remove">
-                  <a href="" class="btn btn-remove fa fa-remove btn-default backgroundColorBlue marginLeft20P"> {{'REMOVE' | translate}}</a>
+                  <a ng-click="removeWishList(cartObject.id)" href="" class="btn btn-remove fa fa-remove btn-default backgroundColorBlue marginLeft20P"> {{'REMOVE' | translate}}</a>
                 </td>
               </tr>
               <tr>
@@ -58,7 +58,7 @@
             </tbody>
           </table>
           <div class="text-right">
-            <a href="" class="btn btn-group fa fa-trash-o btn-default backgroundColorBlue"> {{'CLEARALL' | translate}}</a>
+            <a ng-click="removeAll()" href="" class="btn btn-group fa fa-trash-o btn-default backgroundColorBlue"> {{'CLEARALL' | translate}}</a>
           </div>
         </div>
       </div>

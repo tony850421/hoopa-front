@@ -271,6 +271,7 @@ angular.module('myApp.Projects', ['ngRoute'])
             shop.save().then(res => {
               var addedWishList = $translate.instant('ADDEDWISHLIST');
               $rootScope.displayAlert('success', addedWishList);
+              $rootScope.initWishList();
               $scope.applyFilters();
             });
           }
@@ -296,6 +297,7 @@ angular.module('myApp.Projects', ['ngRoute'])
             element.destroy();
             var removeWishList = $translate.instant('REMOVEDWISHLIST');
             $rootScope.displayAlert('success', removeWishList);
+            $rootScope.initWishList();
           });
 
           $scope.applyFilters();

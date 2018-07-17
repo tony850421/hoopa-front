@@ -20,31 +20,31 @@
 <section class="paddingBoxHome">
   <div class="container">
     <div class="row marginBottom20">
-      <div class="row col-md-6 aligItemCenter">
+      <div class="row col-md-6 aligItemCenter paddingRight0XS">
         <label class="width25P">{{'TEXT' | translate}}</label>
         <input type="text" class="form-control width75P" ng-model="filters.text">
       </div>
-      <div class="col-md-2 aligItemCenter"></div>
-      <div class="col-md-2 pull-right marginLeftAuto">
+      <div class="col-md-2 aligItemCenter paddingRight0XS"></div>
+      <div class="col-md-2 paddingLeft0XS paddingRight0XS pull-right marginLeftAuto">
         <a href="" class="btn btn-default buttonFiltersProjects FRW" ng-click="resetFilters()">{{'RESETFILTERS' | translate}}</a>
       </div>
-      <div class="col-md-2 pull-right paddingRight0 aligItemCenter marginLeftAuto">
+      <div class="col-md-2 paddingLeft0XS pull-right paddingRight0 aligItemCenter marginLeftAuto">
         <a href="" class="btn btn-default buttonFiltersProjects FRW" ng-click="applyFiltersClick()">{{'APPLYFILTERS' | translate}}</a>
       </div>
     </div>
     <div class="row marginBottom20">
-      <div class="row col-md-4 aligItemCenter">
+      <div class="row col-md-4 aligItemCenter paddingRight0XS">
         <label class="width25P">{{'TYPE' | translate}}</label>
         <select id="type" class="form-control width75P" ng-model="filters.type" ng-options="x for x in typeArrivalArray">
         </select>
       </div>
-      <div class="row col-md-4 aligItemCenter marginLeftAuto">
+      <div class="row col-md-4 aligItemCenter marginLeftAutoLG paddingRight0XS">
         <label class="width30P">{{'PROVINCE' | translate}}</label>
         <select id="province" class="form-control width70P" ng-model="filters.province" ng-options="x for x in provinces">
         </select>
       </div>
-      <div class="row col-md-4 aligItemCenter marginLeftAuto">
-        <label class="width25P marginLeftAuto">{{'AMOUNT' | translate}}</label>
+      <div class="row col-md-4 aligItemCenter marginLeftAutoLG paddingRight0XS">
+        <label class="width25P marginLeftAutoLG">{{'AMOUNT' | translate}}</label>
         <input type="text" class="form-control width30P marginLeftAuto" ng-model="filters.amountMin">
         <label class="width5P marginLeftAuto">~</label>
         <input type="text" class="form-control width30P marginLeftAuto" ng-model="filters.amountMax">
@@ -62,9 +62,6 @@
                 <div class="listing-item white-bg bordered mb-20">
                   <div class="overlay-container">
                     <img ng-click="goToProject(project.id)" class="imageProjectHome cursorPointer" ng-src="{{project.imageUrl}}">
-                    <!-- <div class="titleGroupIntroduction cursorPointer" ng-click="goToProject(project.id)">
-                      <p class="lead margin-clear textWhite fontSize14">¥{{project.debitAmount}}万</p>
-                    </div> -->
                   </div>
                   <div class="body">
                     <h3>

@@ -118,12 +118,6 @@ header:not(.dark) .dropdown-menu>li.active>a i {
   background-color: #ff6700 !important;
 }
 
-.imageProjectHome {
-  width: 285px !important;
-  height: 190px !important;
-  object-fit: cover !important;
-}
-
 .social-links:not(.animated-effect-1) li.skype a:hover,
 .colored.social-links li.skype a,
 .social-links.animated-effect-1 li.skype a::after,
@@ -1091,12 +1085,12 @@ ul li.nav-item a.tabCoreTeam.active {
   .ulHomeCar {
     min-width: 320px !important;
     z-index: 2000;
-    transform: translate3d(15px, 0px, 0px) !important;
+    transform: translate3d(0px, 0px, 0px) !important;
   }
   .ulHomeCarOffer {
     min-width: 320px !important;
     z-index: 2000;
-    transform: translate3d(97px, 0px, 0px) !important;
+    transform: translate3d(81px, 0px, 0px) !important;
   }
   .logo_img {
     margin-top: 0 !important;
@@ -1236,12 +1230,12 @@ ul li.nav-item a.tabCoreTeam.active {
   .ulHomeCar {
     min-width: 360px !important;
     z-index: 2000;
-    transform: translate3d(15px, 0px, 0px) !important;
+    transform: translate3d(0px, 0px, 0px) !important;
   }
   .ulHomeCarOffer {
     min-width: 360px !important;
     z-index: 2000;
-    transform: translate3d(97px, 0px, 0px) !important;
+    transform: translate3d(81px, 0px, 0px) !important;
   }
   .width700px {
     width: 355px !important;
@@ -1296,12 +1290,12 @@ ul li.nav-item a.tabCoreTeam.active {
   .ulHomeCar {
     min-width: 375px !important;
     z-index: 2000;
-    transform: translate3d(15px, 0px, 0px) !important;
+    transform: translate3d(0px, 0px, 0px) !important;
   }
   .ulHomeCarOffer {
     min-width: 375px !important;
     z-index: 2000;
-    transform: translate3d(97px, 0px, 0px) !important;
+    transform: translate3d(81px, 0px, 0px) !important;
   }
   .width700px {
     width: 360px !important;
@@ -1370,12 +1364,12 @@ ul li.nav-item a.tabCoreTeam.active {
   .ulHomeCar {
     min-width: 420px !important;
     z-index: 2000;
-    transform: translate3d(15px, 0px, 0px) !important;
+    transform: translate3d(0px, 0px, 0px) !important;
   }
   .ulHomeCarOffer {
     min-width: 420px !important;
     z-index: 2000;
-    transform: translate3d(97px, 0px, 0px) !important;
+    transform: translate3d(81px, 0px, 0px) !important;
   }
   .width700px {
     width: 405px !important;
@@ -1430,12 +1424,12 @@ ul li.nav-item a.tabCoreTeam.active {
   .ulHomeCar {
     min-width: 480px !important;
     z-index: 2000;
-    transform: translate3d(15px, 0px, 0px) !important;
+    transform: translate3d(0px, 0px, 0px) !important;
   }
   .ulHomeCarOffer {
     min-width: 480px !important;
     z-index: 2000;
-    transform: translate3d(97px, 0px, 0px) !important;
+    transform: translate3d(81px, 0px, 0px) !important;
   }
   .imageNewsListHome {
     width: 100% !important;
@@ -1562,6 +1556,14 @@ ul li.nav-item a.tabCoreTeam.active {
   }
   .marginLeft20XS {
     margin-left: 20px !important;
+  }
+  .imageProjectHome {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+  .marginleft15XS{
+    margin-left: 15px !important;
   }
 }
 
@@ -1813,6 +1815,11 @@ ul li.nav-item a.tabCoreTeam.active {
   .marginLeftNumber3{
     margin-left: 16.594px !important;
   }
+  .imageProjectHome {
+    width: 285px !important;
+    height: 190px !important;
+    object-fit: cover !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -2014,6 +2021,10 @@ ul li.nav-item a.tabCoreTeam.active {
     position: absolute !important;
     left: 8% !important;
   }
+  #userDropdown {
+    min-width: 150px !important;
+    transform: translate3d(-90px, 50px, 0px) !important;
+  }
 }
 
 @media (min-width: 1080px) {
@@ -2147,10 +2158,6 @@ ul li.nav-item a.tabCoreTeam.active {
     z-index: 1100 !important;
     position: relative;
     border: none;
-  }
-  #userDropdown {
-    min-width: 150px !important;
-    transform: translate3d(-90px, 50px, 0px) !important;
   }
   .widthBranches {
     width: 28% !important;
@@ -2637,6 +2644,10 @@ span.iconBranches {
 }
 
 .paddingRight10P {
+  padding-right: 10px !important;
+}
+
+.paddingRight10 {
   padding-right: 10px !important;
 }
 

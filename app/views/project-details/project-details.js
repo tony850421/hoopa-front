@@ -330,6 +330,7 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                             var addedWishList = $translate.instant('ADDEDWISHLIST');
                             $rootScope.displayAlert('success', addedWishList);
                             $scope.project.wished = true;
+                            $rootScope.initWishList();
                             $scope.$apply();
                         });
                     }
@@ -356,6 +357,7 @@ angular.module('myApp.ProjectDetails', ['ngRoute'])
                         var removeWishList = $translate.instant('REMOVEDWISHLIST');
                         $rootScope.displayAlert('success', removeWishList);
                         $scope.project.wished = false;
+                        $rootScope.initWishList();
                         $scope.$apply();
                     });
                 })
