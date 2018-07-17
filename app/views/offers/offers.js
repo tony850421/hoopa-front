@@ -25,7 +25,7 @@ angular.module('myApp.Offers', ['ngRoute'])
                 query.equalTo('user', currentUser);
                 query.include('project');
                 query.descending('createdAt');
-                query.find().then(res => {
+                query.find().then(function(res) {
                     $scope.shopCartArray = [];
                     for (var i = 0; i < res.length; i++) {
                         var aux = res[i].get('project').get('description');

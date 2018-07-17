@@ -32,7 +32,7 @@ angular.module('myApp.Login', ['ngRoute'])
         };
 
         $scope.loginWithSmsCode = function () {
-            AV.User.signUpOrlogInWithMobilePhone($scope.phoneNumber, $scope.smsCode).then(res => {
+            AV.User.signUpOrlogInWithMobilePhone($scope.phoneNumber, $scope.smsCode).then(function(res) {
                 var action = localStorageService.cookie.get('action');
                 if (action == 'AddToWishList'){
                     var id = localStorageService.cookie.get('projectId');
@@ -56,7 +56,7 @@ angular.module('myApp.Login', ['ngRoute'])
         };
 
         $scope.requestSmsCode = function () {
-            AV.Cloud.requestSmsCode($scope.phoneNumber).then(res => {
+            AV.Cloud.requestSmsCode($scope.phoneNumber).then(function(res) {
                 var sms = $translate.instant('SMSSENDED');
                 $rootScope.displayAlert('success', sms);
             }).catch(function (error) {

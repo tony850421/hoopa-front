@@ -185,7 +185,7 @@ angular.module('myApp.Projects', ['ngRoute'])
       var query = new AV.Query("ShopCar")
       query.equalTo('project', project);
       query.equalTo('user', user);
-      query.count().then(res => {
+      query.count().then(function(res) {
         if (res > 0) {
           array[index].wished = true;
         }
@@ -259,7 +259,7 @@ angular.module('myApp.Projects', ['ngRoute'])
         var query = new AV.Query("ShopCar")
         query.equalTo('project', project);
         query.equalTo('user', currentUser);
-        query.count().then(res => {
+        query.count().then(function(res) {
           if (res > 0) {
             var alreadyInWishList = $translate.instant('ALREADYINWISHLIST');
             $rootScope.displayAlert('warning', alreadyInWishList);
@@ -268,7 +268,7 @@ angular.module('myApp.Projects', ['ngRoute'])
             shop.set('user', currentUser);
             shop.set('checked', false);
             shop.set('project', project);
-            shop.save().then(res => {
+            shop.save().then(function(res) {
               var addedWishList = $translate.instant('ADDEDWISHLIST');
               $rootScope.displayAlert('success', addedWishList);
               $rootScope.initWishList();
@@ -292,7 +292,7 @@ angular.module('myApp.Projects', ['ngRoute'])
         var query = new AV.Query("ShopCar")
         query.equalTo('project', project);
         query.equalTo('user', currentUser);
-        query.find().then(res => {
+        query.find().then(function(res) {
           res.forEach(function (element) {
             element.destroy();
             var removeWishList = $translate.instant('REMOVEDWISHLIST');

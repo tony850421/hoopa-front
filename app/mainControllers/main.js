@@ -71,13 +71,13 @@ angular.module('myApp.Main', ['ngRoute'])
                 query.include('image');
                 query.include('project');
 
-                query.count().then(count => {
+                query.count().then(function(count){
                     $rootScope.shopCartCount = count;
                 })
 
                 query.limit(4);
                 query.descending('createdAt');
-                query.find().then(res => {
+                query.find().then(function(res) {
                     $scope.shopCartArray = res;
                     $scope.$apply();
                 })
@@ -134,7 +134,7 @@ angular.module('myApp.Main', ['ngRoute'])
             query9.equalTo('user', user);
             query9.include('project');
 
-            query9.count().then(count => {
+            query9.count().then(function(count) {
                 $rootScope.offersCartCount = count;
             })
 
