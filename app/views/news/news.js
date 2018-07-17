@@ -124,9 +124,7 @@ angular.module('myApp.News', ['ngRoute'])
         quotient = Math.floor($scope.newsCount / $scope.pageSize) + 1;
       }
 
-      if ($scope.currentPage < quotient) {        
-        $scope.goToPagination();
-
+      if ($scope.currentPage < quotient) {
         if ($scope.currentPage == quotient) {
           if (remainder > 0) {
             $scope.currentPage = quotient + 1;
@@ -136,6 +134,8 @@ angular.module('myApp.News', ['ngRoute'])
         if ($scope.currentPage < quotient) {
           $scope.currentPage = $scope.currentPage + 1;
         }
+
+        $scope.goToPagination();
       }      
     };
 

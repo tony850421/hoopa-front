@@ -223,9 +223,6 @@ angular.module('myApp.Projects', ['ngRoute'])
       }
 
       if ($scope.currentPage < quotient) {
-        $scope.applyFilters();
-        $('html,body').scrollTop(0);
-
         if ($scope.currentPage == quotient) {
           if (remainder > 0) {
             $scope.currentPage = quotient + 1;
@@ -235,6 +232,9 @@ angular.module('myApp.Projects', ['ngRoute'])
         if ($scope.currentPage < quotient) {
           $scope.currentPage = $scope.currentPage + 1;
         }
+
+        $scope.applyFilters();
+        $('html,body').scrollTop(0);
       }
     };
 
