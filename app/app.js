@@ -40,7 +40,7 @@ angular.module('myApp', [
         // You can simply use the static-files loader with this pattern:
         $translateProvider.useStaticFilesLoader({
             prefix: 'translate/',
-            suffix: '.json'
+            suffix: '.js'
         });
 
         // Since you've now registered more then one translation table, angular-translate has to know which one to use.
