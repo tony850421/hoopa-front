@@ -21,8 +21,6 @@ angular.module('myApp', [
   'myApp.OrganizationStructure',
   'myApp.CoreTeam',
   'myApp.DevHistory',
-  'myApp.GroupHonors',
-  'myApp.Chairman',
   'myApp.BussinesSystem',
   'myApp.BussinesProcess',
   'myApp.FeaturedCases',

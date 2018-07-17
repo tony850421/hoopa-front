@@ -3,7 +3,7 @@
 
 <head ng-controller="MainCtrl">
   <meta charset="utf-8">
-  <title ng-cloak>杭州胡巴资产管理有限公司</title>
+  <title ng-cloak>{{'TITLEPAGE' | translate}}</title>
   <meta name="description" content="The Project a Bootstrap-based, Responsive HTML5 Template">
   <meta name="author" content="author">
 
@@ -17,8 +17,8 @@
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Font Awesome CSS -->
-  <link href="fonts/MicrosoftYaHei/styles.css" rel="stylesheet">
   <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="fonts/MicrosoftYaHei/styles.css" rel="stylesheet">
 
   <!-- Font and Icon Hoopa CSS -->
   <link href="fonts/hoopa-font/style.css" rel="stylesheet">
@@ -65,7 +65,7 @@
           <div class="header-first clearfix">
             <div id="logo" class="logo">
               <a ng-click="customGoTo('home')">
-                <img class="logo_img marginLeftAuto" id="logo_img" src="images/LogoHoopa.png" alt="Hoopa">
+                <img class="logo_img marginLeftAuto cursorPointer" id="logo_img" src="images/LogoHoopa.png" alt="Hoopa">
               </a>
             </div>
           </div>
@@ -750,8 +750,6 @@
   <!-- Appear javascript -->
   <script src="plugins/waypoints/jquery.waypoints.min.js"></script>
   <script src="plugins/waypoints/sticky.min.js"></script>
-  <!-- Count To javascript -->
-  <script src="plugins/countTo/jquery.countTo.js"></script>
 
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
@@ -767,8 +765,6 @@
   <script src="views/organizationStructure/organizationStructure.js"></script>
   <script src="views/coreTeam/coreTeam.js"></script>
   <script src="views/devHistory/devHistory.js"></script>
-  <script src="views/groupHonors/groupHonors.js"></script>
-  <script src="views/charman/charman.js"></script>
   <script src="views/bussinesSystem/bussinesSystem.js"></script>
   <script src="views/bussinesProcess/bussinesProcess.js"></script>
   <script src="views/featured-cases/featured-cases.js"></script>

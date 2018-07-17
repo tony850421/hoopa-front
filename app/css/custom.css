@@ -2447,7 +2447,7 @@ ul#menuBar li {
 
 .divLiUl {
   height: 5px;
-  width: 60%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   background-color: #ff6700;
@@ -2776,4 +2776,8 @@ span.iconBranches {
 
 .marginTop2{
   margin-top: 2px !important;
+}
+
+.fa{
+  font-family: FontAwesome !important;
 }
