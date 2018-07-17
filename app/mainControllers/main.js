@@ -114,6 +114,10 @@ angular.module('myApp.Main', ['ngRoute'])
             $rootScope.customGoTo('wishlist');
         };
 
+        $scope.goToOffers = function () {
+            $rootScope.customGoTo('offers');
+        };
+
         $scope.search = function (searchFilterText) {
             $rootScope.searchFilterText = searchFilterText;
             $rootScope.customGoTo('projects');

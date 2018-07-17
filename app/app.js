@@ -17,6 +17,7 @@ angular.module('myApp', [
   'myApp.version',
   'myApp.Login',
   'myApp.Wishlist',
+  'myApp.Offers',
   'myApp.GroupIntroduction',
   'myApp.OrganizationStructure',
   'myApp.CoreTeam',

@@ -1,0 +1,56 @@
+<div>
+  <img class="imageBanner" src="images/hoopaDark.jpg" />
+  <div class="textBanner">
+    <p class="textWhite marginBottom0">{{'WISHLIST' | translate }}</p>
+    <!-- <p class="textWhite fontSize16">{{'HOME' | translate }} / {{'WISHLIST' | translate }}</p> -->
+  </div>
+  <!-- <div class="lineBlueBanner"></div> -->
+</div>
+<div class="breadcrumb-container">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <i class="fa fa-home pr-2"></i>
+        <a href="index.html" class="textDecorationNone fontSize16">{{'HOME' | translate}}</a>
+      </li>
+      <li class="breadcrumb-item cursorDefault fontSize16 active">{{'WISHLIST' | translate }}</li>
+    </ol>
+  </div>
+</div>
+<section class="main-container">
+  <section class="main-container">
+    <div class="container">
+      <div class="row paddingBottom60">
+        <div class="main col-12">
+          <!-- <h3 class="page-title text-center marginBottom20">{{'WISHLIST' | translate}}</h3>
+          <div class="separator-2"></div> -->
+          <table class="table cart table-hover table-colored">
+            <thead>
+              <tr>
+                <th class="cursorDefault">{{'PACKAGE' | translate}}</th>
+                <th class="textcenter cursorDefault">{{'DAMOUNT' | translate}}</th>
+                <th class="cursorDefault">{{'PROVINCE' | translate}}</th>               
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="remove-data" ng-repeat="cartObject in shopCartArray">
+                <td class="product">
+                  <a id="textShopCart" href="">{{cartObject.get('project').get('title')}}</a>
+                  <p class="fontSize12 cursorDefault">{{cartObject.get('project').get('description')}}</p>
+                </td>
+                <td class="price colorPrimary cursorDefault textcenter">
+                  ¥{{cartObject.get('project').get('debitAmount')}}万</td>
+                <td class="price">
+                  <small class="cursorDefault">{{cartObject.get('project').get('province')}}</small>
+                </td>
+              </tr>
+              <tr>
+                <td class="total-quantity" colspan="6">{{shopCartArray.length}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
