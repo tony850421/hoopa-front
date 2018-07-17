@@ -39,49 +39,50 @@
                 <p class="marginLeft10 marginBottom0" ng-cloak>¥{{project.get('debitAmount')}}万</p>
               </td>
             </tr>
-            <tr class="fontSize18">
+            <tr class="fontSize16">
               <td class="textEnd" ng-cloak>{{'DUPRINCIPALI' | translate}}:</td>
               <td class="colorPrimary">
                 <p class="marginLeft10 marginBottom0" ng-cloak>¥{{project.get('debitPricipalInterest')}}万</p>
               </td>
             </tr>
-            <tr>
-              <td class="textEnd" ng-cloak>{{'TARRIVAL' | translate}}:</td>
-              <td class="colorRed marginLeft10P" ng-repeat="t in typeArrivalString">
+            <tr class="fontSize16" ng-repeat="t in typeArrivalString">
+              <td ng-show="$index == 0" class="textEnd" ng-cloak>{{'TARRIVAL' | translate}}:</td>
+              <td ng-show="$index != 0" class="textEnd" ng-cloak></td>
+              <td class="colorRed marginLeft10P">
                 <p class="marginLeft10 marginBottom0" ng-cloak>{{t}}</p>
               </td>
             </tr>
-            <tr ng-show="project.get('projectManager').get(name)">
+            <tr class="fontSize16" ng-show="project.get('projectManager').get(name)">
               <td class="textEnd" ng-cloak>{{'PROJECTMANAGER' | translate}}:</td>
               <td class="marginLeft10P">
                 <p class="marginLeft10 marginBottom0" ng-cloak>{{project.get('projectManager').get(name)}}</p>
               </td>
             </tr>
-            <tr ng-show="project.get('projectManager').get(phone)">
+            <tr class="fontSize16" ng-show="project.get('projectManager').get(phone)">
               <td class="textEnd" ng-cloak>{{'CONTACTPHONE' | translate}}:</td>
               <td class="marginLeft10P">
                 <p class="marginLeft10 marginBottom0">{{project.get('projectManager').get(phone)}}</p>
               </td>
             </tr>
-            <tr>
+            <tr class="fontSize16">
               <td class="textEnd" ng-cloak>{{'PUADDRESS' | translate}}:</td>
               <td class="marginLeft10P">
                 <p class="marginLeft10 marginBottom0" ng-cloak>{{project.get('plainAddress')}}</p>
               </td>
             </tr>
-            <tr>
+            <tr class="fontSize16">
               <td class="textEnd" ng-cloak>{{'CUFROM' | translate}}:</td>
               <td class="marginLeft10P">
                 <p class="marginLeft10 marginBottom0" ng-cloak>{{project.get('comefrom')}}</p>
               </td>
             </tr>
-            <tr>
+            <tr class="fontSize16">
               <td class="textEnd">{{'PUCOMPANY' | translate}}:</td>
               <td class="marginLeft10P">
                 <p class="marginLeft10 marginBottom0">{{project.get('companyName')}}</p>
               </td>
             </tr>
-            <tr>
+            <tr class="fontSize16">
               <td class="textEnd" ng-cloak>{{'PUPROVINCE' | translate}}:</td>
               <td class="marginLeft10P">
                 <p class="marginLeft10 marginBottom0" ng-cloak>{{project.get('province')}}</p>
