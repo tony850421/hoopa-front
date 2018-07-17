@@ -27,19 +27,19 @@ angular.module('myApp.Home', ['ngRoute'])
 
     if ($(window).width() >= 1366) {
       $scope.limitNews = 3;
-      $scope.limitTitle = 10;
+      $scope.limitTitle = 8;
       $scope.limitTitleSecond = 10;
     } else if ($(window).width() >= 1280) {
       $scope.limitNews = 3;
-      $scope.limitTitle = 10;
+      $scope.limitTitle = 8;
       $scope.limitTitleSecond = 10;
     } else if ($(window).width() >= 1200) {
       $scope.limitNews = 3;
-      $scope.limitTitle = 10;
+      $scope.limitTitle = 8;
       $scope.limitTitleSecond = 10;
     } else if ($(window).width() >= 992) {
       $scope.limitNews = 2;
-      $scope.limitTitle = 10;
+      $scope.limitTitle = 8;
       $scope.limitTitleSecond = 10;
     } else if ($(window).width() >= 768) {
       $scope.limitNews = 3;
